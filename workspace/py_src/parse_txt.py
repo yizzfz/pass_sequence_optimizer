@@ -16,6 +16,9 @@ def main():
 
 # def parse_under_dir():
 def get_performance():
+    print "hi"    
+    
+    
 def get_passlist():
     pass
 def get_IRInfo():

@@ -7,16 +7,37 @@ class_names = ['gemm', 'gemver', 'gesummv', 'symm', 'syr2k', 'syrk', 'trmm',
                'durbin', 'gramschmidt', 'lu', 'ludcmp', 'trisolv', 'deriche',
                'floyd-warshall', 'nussinov', 'adi', 'fdtd-2d', 'heat-3d',
                'jacobi-1d', 'jacobi-2d', 'seidel-2d']
+
+
 def main():
+<<<<<<< HEAD
     parent_dir = '../../poly-e2/'
     # get_performance('../../poly-e2/stencils/seidel-2d/data_O3_1', 'IRinfo.txt')
     # sys.exit()
+=======
+    #parent_dir = '../../poly-e2/stencils/jacobi-1d/data_A12'
+    parent_dir = '../../poly-e2'
+    pass_dict = get_all_passlist()
+>>>>>>> refs/remotes/origin/master
     for root, dirs, files in os.walk(parent_dir):
         for fd in files:
             for item in class_names:
                 if (item in root) and (fd.endswith('.txt')):
-                    print(root, fd)
+                    if fd=="performance.txt":
+                        (time, size) = get_performance(root+'/'+fd)
+                    if fd=="passList.txt":
+                        passlist = get_passlist(root+'/'+fd, pass_dict)
 
+def get_all_passlist():
+    pass_dict = {}
+    with open('../allPassList.txt', 'rb') as f:
+      lines = f.read().split('\n')
+
+    for i, p in enumerate(lines):
+      pass_dict[p] = i
+
+    return pass_dict
+<<<<<<< HEAD
 # def parse_under_dir():
 <<<<<<< HEAD
 def get_performance(f_dir, name):
@@ -64,6 +85,24 @@ def get_performance(f_dir, name):
 
 def get_passlist():
     pass
+=======
+def get_performance(file):
+    with open(file, "rb") as f:
+      lines = f.read().split('\n')
+      time = lines[0].split(": ")[1]
+      size = lines[1].split(": ")[1]
+      return (time, size)
+
+
+def get_passlist(file, pass_dict):
+    firstline = []
+    with open(file, "rb") as f:
+      firstline = f.read().split('\n')[0]
+    args = firstline.split(' ')
+    args1 = [pass_dict[x] for x in args if x.startswith('-') and pass_dict.has_key(x)]
+    return args1
+
+>>>>>>> refs/remotes/origin/master
 def get_IRInfo():
     pass
 

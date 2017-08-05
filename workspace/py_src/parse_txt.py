@@ -18,6 +18,7 @@ def main():
                     print(root, fd)
 
 # def parse_under_dir():
+<<<<<<< HEAD
 def get_performance(f_dir, name):
     performance_metrics = [
     'loop ID', 'loop at depth', 'basic blocks', 'inst', 'coverage wrt function',
@@ -58,6 +59,8 @@ def get_performance(f_dir, name):
 
 
 
+
+=======
 
 def get_passlist():
     pass

@@ -10,15 +10,13 @@ class_names = ['gemm', 'gemver', 'gesummv', 'symm', 'syr2k', 'syrk', 'trmm',
 
 
 def main():
-<<<<<<< HEAD
     parent_dir = '../../poly-e2/'
     # get_performance('../../poly-e2/stencils/seidel-2d/data_O3_1', 'IRinfo.txt')
     # sys.exit()
-=======
     #parent_dir = '../../poly-e2/stencils/jacobi-1d/data_A12'
     parent_dir = '../../poly-e2'
     pass_dict = get_all_passlist()
->>>>>>> refs/remotes/origin/master
+    
     for root, dirs, files in os.walk(parent_dir):
         for fd in files:
             for item in class_names:
@@ -37,9 +35,7 @@ def get_all_passlist():
       pass_dict[p] = i
 
     return pass_dict
-<<<<<<< HEAD
-# def parse_under_dir():
-<<<<<<< HEAD
+
 def get_performance(f_dir, name):
     performance_metrics = [
     'loop ID', 'loop at depth', 'basic blocks', 'inst', 'coverage wrt function',
@@ -77,15 +73,6 @@ def get_performance(f_dir, name):
                         tmp[metric] = float(num)
     print(loops_info[0])
 
-
-
-
-
-=======
-
-def get_passlist():
-    pass
-=======
 def get_performance(file):
     with open(file, "rb") as f:
       lines = f.read().split('\n')
@@ -101,11 +88,6 @@ def get_passlist(file, pass_dict):
     args = firstline.split(' ')
     args1 = [pass_dict[x] for x in args if x.startswith('-') and pass_dict.has_key(x)]
     return args1
-
->>>>>>> refs/remotes/origin/master
-def get_IRInfo():
-    pass
-
 
 if __name__ == "__main__":
     main()

@@ -1,0 +1,132 @@
+loop ID = init_array_D2N11
+loop execution count = 1199000 times
+number of instructions executed here (excluding subloops) = 33572000
+number of instructions executed here = 33572000
+
+
+loop ID = init_array_D1N1
+loop execution count = 1000 times
+number of instructions executed here (excluding subloops) = 10000
+number of instructions executed here = 33582000
+
+
+loop ID = init_array_D1N2
+loop execution count = 61 times
+number of instructions executed here (excluding subloops) = 2867
+number of instructions executed here = 2867
+
+
+loop ID = init_array_D1N3
+loop execution count = 3 times
+number of instructions executed here (excluding subloops) = 42
+number of instructions executed here = 42
+
+
+loop ID = kernel_fdtd_2d_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = kernel_fdtd_2d_D2N12
+loop execution count = 74500 times
+number of instructions executed here (excluding subloops) = 3501500
+number of instructions executed here = 3501500
+
+
+loop ID = kernel_fdtd_2d_D3N131
+loop execution count = 149350500 times
+number of instructions executed here (excluding subloops) = 5227267500
+number of instructions executed here = 5227267500
+
+
+loop ID = kernel_fdtd_2d_D3N132
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = kernel_fdtd_2d_D2N13
+loop execution count = 1998000 times
+number of instructions executed here (excluding subloops) = 153846000
+number of instructions executed here = 5381113500
+
+
+loop ID = kernel_fdtd_2d_D3N141
+loop execution count = 149000000 times
+number of instructions executed here (excluding subloops) = 5811000000
+number of instructions executed here = 5811000000
+
+
+loop ID = kernel_fdtd_2d_D3N142
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = kernel_fdtd_2d_D2N14
+loop execution count = 3000000 times
+number of instructions executed here (excluding subloops) = 222000000
+number of instructions executed here = 6033000000
+
+
+loop ID = kernel_fdtd_2d_D3N151
+loop execution count = 148851000 times
+number of instructions executed here (excluding subloops) = 7889103000
+number of instructions executed here = 7889103000
+
+
+loop ID = kernel_fdtd_2d_D3N152
+loop execution count = 999000 times
+number of instructions executed here (excluding subloops) = 23976000
+number of instructions executed here = 23976000
+
+
+loop ID = kernel_fdtd_2d_D2N15
+loop execution count = 1998000 times
+number of instructions executed here (excluding subloops) = 83916000
+number of instructions executed here = 7996995000
+
+
+loop ID = kernel_fdtd_2d_D1N1
+loop execution count = 2500 times
+number of instructions executed here (excluding subloops) = 112500
+number of instructions executed here = 19414722500
+
+
+loop ID = print_array_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = print_array_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = print_array_D2N21
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = print_array_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = print_array_D2N31
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = print_array_D1N3
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+

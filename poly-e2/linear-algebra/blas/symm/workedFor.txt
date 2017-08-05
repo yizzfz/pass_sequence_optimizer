@@ -1,0 +1,17 @@
+/local/scratch/hc475/summer/workspace/polybench-c-4.2.1-beta/linear-algebra/solvers/trisolv
+/local/scratch/hc475/summer/workspace/polybench-c-4.2.1-beta/linear-algebra/solvers/durbin
+/local/scratch/hc475/summer/workspace/polybench-c-4.2.1-beta/linear-algebra/blas/trmm
+/local/scratch/hc475/summer/workspace/polybench-c-4.2.1-beta/linear-algebra/blas/syr2k
+/local/scratch/hc475/summer/workspace/polybench-c-4.2.1-beta/linear-algebra/blas/gemver
+/local/scratch/hc475/summer/workspace/polybench-c-4.2.1-beta/linear-algebra/blas/gesummv
+/local/scratch/hc475/summer/workspace/polybench-c-4.2.1-beta/linear-algebra/blas/gemm
+/local/scratch/hc475/summer/workspace/polybench-c-4.2.1-beta/linear-algebra/blas/syrk
+/local/scratch/hc475/summer/workspace/polybench-c-4.2.1-beta/linear-algebra/kernels/mvt
+/local/scratch/hc475/summer/workspace/polybench-c-4.2.1-beta/linear-algebra/kernels/doitgen
+/local/scratch/hc475/summer/workspace/polybench-c-4.2.1-beta/linear-algebra/kernels/atax
+/local/scratch/hc475/summer/workspace/polybench-c-4.2.1-beta/linear-algebra/kernels/bicg
+/local/scratch/hc475/summer/workspace/polybench-c-4.2.1-beta/medley/deriche
+/local/scratch/hc475/summer/workspace/polybench-c-4.2.1-beta/stencils/jacobi-1d
+/local/scratch/hc475/summer/workspace/polybench-c-4.2.1-beta/stencils/fdtd-2d
+/local/scratch/hc475/summer/workspace/polybench-c-4.2.1-beta/stencils/jacobi-2d
+/local/scratch/hc475/summer/workspace/polybench-c-4.2.1-beta/stencils/tmp

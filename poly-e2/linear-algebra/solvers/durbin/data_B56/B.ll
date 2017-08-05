@@ -1,0 +1,405 @@
+; ModuleID = 'A.ll'
+source_filename = "durbin.c"
+target datalayout = "e-m:e-i64:64-f80:128-n8:16:32:64-S128"
+target triple = "x86_64-unknown-linux-gnu"
+
+%struct._IO_FILE = type { i32, i8*, i8*, i8*, i8*, i8*, i8*, i8*, i8*, i8*, i8*, i8*, %struct._IO_marker*, %struct._IO_FILE*, i32, i32, i64, i16, i8, [1 x i8], i8*, i64, i8*, i8*, i8*, i8*, i64, i32, [20 x i8] }
+%struct._IO_marker = type { %struct._IO_marker*, %struct._IO_FILE*, i32 }
+
+@stderr = external local_unnamed_addr global %struct._IO_FILE*, align 8
+@.str.1 = private unnamed_addr constant [23 x i8] c"==BEGIN DUMP_ARRAYS==\0A\00", align 1
+@.str.2 = private unnamed_addr constant [15 x i8] c"begin dump: %s\00", align 1
+@.str.3 = private unnamed_addr constant [2 x i8] c"y\00", align 1
+@.str.5 = private unnamed_addr constant [8 x i8] c"%0.2lf \00", align 1
+@.str.6 = private unnamed_addr constant [17 x i8] c"\0Aend   dump: %s\0A\00", align 1
+@.str.7 = private unnamed_addr constant [23 x i8] c"==END   DUMP_ARRAYS==\0A\00", align 1
+
+; Function Attrs: noinline nounwind uwtable
+define i32 @main(i32 %argc, i8** nocapture readonly %argv) local_unnamed_addr #0 {
+entry:
+  %call = tail call i8* @polybench_alloc_data(i64 2000, i32 8) #4
+  %call1 = tail call i8* @polybench_alloc_data(i64 2000, i32 8) #4
+  %arraydecay = bitcast i8* %call to double*
+  tail call fastcc void @init_array(double* %arraydecay)
+  tail call void (...) @polybench_timer_start() #4
+  %arraydecay3 = bitcast i8* %call1 to double*
+  tail call fastcc void @kernel_durbin(double* %arraydecay, double* %arraydecay3)
+  tail call void (...) @polybench_timer_stop() #4
+  tail call void (...) @polybench_timer_print() #4
+  %cmp = icmp sgt i32 %argc, 42
+  br i1 %cmp, label %land.lhs.true, label %if.end
+
+land.lhs.true:                                    ; preds = %entry
+  %0 = load i8*, i8** %argv, align 8
+  %strcmpload = load i8, i8* %0, align 1
+  %tobool = icmp eq i8 %strcmpload, 0
+  br i1 %tobool, label %if.then, label %if.end
+
+if.then:                                          ; preds = %land.lhs.true
+  %1 = bitcast i8* %call1 to double*
+  tail call fastcc void @print_array(double* %1)
+  br label %if.end
+
+if.end:                                           ; preds = %land.lhs.true, %entry, %if.then
+  tail call void @free(i8* %call) #4
+  tail call void @free(i8* %call1) #4
+  ret i32 0
+}
+
+declare i8* @polybench_alloc_data(i64, i32) local_unnamed_addr #1
+
+; Function Attrs: noinline norecurse nounwind uwtable
+define internal fastcc void @init_array(double* nocapture %r) unnamed_addr #2 {
+entry:
+  br label %for.body
+
+for.body:                                         ; preds = %for.body, %entry
+  %indvars.iv = phi i64 [ 0, %entry ], [ %indvars.iv.next.4, %for.body ]
+  %0 = sub nuw nsw i64 2001, %indvars.iv
+  %1 = trunc i64 %0 to i32
+  %conv = sitofp i32 %1 to double
+  %arrayidx = getelementptr inbounds double, double* %r, i64 %indvars.iv
+  %2 = bitcast double* %arrayidx to <2 x double>*
+  %3 = sub i64 2000, %indvars.iv
+  %4 = trunc i64 %3 to i32
+  %conv.1 = sitofp i32 %4 to double
+  %5 = insertelement <2 x double> undef, double %conv, i32 0
+  %6 = insertelement <2 x double> %5, double %conv.1, i32 1
+  store <2 x double> %6, <2 x double>* %2, align 8
+  %indvars.iv.next.1 = add nsw i64 %indvars.iv, 2
+  %7 = sub i64 1999, %indvars.iv
+  %8 = trunc i64 %7 to i32
+  %conv.2 = sitofp i32 %8 to double
+  %arrayidx.2 = getelementptr inbounds double, double* %r, i64 %indvars.iv.next.1
+  %9 = bitcast double* %arrayidx.2 to <2 x double>*
+  %10 = sub i64 1998, %indvars.iv
+  %11 = trunc i64 %10 to i32
+  %conv.3 = sitofp i32 %11 to double
+  %12 = insertelement <2 x double> undef, double %conv.2, i32 0
+  %13 = insertelement <2 x double> %12, double %conv.3, i32 1
+  store <2 x double> %13, <2 x double>* %9, align 8
+  %indvars.iv.next.3 = add nsw i64 %indvars.iv, 4
+  %14 = sub i64 1997, %indvars.iv
+  %15 = trunc i64 %14 to i32
+  %conv.4 = sitofp i32 %15 to double
+  %arrayidx.4 = getelementptr inbounds double, double* %r, i64 %indvars.iv.next.3
+  store double %conv.4, double* %arrayidx.4, align 8
+  %indvars.iv.next.4 = add nsw i64 %indvars.iv, 5
+  %exitcond.4 = icmp eq i64 %indvars.iv.next.4, 2000
+  br i1 %exitcond.4, label %for.end, label %for.body
+
+for.end:                                          ; preds = %for.body
+  ret void
+}
+
+declare void @polybench_timer_start(...) local_unnamed_addr #1
+
+; Function Attrs: noinline norecurse nounwind uwtable
+define internal fastcc void @kernel_durbin(double* nocapture readonly %r, double* nocapture %y) unnamed_addr #2 {
+entry:
+  %z = alloca [2000 x double], align 16
+  %0 = load double, double* %r, align 8
+  %sub = fsub double -0.000000e+00, %0
+  store double %sub, double* %y, align 8
+  %1 = load double, double* %r, align 8
+  %sub3 = fsub double -0.000000e+00, %1
+  %2 = getelementptr inbounds [2000 x double], [2000 x double]* %z, i64 0, i64 0
+  %3 = ptrtoint double* %y to i64
+  %4 = bitcast double* %y to i8*
+  %5 = bitcast [2000 x double]* %z to i8*
+  br label %for.inc.lr.ph
+
+for.inc.lr.ph:                                    ; preds = %for.end44, %entry
+  %indvar = phi i64 [ 0, %entry ], [ %indvar.next, %for.end44 ]
+  %indvars.iv31 = phi i64 [ 1, %entry ], [ %indvars.iv.next32, %for.end44 ]
+  %beta.012 = phi double [ 1.000000e+00, %entry ], [ %mul5, %for.end44 ]
+  %6 = phi double [ %sub3, %entry ], [ %div, %for.end44 ]
+  %7 = add i64 %indvar, -1
+  %8 = shl i64 %indvar, 3
+  %9 = add i64 %8, 8
+  %mul = fmul double %6, %6
+  %sub4 = fsub double 1.000000e+00, %mul
+  %mul5 = fmul double %beta.012, %sub4
+  %10 = add i64 %indvar, 1
+  %11 = add nsw i64 %indvars.iv31, -1
+  %xtraiter = and i64 %10, 3
+  %lcmp.mod = icmp eq i64 %xtraiter, 0
+  br i1 %lcmp.mod, label %for.inc.prol.loopexit, label %for.inc.prol.preheader
+
+for.inc.prol.preheader:                           ; preds = %for.inc.lr.ph
+  br label %for.inc.prol
+
+for.inc.prol:                                     ; preds = %for.inc.prol.preheader, %for.inc.prol
+  %indvars.iv.prol = phi i64 [ %indvars.iv.next.prol, %for.inc.prol ], [ 0, %for.inc.prol.preheader ]
+  %sum.06.prol = phi double [ %add.prol, %for.inc.prol ], [ 0.000000e+00, %for.inc.prol.preheader ]
+  %prol.iter = phi i64 [ %prol.iter.sub, %for.inc.prol ], [ %xtraiter, %for.inc.prol.preheader ]
+  %12 = sub nsw i64 %11, %indvars.iv.prol
+  %arrayidx11.prol = getelementptr inbounds double, double* %r, i64 %12
+  %13 = load double, double* %arrayidx11.prol, align 8
+  %arrayidx13.prol = getelementptr inbounds double, double* %y, i64 %indvars.iv.prol
+  %14 = load double, double* %arrayidx13.prol, align 8
+  %mul14.prol = fmul double %13, %14
+  %add.prol = fadd double %sum.06.prol, %mul14.prol
+  %indvars.iv.next.prol = add nuw nsw i64 %indvars.iv.prol, 1
+  %prol.iter.sub = add i64 %prol.iter, -1
+  %prol.iter.cmp = icmp eq i64 %prol.iter.sub, 0
+  br i1 %prol.iter.cmp, label %for.inc.prol.loopexit.loopexit, label %for.inc.prol, !llvm.loop !1
+
+for.inc.prol.loopexit.loopexit:                   ; preds = %for.inc.prol
+  br label %for.inc.prol.loopexit
+
+for.inc.prol.loopexit:                            ; preds = %for.inc.prol.loopexit.loopexit, %for.inc.lr.ph
+  %indvars.iv.unr = phi i64 [ 0, %for.inc.lr.ph ], [ %indvars.iv.next.prol, %for.inc.prol.loopexit.loopexit ]
+  %sum.06.unr = phi double [ 0.000000e+00, %for.inc.lr.ph ], [ %add.prol, %for.inc.prol.loopexit.loopexit ]
+  %add.lcssa.unr = phi double [ undef, %for.inc.lr.ph ], [ %add.prol, %for.inc.prol.loopexit.loopexit ]
+  %15 = icmp ult i64 %indvar, 3
+  br i1 %15, label %for.body21.lr.ph, label %for.inc.preheader
+
+for.inc.preheader:                                ; preds = %for.inc.prol.loopexit
+  br label %for.inc
+
+for.inc:                                          ; preds = %for.inc.preheader, %for.inc
+  %indvars.iv = phi i64 [ %indvars.iv.next.3, %for.inc ], [ %indvars.iv.unr, %for.inc.preheader ]
+  %sum.06 = phi double [ %add.3, %for.inc ], [ %sum.06.unr, %for.inc.preheader ]
+  %arrayidx13 = getelementptr inbounds double, double* %y, i64 %indvars.iv
+  %16 = bitcast double* %arrayidx13 to <2 x double>*
+  %indvars.iv.next = add nuw nsw i64 %indvars.iv, 1
+  %17 = sub nsw i64 %11, %indvars.iv.next
+  %arrayidx11.1 = getelementptr inbounds double, double* %r, i64 %17
+  %18 = bitcast double* %arrayidx11.1 to <2 x double>*
+  %19 = load <2 x double>, <2 x double>* %18, align 8
+  %20 = load <2 x double>, <2 x double>* %16, align 8
+  %mul14.v.i0 = shufflevector <2 x double> %19, <2 x double> undef, <2 x i32> <i32 1, i32 0>
+  %mul14 = fmul <2 x double> %mul14.v.i0, %20
+  %mul14.v.r1 = extractelement <2 x double> %mul14, i32 0
+  %mul14.v.r2 = extractelement <2 x double> %mul14, i32 1
+  %add = fadd double %sum.06, %mul14.v.r1
+  %add.1 = fadd double %add, %mul14.v.r2
+  %indvars.iv.next.1 = add nsw i64 %indvars.iv, 2
+  %arrayidx13.2 = getelementptr inbounds double, double* %y, i64 %indvars.iv.next.1
+  %21 = bitcast double* %arrayidx13.2 to <2 x double>*
+  %indvars.iv.next.2 = add nsw i64 %indvars.iv, 3
+  %22 = sub nsw i64 %11, %indvars.iv.next.2
+  %arrayidx11.3 = getelementptr inbounds double, double* %r, i64 %22
+  %23 = bitcast double* %arrayidx11.3 to <2 x double>*
+  %24 = load <2 x double>, <2 x double>* %23, align 8
+  %25 = load <2 x double>, <2 x double>* %21, align 8
+  %mul14.2.v.i0 = shufflevector <2 x double> %24, <2 x double> undef, <2 x i32> <i32 1, i32 0>
+  %mul14.2 = fmul <2 x double> %mul14.2.v.i0, %25
+  %mul14.2.v.r1 = extractelement <2 x double> %mul14.2, i32 0
+  %mul14.2.v.r2 = extractelement <2 x double> %mul14.2, i32 1
+  %add.2 = fadd double %add.1, %mul14.2.v.r1
+  %add.3 = fadd double %add.2, %mul14.2.v.r2
+  %indvars.iv.next.3 = add nsw i64 %indvars.iv, 4
+  %exitcond.3 = icmp eq i64 %indvars.iv.next.3, %indvars.iv31
+  br i1 %exitcond.3, label %for.body21.lr.ph.loopexit, label %for.inc
+
+for.body21.lr.ph.loopexit:                        ; preds = %for.inc
+  br label %for.body21.lr.ph
+
+for.body21.lr.ph:                                 ; preds = %for.body21.lr.ph.loopexit, %for.inc.prol.loopexit
+  %sum.0.lcssa = phi double [ %add.lcssa.unr, %for.inc.prol.loopexit ], [ %add.3, %for.body21.lr.ph.loopexit ]
+  %arrayidx16 = getelementptr inbounds double, double* %r, i64 %indvars.iv31
+  %26 = load double, double* %arrayidx16, align 8
+  %add17 = fadd double %sum.0.lcssa, %26
+  %sub18 = fsub double -0.000000e+00, %add17
+  %div = fdiv double %sub18, %mul5
+  %27 = add nsw i64 %indvars.iv31, -1
+  %28 = and i64 %indvar, 1
+  %lcmp.mod39 = icmp eq i64 %28, 0
+  br i1 %lcmp.mod39, label %for.body21.prol, label %for.body21.prol.loopexit
+
+for.body21.prol:                                  ; preds = %for.body21.lr.ph
+  %29 = load double, double* %y, align 8
+  %sunkaddr40 = shl i64 %indvars.iv31, 3
+  %sunkaddr41 = add i64 %3, %sunkaddr40
+  %sunkaddr42 = add i64 %sunkaddr41, -8
+  %sunkaddr43 = inttoptr i64 %sunkaddr42 to double*
+  %30 = load double, double* %sunkaddr43, align 8
+  %mul28.prol = fmul double %div, %30
+  %add29.prol = fadd double %29, %mul28.prol
+  store double %add29.prol, double* %2, align 16
+  br label %for.body21.prol.loopexit
+
+for.body21.prol.loopexit:                         ; preds = %for.body21.lr.ph, %for.body21.prol
+  %indvars.iv18.unr.ph = phi i64 [ 1, %for.body21.prol ], [ 0, %for.body21.lr.ph ]
+  %31 = icmp eq i64 %indvar, 0
+  br i1 %31, label %for.end44, label %for.body21.preheader
+
+for.body21.preheader:                             ; preds = %for.body21.prol.loopexit
+  %32 = sub i64 %7, %indvars.iv18.unr.ph
+  %33 = lshr i64 %32, 1
+  %34 = add nuw i64 %33, 1
+  %min.iters.check = icmp ult i64 %34, 2
+  br i1 %min.iters.check, label %for.body21.preheader1, label %min.iters.checked
+
+min.iters.checked:                                ; preds = %for.body21.preheader
+  %n.mod.vf = and i64 %34, 1
+  %n.vec = sub i64 %34, %n.mod.vf
+  %cmp.zero = icmp eq i64 %n.vec, 0
+  %35 = or i64 %indvars.iv18.unr.ph, 2
+  %36 = shl nuw i64 %33, 1
+  %37 = add i64 %35, %36
+  %38 = shl nuw nsw i64 %n.mod.vf, 1
+  %ind.end = sub i64 %37, %38
+  br i1 %cmp.zero, label %for.body21.preheader1, label %vector.ph
+
+vector.ph:                                        ; preds = %min.iters.checked
+  %broadcast.splatinsert50 = insertelement <2 x double> undef, double %div, i32 0
+  %broadcast.splat51 = shufflevector <2 x double> %broadcast.splatinsert50, <2 x double> undef, <2 x i32> zeroinitializer
+  br label %vector.body
+
+vector.body:                                      ; preds = %vector.body, %vector.ph
+  %index = phi i64 [ 0, %vector.ph ], [ %index.next, %vector.body ]
+  %39 = shl i64 %index, 1
+  %offset.idx = or i64 %indvars.iv18.unr.ph, %39
+  %40 = getelementptr inbounds double, double* %y, i64 %offset.idx
+  %41 = bitcast double* %40 to <4 x double>*
+  %wide.vec = load <4 x double>, <4 x double>* %41, align 8
+  %strided.vec = shufflevector <4 x double> %wide.vec, <4 x double> undef, <2 x i32> <i32 0, i32 2>
+  %strided.vec45 = shufflevector <4 x double> %wide.vec, <4 x double> undef, <2 x i32> <i32 1, i32 3>
+  %42 = sub nsw i64 %27, %offset.idx
+  %43 = getelementptr inbounds double, double* %y, i64 %42
+  %44 = getelementptr double, double* %43, i64 -3
+  %45 = bitcast double* %44 to <4 x double>*
+  %wide.vec46 = load <4 x double>, <4 x double>* %45, align 8
+  %strided.vec47 = shufflevector <4 x double> %wide.vec46, <4 x double> undef, <2 x i32> <i32 0, i32 2>
+  %reverse = shufflevector <2 x double> %strided.vec47, <2 x double> undef, <2 x i32> <i32 1, i32 0>
+  %strided.vec48 = shufflevector <4 x double> %wide.vec46, <4 x double> undef, <2 x i32> <i32 1, i32 3>
+  %reverse49 = shufflevector <2 x double> %strided.vec48, <2 x double> undef, <2 x i32> <i32 1, i32 0>
+  %46 = fmul <2 x double> %broadcast.splat51, %reverse49
+  %47 = fadd <2 x double> %strided.vec, %46
+  %48 = add nuw nsw i64 %offset.idx, 1
+  %49 = fmul <2 x double> %broadcast.splat51, %reverse
+  %50 = fadd <2 x double> %strided.vec45, %49
+  %51 = getelementptr inbounds [2000 x double], [2000 x double]* %z, i64 0, i64 %48
+  %52 = getelementptr double, double* %51, i64 -1
+  %53 = bitcast double* %52 to <4 x double>*
+  %interleaved.vec = shufflevector <2 x double> %47, <2 x double> %50, <4 x i32> <i32 0, i32 2, i32 1, i32 3>
+  store <4 x double> %interleaved.vec, <4 x double>* %53, align 8
+  %index.next = add i64 %index, 2
+  %54 = icmp eq i64 %index.next, %n.vec
+  br i1 %54, label %middle.block, label %vector.body, !llvm.loop !3
+
+middle.block:                                     ; preds = %vector.body
+  %cmp.n = icmp eq i64 %n.mod.vf, 0
+  br i1 %cmp.n, label %for.end44, label %for.body21.preheader1
+
+for.body21.preheader1:                            ; preds = %middle.block, %min.iters.checked, %for.body21.preheader
+  %indvars.iv18.ph = phi i64 [ %ind.end, %middle.block ], [ %indvars.iv18.unr.ph, %min.iters.checked ], [ %indvars.iv18.unr.ph, %for.body21.preheader ]
+  %55 = insertelement <2 x double> undef, double %div, i32 0
+  %mul28.v.i0.2 = shufflevector <2 x double> %55, <2 x double> undef, <2 x i32> zeroinitializer
+  br label %for.body21
+
+for.body21:                                       ; preds = %for.body21.preheader1, %for.body21
+  %indvars.iv18 = phi i64 [ %indvars.iv.next19.1, %for.body21 ], [ %indvars.iv18.ph, %for.body21.preheader1 ]
+  %arrayidx23 = getelementptr inbounds double, double* %y, i64 %indvars.iv18
+  %56 = bitcast double* %arrayidx23 to <2 x double>*
+  %arrayidx31 = getelementptr inbounds [2000 x double], [2000 x double]* %z, i64 0, i64 %indvars.iv18
+  %indvars.iv.next19 = add nuw nsw i64 %indvars.iv18, 1
+  %57 = load <2 x double>, <2 x double>* %56, align 8
+  %58 = sub nsw i64 %27, %indvars.iv.next19
+  %arrayidx27.1 = getelementptr inbounds double, double* %y, i64 %58
+  %59 = bitcast double* %arrayidx27.1 to <2 x double>*
+  %60 = load <2 x double>, <2 x double>* %59, align 8
+  %mul28.1 = fmul <2 x double> %mul28.v.i0.2, %60
+  %add29.v.i1 = shufflevector <2 x double> %mul28.1, <2 x double> undef, <2 x i32> <i32 1, i32 0>
+  %add29 = fadd <2 x double> %57, %add29.v.i1
+  %61 = bitcast double* %arrayidx31 to <2 x double>*
+  store <2 x double> %add29, <2 x double>* %61, align 8
+  %indvars.iv.next19.1 = add nsw i64 %indvars.iv18, 2
+  %exitcond24.1 = icmp eq i64 %indvars.iv.next19.1, %indvars.iv31
+  br i1 %exitcond24.1, label %for.end44.loopexit, label %for.body21, !llvm.loop !6
+
+for.end44.loopexit:                               ; preds = %for.body21
+  br label %for.end44
+
+for.end44:                                        ; preds = %for.end44.loopexit, %middle.block, %for.body21.prol.loopexit
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %4, i8* nonnull %5, i64 %9, i32 8, i1 false)
+  %arrayidx46 = getelementptr inbounds double, double* %y, i64 %indvars.iv31
+  store double %div, double* %arrayidx46, align 8
+  %indvars.iv.next32 = add nuw nsw i64 %indvars.iv31, 1
+  %exitcond35 = icmp eq i64 %indvars.iv.next32, 2000
+  %indvar.next = add i64 %indvar, 1
+  br i1 %exitcond35, label %for.end49, label %for.inc.lr.ph
+
+for.end49:                                        ; preds = %for.end44
+  ret void
+}
+
+declare void @polybench_timer_stop(...) local_unnamed_addr #1
+
+declare void @polybench_timer_print(...) local_unnamed_addr #1
+
+; Function Attrs: noinline nounwind uwtable
+define internal fastcc void @print_array(double* nocapture readonly %y) unnamed_addr #0 {
+entry:
+  %0 = load %struct._IO_FILE*, %struct._IO_FILE** @stderr, align 8
+  %1 = tail call i64 @fwrite(i8* getelementptr inbounds ([23 x i8], [23 x i8]* @.str.1, i64 0, i64 0), i64 22, i64 1, %struct._IO_FILE* %0) #6
+  %2 = load %struct._IO_FILE*, %struct._IO_FILE** @stderr, align 8
+  %call1 = tail call i32 (%struct._IO_FILE*, i8*, ...) @fprintf(%struct._IO_FILE* %2, i8* getelementptr inbounds ([15 x i8], [15 x i8]* @.str.2, i64 0, i64 0), i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.3, i64 0, i64 0)) #7
+  br label %for.body
+
+for.body:                                         ; preds = %if.end, %entry
+  %indvars.iv = phi i64 [ 0, %entry ], [ %indvars.iv.next, %if.end ]
+  %3 = trunc i64 %indvars.iv to i32
+  %rem = srem i32 %3, 20
+  %cmp2 = icmp eq i32 %rem, 0
+  br i1 %cmp2, label %if.then, label %if.end
+
+if.then:                                          ; preds = %for.body
+  %4 = load %struct._IO_FILE*, %struct._IO_FILE** @stderr, align 8
+  %fputc = tail call i32 @fputc(i32 10, %struct._IO_FILE* %4) #6
+  br label %if.end
+
+if.end:                                           ; preds = %for.body, %if.then
+  %5 = load %struct._IO_FILE*, %struct._IO_FILE** @stderr, align 8
+  %arrayidx = getelementptr inbounds double, double* %y, i64 %indvars.iv
+  %6 = load double, double* %arrayidx, align 8
+  %call4 = tail call i32 (%struct._IO_FILE*, i8*, ...) @fprintf(%struct._IO_FILE* %5, i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.5, i64 0, i64 0), double %6) #7
+  %indvars.iv.next = add nuw nsw i64 %indvars.iv, 1
+  %exitcond = icmp eq i64 %indvars.iv.next, 2000
+  br i1 %exitcond, label %for.end, label %for.body
+
+for.end:                                          ; preds = %if.end
+  %7 = load %struct._IO_FILE*, %struct._IO_FILE** @stderr, align 8
+  %call5 = tail call i32 (%struct._IO_FILE*, i8*, ...) @fprintf(%struct._IO_FILE* %7, i8* getelementptr inbounds ([17 x i8], [17 x i8]* @.str.6, i64 0, i64 0), i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.3, i64 0, i64 0)) #7
+  %8 = load %struct._IO_FILE*, %struct._IO_FILE** @stderr, align 8
+  %9 = tail call i64 @fwrite(i8* getelementptr inbounds ([23 x i8], [23 x i8]* @.str.7, i64 0, i64 0), i64 22, i64 1, %struct._IO_FILE* %8) #6
+  ret void
+}
+
+; Function Attrs: nounwind
+declare void @free(i8* nocapture) local_unnamed_addr #3
+
+; Function Attrs: nounwind
+declare i32 @fprintf(%struct._IO_FILE* nocapture, i8* nocapture readonly, ...) local_unnamed_addr #3
+
+; Function Attrs: nounwind
+declare i64 @fwrite(i8* nocapture, i64, i64, %struct._IO_FILE* nocapture) local_unnamed_addr #4
+
+; Function Attrs: nounwind
+declare i32 @fputc(i32, %struct._IO_FILE* nocapture) local_unnamed_addr #4
+
+; Function Attrs: argmemonly nounwind
+declare void @llvm.memcpy.p0i8.p0i8.i64(i8* nocapture writeonly, i8* nocapture readonly, i64, i32, i1) #5
+
+attributes #0 = { noinline nounwind uwtable "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-jump-tables"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #1 = { "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #2 = { noinline norecurse nounwind uwtable "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-jump-tables"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #3 = { nounwind "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #4 = { nounwind }
+attributes #5 = { argmemonly nounwind }
+attributes #6 = { cold }
+attributes #7 = { cold nounwind }
+
+!llvm.ident = !{!0}
+
+!0 = !{!"clang version 4.0.0 (tags/RELEASE_400/final)"}
+!1 = distinct !{!1, !2}
+!2 = !{!"llvm.loop.unroll.disable"}
+!3 = distinct !{!3, !4, !5}
+!4 = !{!"llvm.loop.vectorize.width", i32 1}
+!5 = !{!"llvm.loop.interleave.count", i32 1}
+!6 = distinct !{!6, !7, !4, !5}
+!7 = !{!"llvm.loop.unroll.runtime.disable"}

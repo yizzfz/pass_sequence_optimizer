@@ -1,0 +1,66 @@
+loop ID = init_array_D2N11
+loop execution count = 1688700 times
+number of instructions executed here (excluding subloops) = 40528800
+number of instructions executed here = 40528800
+
+
+loop ID = init_array_D1N1
+loop execution count = 1300 times
+number of instructions executed here (excluding subloops) = 13000
+number of instructions executed here = 40541800
+
+
+loop ID = kernel_jacobi_2d_D3N111
+loop execution count = 209627000 times
+number of instructions executed here (excluding subloops) = 11948739000
+number of instructions executed here = 11948739000
+
+
+loop ID = kernel_jacobi_2d_D3N112
+loop execution count = 649000 times
+number of instructions executed here (excluding subloops) = 16874000
+number of instructions executed here = 16874000
+
+
+loop ID = kernel_jacobi_2d_D2N11
+loop execution count = 3245000 times
+number of instructions executed here (excluding subloops) = 129800000
+number of instructions executed here = 12095413000
+
+
+loop ID = kernel_jacobi_2d_D3N121
+loop execution count = 209627000 times
+number of instructions executed here (excluding subloops) = 11948739000
+number of instructions executed here = 11948739000
+
+
+loop ID = kernel_jacobi_2d_D3N122
+loop execution count = 649000 times
+number of instructions executed here (excluding subloops) = 16874000
+number of instructions executed here = 16874000
+
+
+loop ID = kernel_jacobi_2d_D2N12
+loop execution count = 3245000 times
+number of instructions executed here (excluding subloops) = 129800000
+number of instructions executed here = 12095413000
+
+
+loop ID = kernel_jacobi_2d_D1N1
+loop execution count = 1000 times
+number of instructions executed here (excluding subloops) = 19000
+number of instructions executed here = 24190845000
+
+
+loop ID = print_array_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = print_array_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+

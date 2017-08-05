@@ -1,0 +1,190 @@
+loop ID = init_array_D1N1
+loop at depth = 1
+basic blocks = 2
+inst = 10
+coverage wrt function = 83%
+load = 0
+store = 1
+load/store ratio = 0
+memory allocation = 0
+GEP instructions = 1
+all memory instructions = 2
+all memory instructions (%) = 20%
+binary instructions = 2
+binary instructions (%) = 20%
+integer = 2
+floating point = 0
+int/fp ratio = INF
+most common data type = i64
+contain vector instructions = 0
+%vector instructions = 0%
+trip count = 2000
+cross-iteration dependency detected = 0
+exlusive basic blocks = 2
+exlusive inst = 10
+exlusive ratio = 100%
+critical edges = 0
+unconditonal branch = 1
+conditional branch = 1
+undirect branch = 0
+PHI node = 1
+function call = 0
+#basic block with <50 insts = 2
+#basic block with 50-100 insts = 0
+#basic block with >100 insts = 0
+
+
+
+
+loop ID = kernel_durbin_D2N11
+loop at depth = 2
+basic blocks = 2
+inst = 13
+coverage wrt function = 20%
+load = 2
+store = 0
+load/store ratio = INF
+memory allocation = 0
+GEP instructions = 2
+all memory instructions = 4
+all memory instructions (%) = 30%
+binary instructions = 4
+binary instructions (%) = 30%
+integer = 2
+floating point = 2
+int/fp ratio = 1
+most common data type = double
+contain vector instructions = 0
+%vector instructions = 0%
+trip count = -1
+cross-iteration dependency detected = 0
+exlusive basic blocks = 2
+exlusive inst = 13
+exlusive ratio = 100%
+critical edges = 0
+unconditonal branch = 1
+conditional branch = 1
+undirect branch = 0
+PHI node = 2
+function call = 0
+#basic block with <50 insts = 2
+#basic block with 50-100 insts = 0
+#basic block with >100 insts = 0
+
+
+
+
+loop ID = kernel_durbin_D2N12
+loop at depth = 2
+basic blocks = 2
+inst = 14
+coverage wrt function = 22%
+load = 2
+store = 1
+load/store ratio = 2
+memory allocation = 0
+GEP instructions = 3
+all memory instructions = 6
+all memory instructions (%) = 42%
+binary instructions = 4
+binary instructions (%) = 28%
+integer = 2
+floating point = 2
+int/fp ratio = 1
+most common data type = double
+contain vector instructions = 0
+%vector instructions = 0%
+trip count = -1
+cross-iteration dependency detected = 0
+exlusive basic blocks = 2
+exlusive inst = 14
+exlusive ratio = 100%
+critical edges = 0
+unconditonal branch = 1
+conditional branch = 1
+undirect branch = 0
+PHI node = 1
+function call = 0
+#basic block with <50 insts = 2
+#basic block with 50-100 insts = 0
+#basic block with >100 insts = 0
+
+
+
+
+loop ID = kernel_durbin_D1N1
+loop at depth = 1
+basic blocks = 8
+inst = 52
+coverage wrt function = 83%
+load = 5
+store = 2
+load/store ratio = 2
+memory allocation = 0
+GEP instructions = 7
+all memory instructions = 14
+all memory instructions (%) = 26%
+binary instructions = 19
+binary instructions (%) = 36%
+integer = 9
+floating point = 10
+int/fp ratio = 0
+most common data type = double
+contain vector instructions = 0
+%vector instructions = 0%
+trip count = -1
+cross-iteration dependency detected = 1
+exlusive basic blocks = 4
+exlusive inst = 25
+exlusive ratio = 48%
+critical edges = 0
+unconditonal branch = 5
+conditional branch = 3
+undirect branch = 0
+PHI node = 7
+function call = 1
+#basic block with <50 insts = 8
+#basic block with 50-100 insts = 0
+#basic block with >100 insts = 0
+
+
+
+
+loop ID = print_array_D1N1
+loop at depth = 1
+basic blocks = 3
+inst = 15
+coverage wrt function = 60%
+load = 3
+store = 0
+load/store ratio = INF
+memory allocation = 0
+GEP instructions = 1
+all memory instructions = 4
+all memory instructions (%) = 26%
+binary instructions = 2
+binary instructions (%) = 13%
+integer = 2
+floating point = 0
+int/fp ratio = INF
+most common data type = i32
+contain vector instructions = 0
+%vector instructions = 0%
+trip count = 2000
+cross-iteration dependency detected = 0
+exlusive basic blocks = 3
+exlusive inst = 15
+exlusive ratio = 100%
+critical edges = 2
+unconditonal branch = 1
+conditional branch = 2
+undirect branch = 0
+PHI node = 1
+function call = 2
+#basic block with <50 insts = 3
+#basic block with 50-100 insts = 0
+#basic block with >100 insts = 0
+
+
+
+

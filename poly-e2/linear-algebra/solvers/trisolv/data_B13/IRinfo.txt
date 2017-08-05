@@ -1,0 +1,190 @@
+loop ID = init_array_D2N11
+loop at depth = 2
+basic blocks = 1
+inst = 20
+coverage wrt function = 35%
+load = 0
+store = 1
+load/store ratio = 0
+memory allocation = 0
+GEP instructions = 1
+all memory instructions = 2
+all memory instructions (%) = 10%
+binary instructions = 6
+binary instructions (%) = 30%
+integer = 6
+floating point = 0
+int/fp ratio = INF
+most common data type = i32
+contain vector instructions = 1
+%vector instructions = 33%
+trip count = -1
+cross-iteration dependency detected = 0
+exlusive basic blocks = 1
+exlusive inst = 20
+exlusive ratio = 100%
+critical edges = 1
+unconditonal branch = 0
+conditional branch = 1
+undirect branch = 0
+PHI node = 1
+function call = 0
+#basic block with <50 insts = 1
+#basic block with 50-100 insts = 0
+#basic block with >100 insts = 0
+
+
+
+
+loop ID = init_array_D1N1
+loop at depth = 1
+basic blocks = 9
+inst = 48
+coverage wrt function = 85%
+load = 0
+store = 4
+load/store ratio = 0
+memory allocation = 0
+GEP instructions = 4
+all memory instructions = 8
+all memory instructions (%) = 16%
+binary instructions = 11
+binary instructions (%) = 22%
+integer = 9
+floating point = 2
+int/fp ratio = 4
+most common data type = i64
+contain vector instructions = 1
+%vector instructions = 18%
+trip count = -1
+cross-iteration dependency detected = 0
+exlusive basic blocks = 8
+exlusive inst = 28
+exlusive ratio = 58%
+critical edges = 4
+unconditonal branch = 5
+conditional branch = 4
+undirect branch = 0
+PHI node = 3
+function call = 0
+#basic block with <50 insts = 9
+#basic block with 50-100 insts = 0
+#basic block with >100 insts = 0
+
+
+
+
+loop ID = kernel_trisolv_D2N11
+loop at depth = 2
+basic blocks = 1
+inst = 20
+coverage wrt function = 26%
+load = 4
+store = 2
+load/store ratio = 2
+memory allocation = 0
+GEP instructions = 4
+all memory instructions = 10
+all memory instructions (%) = 50%
+binary instructions = 6
+binary instructions (%) = 30%
+integer = 2
+floating point = 4
+int/fp ratio = 0
+most common data type = double
+contain vector instructions = 0
+%vector instructions = 0%
+trip count = -1
+cross-iteration dependency detected = 0
+exlusive basic blocks = 1
+exlusive inst = 20
+exlusive ratio = 100%
+critical edges = 1
+unconditonal branch = 0
+conditional branch = 1
+undirect branch = 0
+PHI node = 2
+function call = 0
+#basic block with <50 insts = 1
+#basic block with 50-100 insts = 0
+#basic block with >100 insts = 0
+
+
+
+
+loop ID = kernel_trisolv_D1N1
+loop at depth = 1
+basic blocks = 11
+inst = 67
+coverage wrt function = 89%
+load = 8
+store = 5
+load/store ratio = 1
+memory allocation = 0
+GEP instructions = 8
+all memory instructions = 21
+all memory instructions (%) = 31%
+binary instructions = 18
+binary instructions (%) = 26%
+integer = 11
+floating point = 7
+int/fp ratio = 1
+most common data type = i64
+contain vector instructions = 0
+%vector instructions = 0%
+trip count = -1
+cross-iteration dependency detected = 1
+exlusive basic blocks = 10
+exlusive inst = 47
+exlusive ratio = 70%
+critical edges = 5
+unconditonal branch = 6
+conditional branch = 5
+undirect branch = 0
+PHI node = 9
+function call = 0
+#basic block with <50 insts = 11
+#basic block with 50-100 insts = 0
+#basic block with >100 insts = 0
+
+
+
+
+loop ID = print_array_D1N1
+loop at depth = 1
+basic blocks = 3
+inst = 16
+coverage wrt function = 51%
+load = 3
+store = 0
+load/store ratio = INF
+memory allocation = 0
+GEP instructions = 1
+all memory instructions = 4
+all memory instructions (%) = 25%
+binary instructions = 2
+binary instructions (%) = 12%
+integer = 2
+floating point = 0
+int/fp ratio = INF
+most common data type = i32
+contain vector instructions = 0
+%vector instructions = 0%
+trip count = -1
+cross-iteration dependency detected = 0
+exlusive basic blocks = 3
+exlusive inst = 16
+exlusive ratio = 100%
+critical edges = 2
+unconditonal branch = 1
+conditional branch = 2
+undirect branch = 0
+PHI node = 2
+function call = 2
+#basic block with <50 insts = 3
+#basic block with 50-100 insts = 0
+#basic block with >100 insts = 0
+
+
+
+

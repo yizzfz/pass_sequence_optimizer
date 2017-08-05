@@ -1,0 +1,114 @@
+loop ID = _Z4testPhS__21
+loop at depth = 2
+basic blocks = 6
+inst = 33
+coverage wrt function = 58%
+load = 10
+store = 3
+load/store ratio = 3
+memory allocation = 0
+GEP instructions = 2
+all memory instructions = 15
+all memory instructions (%) = 45%
+binary instructions = 7
+binary instructions (%) = 21%
+integer = 7
+floating point = 0
+int/fp ratio = INF
+most common data type = i32
+contain vector instructions = 0
+%vector instructions = 0%
+trip count = -1
+cross-iteration dependency detected = 1
+exlusive basic blocks = 6
+exlusive inst = 33
+exlusive ratio = 100%
+critical edges = 0
+unconditonal branch = 4
+conditional branch = 2
+undirect branch = 0
+PHI node = 0
+function call = 1
+#basic block with <50 insts = 6
+#basic block with 50-100 insts = 0
+#basic block with >100 insts = 0
+
+
+
+
+loop ID = _Z4testPhS__10
+loop at depth = 1
+basic blocks = 10
+inst = 45
+coverage wrt function = 80%
+load = 13
+store = 5
+load/store ratio = 2
+memory allocation = 0
+GEP instructions = 2
+all memory instructions = 20
+all memory instructions (%) = 44%
+binary instructions = 9
+binary instructions (%) = 20%
+integer = 9
+floating point = 0
+int/fp ratio = INF
+most common data type = i32
+contain vector instructions = 0
+%vector instructions = 0%
+trip count = -1
+cross-iteration dependency detected = 1
+exlusive basic blocks = 4
+exlusive inst = 12
+exlusive ratio = 26%
+critical edges = 0
+unconditonal branch = 7
+conditional branch = 3
+undirect branch = 0
+PHI node = 0
+function call = 1
+#basic block with <50 insts = 10
+#basic block with 50-100 insts = 0
+#basic block with >100 insts = 0
+
+
+
+
+loop ID = main_10
+loop at depth = 1
+basic blocks = 3
+inst = 17
+coverage wrt function = 45%
+load = 6
+store = 2
+load/store ratio = 3
+memory allocation = 0
+GEP instructions = 1
+all memory instructions = 9
+all memory instructions (%) = 52%
+binary instructions = 2
+binary instructions (%) = 11%
+integer = 2
+floating point = 0
+int/fp ratio = INF
+most common data type = i32
+contain vector instructions = 0
+%vector instructions = 0%
+trip count = -1
+cross-iteration dependency detected = 1
+exlusive basic blocks = 3
+exlusive inst = 17
+exlusive ratio = 100%
+critical edges = 0
+unconditonal branch = 2
+conditional branch = 1
+undirect branch = 0
+PHI node = 0
+function call = 0
+#basic block with <50 insts = 3
+#basic block with 50-100 insts = 0
+#basic block with >100 insts = 0
+
+
+
+

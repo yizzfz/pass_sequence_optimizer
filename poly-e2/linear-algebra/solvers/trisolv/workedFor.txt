@@ -1,0 +1,4 @@
+/local/scratch/hc475/summer/workspace/polybench-c-4.2.1-beta/linear-algebra/solvers/trisolv
+/local/scratch/hc475/summer/workspace/polybench-c-4.2.1-beta/linear-algebra/solvers/durbin
+/local/scratch/hc475/summer/workspace/polybench-c-4.2.1-beta/stencils/jacobi-1d
+/local/scratch/hc475/summer/workspace/polybench-c-4.2.1-beta/stencils/tmp

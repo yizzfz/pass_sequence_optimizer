@@ -1,0 +1,114 @@
+loop ID = init_array_D2N11
+loop execution count = 1318800 times
+number of instructions executed here (excluding subloops) = 21100800
+number of instructions executed here = 21100800
+
+
+loop ID = init_array_D1N1
+loop execution count = 1200 times
+number of instructions executed here (excluding subloops) = 9600
+number of instructions executed here = 21110400
+
+
+loop ID = init_array_D2N21
+loop execution count = 599000 times
+number of instructions executed here (excluding subloops) = 13777000
+number of instructions executed here = 13777000
+
+
+loop ID = init_array_D1N2
+loop execution count = 1000 times
+number of instructions executed here (excluding subloops) = 26000
+number of instructions executed here = 13803000
+
+
+loop ID = init_array_D2N31
+loop execution count = 1099000 times
+number of instructions executed here (excluding subloops) = 17584000
+number of instructions executed here = 17584000
+
+
+loop ID = init_array_D1N3
+loop execution count = 1000 times
+number of instructions executed here (excluding subloops) = 8000
+number of instructions executed here = 17592000
+
+
+loop ID = kernel_gemm_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = kernel_gemm_D2N12
+loop execution count = 136000 times
+number of instructions executed here (excluding subloops) = 3944000
+number of instructions executed here = 3944000
+
+
+loop ID = kernel_gemm_D2N13
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = kernel_gemm_D3N141
+loop execution count = 328800000 times
+number of instructions executed here (excluding subloops) = 9864000000
+number of instructions executed here = 9864000000
+
+
+loop ID = kernel_gemm_D3N142
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = kernel_gemm_D2N14
+loop execution count = 4800000 times
+number of instructions executed here (excluding subloops) = 398400000
+number of instructions executed here = 10262400000
+
+
+loop ID = kernel_gemm_D1N1
+loop execution count = 6000 times
+number of instructions executed here (excluding subloops) = 336000
+number of instructions executed here = 10266680000
+
+
+loop ID = kernel_gemm_D3N211
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = kernel_gemm_D3N212
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = kernel_gemm_D2N21
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = kernel_gemm_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = print_array_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = print_array_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+

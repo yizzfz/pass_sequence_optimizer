@@ -1,0 +1,18 @@
+loop ID = _Z4testPhS__21
+loop execution count = 60000 times
+number of instructions executed here (excluding subloops) = 2340000
+number of instructions executed here = 2340000
+
+
+loop ID = _Z4testPhS__10
+loop execution count = 300 times
+number of instructions executed here (excluding subloops) = 4500
+number of instructions executed here = 2344500
+
+
+loop ID = main_10
+loop execution count = 60000 times
+number of instructions executed here (excluding subloops) = 1200000
+number of instructions executed here = 1200000
+
+

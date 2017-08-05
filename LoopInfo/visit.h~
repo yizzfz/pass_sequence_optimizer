@@ -1,0 +1,12 @@
+	void visitAllocaInst(AllocaInst &I) {
+    instCnt[AddrSpaceCastInst::MemoryOps::Alloca]++;
+  }
+  
+	void visitStoreInst(StoreInst &I) {
+    instCnt[AddrSpaceCastInst::MemoryOps::Store]++;
+  }
+  
+	void visitLoadInst(LoadInst &AI) {
+    instCnt[AddrSpaceCastInst::MemoryOps::Load]++;
+  }
+

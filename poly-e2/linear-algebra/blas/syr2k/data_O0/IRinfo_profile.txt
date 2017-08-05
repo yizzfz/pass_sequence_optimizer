@@ -1,0 +1,102 @@
+loop ID = init_array_D2N11
+loop execution count = 1438800 times
+number of instructions executed here (excluding subloops) = 23020800
+number of instructions executed here = 23020800
+
+
+loop ID = init_array_D1N1
+loop execution count = 1200 times
+number of instructions executed here (excluding subloops) = 9600
+number of instructions executed here = 23030400
+
+
+loop ID = init_array_D2N21
+loop execution count = 1198800 times
+number of instructions executed here (excluding subloops) = 27572400
+number of instructions executed here = 27572400
+
+
+loop ID = init_array_D1N2
+loop execution count = 1200 times
+number of instructions executed here (excluding subloops) = 9600
+number of instructions executed here = 27582000
+
+
+loop ID = kernel_syr2k_D2N11
+loop execution count = 900 times
+number of instructions executed here (excluding subloops) = 12600
+number of instructions executed here = 12600
+
+
+loop ID = kernel_syr2k_D2N12
+loop execution count = 88357 times
+number of instructions executed here (excluding subloops) = 2562353
+number of instructions executed here = 2562353
+
+
+loop ID = kernel_syr2k_D2N13
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = kernel_syr2k_D3N141
+loop execution count = 358801000 times
+number of instructions executed here (excluding subloops) = 11481632000
+number of instructions executed here = 11481632000
+
+
+loop ID = kernel_syr2k_D3N142
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = kernel_syr2k_D2N14
+loop execution count = 4796000 times
+number of instructions executed here (excluding subloops) = 268576000
+number of instructions executed here = 11750208000
+
+
+loop ID = kernel_syr2k_D1N1
+loop execution count = 1200 times
+number of instructions executed here (excluding subloops) = 76800
+number of instructions executed here = 11752859753
+
+
+loop ID = kernel_syr2k_D2N21
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = kernel_syr2k_D2N22
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = kernel_syr2k_D2N23
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = kernel_syr2k_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = print_array_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = print_array_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+

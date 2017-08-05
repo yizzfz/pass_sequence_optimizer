@@ -11,12 +11,12 @@ class_names = ['gemm', 'gemver', 'gesummv', 'symm', 'syr2k', 'syrk', 'trmm',
 
 def main():
     parent_dir = '../../poly-e2/'
-    # get_performance('../../poly-e2/stencils/seidel-2d/data_O3_1', 'IRinfo.txt')
-    # sys.exit()
+    get_performance('../../poly-e2/stencils/seidel-2d/data_O3_1', 'IRinfo.txt')
+    sys.exit()
     #parent_dir = '../../poly-e2/stencils/jacobi-1d/data_A12'
     parent_dir = '../../poly-e2'
     pass_dict = get_all_passlist()
-    
+
     for root, dirs, files in os.walk(parent_dir):
         for fd in files:
             for item in class_names:

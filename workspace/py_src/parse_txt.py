@@ -1,6 +1,8 @@
 import os
 import sys
 
+data_types = ['half', 'float', 'double', 'i1', 'i8', 'i16', 'i32', 'i64', 'i1*', 'i8*', 'i16*', 'i32*', 'i64*', 'vector', 'other']
+
 
 class_names = ['gemm', 'gemver', 'gesummv', 'symm', 'syr2k', 'syrk', 'trmm',
                '2mm', '3mm', 'atax', 'bicg', 'doitgen', 'mvt', 'cholesky',
@@ -11,8 +13,8 @@ class_names = ['gemm', 'gemver', 'gesummv', 'symm', 'syr2k', 'syrk', 'trmm',
 
 def main():
     parent_dir = '../../poly-e2/'
-    get_performance('../../poly-e2/stencils/seidel-2d/data_O3_1', 'IRinfo.txt')
-    sys.exit()
+    #get_IRinfo('../../poly-e2/stencils/seidel-2d/data_O3_1/IRinfo.txt')
+    #sys.exit()
     #parent_dir = '../../poly-e2/stencils/jacobi-1d/data_A12'
     parent_dir = '../../poly-e2'
     pass_dict = get_all_passlist()
@@ -20,11 +22,13 @@ def main():
     for root, dirs, files in os.walk(parent_dir):
         for fd in files:
             for item in class_names:
-                if (item in root) and (fd.endswith('.txt')):
+                if (item in root) and (fd.endswith('.txt')) and not ('err' in root):
                     if fd=="performance.txt":
                         (time, size) = get_performance(root+'/'+fd)
                     if fd=="passList.txt":
                         passlist = get_passlist(root+'/'+fd, pass_dict)
+                    if fd=="IRinfo.txt":
+                       res = get_IRinfo(root+'/'+fd)
 
 def get_all_passlist():
     pass_dict = {}
@@ -36,7 +40,8 @@ def get_all_passlist():
 
     return pass_dict
 
-def get_performance(f_dir, name):
+
+def get_IRinfo(file):
     performance_metrics = [
     'loop ID', 'loop at depth', 'basic blocks', 'inst', 'coverage wrt function',
     'load', 'store', 'load/store ratio', 'memory allocation', 'GEP instructions',
@@ -50,28 +55,47 @@ def get_performance(f_dir, name):
     'basic block with >100 insts']
     loops_info = []
     tmp = None
-    with open(f_dir+'/'+name, 'rb') as f:
-        for line in f:
-            if 'loop ID' in line:
-                if tmp != None:
-                    loops_info.append(tmp)
-                tmp = {}
-                # split based on ' = '
-                num = line.split(' = ')[1]
-                # remove \n
-                num = num[0:len(num)-2]
-                tmp['loop ID'] = num
-            else:
-                for metric in performance_metrics:
-                    if metric in line:
-                        num = line.split(' = ')[1]
+    
+    datatype_dict = {}
+    for i, p in enumerate(data_types):
+      datatype_dict[p] = i
+      
+    with open(file, 'rb') as f:
+        try:
+            for line in f:
+                if 'loop ID' in line:
+                    if tmp != None:
+                        loops_info.append(tmp)
+                    tmp = {}
+                    # split based on ' = '
+                    num = line.split(' = ')[1]
+                    # remove \n
+                    num = num[0:len(num)-2]
+                    tmp['loop ID'] = num
+                elif line=='\n':
+                    continue
+                else:
+                    metric = line.split(' = ')[0]
+                    num = line.split(' = ')[1]
+                    if metric in performance_metrics:
                         num = num[0:len(num)-1]
                         if '%' in num:
-                            num = num[0:len(num)-1] / float(100)
+                            num = float(num[0:len(num)-1]) / float(100)
                         elif metric == 'most common data type':
-                            TO DO
+                            if '<' in num and '>' in num:
+                                num = datatype_dict['vector']
+                            elif datatype_dict.has_key(num):
+                                num = datatype_dict[num]
+                            else:
+                                num = datatype_dict['other']
+                        elif num == 'INF':
+                            num = float('Inf')
+                        
                         tmp[metric] = float(num)
-    print(loops_info[0])
+        except IndexError:
+            print 'error in ' + file
+            
+    #print(loops_info[0])
 
 def get_performance(file):
     with open(file, "rb") as f:

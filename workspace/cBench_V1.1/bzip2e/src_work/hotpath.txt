@@ -1,0 +1,877 @@
+Counters:
+  BZ2_hbMakeCodeLengths:
+    Hash: 0x0000005651123af2
+    Counters: 23
+    Block counts: [36800, 26800, 157760, 56320, 47520, 51120, 45560, 22160, 22480, 31680, 31680, 0, 9960, 19800, 0, 6360, 7000, 0, 28440, 0, 0, 3240, 1920]
+  BZ2_hbAssignCodes:
+    Hash: 0x0000000f3de7ad2c
+    Counters: 4
+    Block counts: [57600, 7920, 3480, 480]
+  BZ2_hbCreateDecodeTables:
+    Hash: 0x0000002d70716d7e
+    Counters: 10
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  BZ2_hbMakeCodeLengths:
+    Hash: 0x0000005651123af2
+    Counters: 23
+    Block counts: [36800, 26800, 157760, 56320, 47520, 51120, 45560, 22160, 22480, 31680, 31680, 0, 9960, 19800, 0, 6360, 7000, 0, 28440, 0, 0, 3240, 1920]
+  BZ2_hbAssignCodes:
+    Hash: 0x0000000f3de7ad2c
+    Counters: 4
+    Block counts: [57600, 7920, 3480, 480]
+  BZ2_hbCreateDecodeTables:
+    Hash: 0x0000002d70716d7e
+    Counters: 10
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  main1:
+    Hash: 0x010001217fb83c27
+    Counters: 95
+    Block counts: [0, 200, 40, 160, 0, 0, 240, 160, 200, 0, 0, 40, 0, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 0, 0, 0, 0, 160, 0, 0, 0, 0, 280, 200, 200, 200, 0, 0, 0, 0, 160, 0, 200, 0, 0, 0, 0, 200, 40, 0, 0, 0, 40, 0, 0, 40, 0, 0, 40, 0, 0, 0, 0, 0, 0, 40, 0, 0, 0, 0, 40, 0, 0, 0, 0, 0, 0, 40, 0, 0, 0, 0, 200, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:mySIGSEGVorSIGBUScatcher:
+    Hash: 0x0000000a9010925a
+    Counters: 3
+    Block counts: [0, 0, 0]
+  tmp1.ll:copyFileName:
+    Hash: 0x00000005ca4d8805
+    Counters: 2
+    Block counts: [200, 0]
+  tmp1.ll:addFlagsFromEnvVar:
+    Hash: 0x00000020808f82d3
+    Counters: 9
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 80, 0]
+  tmp1.ll:snocString:
+    Hash: 0x0000000a7ee9f778
+    Counters: 3
+    Block counts: [240, 160, 200]
+  tmp1.ll:license:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  tmp1.ll:usage:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  tmp1.ll:redundant:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  tmp1.ll:mySignalCatcher:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  tmp1.ll:compress:
+    Hash: 0x01000078c0f43103
+    Counters: 44
+    Block counts: [160, 0, 40, 0, 0, 0, 0, 40, 0, 0, 40, 0, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:uncompress:
+    Hash: 0x0100008d94114b2a
+    Counters: 50
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:setExit:
+    Hash: 0x00000005f42b0f02
+    Counters: 2
+    Block counts: [0, 0]
+  tmp1.ll:testf:
+    Hash: 0x0000003914523bc6
+    Counters: 22
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:showFileNames:
+    Hash: 0x00000005f42b0f02
+    Counters: 2
+    Block counts: [0, 0]
+  tmp1.ll:cleanUpAndFail:
+    Hash: 0x0000001e4d821e35
+    Counters: 11
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:cadvise:
+    Hash: 0x00000005f42b0f02
+    Counters: 2
+    Block counts: [0, 0]
+  tmp1.ll:mkCell:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [200]
+  tmp1.ll:myMalloc:
+    Hash: 0x00000005ca4d8805
+    Counters: 2
+    Block counts: [400, 0]
+  tmp1.ll:outOfMemory:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  tmp1.ll:panic:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  tmp1.ll:containsDubiousChars:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [40]
+  tmp1.ll:fileExists:
+    Hash: 0x00000005f42b0f02
+    Counters: 2
+    Block counts: [40, 40]
+  tmp1.ll:hasSuffix:
+    Hash: 0x00000009f45bd106
+    Counters: 3
+    Block counts: [0, 160, 0]
+  tmp1.ll:notAStandardFile:
+    Hash: 0x00000009f45bd106
+    Counters: 3
+    Block counts: [0, 0, 0]
+  tmp1.ll:countHardLinks:
+    Hash: 0x00000006e852da94
+    Counters: 2
+    Block counts: [0, 0]
+  tmp1.ll:saveInputFileMetaInfo:
+    Hash: 0x00000005ca4d8805
+    Counters: 2
+    Block counts: [0, 0]
+  tmp1.ll:fopen_output_safely:
+    Hash: 0x00000009b67ed67b
+    Counters: 3
+    Block counts: [0, 0, 0]
+  tmp1.ll:pad:
+    Hash: 0x0000000af3ee4590
+    Counters: 3
+    Block counts: [0, 0, 0]
+  tmp1.ll:compressStream:
+    Hash: 0x00000046afa2db8b
+    Counters: 23
+    Block counts: [8600, 8600, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:applySavedTimeInfoToOutputFile:
+    Hash: 0x00000005ca4d8805
+    Counters: 2
+    Block counts: [0, 0]
+  tmp1.ll:ioError:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  tmp1.ll:myfeof:
+    Hash: 0x00000006e852da94
+    Counters: 2
+    Block counts: [8600, 40]
+  tmp1.ll:applySavedFileAttrToOutputFile:
+    Hash: 0x00000005ca4d8805
+    Counters: 2
+    Block counts: [0, 0]
+  tmp1.ll:uInt64_from_UInt32s:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  tmp1.ll:uInt64_to_double:
+    Hash: 0x00000007f2c35b9c
+    Counters: 2
+    Block counts: [0, 0]
+  tmp1.ll:uInt64_toAscii:
+    Hash: 0x0000000b2f133568
+    Counters: 3
+    Block counts: [0, 0, 0]
+  tmp1.ll:configError:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  tmp1.ll:uInt64_qrm10:
+    Hash: 0x00000007f2c35b9c
+    Counters: 2
+    Block counts: [0, 0]
+  tmp1.ll:uInt64_isZero:
+    Hash: 0x0000000be316c968
+    Counters: 3
+    Block counts: [0, 0, 0]
+  tmp1.ll:mapSuffix:
+    Hash: 0x00000006e852da94
+    Counters: 2
+    Block counts: [0, 0]
+  tmp1.ll:uncompressStream:
+    Hash: 0x0000007d9b3079b7
+    Counters: 41
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:crcError:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  tmp1.ll:compressedStreamEOF:
+    Hash: 0x00000006f42b0f02
+    Counters: 2
+    Block counts: [0, 0]
+  tmp1.ll:testStream:
+    Hash: 0x0000004b21f12daa
+    Counters: 25
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  main1:
+    Hash: 0x0100012c03b4c9e6
+    Counters: 95
+    Block counts: [160, 40, 0, 40, 200, 160, 40, 200, 160, 200, 0, 0, 40, 0, 40, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 0, 0, 0, 0, 0, 160, 0, 0, 0, 0, 280, 200, 200, 200, 0, 0, 160, 200, 0, 0, 0, 0, 200, 40, 0, 0, 0, 40, 0, 0, 0, 0, 0, 40, 40, 0, 0, 0, 40, 0, 40, 0, 0, 0, 40, 40, 0, 0, 0, 0, 0, 0, 40, 0, 0, 0, 0, 200, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  bzip2.2.ll:mySIGSEGVorSIGBUScatcher:
+    Hash: 0x0000000a9010925a
+    Counters: 3
+    Block counts: [0, 0, 0]
+  bzip2.2.ll:copyFileName:
+    Hash: 0x00000005ca4d8805
+    Counters: 2
+    Block counts: [200, 0]
+  bzip2.2.ll:addFlagsFromEnvVar:
+    Hash: 0x00000020808f82d3
+    Counters: 9
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 80, 0]
+  bzip2.2.ll:snocString:
+    Hash: 0x0000000a7ee9f778
+    Counters: 3
+    Block counts: [240, 160, 200]
+  bzip2.2.ll:license:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  bzip2.2.ll:usage:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  bzip2.2.ll:redundant:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  bzip2.2.ll:mySignalCatcher:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  bzip2.2.ll:compress:
+    Hash: 0x0100007e2725857f
+    Counters: 44
+    Block counts: [160, 40, 0, 0, 0, 40, 40, 0, 40, 0, 40, 0, 0, 0, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  bzip2.2.ll:uncompress:
+    Hash: 0x0100008e4018fe77
+    Counters: 50
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  bzip2.2.ll:setExit:
+    Hash: 0x00000005f42b0f02
+    Counters: 2
+    Block counts: [0, 0]
+  bzip2.2.ll:testf:
+    Hash: 0x0000003a2fed27cc
+    Counters: 22
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  bzip2.2.ll:showFileNames:
+    Hash: 0x00000005f42b0f02
+    Counters: 2
+    Block counts: [0, 0]
+  bzip2.2.ll:cleanUpAndFail:
+    Hash: 0x0000001e4d821e35
+    Counters: 11
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  bzip2.2.ll:cadvise:
+    Hash: 0x00000005f42b0f02
+    Counters: 2
+    Block counts: [0, 0]
+  bzip2.2.ll:mkCell:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [200]
+  bzip2.2.ll:myMalloc:
+    Hash: 0x00000005ca4d8805
+    Counters: 2
+    Block counts: [400, 0]
+  bzip2.2.ll:outOfMemory:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  bzip2.2.ll:panic:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  bzip2.2.ll:containsDubiousChars:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [40]
+  bzip2.2.ll:fileExists:
+    Hash: 0x00000005f42b0f02
+    Counters: 2
+    Block counts: [40, 40]
+  bzip2.2.ll:hasSuffix:
+    Hash: 0x00000009f45bd106
+    Counters: 3
+    Block counts: [0, 160, 0]
+  bzip2.2.ll:notAStandardFile:
+    Hash: 0x00000009f45bd106
+    Counters: 3
+    Block counts: [0, 0, 0]
+  bzip2.2.ll:countHardLinks:
+    Hash: 0x00000006e852da94
+    Counters: 2
+    Block counts: [0, 0]
+  bzip2.2.ll:saveInputFileMetaInfo:
+    Hash: 0x00000005ca4d8805
+    Counters: 2
+    Block counts: [0, 0]
+  bzip2.2.ll:fopen_output_safely:
+    Hash: 0x00000009b67ed67b
+    Counters: 3
+    Block counts: [0, 0, 0]
+  bzip2.2.ll:pad:
+    Hash: 0x0000000af3ee4590
+    Counters: 3
+    Block counts: [0, 0, 0]
+  bzip2.2.ll:compressStream:
+    Hash: 0x00000046afa2db8b
+    Counters: 23
+    Block counts: [8600, 8600, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  bzip2.2.ll:applySavedTimeInfoToOutputFile:
+    Hash: 0x00000005ca4d8805
+    Counters: 2
+    Block counts: [0, 0]
+  bzip2.2.ll:ioError:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  bzip2.2.ll:myfeof:
+    Hash: 0x00000006e852da94
+    Counters: 2
+    Block counts: [8600, 40]
+  bzip2.2.ll:applySavedFileAttrToOutputFile:
+    Hash: 0x00000005ca4d8805
+    Counters: 2
+    Block counts: [0, 0]
+  bzip2.2.ll:uInt64_from_UInt32s:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  bzip2.2.ll:uInt64_to_double:
+    Hash: 0x00000007f2c35b9c
+    Counters: 2
+    Block counts: [0, 0]
+  bzip2.2.ll:uInt64_toAscii:
+    Hash: 0x0000000b2f133568
+    Counters: 3
+    Block counts: [0, 0, 0]
+  bzip2.2.ll:configError:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  bzip2.2.ll:uInt64_qrm10:
+    Hash: 0x00000007f2c35b9c
+    Counters: 2
+    Block counts: [0, 0]
+  bzip2.2.ll:uInt64_isZero:
+    Hash: 0x0000000be316c968
+    Counters: 3
+    Block counts: [0, 0, 0]
+  bzip2.2.ll:mapSuffix:
+    Hash: 0x00000006e852da94
+    Counters: 2
+    Block counts: [0, 0]
+  bzip2.2.ll:uncompressStream:
+    Hash: 0x000000806ed8e352
+    Counters: 41
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  bzip2.2.ll:crcError:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  bzip2.2.ll:compressedStreamEOF:
+    Hash: 0x00000006f42b0f02
+    Counters: 2
+    Block counts: [0, 0]
+  bzip2.2.ll:testStream:
+    Hash: 0x0000004c10beb782
+    Counters: 25
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  BZ2_bsInitWrite:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [40]
+  BZ2_compressBlock:
+    Hash: 0x00000017ea1ca2f3
+    Counters: 8
+    Block counts: [80, 80, 80, 40, 40, 40, 0, 0]
+  tmp1.ll:bsPutUChar:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [880]
+  tmp1.ll:bsPutUInt32:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [120]
+  tmp1.ll:bsW:
+    Hash: 0x00000006cd398548
+    Counters: 2
+    Block counts: [19426480, 44544920]
+  tmp1.ll:generateMTFValues:
+    Hash: 0x000000343979a350
+    Counters: 13
+    Block counts: [175098360, 333720, 3385760, 1320, 1160, 4146440, 38779080, 80, 0, 0, 3675640, 80, 0]
+  tmp1.ll:sendMTFValues:
+    Hash: 0x000001318229e64c
+    Counters: 79
+    Block counts: [63360, 31680, 5000, 2520, 20400000, 20400000, 10560, 10560, 7272680, 7920, 1480, 1920, 1920, 1920, 1174840, 7920, 20480, 1174840, 7920, 6600, 320, 2640, 1160, 1480, 5400, 5280, 0, 2040, 920, 320, 3400000, 3400000, 1160, 1320, 3399680, 3399680, 1400, 480, 480, 480, 850000, 480, 1280, 1280, 850000, 480, 320, 80, 160, 160, 480, 0, 320, 0, 0, 80, 0, 850000, 0, 1120, 400, 849920, 320, 160, 0, 0, 0, 0, 80, 0, 0, 0, 0, 0, 0, 0, 0, 0, 80]
+  tmp1.ll:bsFinishWrite:
+    Hash: 0x00000006cd398548
+    Counters: 2
+    Block counts: [80, 40]
+  tmp1.ll:makeMaps_e:
+    Hash: 0x0000000a8202e3b6
+    Counters: 3
+    Block counts: [20480, 1160, 80]
+  BZ2_bsInitWrite:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [40]
+  BZ2_compressBlock:
+    Hash: 0x00000017ea1ca2f3
+    Counters: 8
+    Block counts: [80, 80, 80, 40, 40, 40, 0, 0]
+  compress.2.ll:bsPutUChar:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [880]
+  compress.2.ll:bsPutUInt32:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [120]
+  compress.2.ll:bsW:
+    Hash: 0x00000006cd398548
+    Counters: 2
+    Block counts: [19426480, 44544920]
+  compress.2.ll:generateMTFValues:
+    Hash: 0x000000343979a350
+    Counters: 13
+    Block counts: [175098360, 333720, 3385760, 1320, 1160, 4146440, 38779080, 80, 0, 0, 3675640, 80, 0]
+  compress.2.ll:sendMTFValues:
+    Hash: 0x000001318229e64c
+    Counters: 79
+    Block counts: [63360, 31680, 5000, 2520, 20400000, 20400000, 10560, 10560, 7272680, 7920, 1480, 1920, 1920, 1920, 1174840, 7920, 20480, 1174840, 7920, 6600, 320, 2640, 1160, 1480, 5400, 5280, 0, 2040, 920, 320, 3400000, 3400000, 1160, 1320, 3399680, 3399680, 1400, 480, 480, 480, 850000, 480, 1280, 1280, 850000, 480, 320, 80, 160, 160, 480, 0, 320, 0, 0, 80, 0, 850000, 0, 1120, 400, 849920, 320, 160, 0, 0, 0, 0, 80, 0, 0, 0, 0, 0, 0, 0, 0, 0, 80]
+  compress.2.ll:bsFinishWrite:
+    Hash: 0x00000006cd398548
+    Counters: 2
+    Block counts: [80, 40]
+  compress.2.ll:makeMaps_e:
+    Hash: 0x0000000a8202e3b6
+    Counters: 3
+    Block counts: [20480, 1160, 80]
+  BZ2_blockSort:
+    Hash: 0x0000002704219b80
+    Counters: 12
+    Block counts: [25387840, 0, 80, 80, 0, 80, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:fallbackSort:
+    Hash: 0x0000008b6f6c2932
+    Counters: 36
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:mainSort:
+    Hash: 0x0000009da9991aa7
+    Counters: 41
+    Block counts: [5760, 86920, 1160, 5242880, 21961160, 20964360, 5242880, 5242880, 360, 38996880, 5222400, 0, 9898200, 80, 13482160, 2440, 2611200, 400, 400, 5242960, 10731360, 80, 2720, 5242880, 10731360, 80, 20480, 6480, 0, 20480, 0, 0, 20400, 0, 0, 0, 0, 0, 0, 80, 0]
+  tmp1.ll:fallbackQSort3:
+    Hash: 0x00000046b7ee80e1
+    Counters: 19
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:fallbackSimpleSort:
+    Hash: 0x00000022ced7e2dd
+    Counters: 9
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:mainQSort3:
+    Hash: 0x000000489367af26
+    Counters: 21
+    Block counts: [39166560, 38652000, 28327960, 14023240, 1331600, 14054920, 13489360, 19965560, 19373160, 2372480, 0, 1331600, 148600, 186720, 1006400, 176600, 577520, 475080, 80960, 6480, 0]
+  tmp1.ll:mainSimpleSort:
+    Hash: 0x0000003187b1ec64
+    Counters: 14
+    Block counts: [6820000, 7770640, 8356320, 4292080, 8733920, 2976640, 2132160, 1629320, 292000, 2080480, 1337640, 1564160, 1390280, 0]
+  tmp1.ll:mmed3:
+    Hash: 0x0000000bf786dad9
+    Counters: 4
+    Block counts: [1331600, 481560, 671400, 294600]
+  tmp1.ll:mainGtU:
+    Hash: 0x000000611c2be2fe
+    Counters: 32
+    Block counts: [27481960, 22241840, 3378920, 348400, 36840, 4760, 560, 80, 80, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  BZ2_blockSort:
+    Hash: 0x0000002704219b80
+    Counters: 12
+    Block counts: [25387840, 0, 80, 80, 0, 80, 0, 0, 0, 0, 0, 0]
+  blocksort.2.ll:fallbackSort:
+    Hash: 0x0000008b6f6c2932
+    Counters: 36
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  blocksort.2.ll:mainSort:
+    Hash: 0x0000009da9991aa7
+    Counters: 41
+    Block counts: [5760, 86920, 1160, 5242880, 21961160, 20964360, 5242880, 5242880, 360, 38996880, 5222400, 0, 9898200, 80, 13482160, 2440, 2611200, 400, 400, 5242960, 10731360, 80, 2720, 5242880, 10731360, 80, 20480, 6480, 0, 20480, 0, 0, 20400, 0, 0, 0, 0, 0, 0, 80, 0]
+  blocksort.2.ll:fallbackQSort3:
+    Hash: 0x00000046b7ee80e1
+    Counters: 19
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  blocksort.2.ll:fallbackSimpleSort:
+    Hash: 0x00000022ced7e2dd
+    Counters: 9
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0]
+  blocksort.2.ll:mainQSort3:
+    Hash: 0x000000489367af26
+    Counters: 21
+    Block counts: [39166560, 38652000, 28327960, 14023240, 1331600, 14054920, 13489360, 19965560, 19373160, 2372480, 0, 1331600, 148600, 186720, 1006400, 176600, 577520, 475080, 80960, 6480, 0]
+  blocksort.2.ll:mainSimpleSort:
+    Hash: 0x0000003187b1ec64
+    Counters: 14
+    Block counts: [6820000, 7770640, 8356320, 4292080, 8733920, 2976640, 2132160, 1629320, 292000, 2080480, 1337640, 1564160, 1390280, 0]
+  blocksort.2.ll:mmed3:
+    Hash: 0x0000000bf786dad9
+    Counters: 4
+    Block counts: [1331600, 481560, 671400, 294600]
+  blocksort.2.ll:mainGtU:
+    Hash: 0x000000611c2be2fe
+    Counters: 32
+    Block counts: [27481960, 22241840, 3378920, 348400, 36840, 4760, 560, 80, 80, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  BZ2_decompress:
+    Hash: 0x020303ba751930a7
+    Counters: 283
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:makeMaps_d:
+    Hash: 0x0000000a8202e3b6
+    Counters: 3
+    Block counts: [0, 0, 0]
+  BZ2_decompress:
+    Hash: 0x020303ba751930a7
+    Counters: 283
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  decompress.2.ll:makeMaps_d:
+    Hash: 0x0000000a8202e3b6
+    Counters: 3
+    Block counts: [0, 0, 0]
+  main:
+    Hash: 0x0000000bfb666f9f
+    Counters: 3
+    Block counts: [40, 1, 0]
+  main:
+    Hash: 0x0000000bfb666f9f
+    Counters: 3
+    Block counts: [40, 1, 0]
+  BZ2_bz__AssertH__fail:
+    Hash: 0x00000006f42b0f02
+    Counters: 2
+    Block counts: [0, 0]
+  BZ2_bzlibVersion:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  BZ2_bzCompressInit:
+    Hash: 0x00080030c22486c8
+    Counters: 18
+    Block counts: [0, 40, 0, 40, 40, 40, 0, 40, 0, 40, 40, 0, 0, 0, 0, 0, 40, 40]
+  tmp1.ll:bz_config_ok:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [40]
+  tmp1.ll:default_bzalloc:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [160]
+  tmp1.ll:default_bzfree:
+    Hash: 0x00000005f42b0f02
+    Counters: 2
+    Block counts: [160, 160]
+  tmp1.ll:init_RL:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [80]
+  tmp1.ll:prepare_new_block:
+    Hash: 0x00000007f2c35b9c
+    Counters: 2
+    Block counts: [20480, 80]
+  BZ2_bzCompress:
+    Hash: 0x0100003cb59d7dc1
+    Counters: 23
+    Block counts: [0, 40, 0, 0, 0, 11840, 0, 0, 0, 0, 0, 0, 0, 0, 600, 0, 0, 0, 640, 640, 0, 40, 11840]
+  tmp1.ll:handle_compress:
+    Hash: 0x0000002b74693676
+    Counters: 15
+    Block counts: [80, 40, 40, 40, 0, 40, 0, 40, 40, 0, 3840, 3840, 8600, 40, 0]
+  tmp1.ll:isempty_RL:
+    Hash: 0x00000008f63dd43b
+    Counters: 3
+    Block counts: [680, 0, 0]
+  BZ2_bzCompressEnd:
+    Hash: 0x000400150fc47ec0
+    Counters: 7
+    Block counts: [0, 0, 0, 40, 40, 40, 40]
+  BZ2_bzDecompressInit:
+    Hash: 0x0001001c44032ae5
+    Counters: 10
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  BZ2_indexIntoF:
+    Hash: 0x0000000ad4f4a912
+    Counters: 3
+    Block counts: [0, 0, 0]
+  BZ2_bzDecompress:
+    Hash: 0x00000038edfe877a
+    Counters: 18
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:unRLE_obuf_to_output_SMALL:
+    Hash: 0x0500006cae152d87
+    Counters: 39
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:unRLE_obuf_to_output_FAST:
+    Hash: 0x050000759eb3f2c2
+    Counters: 41
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  BZ2_bzDecompressEnd:
+    Hash: 0x000400150fc47ec0
+    Counters: 7
+    Block counts: [0, 0, 0, 0, 0, 0, 0]
+  BZ2_bzWriteOpen:
+    Hash: 0x00000042eed940dc
+    Counters: 24
+    Block counts: [0, 40, 0, 40, 0, 0, 40, 40, 40, 40, 40, 0, 0, 0, 40, 40, 0, 0, 0, 0, 0, 0, 0, 40]
+  BZ2_bzWrite:
+    Hash: 0x00000052275120ae
+    Counters: 28
+    Block counts: [0, 8600, 8600, 8600, 0, 0, 8600, 3240, 3280, 3280, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8600, 0, 0, 0, 0, 8600, 8600]
+  BZ2_bzWriteClose:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  BZ2_bzWriteClose64:
+    Hash: 0x0000006d3dd899e7
+    Counters: 37
+    Block counts: [0, 600, 0, 0, 0, 0, 0, 0, 0, 0, 40, 640, 640, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0, 40, 0, 0, 40, 0, 0, 0, 0, 0]
+  BZ2_bzReadOpen:
+    Hash: 0x00000049cf47d4e1
+    Counters: 27
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  BZ2_bzReadClose:
+    Hash: 0x0000001e8a9cfafd
+    Counters: 10
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  BZ2_bzRead:
+    Hash: 0x0000006c9b1bfb02
+    Counters: 38
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:myfeof:
+    Hash: 0x00000006e852da94
+    Counters: 2
+    Block counts: [0, 0]
+  BZ2_bzReadGetUnused:
+    Hash: 0x00000026a3523623
+    Counters: 13
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  BZ2_bzBuffToBuffCompress:
+    Hash: 0x00000024d735ba2d
+    Counters: 14
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  BZ2_bzBuffToBuffDecompress:
+    Hash: 0x000000209f05f775
+    Counters: 12
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  BZ2_bzopen:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  tmp1.ll:bzopen_or_bzdopen:
+    Hash: 0x010000388461cde2
+    Counters: 19
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  BZ2_bzdopen:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  BZ2_bzread:
+    Hash: 0x0000000bc2f8d513
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+  BZ2_bzwrite:
+    Hash: 0x00000006e852da94
+    Counters: 2
+    Block counts: [0, 0]
+  BZ2_bzflush:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  BZ2_bzclose:
+    Hash: 0x0000001117658a1f
+    Counters: 6
+    Block counts: [0, 0, 0, 0, 0, 0]
+  BZ2_bzerror:
+    Hash: 0x00000005f42b0f02
+    Counters: 2
+    Block counts: [0, 0]
+  tmp1.ll:copy_output_until_stop:
+    Hash: 0x0000000dfee581e0
+    Counters: 4
+    Block counts: [19426560, 0, 3840, 80]
+  tmp1.ll:copy_input_until_stop:
+    Hash: 0x0000003d0721ec94
+    Counters: 19
+    Block counts: [3136120, 39472240, 3431480, 0, 0, 0, 3136080, 36336120, 0, 0, 3431480, 0, 0, 0, 40, 8600, 0, 40, 0]
+  tmp1.ll:flush_RL:
+    Hash: 0x00000005f42b0f02
+    Counters: 2
+    Block counts: [40, 40]
+  tmp1.ll:add_pair_to_block:
+    Hash: 0x0000000f0764398d
+    Counters: 5
+    Block counts: [6567600, 2866560, 245680, 40, 23840]
+  BZ2_bz__AssertH__fail:
+    Hash: 0x00000006f42b0f02
+    Counters: 2
+    Block counts: [0, 0]
+  BZ2_bzlibVersion:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  BZ2_bzCompressInit:
+    Hash: 0x00080030c22486c8
+    Counters: 18
+    Block counts: [0, 40, 0, 40, 40, 40, 0, 40, 0, 40, 40, 0, 0, 0, 0, 0, 40, 40]
+  bzlib.2.ll:bz_config_ok:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [40]
+  bzlib.2.ll:default_bzalloc:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [160]
+  bzlib.2.ll:default_bzfree:
+    Hash: 0x00000005f42b0f02
+    Counters: 2
+    Block counts: [160, 160]
+  bzlib.2.ll:init_RL:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [80]
+  bzlib.2.ll:prepare_new_block:
+    Hash: 0x00000007f2c35b9c
+    Counters: 2
+    Block counts: [20480, 80]
+  BZ2_bzCompress:
+    Hash: 0x0100003cb59d7dc1
+    Counters: 23
+    Block counts: [0, 40, 0, 0, 0, 11840, 0, 0, 0, 0, 0, 0, 0, 0, 600, 0, 0, 0, 640, 640, 0, 40, 11840]
+  bzlib.2.ll:handle_compress:
+    Hash: 0x0000002b74693676
+    Counters: 15
+    Block counts: [80, 40, 40, 40, 0, 40, 0, 40, 40, 0, 3840, 3840, 8600, 40, 0]
+  bzlib.2.ll:isempty_RL:
+    Hash: 0x00000008f63dd43b
+    Counters: 3
+    Block counts: [680, 0, 0]
+  BZ2_bzCompressEnd:
+    Hash: 0x000400150fc47ec0
+    Counters: 7
+    Block counts: [0, 0, 0, 40, 40, 40, 40]
+  BZ2_bzDecompressInit:
+    Hash: 0x0001001c44032ae5
+    Counters: 10
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  BZ2_indexIntoF:
+    Hash: 0x0000000ad4f4a912
+    Counters: 3
+    Block counts: [0, 0, 0]
+  BZ2_bzDecompress:
+    Hash: 0x00000038edfe877a
+    Counters: 18
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  bzlib.2.ll:unRLE_obuf_to_output_SMALL:
+    Hash: 0x0500006cae152d87
+    Counters: 39
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  bzlib.2.ll:unRLE_obuf_to_output_FAST:
+    Hash: 0x050000759eb3f2c2
+    Counters: 41
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  BZ2_bzDecompressEnd:
+    Hash: 0x000400150fc47ec0
+    Counters: 7
+    Block counts: [0, 0, 0, 0, 0, 0, 0]
+  BZ2_bzWriteOpen:
+    Hash: 0x00000042eed940dc
+    Counters: 24
+    Block counts: [0, 40, 0, 40, 0, 0, 40, 40, 40, 40, 40, 0, 0, 0, 40, 40, 0, 0, 0, 0, 0, 0, 0, 40]
+  BZ2_bzWrite:
+    Hash: 0x00000052275120ae
+    Counters: 28
+    Block counts: [0, 8600, 8600, 8600, 0, 0, 8600, 3240, 3280, 3280, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8600, 0, 0, 0, 0, 8600, 8600]
+  BZ2_bzWriteClose:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  BZ2_bzWriteClose64:
+    Hash: 0x0000006d3dd899e7
+    Counters: 37
+    Block counts: [0, 600, 0, 0, 0, 0, 0, 0, 0, 0, 40, 640, 640, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 0, 0, 40, 0, 0, 40, 0, 0, 0, 0, 0]
+  BZ2_bzReadOpen:
+    Hash: 0x0000004bc8c05295
+    Counters: 27
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  BZ2_bzReadClose:
+    Hash: 0x0000001e8a9cfafd
+    Counters: 10
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  BZ2_bzRead:
+    Hash: 0x0000006c9b1bfb02
+    Counters: 38
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  bzlib.2.ll:myfeof:
+    Hash: 0x00000006e852da94
+    Counters: 2
+    Block counts: [0, 0]
+  BZ2_bzReadGetUnused:
+    Hash: 0x00000026a3523623
+    Counters: 13
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  BZ2_bzBuffToBuffCompress:
+    Hash: 0x00000024d735ba2d
+    Counters: 14
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  BZ2_bzBuffToBuffDecompress:
+    Hash: 0x0000002110b28779
+    Counters: 12
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  BZ2_bzopen:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  bzlib.2.ll:bzopen_or_bzdopen:
+    Hash: 0x010000388461cde2
+    Counters: 19
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  BZ2_bzdopen:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  BZ2_bzread:
+    Hash: 0x0000000bc2f8d513
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+  BZ2_bzwrite:
+    Hash: 0x00000006e852da94
+    Counters: 2
+    Block counts: [0, 0]
+  BZ2_bzflush:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  BZ2_bzclose:
+    Hash: 0x0000001117658a1f
+    Counters: 6
+    Block counts: [0, 0, 0, 0, 0, 0]
+  BZ2_bzerror:
+    Hash: 0x00000005f42b0f02
+    Counters: 2
+    Block counts: [0, 0]
+  bzlib.2.ll:copy_output_until_stop:
+    Hash: 0x0000000dfee581e0
+    Counters: 4
+    Block counts: [19426560, 0, 3840, 80]
+  bzlib.2.ll:copy_input_until_stop:
+    Hash: 0x0000003d0721ec94
+    Counters: 19
+    Block counts: [3136120, 39472240, 3431480, 0, 0, 0, 3136080, 36336120, 0, 0, 3431480, 0, 0, 0, 40, 8600, 0, 40, 0]
+  bzlib.2.ll:flush_RL:
+    Hash: 0x00000005f42b0f02
+    Counters: 2
+    Block counts: [40, 40]
+  bzlib.2.ll:add_pair_to_block:
+    Hash: 0x0000000f0764398d
+    Counters: 5
+    Block counts: [6567600, 2866560, 245680, 40, 23840]
+Functions shown: 218
+Total functions: 218
+Maximum function count: 175098360
+Maximum internal block count: 44544920

@@ -1,0 +1,165 @@
+Counters:
+  bit_count:
+    Hash: 0x00000009c792705d
+    Counters: 3
+    Block counts: [1059527520, 90000000, 90000000]
+  bit_count:
+    Hash: 0x00000009c792705d
+    Counters: 3
+    Block counts: [1059527520, 90000000, 90000000]
+  bitcount:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [90000000]
+  bitcount:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [90000000]
+  ntbl_bitcount:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [90000000]
+  BW_btbl_bitcount:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [90000000]
+  AR_btbl_bitcount:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [90000000]
+  ntbl_bitcount:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [90000000]
+  BW_btbl_bitcount:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [90000000]
+  AR_btbl_bitcount:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [90000000]
+  bitstring:
+    Hash: 0x01000010d96e90a7
+    Counters: 6
+    Block counts: [0, 0, 0, 0, 0, 0]
+  bitstring:
+    Hash: 0x01000010d96e90a7
+    Counters: 6
+    Block counts: [0, 0, 0, 0, 0, 0]
+  main:
+    Hash: 0x0000000bfb666f9f
+    Counters: 3
+    Block counts: [80, 1, 0]
+  main:
+    Hash: 0x0000000bfb666f9f
+    Counters: 3
+    Block counts: [80, 1, 0]
+  alloc_bit_array:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  getbit:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  setbit:
+    Hash: 0x00000006e852da94
+    Counters: 2
+    Block counts: [0, 0]
+  flipbit:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  alloc_bit_array:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  getbit:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  setbit:
+    Hash: 0x00000006e852da94
+    Counters: 2
+    Block counts: [0, 0]
+  flipbit:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  ntbl_bitcnt:
+    Hash: 0x00000005f42b0f02
+    Counters: 2
+    Block counts: [533116880, 443116880]
+  btbl_bitcnt:
+    Hash: 0x00000005f42b0f02
+    Counters: 2
+    Block counts: [0, 0]
+  ntbl_bitcnt:
+    Hash: 0x00000005f42b0f02
+    Counters: 2
+    Block counts: [533116880, 443116880]
+  btbl_bitcnt:
+    Hash: 0x00000005f42b0f02
+    Counters: 2
+    Block counts: [0, 0]
+  bstr_i:
+    Hash: 0x0000000b961f265e
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+  bstr_i:
+    Hash: 0x0000000b961f265e
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+  bfopen:
+    Hash: 0x00000009f45bd106
+    Counters: 3
+    Block counts: [0, 0, 0]
+  bfread:
+    Hash: 0x00000005f42b0f02
+    Counters: 2
+    Block counts: [0, 0]
+  bfwrite:
+    Hash: 0x00000005f42b0f02
+    Counters: 2
+    Block counts: [0, 0]
+  bfclose:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  bfopen:
+    Hash: 0x00000009f45bd106
+    Counters: 3
+    Block counts: [0, 0, 0]
+  bfread:
+    Hash: 0x00000005f42b0f02
+    Counters: 2
+    Block counts: [0, 0]
+  bfwrite:
+    Hash: 0x00000005f42b0f02
+    Counters: 2
+    Block counts: [0, 0]
+  bfclose:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  main1:
+    Hash: 0x0001001585ee42de
+    Counters: 6
+    Block counts: [630000000, 560, 7, 80, 1, 0]
+  tmp1.ll:bit_shifter:
+    Hash: 0x0000000acead6c02
+    Counters: 3
+    Block counts: [2056754800, 2056754800, 90000000]
+  main1:
+    Hash: 0x0001001585ee42de
+    Counters: 6
+    Block counts: [630000000, 560, 7, 80, 1, 0]
+  bitcnts.2.ll:bit_shifter:
+    Hash: 0x0000000acead6c02
+    Counters: 3
+    Block counts: [2056754800, 2056754800, 90000000]
+Functions shown: 40
+Total functions: 40
+Maximum function count: 2056754800
+Maximum internal block count: 2056754800

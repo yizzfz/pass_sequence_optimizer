@@ -1,0 +1,66 @@
+loop ID = main_D1N1
+loop execution count = 321506 times
+number of instructions executed here (excluding subloops) = 6430120
+number of instructions executed here = 6430120
+
+
+loop ID = sha_update_D1N1
+loop execution count = 19611866 times
+number of instructions executed here (excluding subloops) = 490296650
+number of instructions executed here = 490296650
+
+
+loop ID = byte_reverse_D1N1
+loop execution count = 159466976 times
+number of instructions executed here (excluding subloops) = 8770683680
+number of instructions executed here = 8770683680
+
+
+loop ID = sha_transform_D1N1
+loop execution count = 398667440 times
+number of instructions executed here (excluding subloops) = 17940034800
+number of instructions executed here = 17940034800
+
+
+loop ID = sha_transform_D1N2
+loop execution count = 398667440 times
+number of instructions executed here (excluding subloops) = 20332039440
+number of instructions executed here = 20332039440
+
+
+loop ID = sha_transform_D1N3
+loop execution count = 398667440 times
+number of instructions executed here (excluding subloops) = 17940034800
+number of instructions executed here = 17940034800
+
+
+loop ID = sha_transform_D1N4
+loop execution count = 398667440 times
+number of instructions executed here (excluding subloops) = 19136037120
+number of instructions executed here = 19136037120
+
+
+loop ID = sha_transform_D1N5
+loop execution count = 1275735808 times
+number of instructions executed here (excluding subloops) = 48477960704
+number of instructions executed here = 48477960704
+
+
+loop ID = sha_transform_D1N6
+loop execution count = 318933952 times
+number of instructions executed here (excluding subloops) = 6697612992
+number of instructions executed here = 6697612992
+
+
+loop ID = sha_stream_D1N1
+loop execution count = 321506 times
+number of instructions executed here (excluding subloops) = 4822590
+number of instructions executed here = 4822590
+
+
+loop ID = main1_D1N1
+loop execution count = 321507 times
+number of instructions executed here (excluding subloops) = 9966717
+number of instructions executed here = 9966717
+
+

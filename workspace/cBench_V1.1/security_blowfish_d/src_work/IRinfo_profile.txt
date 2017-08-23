@@ -1,0 +1,78 @@
+loop ID = BF_ofb64_encrypt_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = BF_set_key_D1N1
+loop execution count = 512 times
+number of instructions executed here (excluding subloops) = 14848
+number of instructions executed here = 14848
+
+
+loop ID = BF_set_key_D1N2
+loop execution count = 9 times
+number of instructions executed here (excluding subloops) = 261
+number of instructions executed here = 261
+
+
+loop ID = BF_set_key_D1N3
+loop execution count = 18 times
+number of instructions executed here (excluding subloops) = 1764
+number of instructions executed here = 1764
+
+
+loop ID = BF_cfb64_encrypt_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = BF_cfb64_encrypt_D1N2
+loop execution count = 712103736 times
+number of instructions executed here (excluding subloops) = 138148124784
+number of instructions executed here = 138148124784
+
+
+loop ID = BF_cbc_encrypt_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = BF_cbc_encrypt_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = main_D2N11
+loop execution count = 17820594 times
+number of instructions executed here (excluding subloops) = 463335444
+number of instructions executed here = 463335444
+
+
+loop ID = main_D2N12
+loop execution count = 3956 times
+number of instructions executed here (excluding subloops) = 94944
+number of instructions executed here = 94944
+
+
+loop ID = main_D2N13
+loop execution count = 99 times
+number of instructions executed here (excluding subloops) = 1881
+number of instructions executed here = 1881
+
+
+loop ID = main_D1N1
+loop execution count = 33 times
+number of instructions executed here (excluding subloops) = 660
+number of instructions executed here = 463432929
+
+
+loop ID = main_D1N2
+loop execution count = 65 times
+number of instructions executed here (excluding subloops) = 5655
+number of instructions executed here = 5655
+
+

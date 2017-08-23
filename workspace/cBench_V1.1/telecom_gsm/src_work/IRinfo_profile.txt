@@ -1,0 +1,390 @@
+loop ID = ulaw_input_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = ulaw_output_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = Gsm_Preprocess_D1N1
+loop execution count = 110445498 times
+number of instructions executed here (excluding subloops) = 22309990596
+number of instructions executed here = 22309990596
+
+
+loop ID = main1_D1N1
+loop execution count = 558 times
+number of instructions executed here (excluding subloops) = 7812
+number of instructions executed here = 7812
+
+
+loop ID = main1_D1N2
+loop execution count = 4 times
+number of instructions executed here (excluding subloops) = 236
+number of instructions executed here = 236
+
+
+loop ID = process_decode_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = process_encode_D1N1
+loop execution count = 269514 times
+number of instructions executed here (excluding subloops) = 10511046
+number of instructions executed here = 10511046
+
+
+loop ID = grok_format_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = ok_to_replace_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = gsm_debug_words_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = gsm_debug_longwords_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = Gsm_Coder_D2N11
+loop execution count = 43120566 times
+number of instructions executed here (excluding subloops) = 2112907734
+number of instructions executed here = 2112907734
+
+
+loop ID = Gsm_Coder_D1N1
+loop execution count = 1078056 times
+number of instructions executed here (excluding subloops) = 49590576
+number of instructions executed here = 2162498310
+
+
+loop ID = Weighting_filter_D1N1
+loop execution count = 43122240 times
+number of instructions executed here (excluding subloops) = 5993991360
+number of instructions executed here = 5993991360
+
+
+loop ID = RPE_grid_selection_D1N1
+loop execution count = 14014728 times
+number of instructions executed here (excluding subloops) = 350368200
+number of instructions executed here = 350368200
+
+
+loop ID = APCM_quantization_D1N1
+loop execution count = 1075266 times
+number of instructions executed here (excluding subloops) = 56989098
+number of instructions executed here = 56989098
+
+
+loop ID = APCM_quantization_D1N2
+loop execution count = 2232 times
+number of instructions executed here (excluding subloops) = 84816
+number of instructions executed here = 84816
+
+
+loop ID = APCM_quantization_D1N3
+loop execution count = 1076940 times
+number of instructions executed here (excluding subloops) = 60308640
+number of instructions executed here = 60308640
+
+
+loop ID = APCM_inverse_quantization_D1N1
+loop execution count = 14014728 times
+number of instructions executed here (excluding subloops) = 1205266608
+number of instructions executed here = 1205266608
+
+
+loop ID = RPE_grid_positioning_D1N1
+loop execution count = 1651680 times
+number of instructions executed here (excluding subloops) = 23123520
+number of instructions executed here = 23123520
+
+
+loop ID = APCM_quantization_xmaxc_to_exp_mant_D1N1
+loop execution count = 2232 times
+number of instructions executed here (excluding subloops) = 37944
+number of instructions executed here = 37944
+
+
+loop ID = Coefficients_0_12_D1N1
+loop execution count = 4312224 times
+number of instructions executed here (excluding subloops) = 362226816
+number of instructions executed here = 362226816
+
+
+loop ID = LARp_to_rp_D1N1
+loop execution count = 11521026 times
+number of instructions executed here (excluding subloops) = 1785759030
+number of instructions executed here = 1785759030
+
+
+loop ID = Short_term_analysis_filtering_D2N11
+loop execution count = 689954724 times
+number of instructions executed here (excluding subloops) = 68305517676
+number of instructions executed here = 68305517676
+
+
+loop ID = Short_term_analysis_filtering_D1N1
+loop execution count = 43122240 times
+number of instructions executed here (excluding subloops) = 948689280
+number of instructions executed here = 69254206956
+
+
+loop ID = Coefficients_13_26_D1N1
+loop execution count = 2156112 times
+number of instructions executed here (excluding subloops) = 114273936
+number of instructions executed here = 114273936
+
+
+loop ID = Coefficients_27_39_D1N1
+loop execution count = 4312224 times
+number of instructions executed here (excluding subloops) = 362226816
+number of instructions executed here = 362226816
+
+
+loop ID = Coefficients_40_159_D1N1
+loop execution count = 2156112 times
+number of instructions executed here (excluding subloops) = 45278352
+number of instructions executed here = 45278352
+
+
+loop ID = Short_term_synthesis_filtering_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = Short_term_synthesis_filtering_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = gsm_div_D1N1
+loop execution count = 32341680 times
+number of instructions executed here (excluding subloops) = 1034933760
+number of instructions executed here = 1034933760
+
+
+loop ID = alaw_input_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = alaw_output_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = Autocorrelation_D1N1
+loop execution count = 43032960 times
+number of instructions executed here (excluding subloops) = 860659200
+number of instructions executed here = 860659200
+
+
+loop ID = Autocorrelation_D1N2
+loop execution count = 2425626 times
+number of instructions executed here (excluding subloops) = 41235642
+number of instructions executed here = 41235642
+
+
+loop ID = Autocorrelation_D1N3
+loop execution count = 40966128 times
+number of instructions executed here (excluding subloops) = 5079799872
+number of instructions executed here = 5079799872
+
+
+loop ID = Autocorrelation_D1N4
+loop execution count = 2425626 times
+number of instructions executed here (excluding subloops) = 36384390
+number of instructions executed here = 36384390
+
+
+loop ID = Autocorrelation_D1N5
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = Autocorrelation_D1N6
+loop execution count = 8749440 times
+number of instructions executed here (excluding subloops) = 227485440
+number of instructions executed here = 227485440
+
+
+loop ID = Autocorrelation_D1N7
+loop execution count = 11606400 times
+number of instructions executed here (excluding subloops) = 301766400
+number of instructions executed here = 301766400
+
+
+loop ID = Autocorrelation_D1N8
+loop execution count = 22677120 times
+number of instructions executed here (excluding subloops) = 589605120
+number of instructions executed here = 589605120
+
+
+loop ID = Autocorrelation_D1N9
+loop execution count = 44687988 times
+number of instructions executed here (excluding subloops) = 2949407208
+number of instructions executed here = 2949407208
+
+
+loop ID = Reflection_coefficients_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = Reflection_coefficients_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = Reflection_coefficients_D2N31
+loop execution count = 15092784 times
+number of instructions executed here (excluding subloops) = 1584742320
+number of instructions executed here = 1584742320
+
+
+loop ID = Reflection_coefficients_D1N3
+loop execution count = 4042710 times
+number of instructions executed here (excluding subloops) = 521509590
+number of instructions executed here = 2106251910
+
+
+loop ID = Reflection_coefficients_D1N4
+loop execution count = 2425626 times
+number of instructions executed here (excluding subloops) = 46086894
+number of instructions executed here = 46086894
+
+
+loop ID = Reflection_coefficients_D1N5
+loop execution count = 1886598 times
+number of instructions executed here (excluding subloops) = 35845362
+number of instructions executed here = 35845362
+
+
+loop ID = Reflection_coefficients_D1N6
+loop execution count = 2425626 times
+number of instructions executed here (excluding subloops) = 63066276
+number of instructions executed here = 63066276
+
+
+loop ID = Transformation_to_Log_Area_Ratios_D1N1
+loop execution count = 3669408 times
+number of instructions executed here (excluding subloops) = 447667776
+number of instructions executed here = 447667776
+
+
+loop ID = Gsm_Decoder_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = Gsm_Decoder_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = Postprocessing_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = main_D1N1
+loop execution count = 558 times
+number of instructions executed here (excluding subloops) = 8370
+number of instructions executed here = 8370
+
+
+loop ID = Calculation_of_the_LTP_parameters_D1N1
+loop execution count = 1730916 times
+number of instructions executed here (excluding subloops) = 39811068
+number of instructions executed here = 39811068
+
+
+loop ID = Calculation_of_the_LTP_parameters_D1N2
+loop execution count = 43122240 times
+number of instructions executed here (excluding subloops) = 1250544960
+number of instructions executed here = 1250544960
+
+
+loop ID = Calculation_of_the_LTP_parameters_D1N3
+loop execution count = 87322536 times
+number of instructions executed here (excluding subloops) = 54314617392
+number of instructions executed here = 54314617392
+
+
+loop ID = Calculation_of_the_LTP_parameters_D1N4
+loop execution count = 43122240 times
+number of instructions executed here (excluding subloops) = 1078056000
+number of instructions executed here = 1078056000
+
+
+loop ID = Calculation_of_the_LTP_parameters_D1N5
+loop execution count = 47973492 times
+number of instructions executed here (excluding subloops) = 2686515552
+number of instructions executed here = 2686515552
+
+
+loop ID = Long_term_analysis_filtering_D1N1
+loop execution count = 1919520 times
+number of instructions executed here (excluding subloops) = 128607840
+number of instructions executed here = 128607840
+
+
+loop ID = Long_term_analysis_filtering_D1N2
+loop execution count = 17744400 times
+number of instructions executed here (excluding subloops) = 1188874800
+number of instructions executed here = 1188874800
+
+
+loop ID = Long_term_analysis_filtering_D1N3
+loop execution count = 15802560 times
+number of instructions executed here (excluding subloops) = 1058771520
+number of instructions executed here = 1058771520
+
+
+loop ID = Long_term_analysis_filtering_D1N4
+loop execution count = 7655760 times
+number of instructions executed here (excluding subloops) = 512935920
+number of instructions executed here = 512935920
+
+
+loop ID = Gsm_Long_Term_Synthesis_Filtering_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = Gsm_Long_Term_Synthesis_Filtering_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+

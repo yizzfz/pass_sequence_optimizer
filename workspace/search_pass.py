@@ -219,7 +219,12 @@ def main():
     base_dir = './polybench-c-4.2.1-beta/linear-algebra/blas/gemm'
     
     
+<<<<<<< Updated upstream
     testcodes = get_testcodes(base_dir)
+=======
+    #testcodes = get_testcodes(base_dir)
+    testcodes = ['./polybench-c-4.2.1-beta/linear-algebra/solvers/ludcmp']
+>>>>>>> Stashed changes
     
     print 'found ' + str(len(testcodes)) + ' benchmarks:'
     print testcodes

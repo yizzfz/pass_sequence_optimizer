@@ -129,7 +129,7 @@ def get_testcodes(base_dir):
       cfiles = []
       for file in files:
         if file == 'MARKER':
-          testcodes.append(root)
+          testcodes.append(os.path.realpath(root))
     return testcodes
   
 def read_O3_time(current_dir):
@@ -216,14 +216,10 @@ def main():
     threads=[]
     
     base_dir = '.'
-    #testcodes = ['/local/scratch/hc475/summer/workspace/src/tmp'] 
-       
-    #base_dir = '/home/naim/compiler/workspace/polybench-c-4.2.1-beta'
-    #testcodes = ['/home/naim/compiler/workspace/src/tmp']
+    base_dir = './polybench-c-4.2.1-beta/linear-algebra/blas/gemm'
     
     
     testcodes = get_testcodes(base_dir)
-    #testcodes = ['/local/scratch/hc475/summer/workspace/polybench-c-4.2.1-beta/linear-algebra/solvers/ludcmp']
     
     print 'found ' + str(len(testcodes)) + ' benchmarks:'
     print testcodes

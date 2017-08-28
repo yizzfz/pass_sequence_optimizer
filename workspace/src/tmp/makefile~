@@ -1,2 +1,0 @@
-all: Source.cpp
-		clang++ Source.cpp -O3 

@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 FILES= adpcm.c rawcaudio.c
 LL1= adpcm.1.ll rawcaudio.1.ll
 LL2= adpcm.2.ll rawcaudio.2.ll
 LL3= adpcm.3.ll rawcaudio.3.ll
+=======
+FILES= rawcaudio.c adpcm.c
+LL1= rawcaudio.1.ll adpcm.1.ll
+LL2= rawcaudio.2.ll adpcm.2.ll
+LL3= rawcaudio.3.ll adpcm.3.ll
+>>>>>>> 6f701e38f661d4dfa548b57c00f6048e8fec418f
 CC_FLAGS=
 LD_FLAGS=-lm 
 

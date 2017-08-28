@@ -10,7 +10,7 @@ def main():
         shutil.rmtree(os.path.join(root, dir))
         
     for file in files:
-      if (file.endswith('txt') or file.endswith('ll') or 'makefile' in file or 
+      if ('IRinfo' in file or file.endswith('ll') or file.endswith('.o') or 'hotpath' in file or 
           file.endswith('.out') or 'prof' in file or file=='MARKER'):
         os.system('rm '+(os.path.join(root, file)))
   

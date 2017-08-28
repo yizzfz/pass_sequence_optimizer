@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 FILES= bzlib.c loop-wrap.c crctable.c huffman.c compress.c blocksort.c randtable.c bzip2.c decompress.c
 LL1= bzlib.1.ll loop-wrap.1.ll crctable.1.ll huffman.1.ll compress.1.ll blocksort.1.ll randtable.1.ll bzip2.1.ll decompress.1.ll
 LL2= bzlib.2.ll loop-wrap.2.ll crctable.2.ll huffman.2.ll compress.2.ll blocksort.2.ll randtable.2.ll bzip2.2.ll decompress.2.ll
 LL3= bzlib.3.ll loop-wrap.3.ll crctable.3.ll huffman.3.ll compress.3.ll blocksort.3.ll randtable.3.ll bzip2.3.ll decompress.3.ll
+=======
+FILES= huffman.c crctable.c bzip2.c compress.c blocksort.c decompress.c loop-wrap.c bzlib.c randtable.c
+LL1= huffman.1.ll crctable.1.ll bzip2.1.ll compress.1.ll blocksort.1.ll decompress.1.ll loop-wrap.1.ll bzlib.1.ll randtable.1.ll
+LL2= huffman.2.ll crctable.2.ll bzip2.2.ll compress.2.ll blocksort.2.ll decompress.2.ll loop-wrap.2.ll bzlib.2.ll randtable.2.ll
+LL3= huffman.3.ll crctable.3.ll bzip2.3.ll compress.3.ll blocksort.3.ll decompress.3.ll loop-wrap.3.ll bzlib.3.ll randtable.3.ll
+>>>>>>> 6f701e38f661d4dfa548b57c00f6048e8fec418f
 CC_FLAGS=
 LD_FLAGS=-lm 
 

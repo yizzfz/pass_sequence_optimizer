@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 FILES= sha.c sha_driver.c loop-wrap.c
 LL1= sha.1.ll sha_driver.1.ll loop-wrap.1.ll
 LL2= sha.2.ll sha_driver.2.ll loop-wrap.2.ll
 LL3= sha.3.ll sha_driver.3.ll loop-wrap.3.ll
+=======
+FILES= loop-wrap.c sha.c sha_driver.c
+LL1= loop-wrap.1.ll sha.1.ll sha_driver.1.ll
+LL2= loop-wrap.2.ll sha.2.ll sha_driver.2.ll
+LL3= loop-wrap.3.ll sha.3.ll sha_driver.3.ll
+>>>>>>> 6f701e38f661d4dfa548b57c00f6048e8fec418f
 CC_FLAGS=
 LD_FLAGS=-lm 
 

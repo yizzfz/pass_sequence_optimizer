@@ -44,6 +44,7 @@
 #define binOp 127
 #define BBSI 50 //basic block size interval
 #define ll long long
+#define DP(x) if(debugMode) printf(x);
 using namespace std;
 using namespace llvm;
 
@@ -54,6 +55,8 @@ static cl::opt<bool> hotpath("hotpath", cl::init(false), cl::Hidden,
 static cl::opt<string> hotpath_file("hotpath-file", cl::init(""), cl::Hidden, 
   cl::desc("specify the hotpath file obtained at runtime"));
  
+static cl::opt<bool> debug("debug", cl::init(false), cl::Hidden, 
+  cl::desc("print debug info"));
 
 
 namespace {
@@ -91,6 +94,7 @@ struct myPass : FunctionPass, InstVisitor<myPass>
   string fileName = "IRinfo.txt";
   string hotpathFileName = "";
   bool checkCounter = false;
+  bool debugMode = false;
   
   typedef struct profileInfo {
     string functionName;
@@ -124,6 +128,9 @@ struct myPass : FunctionPass, InstVisitor<myPass>
       
     if (hotpath_file.getNumOccurrences() > 0)
       hotpathFileName = hotpath_file;
+      
+    if (debug.getNumOccurrences() > 0)
+      debugMode = true;
     
     if(checkCounter) fileName = "IRinfo_profile.txt";
     return false;
@@ -362,6 +369,7 @@ struct myPass : FunctionPass, InstVisitor<myPass>
  	  profileInfo pi;
  	  pi.functionName = funcName;
  	  ifstream fs(fileName);
+ 	  if(fs.fail()) {pi.numCounters = -1; return pi; }
  	  string line;
  	  while(getline(fs, line))
  	  {
@@ -494,11 +502,13 @@ struct myPass : FunctionPass, InstVisitor<myPass>
 	  int depth = lp->getLoopDepth();
 	  int numBB = lp->getNumBlocks();
 	  fd<<"loop ID = "<<funcName<<"_D"<<depth<<"N"<<loopID<<"\n";
+	  DP("loop ID generated\n");
 	  
     set<BasicBlock*> ebbs = getLoopExclusiveBBs(lp);
 	  int einst = 0;
 	  for(auto bb:ebbs)
 	    einst+=bb->size();
+    
 	    
     set<int> cnts;
     if(checkCounter) {
@@ -517,6 +527,8 @@ struct myPass : FunctionPass, InstVisitor<myPass>
         }
       }
       if(cnts.size()==0) cout<<"error\n";
+      
+      DP("found counters\n");
     }
     //int numCounters = getNumCountersInLoop(lp);
     int numInsts = numInst(lp);
@@ -531,7 +543,7 @@ struct myPass : FunctionPass, InstVisitor<myPass>
       instStat(lp, allocInsts, storeInsts, loadInsts, arithInsts, vecArithInsts, GEPInsts);
       binStat(lp, intInsts, fpInsts, &dataTy);
       brStat(lp, uncBr, cBr, undirect);
-      
+      DP("statistic done\n");
 	    BasicBlock *Exiting = lp->getExitingBlock();
       int tripCnt  = SE->getSmallConstantTripCount(lp, Exiting);
       
@@ -583,12 +595,14 @@ struct myPass : FunctionPass, InstVisitor<myPass>
       }
       else {
         profileInfo pi = readProfileInfo(hotpathFileName, funcName);
-        ll sumCounter = 0;
-        for(int c: cnts) sumCounter += pi.counters[c];
-        fd<<"loop execution count = "<<sumCounter<<" times\n";
-        fd<<"number of instructions executed here (excluding subloops) = "<<einst*sumCounter<<"\n";
-        res = einst*sumCounter + sumInsts;
-        fd<<"number of instructions executed here = "<<res<<"\n";
+        if (pi.numCounters!=-1) {
+          ll sumCounter = 0;
+          for(int c: cnts) sumCounter += pi.counters[c];
+          fd<<"loop execution count = "<<sumCounter<<" times\n";
+          fd<<"number of instructions executed here (excluding subloops) = "<<einst*sumCounter<<"\n";
+          res = einst*sumCounter + sumInsts;
+          fd<<"number of instructions executed here = "<<res<<"\n";
+        }
       }
     }
     fd<<"\n\n";

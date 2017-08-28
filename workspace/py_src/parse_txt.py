@@ -90,7 +90,6 @@ def get_IRinfo(file):
                                 num = datatype_dict['other']
                         elif num == 'INF':
                             num = float('Inf')
-                        
                         tmp[metric] = float(num)
         except IndexError:
             print 'error in ' + file

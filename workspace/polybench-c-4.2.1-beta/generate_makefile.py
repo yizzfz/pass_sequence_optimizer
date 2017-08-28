@@ -4,8 +4,8 @@ from subprocess import check_call, check_output, STDOUT
 from multiprocessing import Process, Queue
 
 makefile_content = "\
-ULT=/home/naim/compiler/workspace/polybench-c-4.2.1-beta/utilities\n\
-FLAGS=-DPOLYBENCH_TIME -I \n\n\
+ULT=$(WORKSPACE)/polybench-c-4.2.1-beta/utilities\n\
+FLAGS=-DPOLYBENCH_TIME -I$(ULT) \n\n\
 all: $(FILES)\n\
 \t@$(RM) IRinfo* *.profraw\n\
 \t@clang $(FILES) -O0 -emit-llvm -S -o A.ll -w $(FLAGS)\n\
@@ -23,7 +23,11 @@ hotpath: $(FILES)\n\
 \t@./p.out\n\
 \t@llvm-profdata show -counts -all-functions default* > hotpath.txt\n\
 \t@opt C.ll -S -o tmp.ll -O0 -load $(IR_PASS) -hotpath -hotpath-file=hotpath.txt\n\
-\t@clang B.ll -O0 $(ULT)/polybench.o -lm $(FLAGS)\n"
+\t@clang B.ll -O0 $(ULT)/polybench.o -lm $(FLAGS)\n\
+\n\
+run:\n\
+\t@./a.out\n\
+"
 
 
 def list_to_string(list):
@@ -37,11 +41,13 @@ def thread_func(root, cfiles):
   with open(root+'/makefile', "wb") as f:
     f.write(envvar_files+"\n")
     f.write(makefile_content)
+  os.system('touch '+root+'/MARKER')
   try:
     check_call(['make hotpath'], cwd = root, shell = True)
   except subprocess.CalledProcessError as e:
     print 'make error'
-  print root+" -success"
+    os.system('rm '+root+'/MARKER')
+  print root+" - done"
 
   
 def main():

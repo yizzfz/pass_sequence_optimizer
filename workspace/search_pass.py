@@ -116,7 +116,7 @@ def create_child(child_list, current_dir):
     etime = -1.0
     size = -1
     start = time.time()
-    check_call(['./a.out'], stdout=DEVNULL, stderr=STDOUT, cwd = current_dir, shell = True)
+    check_call(['make run'], stdout=DEVNULL, stderr=STDOUT, cwd = current_dir, shell = True)
     end = time.time()
     etime = end - start
     size = int(check_output('ls -nl a.out | awk \'{print $5}\'', cwd = current_dir, shell = True))
@@ -128,10 +128,8 @@ def get_testcodes(base_dir):
     for root, dirs, files in os.walk(base_dir):
       cfiles = []
       for file in files:
-        if file.endswith(".c"):
-          cfiles.append(file)
-      if len(cfiles)==1:
-        testcodes.append(root)
+        if file == 'MARKER':
+          testcodes.append(root)
     return testcodes
   
 def read_O3_time(current_dir):
@@ -177,7 +175,7 @@ def thread_func(current_dir, all_list, O3_list, testcodes):
     if err==0:
       DEVNULL = open(os.devnull, 'wb', 0)
       start = time.time()
-      check_call(['./a.out'], stdout=DEVNULL, stderr=STDOUT, cwd = current_dir, shell = True)
+      check_call(['make run'], stdout=DEVNULL, stderr=STDOUT, cwd = current_dir, shell = True)
       end = time.time()
       O3time = end - start
       O3size = int(check_output('ls -nl a.out | awk \'{print $5}\'', cwd = current_dir, shell = True))
@@ -217,7 +215,7 @@ def main():
     i=0
     threads=[]
     
-    base_dir = '/local/scratch/hc475/summer/workspace/polybench-c-4.2.1-beta'
+    base_dir = '.'
     #testcodes = ['/local/scratch/hc475/summer/workspace/src/tmp'] 
        
     #base_dir = '/home/naim/compiler/workspace/polybench-c-4.2.1-beta'
@@ -226,11 +224,16 @@ def main():
     
     testcodes = get_testcodes(base_dir)
     #testcodes = ['/local/scratch/hc475/summer/workspace/polybench-c-4.2.1-beta/linear-algebra/solvers/ludcmp']
-    for testcode in testcodes:
-      thread = Process(target = thread_func, args = (testcode, all_list, O3_list, testcodes))
-      threads.append(thread)
-      threads[i].start()
-      i+=1
+    
+    print 'found ' + str(len(testcodes)) + ' benchmarks:'
+    print testcodes
+    cmd = raw_input('continue? (y/n) ')
+    if cmd == 'y':
+      for testcode in testcodes:
+        thread = Process(target = thread_func, args = (testcode, all_list, O3_list, testcodes))
+        threads.append(thread)
+        threads[i].start()
+        i+=1
       
       
       

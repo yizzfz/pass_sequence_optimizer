@@ -220,7 +220,12 @@ def main():
     
     
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     testcodes = get_testcodes(base_dir)
+=======
+    #testcodes = get_testcodes(base_dir)
+    testcodes = ['./polybench-c-4.2.1-beta/linear-algebra/solvers/ludcmp']
+>>>>>>> Stashed changes
 =======
     #testcodes = get_testcodes(base_dir)
     testcodes = ['./polybench-c-4.2.1-beta/linear-algebra/solvers/ludcmp']

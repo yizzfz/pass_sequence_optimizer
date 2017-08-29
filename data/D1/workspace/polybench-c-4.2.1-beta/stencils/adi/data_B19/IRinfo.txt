@@ -1,0 +1,494 @@
+loop ID = init_array_D2N11
+loop at depth = 2
+basic blocks = 2
+inst = 18
+coverage wrt function = 34%
+load = 0
+store = 2
+load/store ratio = 0
+memory allocation = 0
+GEP instructions = 2
+all memory instructions = 4
+all memory instructions (%) = 22%
+binary instructions = 6
+binary instructions (%) = 33%
+integer = 4
+floating point = 2
+int/fp ratio = 2
+most common data type = double
+contain vector instructions = 0
+%vector instructions = 0%
+trip count = -1
+cross-iteration dependency detected = 0
+exlusive basic blocks = 2
+exlusive inst = 18
+exlusive ratio = 100%
+critical edges = 0
+unconditonal branch = 1
+conditional branch = 1
+undirect branch = 0
+PHI node = 1
+function call = 0
+#basic block with <50 insts = 2
+#basic block with 50-100 insts = 0
+#basic block with >100 insts = 0
+
+
+
+
+loop ID = init_array_D1N1
+loop at depth = 1
+basic blocks = 11
+inst = 39
+coverage wrt function = 75%
+load = 0
+store = 3
+load/store ratio = 0
+memory allocation = 0
+GEP instructions = 3
+all memory instructions = 6
+all memory instructions (%) = 15%
+binary instructions = 9
+binary instructions (%) = 23%
+integer = 6
+floating point = 3
+int/fp ratio = 2
+most common data type = i64
+contain vector instructions = 0
+%vector instructions = 0%
+trip count = -1
+cross-iteration dependency detected = 0
+exlusive basic blocks = 9
+exlusive inst = 21
+exlusive ratio = 53%
+critical edges = 0
+unconditonal branch = 7
+conditional branch = 4
+undirect branch = 0
+PHI node = 3
+function call = 0
+#basic block with <50 insts = 11
+#basic block with 50-100 insts = 0
+#basic block with >100 insts = 0
+
+
+
+
+loop ID = kernel_adi_D3N111
+loop at depth = 3
+basic blocks = 2
+inst = 30
+coverage wrt function = 8%
+load = 3
+store = 2
+load/store ratio = 1
+memory allocation = 0
+GEP instructions = 5
+all memory instructions = 10
+all memory instructions (%) = 33%
+binary instructions = 14
+binary instructions (%) = 46%
+integer = 1
+floating point = 13
+int/fp ratio = 0
+most common data type = double
+contain vector instructions = 0
+%vector instructions = 0%
+trip count = -1
+cross-iteration dependency detected = 0
+exlusive basic blocks = 2
+exlusive inst = 30
+exlusive ratio = 100%
+critical edges = 0
+unconditonal branch = 1
+conditional branch = 1
+undirect branch = 0
+PHI node = 3
+function call = 0
+#basic block with <50 insts = 2
+#basic block with 50-100 insts = 0
+#basic block with >100 insts = 0
+
+
+
+
+loop ID = kernel_adi_D3N112
+loop at depth = 3
+basic blocks = 2
+inst = 34
+coverage wrt function = 9%
+load = 6
+store = 2
+load/store ratio = 3
+memory allocation = 0
+GEP instructions = 7
+all memory instructions = 15
+all memory instructions (%) = 44%
+binary instructions = 15
+binary instructions (%) = 44%
+integer = 2
+floating point = 13
+int/fp ratio = 0
+most common data type = double
+contain vector instructions = 0
+%vector instructions = 0%
+trip count = -1
+cross-iteration dependency detected = 1
+exlusive basic blocks = 2
+exlusive inst = 34
+exlusive ratio = 100%
+critical edges = 0
+unconditonal branch = 1
+conditional branch = 1
+undirect branch = 0
+PHI node = 1
+function call = 0
+#basic block with <50 insts = 2
+#basic block with 50-100 insts = 0
+#basic block with >100 insts = 0
+
+
+
+
+loop ID = kernel_adi_D3N113
+loop at depth = 3
+basic blocks = 2
+inst = 25
+coverage wrt function = 7%
+load = 5
+store = 2
+load/store ratio = 2
+memory allocation = 0
+GEP instructions = 7
+all memory instructions = 14
+all memory instructions (%) = 56%
+binary instructions = 7
+binary instructions (%) = 28%
+integer = 3
+floating point = 4
+int/fp ratio = 0
+most common data type = double
+contain vector instructions = 0
+%vector instructions = 0%
+trip count = -1
+cross-iteration dependency detected = 1
+exlusive basic blocks = 2
+exlusive inst = 25
+exlusive ratio = 100%
+critical edges = 0
+unconditonal branch = 1
+conditional branch = 1
+undirect branch = 0
+PHI node = 1
+function call = 0
+#basic block with <50 insts = 2
+#basic block with 50-100 insts = 0
+#basic block with >100 insts = 0
+
+
+
+
+loop ID = kernel_adi_D2N11
+loop at depth = 2
+basic blocks = 22
+inst = 146
+coverage wrt function = 41%
+load = 20
+store = 11
+load/store ratio = 1
+memory allocation = 0
+GEP instructions = 33
+all memory instructions = 64
+all memory instructions (%) = 43%
+binary instructions = 44
+binary instructions (%) = 30%
+integer = 12
+floating point = 32
+int/fp ratio = 0
+most common data type = double
+contain vector instructions = 0
+%vector instructions = 0%
+trip count = -1
+cross-iteration dependency detected = 1
+exlusive basic blocks = 16
+exlusive inst = 57
+exlusive ratio = 39%
+critical edges = 0
+unconditonal branch = 14
+conditional branch = 8
+undirect branch = 0
+PHI node = 8
+function call = 0
+#basic block with <50 insts = 22
+#basic block with 50-100 insts = 0
+#basic block with >100 insts = 0
+
+
+
+
+loop ID = kernel_adi_D3N121
+loop at depth = 3
+basic blocks = 2
+inst = 30
+coverage wrt function = 8%
+load = 3
+store = 2
+load/store ratio = 1
+memory allocation = 0
+GEP instructions = 5
+all memory instructions = 10
+all memory instructions (%) = 33%
+binary instructions = 14
+binary instructions (%) = 46%
+integer = 1
+floating point = 13
+int/fp ratio = 0
+most common data type = double
+contain vector instructions = 0
+%vector instructions = 0%
+trip count = -1
+cross-iteration dependency detected = 0
+exlusive basic blocks = 2
+exlusive inst = 30
+exlusive ratio = 100%
+critical edges = 0
+unconditonal branch = 1
+conditional branch = 1
+undirect branch = 0
+PHI node = 3
+function call = 0
+#basic block with <50 insts = 2
+#basic block with 50-100 insts = 0
+#basic block with >100 insts = 0
+
+
+
+
+loop ID = kernel_adi_D3N122
+loop at depth = 3
+basic blocks = 2
+inst = 34
+coverage wrt function = 9%
+load = 6
+store = 2
+load/store ratio = 3
+memory allocation = 0
+GEP instructions = 7
+all memory instructions = 15
+all memory instructions (%) = 44%
+binary instructions = 15
+binary instructions (%) = 44%
+integer = 2
+floating point = 13
+int/fp ratio = 0
+most common data type = double
+contain vector instructions = 0
+%vector instructions = 0%
+trip count = -1
+cross-iteration dependency detected = 1
+exlusive basic blocks = 2
+exlusive inst = 34
+exlusive ratio = 100%
+critical edges = 0
+unconditonal branch = 1
+conditional branch = 1
+undirect branch = 0
+PHI node = 1
+function call = 0
+#basic block with <50 insts = 2
+#basic block with 50-100 insts = 0
+#basic block with >100 insts = 0
+
+
+
+
+loop ID = kernel_adi_D3N123
+loop at depth = 3
+basic blocks = 2
+inst = 25
+coverage wrt function = 7%
+load = 5
+store = 2
+load/store ratio = 2
+memory allocation = 0
+GEP instructions = 7
+all memory instructions = 14
+all memory instructions (%) = 56%
+binary instructions = 7
+binary instructions (%) = 28%
+integer = 3
+floating point = 4
+int/fp ratio = 0
+most common data type = double
+contain vector instructions = 0
+%vector instructions = 0%
+trip count = -1
+cross-iteration dependency detected = 1
+exlusive basic blocks = 2
+exlusive inst = 25
+exlusive ratio = 100%
+critical edges = 0
+unconditonal branch = 1
+conditional branch = 1
+undirect branch = 0
+PHI node = 1
+function call = 0
+#basic block with <50 insts = 2
+#basic block with 50-100 insts = 0
+#basic block with >100 insts = 0
+
+
+
+
+loop ID = kernel_adi_D2N12
+loop at depth = 2
+basic blocks = 22
+inst = 146
+coverage wrt function = 41%
+load = 20
+store = 11
+load/store ratio = 1
+memory allocation = 0
+GEP instructions = 33
+all memory instructions = 64
+all memory instructions (%) = 43%
+binary instructions = 44
+binary instructions (%) = 30%
+integer = 12
+floating point = 32
+int/fp ratio = 0
+most common data type = double
+contain vector instructions = 0
+%vector instructions = 0%
+trip count = -1
+cross-iteration dependency detected = 1
+exlusive basic blocks = 16
+exlusive inst = 57
+exlusive ratio = 39%
+critical edges = 0
+unconditonal branch = 14
+conditional branch = 8
+undirect branch = 0
+PHI node = 8
+function call = 0
+#basic block with <50 insts = 22
+#basic block with 50-100 insts = 0
+#basic block with >100 insts = 0
+
+
+
+
+loop ID = kernel_adi_D1N1
+loop at depth = 1
+basic blocks = 53
+inst = 304
+coverage wrt function = 86%
+load = 40
+store = 22
+load/store ratio = 1
+memory allocation = 0
+GEP instructions = 66
+all memory instructions = 128
+all memory instructions (%) = 42%
+binary instructions = 89
+binary instructions (%) = 29%
+integer = 25
+floating point = 64
+int/fp ratio = 0
+most common data type = double
+contain vector instructions = 0
+%vector instructions = 0%
+trip count = -1
+cross-iteration dependency detected = 1
+exlusive basic blocks = 9
+exlusive inst = 12
+exlusive ratio = 3%
+critical edges = 0
+unconditonal branch = 34
+conditional branch = 19
+undirect branch = 0
+PHI node = 17
+function call = 0
+#basic block with <50 insts = 53
+#basic block with 50-100 insts = 0
+#basic block with >100 insts = 0
+
+
+
+
+loop ID = print_array_D2N11
+loop at depth = 2
+basic blocks = 5
+inst = 18
+coverage wrt function = 42%
+load = 3
+store = 0
+load/store ratio = INF
+memory allocation = 0
+GEP instructions = 1
+all memory instructions = 4
+all memory instructions (%) = 22%
+binary instructions = 3
+binary instructions (%) = 16%
+integer = 3
+floating point = 0
+int/fp ratio = INF
+most common data type = i64
+contain vector instructions = 0
+%vector instructions = 0%
+trip count = -1
+cross-iteration dependency detected = 0
+exlusive basic blocks = 5
+exlusive inst = 18
+exlusive ratio = 100%
+critical edges = 0
+unconditonal branch = 3
+conditional branch = 2
+undirect branch = 0
+PHI node = 1
+function call = 2
+#basic block with <50 insts = 5
+#basic block with 50-100 insts = 0
+#basic block with >100 insts = 0
+
+
+
+
+loop ID = print_array_D1N1
+loop at depth = 1
+basic blocks = 8
+inst = 25
+coverage wrt function = 59%
+load = 3
+store = 0
+load/store ratio = INF
+memory allocation = 0
+GEP instructions = 1
+all memory instructions = 4
+all memory instructions (%) = 16%
+binary instructions = 5
+binary instructions (%) = 20%
+integer = 5
+floating point = 0
+int/fp ratio = INF
+most common data type = i64
+contain vector instructions = 0
+%vector instructions = 0%
+trip count = -1
+cross-iteration dependency detected = 0
+exlusive basic blocks = 3
+exlusive inst = 7
+exlusive ratio = 28%
+critical edges = 0
+unconditonal branch = 5
+conditional branch = 3
+undirect branch = 0
+PHI node = 2
+function call = 2
+#basic block with <50 insts = 8
+#basic block with 50-100 insts = 0
+#basic block with >100 insts = 0
+
+
+
+

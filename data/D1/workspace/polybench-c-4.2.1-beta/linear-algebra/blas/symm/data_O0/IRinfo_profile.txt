@@ -1,0 +1,84 @@
+loop ID = init_array_D2N11
+loop execution count = 249001 times
+number of instructions executed here (excluding subloops) = 5727023
+number of instructions executed here = 5727023
+
+
+loop ID = init_array_D2N12
+loop execution count = 2625 times
+number of instructions executed here (excluding subloops) = 31500
+number of instructions executed here = 31500
+
+
+loop ID = init_array_D2N13
+loop execution count = 29768 times
+number of instructions executed here (excluding subloops) = 446520
+number of instructions executed here = 446520
+
+
+loop ID = init_array_D2N14
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = init_array_D1N1
+loop execution count = 6830 times
+number of instructions executed here (excluding subloops) = 573720
+number of instructions executed here = 6778763
+
+
+loop ID = init_array_D2N21
+loop execution count = 1199000 times
+number of instructions executed here (excluding subloops) = 26378000
+number of instructions executed here = 26378000
+
+
+loop ID = init_array_D1N2
+loop execution count = 1000 times
+number of instructions executed here (excluding subloops) = 10000
+number of instructions executed here = 26388000
+
+
+loop ID = kernel_symm_D2N11
+loop execution count = 299 times
+number of instructions executed here (excluding subloops) = 10166
+number of instructions executed here = 10166
+
+
+loop ID = kernel_symm_D2N12
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = kernel_symm_D3N131
+loop execution count = 598201200 times
+number of instructions executed here (excluding subloops) = 13758627600
+number of instructions executed here = 13758627600
+
+
+loop ID = kernel_symm_D2N13
+loop execution count = 1198800 times
+number of instructions executed here (excluding subloops) = 25174800
+number of instructions executed here = 13783802400
+
+
+loop ID = kernel_symm_D1N1
+loop execution count = 1003 times
+number of instructions executed here (excluding subloops) = 80240
+number of instructions executed here = 13783892806
+
+
+loop ID = print_array_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = print_array_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+

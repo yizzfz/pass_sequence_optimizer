@@ -1,0 +1,21 @@
+Counters:
+  kernel_doitgen:
+    Hash: 0x0000004005a7c000
+    Counters: 22
+    Block counts: [265440000, 0, 819000, 0, 0, 0, 0, 0, 3360000, 0, 21000, 21000, 0, 0, 0, 21000, 0, 0, 150, 0, 1, 1]
+  main:
+    Hash: 0x000000078c10357e
+    Counters: 3
+    Block counts: [1, 0, 0]
+  B.ll:init_array:
+    Hash: 0x0000002897efda19
+    Counters: 14
+    Block counts: [1659000, 12640, 0, 0, 0, 0, 21000, 0, 160, 150, 1, 1, 1, 1]
+  B.ll:print_array:
+    Hash: 0x000000168cabb005
+    Counters: 8
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0]
+Functions shown: 4
+Total functions: 4
+Maximum function count: 265440000
+Maximum internal block count: 3360000

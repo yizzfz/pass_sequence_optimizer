@@ -1,0 +1,266 @@
+loop ID = jpeg_make_c_derived_tbl_D1N1
+loop at depth = 1
+basic blocks = 1
+inst = 31
+coverage wrt function = 15%
+load = 8
+store = 4
+load/store ratio = 2
+memory allocation = 0
+GEP instructions = 10
+all memory instructions = 22
+all memory instructions (%) = 70%
+binary instructions = 2
+binary instructions (%) = 6%
+integer = 2
+floating point = 0
+int/fp ratio = INF
+most common data type = i64
+contain vector instructions = 0
+%vector instructions = 0%
+trip count = -1
+cross-iteration dependency detected = 0
+exlusive basic blocks = 1
+exlusive inst = 31
+exlusive ratio = 100%
+critical edges = 1
+unconditonal branch = 0
+conditional branch = 1
+undirect branch = 0
+PHI node = 1
+function call = 0
+#basic block with <50 insts = 1
+#basic block with 50-100 insts = 0
+#basic block with >100 insts = 0
+
+
+
+
+loop ID = jpeg_make_c_derived_tbl_D2N21
+loop at depth = 2
+basic blocks = 1
+inst = 11
+coverage wrt function = 5%
+load = 1
+store = 1
+load/store ratio = 1
+memory allocation = 0
+GEP instructions = 2
+all memory instructions = 4
+all memory instructions (%) = 36%
+binary instructions = 2
+binary instructions (%) = 18%
+integer = 2
+floating point = 0
+int/fp ratio = INF
+most common data type = i32
+contain vector instructions = 0
+%vector instructions = 0%
+trip count = -1
+cross-iteration dependency detected = 0
+exlusive basic blocks = 1
+exlusive inst = 11
+exlusive ratio = 100%
+critical edges = 1
+unconditonal branch = 0
+conditional branch = 1
+undirect branch = 0
+PHI node = 2
+function call = 0
+#basic block with <50 insts = 1
+#basic block with 50-100 insts = 0
+#basic block with >100 insts = 0
+
+
+
+
+loop ID = jpeg_make_c_derived_tbl_D1N2
+loop at depth = 1
+basic blocks = 5
+inst = 32
+coverage wrt function = 15%
+load = 3
+store = 1
+load/store ratio = 3
+memory allocation = 0
+GEP instructions = 4
+all memory instructions = 8
+all memory instructions (%) = 25%
+binary instructions = 4
+binary instructions (%) = 12%
+integer = 4
+floating point = 0
+int/fp ratio = INF
+most common data type = i32
+contain vector instructions = 0
+%vector instructions = 0%
+trip count = -1
+cross-iteration dependency detected = 0
+exlusive basic blocks = 4
+exlusive inst = 21
+exlusive ratio = 65%
+critical edges = 3
+unconditonal branch = 2
+conditional branch = 3
+undirect branch = 0
+PHI node = 7
+function call = 0
+#basic block with <50 insts = 5
+#basic block with 50-100 insts = 0
+#basic block with >100 insts = 0
+
+
+
+
+loop ID = jpeg_make_c_derived_tbl_D2N31
+loop at depth = 2
+basic blocks = 1
+inst = 10
+coverage wrt function = 4%
+load = 0
+store = 0
+load/store ratio = 0
+memory allocation = 0
+GEP instructions = 0
+all memory instructions = 0
+all memory instructions (%) = 0%
+binary instructions = 4
+binary instructions (%) = 40%
+integer = 4
+floating point = 0
+int/fp ratio = INF
+most common data type = i32
+contain vector instructions = 1
+%vector instructions = 50%
+trip count = -1
+cross-iteration dependency detected = 0
+exlusive basic blocks = 1
+exlusive inst = 10
+exlusive ratio = 100%
+critical edges = 1
+unconditonal branch = 0
+conditional branch = 1
+undirect branch = 0
+PHI node = 4
+function call = 0
+#basic block with <50 insts = 1
+#basic block with 50-100 insts = 0
+#basic block with >100 insts = 0
+
+
+
+
+loop ID = jpeg_make_c_derived_tbl_D2N32
+loop at depth = 2
+basic blocks = 1
+inst = 8
+coverage wrt function = 3%
+load = 0
+store = 0
+load/store ratio = 0
+memory allocation = 0
+GEP instructions = 0
+all memory instructions = 0
+all memory instructions (%) = 0%
+binary instructions = 3
+binary instructions (%) = 37%
+integer = 3
+floating point = 0
+int/fp ratio = INF
+most common data type = <2 x i64>
+contain vector instructions = 1
+%vector instructions = 66%
+trip count = -1
+cross-iteration dependency detected = 0
+exlusive basic blocks = 1
+exlusive inst = 8
+exlusive ratio = 100%
+critical edges = 1
+unconditonal branch = 0
+conditional branch = 1
+undirect branch = 0
+PHI node = 3
+function call = 0
+#basic block with <50 insts = 1
+#basic block with 50-100 insts = 0
+#basic block with >100 insts = 0
+
+
+
+
+loop ID = jpeg_make_c_derived_tbl_D2N33
+loop at depth = 2
+basic blocks = 1
+inst = 6
+coverage wrt function = 2%
+load = 0
+store = 0
+load/store ratio = 0
+memory allocation = 0
+GEP instructions = 0
+all memory instructions = 0
+all memory instructions (%) = 0%
+binary instructions = 2
+binary instructions (%) = 33%
+integer = 2
+floating point = 0
+int/fp ratio = INF
+most common data type = i32
+contain vector instructions = 0
+%vector instructions = 0%
+trip count = -1
+cross-iteration dependency detected = 0
+exlusive basic blocks = 1
+exlusive inst = 6
+exlusive ratio = 100%
+critical edges = 1
+unconditonal branch = 0
+conditional branch = 1
+undirect branch = 0
+PHI node = 2
+function call = 0
+#basic block with <50 insts = 1
+#basic block with 50-100 insts = 0
+#basic block with >100 insts = 0
+
+
+
+
+loop ID = jpeg_make_c_derived_tbl_D1N3
+loop at depth = 1
+basic blocks = 17
+inst = 89
+coverage wrt function = 43%
+load = 2
+store = 0
+load/store ratio = INF
+memory allocation = 0
+GEP instructions = 2
+all memory instructions = 4
+all memory instructions (%) = 4%
+binary instructions = 21
+binary instructions (%) = 23%
+integer = 21
+floating point = 0
+int/fp ratio = INF
+most common data type = i32
+contain vector instructions = 1
+%vector instructions = 28%
+trip count = 16
+cross-iteration dependency detected = 0
+exlusive basic blocks = 14
+exlusive inst = 65
+exlusive ratio = 73%
+critical edges = 11
+unconditonal branch = 7
+conditional branch = 10
+undirect branch = 0
+PHI node = 23
+function call = 1
+#basic block with <50 insts = 17
+#basic block with 50-100 insts = 0
+#basic block with >100 insts = 0
+
+
+
+

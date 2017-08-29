@@ -1,0 +1,48 @@
+loop ID = init_array_D1N1
+loop execution count = 499 times
+number of instructions executed here (excluding subloops) = 15469
+number of instructions executed here = 15469
+
+
+loop ID = init_array_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = kernel_durbin_D2N11
+loop execution count = 1500 times
+number of instructions executed here (excluding subloops) = 27000
+number of instructions executed here = 27000
+
+
+loop ID = kernel_durbin_D2N12
+loop execution count = 497004 times
+number of instructions executed here (excluding subloops) = 19880160
+number of instructions executed here = 19880160
+
+
+loop ID = kernel_durbin_D2N13
+loop execution count = 497004 times
+number of instructions executed here (excluding subloops) = 16898136
+number of instructions executed here = 16898136
+
+
+loop ID = kernel_durbin_D2N14
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = kernel_durbin_D1N1
+loop execution count = 11487 times
+number of instructions executed here (excluding subloops) = 1148700
+number of instructions executed here = 37953996
+
+
+loop ID = print_array_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+

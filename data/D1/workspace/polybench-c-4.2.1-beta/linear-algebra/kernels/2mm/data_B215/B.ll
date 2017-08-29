@@ -1,0 +1,398 @@
+; ModuleID = 'A.ll'
+source_filename = "2mm.c"
+target datalayout = "e-m:e-i64:64-f80:128-n8:16:32:64-S128"
+target triple = "x86_64-unknown-linux-gnu"
+
+%struct._IO_FILE = type { i32, i8*, i8*, i8*, i8*, i8*, i8*, i8*, i8*, i8*, i8*, i8*, %struct._IO_marker*, %struct._IO_FILE*, i32, i32, i64, i16, i8, [1 x i8], i8*, i64, i8*, i8*, i8*, i8*, i64, i32, [20 x i8] }
+%struct._IO_marker = type { %struct._IO_marker*, %struct._IO_FILE*, i32 }
+
+@stderr = external local_unnamed_addr global %struct._IO_FILE*, align 8
+@.str.1 = private unnamed_addr constant [23 x i8] c"==BEGIN DUMP_ARRAYS==\0A\00", align 1
+@.str.2 = private unnamed_addr constant [15 x i8] c"begin dump: %s\00", align 1
+@.str.3 = private unnamed_addr constant [2 x i8] c"D\00", align 1
+@.str.5 = private unnamed_addr constant [8 x i8] c"%0.2lf \00", align 1
+@.str.6 = private unnamed_addr constant [17 x i8] c"\0Aend   dump: %s\0A\00", align 1
+@.str.7 = private unnamed_addr constant [23 x i8] c"==END   DUMP_ARRAYS==\0A\00", align 1
+
+; Function Attrs: noinline nounwind uwtable
+define i32 @main(i32, i8**) local_unnamed_addr #0 {
+  %3 = alloca double, align 8
+  %4 = alloca double, align 8
+  %5 = tail call i8* @polybench_alloc_data(i64 720000, i32 8) #4
+  %6 = tail call i8* @polybench_alloc_data(i64 880000, i32 8) #4
+  %7 = tail call i8* @polybench_alloc_data(i64 990000, i32 8) #4
+  %8 = tail call i8* @polybench_alloc_data(i64 1080000, i32 8) #4
+  %9 = tail call i8* @polybench_alloc_data(i64 960000, i32 8) #4
+  %10 = bitcast i8* %6 to [1100 x double]*
+  %11 = bitcast i8* %7 to [900 x double]*
+  %12 = bitcast i8* %8 to [1200 x double]*
+  %13 = bitcast i8* %9 to [1200 x double]*
+  call fastcc void @init_array(i32 800, i32 900, i32 1100, i32 1200, double* nonnull %3, double* nonnull %4, [1100 x double]* %10, [900 x double]* %11, [1200 x double]* %12, [1200 x double]* %13)
+  call void (...) @polybench_timer_start() #4
+  %14 = load double, double* %3, align 8
+  %15 = load double, double* %4, align 8
+  %16 = bitcast i8* %5 to [900 x double]*
+  call fastcc void @kernel_2mm(i32 800, i32 900, i32 1100, i32 1200, double %14, double %15, [900 x double]* %16, [1100 x double]* %10, [900 x double]* %11, [1200 x double]* %12, [1200 x double]* %13)
+  call void (...) @polybench_timer_stop() #4
+  call void (...) @polybench_timer_print() #4
+  %17 = icmp sgt i32 %0, 42
+  br i1 %17, label %18, label %.._crit_edge_crit_edge
+
+.._crit_edge_crit_edge:                           ; preds = %2
+  br label %._crit_edge
+
+; <label>:18:                                     ; preds = %2
+  %19 = load i8*, i8** %1, align 8
+  %strcmpload = load i8, i8* %19, align 1
+  %20 = icmp eq i8 %strcmpload, 0
+  br i1 %20, label %21, label %.._crit_edge_crit_edge3
+
+.._crit_edge_crit_edge3:                          ; preds = %18
+  br label %._crit_edge
+
+; <label>:21:                                     ; preds = %18
+  call fastcc void @print_array(i32 800, i32 1200, [1200 x double]* %13)
+  br label %._crit_edge
+
+._crit_edge:                                      ; preds = %.._crit_edge_crit_edge3, %.._crit_edge_crit_edge, %21
+  call void @free(i8* %5) #4
+  call void @free(i8* %6) #4
+  call void @free(i8* %7) #4
+  call void @free(i8* %8) #4
+  call void @free(i8* %9) #4
+  ret i32 0
+}
+
+declare i8* @polybench_alloc_data(i64, i32) local_unnamed_addr #1
+
+; Function Attrs: noinline norecurse nounwind uwtable
+define internal fastcc void @init_array(i32, i32, i32, i32, double* nocapture, double* nocapture, [1100 x double]*, [900 x double]*, [1200 x double]*, [1200 x double]*) unnamed_addr #2 {
+.lr.ph20.split.us.preheader:
+  store double 1.500000e+00, double* %4, align 8
+  store double 1.200000e+00, double* %5, align 8
+  br label %.lr.ph20.split.us
+
+.lr.ph20.split.us:                                ; preds = %._crit_edge18.us..lr.ph20.split.us_crit_edge, %.lr.ph20.split.us.preheader
+  %indvars.iv74 = phi i64 [ 0, %.lr.ph20.split.us.preheader ], [ %indvars.iv.next75, %._crit_edge18.us..lr.ph20.split.us_crit_edge ]
+  br label %._crit_edge
+
+._crit_edge:                                      ; preds = %._crit_edge.._crit_edge_crit_edge, %.lr.ph20.split.us
+  %indvars.iv70 = phi i64 [ 0, %.lr.ph20.split.us ], [ %indvars.iv.next71, %._crit_edge.._crit_edge_crit_edge ]
+  %10 = mul nuw nsw i64 %indvars.iv74, %indvars.iv70
+  %11 = add nuw nsw i64 %10, 1
+  %12 = trunc i64 %11 to i32
+  %13 = srem i32 %12, 800
+  %14 = sitofp i32 %13 to double
+  %15 = fdiv double %14, 8.000000e+02
+  %16 = getelementptr inbounds [1100 x double], [1100 x double]* %6, i64 %indvars.iv74, i64 %indvars.iv70
+  store double %15, double* %16, align 8
+  %indvars.iv.next71 = add nuw nsw i64 %indvars.iv70, 1
+  %exitcond73 = icmp eq i64 %indvars.iv.next71, 1100
+  br i1 %exitcond73, label %._crit_edge18.us, label %._crit_edge.._crit_edge_crit_edge
+
+._crit_edge.._crit_edge_crit_edge:                ; preds = %._crit_edge
+  br label %._crit_edge
+
+._crit_edge18.us:                                 ; preds = %._crit_edge
+  %indvars.iv.next75 = add nuw nsw i64 %indvars.iv74, 1
+  %exitcond97 = icmp eq i64 %indvars.iv.next75, 800
+  br i1 %exitcond97, label %.lr.ph14.split.us.new.preheader.preheader, label %._crit_edge18.us..lr.ph20.split.us_crit_edge
+
+._crit_edge18.us..lr.ph20.split.us_crit_edge:     ; preds = %._crit_edge18.us
+  br label %.lr.ph20.split.us
+
+.lr.ph14.split.us.new.preheader.preheader:        ; preds = %._crit_edge18.us
+  br label %.lr.ph14.split.us.new.preheader
+
+.lr.ph14.split.us.new.preheader:                  ; preds = %._crit_edge12.us..lr.ph14.split.us.new.preheader_crit_edge, %.lr.ph14.split.us.new.preheader.preheader
+  %indvars.iv66 = phi i64 [ %indvars.iv.next67, %._crit_edge12.us..lr.ph14.split.us.new.preheader_crit_edge ], [ 0, %.lr.ph14.split.us.new.preheader.preheader ]
+  br label %.lr.ph14.split.us.new
+
+.lr.ph14.split.us.new:                            ; preds = %.lr.ph14.split.us.new..lr.ph14.split.us.new_crit_edge, %.lr.ph14.split.us.new.preheader
+  %indvars.iv62 = phi i64 [ 0, %.lr.ph14.split.us.new.preheader ], [ %indvars.iv.next63.1, %.lr.ph14.split.us.new..lr.ph14.split.us.new_crit_edge ]
+  %indvars.iv.next63 = or i64 %indvars.iv62, 1
+  %17 = mul nuw nsw i64 %indvars.iv66, %indvars.iv.next63
+  %18 = trunc i64 %17 to i32
+  %19 = srem i32 %18, 900
+  %20 = sitofp i32 %19 to double
+  %21 = getelementptr inbounds [900 x double], [900 x double]* %7, i64 %indvars.iv66, i64 %indvars.iv62
+  %indvars.iv.next63.1 = add nuw nsw i64 %indvars.iv62, 2
+  %22 = mul nuw nsw i64 %indvars.iv66, %indvars.iv.next63.1
+  %23 = trunc i64 %22 to i32
+  %24 = srem i32 %23, 900
+  %25 = sitofp i32 %24 to double
+  %26 = insertelement <2 x double> undef, double %20, i32 0
+  %27 = insertelement <2 x double> %26, double %25, i32 1
+  %28 = fdiv <2 x double> %27, <double 9.000000e+02, double 9.000000e+02>
+  %29 = bitcast double* %21 to <2 x double>*
+  store <2 x double> %28, <2 x double>* %29, align 8
+  %exitcond65.1 = icmp eq i64 %indvars.iv.next63.1, 900
+  br i1 %exitcond65.1, label %._crit_edge12.us, label %.lr.ph14.split.us.new..lr.ph14.split.us.new_crit_edge
+
+.lr.ph14.split.us.new..lr.ph14.split.us.new_crit_edge: ; preds = %.lr.ph14.split.us.new
+  br label %.lr.ph14.split.us.new
+
+._crit_edge12.us:                                 ; preds = %.lr.ph14.split.us.new
+  %indvars.iv.next67 = add nuw nsw i64 %indvars.iv66, 1
+  %exitcond96 = icmp eq i64 %indvars.iv.next67, 1100
+  br i1 %exitcond96, label %.lr.ph8.split.us.preheader, label %._crit_edge12.us..lr.ph14.split.us.new.preheader_crit_edge
+
+._crit_edge12.us..lr.ph14.split.us.new.preheader_crit_edge: ; preds = %._crit_edge12.us
+  br label %.lr.ph14.split.us.new.preheader
+
+.lr.ph8.split.us.preheader:                       ; preds = %._crit_edge12.us
+  br label %.lr.ph8.split.us
+
+.lr.ph8.split.us:                                 ; preds = %._crit_edge6.us..lr.ph8.split.us_crit_edge, %.lr.ph8.split.us.preheader
+  %indvars.iv58 = phi i64 [ %indvars.iv.next59, %._crit_edge6.us..lr.ph8.split.us_crit_edge ], [ 0, %.lr.ph8.split.us.preheader ]
+  br label %._crit_edge92
+
+._crit_edge92:                                    ; preds = %._crit_edge92.._crit_edge92_crit_edge, %.lr.ph8.split.us
+  %indvars.iv54 = phi i64 [ 0, %.lr.ph8.split.us ], [ %indvars.iv.next55, %._crit_edge92.._crit_edge92_crit_edge ]
+  %30 = add nuw nsw i64 %indvars.iv54, 3
+  %31 = mul nuw nsw i64 %indvars.iv58, %30
+  %32 = add nuw nsw i64 %31, 1
+  %33 = trunc i64 %32 to i32
+  %34 = srem i32 %33, 1200
+  %35 = sitofp i32 %34 to double
+  %36 = fdiv double %35, 1.200000e+03
+  %37 = getelementptr inbounds [1200 x double], [1200 x double]* %8, i64 %indvars.iv58, i64 %indvars.iv54
+  store double %36, double* %37, align 8
+  %indvars.iv.next55 = add nuw nsw i64 %indvars.iv54, 1
+  %exitcond57 = icmp eq i64 %indvars.iv.next55, 1200
+  br i1 %exitcond57, label %._crit_edge6.us, label %._crit_edge92.._crit_edge92_crit_edge
+
+._crit_edge92.._crit_edge92_crit_edge:            ; preds = %._crit_edge92
+  br label %._crit_edge92
+
+._crit_edge6.us:                                  ; preds = %._crit_edge92
+  %indvars.iv.next59 = add nuw nsw i64 %indvars.iv58, 1
+  %exitcond95 = icmp eq i64 %indvars.iv.next59, 900
+  br i1 %exitcond95, label %.lr.ph2.split.us.preheader, label %._crit_edge6.us..lr.ph8.split.us_crit_edge
+
+._crit_edge6.us..lr.ph8.split.us_crit_edge:       ; preds = %._crit_edge6.us
+  br label %.lr.ph8.split.us
+
+.lr.ph2.split.us.preheader:                       ; preds = %._crit_edge6.us
+  br label %.lr.ph2.split.us
+
+.lr.ph2.split.us:                                 ; preds = %._crit_edge.us..lr.ph2.split.us_crit_edge, %.lr.ph2.split.us.preheader
+  %indvars.iv52 = phi i64 [ %indvars.iv.next53, %._crit_edge.us..lr.ph2.split.us_crit_edge ], [ 0, %.lr.ph2.split.us.preheader ]
+  br label %._crit_edge93
+
+._crit_edge93:                                    ; preds = %._crit_edge93.._crit_edge93_crit_edge, %.lr.ph2.split.us
+  %indvars.iv = phi i64 [ 0, %.lr.ph2.split.us ], [ %indvars.iv.next, %._crit_edge93.._crit_edge93_crit_edge ]
+  %38 = add nuw nsw i64 %indvars.iv, 2
+  %39 = mul nuw nsw i64 %indvars.iv52, %38
+  %40 = trunc i64 %39 to i32
+  %41 = srem i32 %40, 1100
+  %42 = sitofp i32 %41 to double
+  %43 = fdiv double %42, 1.100000e+03
+  %44 = getelementptr inbounds [1200 x double], [1200 x double]* %9, i64 %indvars.iv52, i64 %indvars.iv
+  store double %43, double* %44, align 8
+  %indvars.iv.next = add nuw nsw i64 %indvars.iv, 1
+  %exitcond = icmp eq i64 %indvars.iv.next, 1200
+  br i1 %exitcond, label %._crit_edge.us, label %._crit_edge93.._crit_edge93_crit_edge
+
+._crit_edge93.._crit_edge93_crit_edge:            ; preds = %._crit_edge93
+  br label %._crit_edge93
+
+._crit_edge.us:                                   ; preds = %._crit_edge93
+  %indvars.iv.next53 = add nuw nsw i64 %indvars.iv52, 1
+  %exitcond94 = icmp eq i64 %indvars.iv.next53, 800
+  br i1 %exitcond94, label %45, label %._crit_edge.us..lr.ph2.split.us_crit_edge
+
+._crit_edge.us..lr.ph2.split.us_crit_edge:        ; preds = %._crit_edge.us
+  br label %.lr.ph2.split.us
+
+; <label>:45:                                     ; preds = %._crit_edge.us
+  ret void
+}
+
+declare void @polybench_timer_start(...) local_unnamed_addr #1
+
+; Function Attrs: noinline norecurse nounwind uwtable
+define internal fastcc void @kernel_2mm(i32, i32, i32, i32, double, double, [900 x double]*, [1100 x double]*, [900 x double]*, [1200 x double]*, [1200 x double]*) unnamed_addr #2 {
+.lr.ph14.split.us:
+  br label %.lr.ph8.us.us.preheader
+
+.lr.ph8.us.us.preheader:                          ; preds = %._crit_edge12.us..lr.ph8.us.us.preheader_crit_edge, %.lr.ph14.split.us
+  %indvars.iv81 = phi i64 [ 0, %.lr.ph14.split.us ], [ %indvars.iv.next82, %._crit_edge12.us..lr.ph8.us.us.preheader_crit_edge ]
+  br label %.lr.ph8.us.us
+
+._crit_edge12.us:                                 ; preds = %._crit_edge9.us.us
+  %indvars.iv.next82 = add nuw nsw i64 %indvars.iv81, 1
+  %exitcond102 = icmp eq i64 %indvars.iv.next82, 800
+  br i1 %exitcond102, label %.lr.ph.us.us.preheader.preheader, label %._crit_edge12.us..lr.ph8.us.us.preheader_crit_edge
+
+._crit_edge12.us..lr.ph8.us.us.preheader_crit_edge: ; preds = %._crit_edge12.us
+  br label %.lr.ph8.us.us.preheader
+
+.lr.ph.us.us.preheader.preheader:                 ; preds = %._crit_edge12.us
+  br label %.lr.ph.us.us.preheader
+
+.lr.ph8.us.us:                                    ; preds = %._crit_edge9.us.us..lr.ph8.us.us_crit_edge, %.lr.ph8.us.us.preheader
+  %indvars.iv77 = phi i64 [ 0, %.lr.ph8.us.us.preheader ], [ %indvars.iv.next78, %._crit_edge9.us.us..lr.ph8.us.us_crit_edge ]
+  %11 = getelementptr inbounds [900 x double], [900 x double]* %6, i64 %indvars.iv81, i64 %indvars.iv77
+  store double 0.000000e+00, double* %11, align 8
+  br label %._crit_edge
+
+._crit_edge9.us.us:                               ; preds = %._crit_edge
+  %indvars.iv.next78 = add nuw nsw i64 %indvars.iv77, 1
+  %exitcond80 = icmp eq i64 %indvars.iv.next78, 900
+  br i1 %exitcond80, label %._crit_edge12.us, label %._crit_edge9.us.us..lr.ph8.us.us_crit_edge
+
+._crit_edge9.us.us..lr.ph8.us.us_crit_edge:       ; preds = %._crit_edge9.us.us
+  br label %.lr.ph8.us.us
+
+._crit_edge:                                      ; preds = %._crit_edge.._crit_edge_crit_edge, %.lr.ph8.us.us
+  %12 = phi double [ 0.000000e+00, %.lr.ph8.us.us ], [ %19, %._crit_edge.._crit_edge_crit_edge ]
+  %indvars.iv74 = phi i64 [ 0, %.lr.ph8.us.us ], [ %indvars.iv.next75, %._crit_edge.._crit_edge_crit_edge ]
+  %13 = getelementptr inbounds [1100 x double], [1100 x double]* %7, i64 %indvars.iv81, i64 %indvars.iv74
+  %14 = load double, double* %13, align 8
+  %15 = fmul double %14, %4
+  %16 = getelementptr inbounds [900 x double], [900 x double]* %8, i64 %indvars.iv74, i64 %indvars.iv77
+  %17 = load double, double* %16, align 8
+  %18 = fmul double %15, %17
+  %19 = fadd double %12, %18
+  store double %19, double* %11, align 8
+  %indvars.iv.next75 = add nuw nsw i64 %indvars.iv74, 1
+  %exitcond93 = icmp eq i64 %indvars.iv.next75, 1100
+  br i1 %exitcond93, label %._crit_edge9.us.us, label %._crit_edge.._crit_edge_crit_edge
+
+._crit_edge.._crit_edge_crit_edge:                ; preds = %._crit_edge
+  br label %._crit_edge
+
+.lr.ph.us.us.preheader:                           ; preds = %._crit_edge3.us..lr.ph.us.us.preheader_crit_edge, %.lr.ph.us.us.preheader.preheader
+  %indvars.iv68 = phi i64 [ %indvars.iv.next69, %._crit_edge3.us..lr.ph.us.us.preheader_crit_edge ], [ 0, %.lr.ph.us.us.preheader.preheader ]
+  br label %.lr.ph.us.us
+
+._crit_edge3.us:                                  ; preds = %._crit_edge.us.us
+  %indvars.iv.next69 = add nuw nsw i64 %indvars.iv68, 1
+  %exitcond101 = icmp eq i64 %indvars.iv.next69, 800
+  br i1 %exitcond101, label %30, label %._crit_edge3.us..lr.ph.us.us.preheader_crit_edge
+
+._crit_edge3.us..lr.ph.us.us.preheader_crit_edge: ; preds = %._crit_edge3.us
+  br label %.lr.ph.us.us.preheader
+
+.lr.ph.us.us:                                     ; preds = %._crit_edge.us.us..lr.ph.us.us_crit_edge, %.lr.ph.us.us.preheader
+  %indvars.iv64 = phi i64 [ 0, %.lr.ph.us.us.preheader ], [ %indvars.iv.next65, %._crit_edge.us.us..lr.ph.us.us_crit_edge ]
+  %20 = getelementptr inbounds [1200 x double], [1200 x double]* %10, i64 %indvars.iv68, i64 %indvars.iv64
+  %21 = load double, double* %20, align 8
+  %22 = fmul double %21, %5
+  store double %22, double* %20, align 8
+  br label %._crit_edge100
+
+._crit_edge.us.us:                                ; preds = %._crit_edge100
+  %indvars.iv.next65 = add nuw nsw i64 %indvars.iv64, 1
+  %exitcond67 = icmp eq i64 %indvars.iv.next65, 1200
+  br i1 %exitcond67, label %._crit_edge3.us, label %._crit_edge.us.us..lr.ph.us.us_crit_edge
+
+._crit_edge.us.us..lr.ph.us.us_crit_edge:         ; preds = %._crit_edge.us.us
+  br label %.lr.ph.us.us
+
+._crit_edge100:                                   ; preds = %._crit_edge100.._crit_edge100_crit_edge, %.lr.ph.us.us
+  %23 = phi double [ %22, %.lr.ph.us.us ], [ %29, %._crit_edge100.._crit_edge100_crit_edge ]
+  %indvars.iv62 = phi i64 [ 0, %.lr.ph.us.us ], [ %indvars.iv.next63, %._crit_edge100.._crit_edge100_crit_edge ]
+  %24 = getelementptr inbounds [900 x double], [900 x double]* %6, i64 %indvars.iv68, i64 %indvars.iv62
+  %25 = load double, double* %24, align 8
+  %26 = getelementptr inbounds [1200 x double], [1200 x double]* %9, i64 %indvars.iv62, i64 %indvars.iv64
+  %27 = load double, double* %26, align 8
+  %28 = fmul double %25, %27
+  %29 = fadd double %23, %28
+  store double %29, double* %20, align 8
+  %indvars.iv.next63 = add nuw nsw i64 %indvars.iv62, 1
+  %exitcond = icmp eq i64 %indvars.iv.next63, 900
+  br i1 %exitcond, label %._crit_edge.us.us, label %._crit_edge100.._crit_edge100_crit_edge
+
+._crit_edge100.._crit_edge100_crit_edge:          ; preds = %._crit_edge100
+  br label %._crit_edge100
+
+; <label>:30:                                     ; preds = %._crit_edge3.us
+  ret void
+}
+
+declare void @polybench_timer_stop(...) local_unnamed_addr #1
+
+declare void @polybench_timer_print(...) local_unnamed_addr #1
+
+; Function Attrs: noinline nounwind uwtable
+define internal fastcc void @print_array(i32, i32, [1200 x double]*) unnamed_addr #0 {
+.lr.ph2.split.us.preheader:
+  %3 = load %struct._IO_FILE*, %struct._IO_FILE** @stderr, align 8
+  %4 = call i64 @fwrite(i8* getelementptr inbounds ([23 x i8], [23 x i8]* @.str.1, i64 0, i64 0), i64 22, i64 1, %struct._IO_FILE* %3) #5
+  %5 = load %struct._IO_FILE*, %struct._IO_FILE** @stderr, align 8
+  %6 = tail call i32 (%struct._IO_FILE*, i8*, ...) @fprintf(%struct._IO_FILE* %5, i8* getelementptr inbounds ([15 x i8], [15 x i8]* @.str.2, i64 0, i64 0), i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.3, i64 0, i64 0)) #6
+  br label %.lr.ph2.split.us
+
+.lr.ph2.split.us:                                 ; preds = %._crit_edge.us..lr.ph2.split.us_crit_edge, %.lr.ph2.split.us.preheader
+  %indvars.iv10 = phi i64 [ 0, %.lr.ph2.split.us.preheader ], [ %indvars.iv.next11, %._crit_edge.us..lr.ph2.split.us_crit_edge ]
+  %7 = mul nuw nsw i64 %indvars.iv10, 800
+  br label %._crit_edge16
+
+._crit_edge16:                                    ; preds = %._crit_edge.._crit_edge16_crit_edge, %.lr.ph2.split.us
+  %indvars.iv = phi i64 [ 0, %.lr.ph2.split.us ], [ %indvars.iv.next, %._crit_edge.._crit_edge16_crit_edge ]
+  %8 = add nuw nsw i64 %7, %indvars.iv
+  %9 = trunc i64 %8 to i32
+  %10 = srem i32 %9, 20
+  %11 = icmp eq i32 %10, 0
+  br i1 %11, label %12, label %._crit_edge16.._crit_edge_crit_edge
+
+._crit_edge16.._crit_edge_crit_edge:              ; preds = %._crit_edge16
+  br label %._crit_edge
+
+; <label>:12:                                     ; preds = %._crit_edge16
+  %13 = load %struct._IO_FILE*, %struct._IO_FILE** @stderr, align 8
+  %fputc = call i32 @fputc(i32 10, %struct._IO_FILE* %13) #5
+  br label %._crit_edge
+
+._crit_edge:                                      ; preds = %._crit_edge16.._crit_edge_crit_edge, %12
+  %14 = load %struct._IO_FILE*, %struct._IO_FILE** @stderr, align 8
+  %15 = getelementptr inbounds [1200 x double], [1200 x double]* %2, i64 %indvars.iv10, i64 %indvars.iv
+  %16 = load double, double* %15, align 8
+  %17 = tail call i32 (%struct._IO_FILE*, i8*, ...) @fprintf(%struct._IO_FILE* %14, i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.5, i64 0, i64 0), double %16) #6
+  %indvars.iv.next = add nuw nsw i64 %indvars.iv, 1
+  %exitcond = icmp eq i64 %indvars.iv.next, 1200
+  br i1 %exitcond, label %._crit_edge.us, label %._crit_edge.._crit_edge16_crit_edge
+
+._crit_edge.._crit_edge16_crit_edge:              ; preds = %._crit_edge
+  br label %._crit_edge16
+
+._crit_edge.us:                                   ; preds = %._crit_edge
+  %indvars.iv.next11 = add nuw nsw i64 %indvars.iv10, 1
+  %exitcond17 = icmp eq i64 %indvars.iv.next11, 800
+  br i1 %exitcond17, label %18, label %._crit_edge.us..lr.ph2.split.us_crit_edge
+
+._crit_edge.us..lr.ph2.split.us_crit_edge:        ; preds = %._crit_edge.us
+  br label %.lr.ph2.split.us
+
+; <label>:18:                                     ; preds = %._crit_edge.us
+  %19 = load %struct._IO_FILE*, %struct._IO_FILE** @stderr, align 8
+  %20 = tail call i32 (%struct._IO_FILE*, i8*, ...) @fprintf(%struct._IO_FILE* %19, i8* getelementptr inbounds ([17 x i8], [17 x i8]* @.str.6, i64 0, i64 0), i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.3, i64 0, i64 0)) #6
+  %21 = load %struct._IO_FILE*, %struct._IO_FILE** @stderr, align 8
+  %22 = call i64 @fwrite(i8* getelementptr inbounds ([23 x i8], [23 x i8]* @.str.7, i64 0, i64 0), i64 22, i64 1, %struct._IO_FILE* %21) #5
+  ret void
+}
+
+; Function Attrs: nounwind
+declare void @free(i8*) local_unnamed_addr #3
+
+declare i32 @fprintf(%struct._IO_FILE*, i8*, ...) local_unnamed_addr #1
+
+; Function Attrs: nounwind
+declare i64 @fwrite(i8* nocapture, i64, i64, %struct._IO_FILE* nocapture) local_unnamed_addr #4
+
+; Function Attrs: nounwind
+declare i32 @fputc(i32, %struct._IO_FILE* nocapture) local_unnamed_addr #4
+
+attributes #0 = { noinline nounwind uwtable "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-jump-tables"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #1 = { "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #2 = { noinline norecurse nounwind uwtable "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-jump-tables"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #3 = { nounwind "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #4 = { nounwind }
+attributes #5 = { cold }
+attributes #6 = { cold nounwind }
+
+!llvm.ident = !{!0}
+
+!0 = !{!"clang version 4.0.0 (tags/RELEASE_400/final)"}

@@ -1,0 +1,21 @@
+Counters:
+  main:
+    Hash: 0x000000078c10357e
+    Counters: 3
+    Block counts: [1, 0, 0]
+  B.ll:init_array:
+    Hash: 0x00000022e612670f
+    Counters: 12
+    Block counts: [1199000, 0, 149, 1000, 1, 1, 1, 1, 0, 1, 1, 0]
+  B.ll:kernel_gramschmidt:
+    Hash: 0x0000003e6cdc9e27
+    Counters: 22
+    Block counts: [358980600, 358980600, 0, 598800, 298800, 0, 0, 719400, 719400, 0, 719400, 0, 1200, 1200, 0, 1200, 1200, 0, 1199, 0, 1, 1]
+  B.ll:print_array:
+    Hash: 0x0000001a033acc4b
+    Counters: 9
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0]
+Functions shown: 4
+Total functions: 4
+Maximum function count: 358980600
+Maximum internal block count: 358980600

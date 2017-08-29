@@ -1,21 +1,15 @@
-<<<<<<< HEAD
-FILES= pbmsrch_large.c bmhasrch.c bmhsrch.c bmhisrch.c
-LL1= pbmsrch_large.1.ll bmhasrch.1.ll bmhsrch.1.ll bmhisrch.1.ll
-LL2= pbmsrch_large.2.ll bmhasrch.2.ll bmhsrch.2.ll bmhisrch.2.ll
-LL3= pbmsrch_large.3.ll bmhasrch.3.ll bmhsrch.3.ll bmhisrch.3.ll
-=======
 FILES= bmhisrch.c bmhsrch.c bmhasrch.c pbmsrch_large.c
 LL1= bmhisrch.1.ll bmhsrch.1.ll bmhasrch.1.ll pbmsrch_large.1.ll
 LL2= bmhisrch.2.ll bmhsrch.2.ll bmhasrch.2.ll pbmsrch_large.2.ll
 LL3= bmhisrch.3.ll bmhsrch.3.ll bmhasrch.3.ll pbmsrch_large.3.ll
->>>>>>> 6f701e38f661d4dfa548b57c00f6048e8fec418f
 CC_FLAGS=-DUNIX -DPORTABLE 
 LD_FLAGS=-lm 
 
 all: 
 	@$(RM) IRinfo.txt *.profraw
-	@make ll1
+	@make ll1 -s
 	@clang $(LL1) -O0 $(LD_FLAGS) -o a.out
+	@$(RM) *.ll
 	
 run:
 	@./__run 1
@@ -25,11 +19,13 @@ ll1: $(LL1)
 
 hotpath: $(LL2)
 	@$(RM) IRinfo_profile.txt *.profraw
-	@make ll2
+	@make ll1 -s
+	@make ll2 -s
 	@clang $(LL2) -O0 -fprofile-generate $(LD_FLAGS) -o a.out
 	@./__run 1
 	@llvm-profdata show -counts -all-functions default* > hotpath.txt
-	@make ll3
+	@make ll3 -s
+	@$(RM) *.ll
 
 ll2: $(LL2)
 	@

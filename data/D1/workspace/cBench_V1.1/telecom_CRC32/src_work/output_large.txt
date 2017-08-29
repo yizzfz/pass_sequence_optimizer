@@ -1,1 +1,0 @@
-FFFFFFFF9C4B040E  154422 ../../telecom_data/1.pcm

@@ -1,21 +1,15 @@
-<<<<<<< HEAD
-FILES= adpcm.c rawcaudio.c
-LL1= adpcm.1.ll rawcaudio.1.ll
-LL2= adpcm.2.ll rawcaudio.2.ll
-LL3= adpcm.3.ll rawcaudio.3.ll
-=======
 FILES= rawcaudio.c adpcm.c
 LL1= rawcaudio.1.ll adpcm.1.ll
 LL2= rawcaudio.2.ll adpcm.2.ll
 LL3= rawcaudio.3.ll adpcm.3.ll
->>>>>>> 6f701e38f661d4dfa548b57c00f6048e8fec418f
 CC_FLAGS=
 LD_FLAGS=-lm 
 
 all: 
 	@$(RM) IRinfo.txt *.profraw
-	@make ll1
+	@make ll1 -s
 	@clang $(LL1) -O0 $(LD_FLAGS) -o a.out
+	@$(RM) *.ll
 	
 run:
 	@./__run 1
@@ -25,11 +19,13 @@ ll1: $(LL1)
 
 hotpath: $(LL2)
 	@$(RM) IRinfo_profile.txt *.profraw
-	@make ll2
+	@make ll1 -s
+	@make ll2 -s
 	@clang $(LL2) -O0 -fprofile-generate $(LD_FLAGS) -o a.out
 	@./__run 1
 	@llvm-profdata show -counts -all-functions default* > hotpath.txt
-	@make ll3
+	@make ll3 -s
+	@$(RM) *.ll
 
 ll2: $(LL2)
 	@

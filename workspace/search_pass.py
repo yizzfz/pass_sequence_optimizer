@@ -61,9 +61,11 @@ def record_list(prefix, time, size):
     subdir = 'data_' + prefix + str(cnt)
     os.environ["SUBDIR"] = subdir
     os.system('mkdir -p $SUBDIR')
-    os.system('opt A.ll -S $OPTFLAGS -debug-pass=Structure  -o tmp.ll 2> $SUBDIR/passList.txt')
+    os.system('touch tmp1.ll')
+    os.system('opt tmp1.ll -S $OPTFLAGS -debug-pass=Structure -o tmp2.ll 2> $SUBDIR/passList.txt')
+    os.system('rm tmp1.ll')
     os.system('cp IRinfo.txt $SUBDIR/IRinfo.txt')
-    os.system('cp B.ll $SUBDIR/B.ll')
+    os.system('cp *.ll $SUBDIR/')
     with open(subdir+'/performance.txt', "wb") as f:
       f.write('execution time: ' + str(time) + '\n')
       f.write('binary size: ' + str(size) + '\n')
@@ -189,7 +191,9 @@ def thread_func(current_dir, all_list, O3_list, testcodes):
     current_time = O3time
     current_size = O3size
     fail_in_a_row = 0
-    for i in range(1,100):
+    
+    #### num. ga steps ####
+    for i in range(1,2):                        
       res = ga(all_list, current_list, current_dir, current_time, current_size)
       improved = res[0]
       if improved == 0:
@@ -216,20 +220,10 @@ def main():
     threads=[]
     
     base_dir = '.'
-    base_dir = './polybench-c-4.2.1-beta/linear-algebra/blas/gemm'
+    #base_dir = './polybench-c-4.2.1-beta/linear-algebra/blas/gemm'
+    #base_dir = './cBench_V1.1/automotive_bitcount'
     
-    
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
     testcodes = get_testcodes(base_dir)
-=======
-    #testcodes = get_testcodes(base_dir)
-    testcodes = ['./polybench-c-4.2.1-beta/linear-algebra/solvers/ludcmp']
->>>>>>> Stashed changes
-=======
-    #testcodes = get_testcodes(base_dir)
-    testcodes = ['./polybench-c-4.2.1-beta/linear-algebra/solvers/ludcmp']
->>>>>>> Stashed changes
     
     print 'found ' + str(len(testcodes)) + ' benchmarks:'
     print testcodes

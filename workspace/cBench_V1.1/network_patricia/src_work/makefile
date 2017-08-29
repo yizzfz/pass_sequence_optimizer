@@ -1,21 +1,15 @@
-<<<<<<< HEAD
-FILES= loop-wrap.c patricia.c patricia_test.c
-LL1= loop-wrap.1.ll patricia.1.ll patricia_test.1.ll
-LL2= loop-wrap.2.ll patricia.2.ll patricia_test.2.ll
-LL3= loop-wrap.3.ll patricia.3.ll patricia_test.3.ll
-=======
 FILES= patricia.c loop-wrap.c patricia_test.c
 LL1= patricia.1.ll loop-wrap.1.ll patricia_test.1.ll
 LL2= patricia.2.ll loop-wrap.2.ll patricia_test.2.ll
 LL3= patricia.3.ll loop-wrap.3.ll patricia_test.3.ll
->>>>>>> 6f701e38f661d4dfa548b57c00f6048e8fec418f
 CC_FLAGS=
 LD_FLAGS=-lm 
 
 all: 
 	@$(RM) IRinfo.txt *.profraw
-	@make ll1
+	@make ll1 -s
 	@clang $(LL1) -O0 $(LD_FLAGS) -o a.out
+	@$(RM) *.ll
 	
 run:
 	@./__run 1
@@ -25,11 +19,13 @@ ll1: $(LL1)
 
 hotpath: $(LL2)
 	@$(RM) IRinfo_profile.txt *.profraw
-	@make ll2
+	@make ll1 -s
+	@make ll2 -s
 	@clang $(LL2) -O0 -fprofile-generate $(LD_FLAGS) -o a.out
 	@./__run 1
 	@llvm-profdata show -counts -all-functions default* > hotpath.txt
-	@make ll3
+	@make ll3 -s
+	@$(RM) *.ll
 
 ll2: $(LL2)
 	@

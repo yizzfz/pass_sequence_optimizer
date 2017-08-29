@@ -7,8 +7,9 @@ LD_FLAGS=-lm
 
 all: 
 	@$(RM) IRinfo.txt *.profraw
-	@make ll1
+	@make ll1 -s
 	@clang $(LL1) -O0 $(LD_FLAGS) -o a.out
+	@$(RM) *.ll
 	
 run:
 	@./__run 1
@@ -18,11 +19,13 @@ ll1: $(LL1)
 
 hotpath: $(LL2)
 	@$(RM) IRinfo_profile.txt *.profraw
-	@make ll2
+	@make ll1 -s
+	@make ll2 -s
 	@clang $(LL2) -O0 -fprofile-generate $(LD_FLAGS) -o a.out
 	@./__run 1
 	@llvm-profdata show -counts -all-functions default* > hotpath.txt
-	@make ll3
+	@make ll3 -s
+	@$(RM) *.ll
 
 ll2: $(LL2)
 	@

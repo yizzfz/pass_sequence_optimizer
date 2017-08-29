@@ -1,21 +1,15 @@
-<<<<<<< HEAD
-FILES= bf_ofb64.c bf_cfb64.c bf_skey.c bf_ecb.c bf_cbc.c bf_enc.c bf.c
-LL1= bf_ofb64.1.ll bf_cfb64.1.ll bf_skey.1.ll bf_ecb.1.ll bf_cbc.1.ll bf_enc.1.ll bf.1.ll
-LL2= bf_ofb64.2.ll bf_cfb64.2.ll bf_skey.2.ll bf_ecb.2.ll bf_cbc.2.ll bf_enc.2.ll bf.2.ll
-LL3= bf_ofb64.3.ll bf_cfb64.3.ll bf_skey.3.ll bf_ecb.3.ll bf_cbc.3.ll bf_enc.3.ll bf.3.ll
-=======
 FILES= bf_ofb64.c bf_skey.c bf_enc.c bf_cfb64.c bf_cbc.c bf_ecb.c bf.c
 LL1= bf_ofb64.1.ll bf_skey.1.ll bf_enc.1.ll bf_cfb64.1.ll bf_cbc.1.ll bf_ecb.1.ll bf.1.ll
 LL2= bf_ofb64.2.ll bf_skey.2.ll bf_enc.2.ll bf_cfb64.2.ll bf_cbc.2.ll bf_ecb.2.ll bf.2.ll
 LL3= bf_ofb64.3.ll bf_skey.3.ll bf_enc.3.ll bf_cfb64.3.ll bf_cbc.3.ll bf_ecb.3.ll bf.3.ll
->>>>>>> 6f701e38f661d4dfa548b57c00f6048e8fec418f
 CC_FLAGS=
 LD_FLAGS=-lm 
 
 all: 
 	@$(RM) IRinfo.txt *.profraw
-	@make ll1
+	@make ll1 -s
 	@clang $(LL1) -O0 $(LD_FLAGS) -o a.out
+	@$(RM) *.ll
 	
 run:
 	@./__run 1
@@ -25,11 +19,13 @@ ll1: $(LL1)
 
 hotpath: $(LL2)
 	@$(RM) IRinfo_profile.txt *.profraw
-	@make ll2
+	@make ll1 -s
+	@make ll2 -s
 	@clang $(LL2) -O0 -fprofile-generate $(LD_FLAGS) -o a.out
 	@./__run 1
 	@llvm-profdata show -counts -all-functions default* > hotpath.txt
-	@make ll3
+	@make ll3 -s
+	@$(RM) *.ll
 
 ll2: $(LL2)
 	@

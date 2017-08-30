@@ -314,20 +314,31 @@ struct myPass : FunctionPass, InstVisitor<myPass>
 	
 	bool primaryDepCheck(Loop* lp)
  	{
- 		
- 		set<LoadInst*> ldInsts;
-		set<StoreInst*> stInsts;
-		collectInst(lp, &ldInsts, &stInsts);
+ 		set<Instruction*> ldInsts, stInsts;
+		
+		auto bbs = lp->getBlocks();
+		for(auto bb: bbs)
+			for(auto it = bb->begin();it!=bb->end();it++)
+			{
+				if(isa<StoreInst>(it))
+					stInsts.insert(&*it);
+				else if(isa<LoadInst>(it))
+					ldInsts.insert(&*it);
+			}
+			
 		bool hasDep = false;
+		cout<<ldInsts.size()<<" "<<stInsts.size()<<endl;
 		for(auto ld:ldInsts)
 			for(auto st:stInsts)
 			{
-				unique_ptr<Dependence> d = DI->depends(ld, st, true);
+				auto d = DI->depends(ld, st, true);     //sometime error
 				if(d==nullptr) continue;
 				int lvls = d->getLevels ();
 				if(lvls==0) continue;
 				else hasDep=1;
 			}
+		ldInsts.clear();
+		stInsts.clear();
 		return hasDep;
  	}
  	
@@ -490,14 +501,14 @@ struct myPass : FunctionPass, InstVisitor<myPass>
 	}
 	
 	
-	ll analyseLoop(Loop* lp, raw_fd_ostream& fd, int funcSize, string funcName, int loopID)
+	ll analyseLoop(Loop* lp, raw_fd_ostream& fd, int funcSize, string funcName, string loopID)
 	{
 	  ll sumInsts = 0;
 	  ll res = 0;
 	  int sub = 0;
     for(auto sublp: lp->getSubLoops()) {
 	    sub++;
-	    sumInsts += analyseLoop(sublp, fd, funcSize, funcName, loopID*10+sub);	
+	    sumInsts += analyseLoop(sublp, fd, funcSize, funcName, loopID+to_string(sub));	
 	  }
 	  int depth = lp->getLoopDepth();
 	  int numBB = lp->getNumBlocks();
@@ -545,8 +556,9 @@ struct myPass : FunctionPass, InstVisitor<myPass>
       brStat(lp, uncBr, cBr, undirect);
       DP("statistic done\n");
 	    BasicBlock *Exiting = lp->getExitingBlock();
-      int tripCnt  = SE->getSmallConstantTripCount(lp, Exiting);
+      int tripCnt = SE->getSmallConstantTripCount(lp, Exiting);
       
+      DP("printing .");
 	    fd<<"loop at depth = "<<depth<<"\nbasic blocks = "<< numBB<<"\ninst = "<< numInsts <<"\ncoverage wrt function = "<<numInsts*100/funcSize<<"%\n";
 	    
 	    fd<<"load = "<<loadInsts<<"\n";
@@ -554,6 +566,8 @@ struct myPass : FunctionPass, InstVisitor<myPass>
 	    fd<<"load/store ratio = "<<RATIO(loadInsts, storeInsts)<<"\n";
 	    fd<<"memory allocation = "<<allocInsts<<"\n";
 	    fd<<"GEP instructions = "<<GEPInsts<<"\n";
+	    
+      DP(".");
 	    
 	    int allMem = loadInsts+storeInsts+allocInsts+GEPInsts;
 	    fd<<"all memory instructions = "<<allMem<<"\n";
@@ -568,10 +582,14 @@ struct myPass : FunctionPass, InstVisitor<myPass>
 	    else dataTy->print(fd);
 	    fd<<"\n";
 	    
+      DP(".");
+	    
 	    fd<<"contain vector instructions = "<<(hasVectorInsts(lp) || vecArithInsts>0)<<"\n";
 	    fd<<"%vector instructions = "<< PERC(vecArithInsts, arithInsts) <<"%\n";
       fd<<"trip count = "<<(tripCnt==0?-1:tripCnt)<<"\n";
-      fd<<"cross-iteration dependency detected = "<<(primaryDepCheck(lp)?1:0)<<"\n";
+      
+      //fd<<"cross-iteration dependency detected = "<<(primaryDepCheck(lp)?1:0)<<"\n";
+		  
 		  fd<<"exlusive basic blocks = "<<ebbs.size()<<"\nexlusive inst = "<<einst<<"\n";
 		  fd<<"exlusive ratio = "<<PERC(einst, numInsts)<<"%\n";
 		  fd<<"critical edges = "<< countCritEdges(lp)<<"\n";
@@ -579,11 +597,14 @@ struct myPass : FunctionPass, InstVisitor<myPass>
 		  fd<<"PHI node = "<<countPHI(lp)<<"\n";
 		  fd<<"function call = "<<countCallInst(lp)<<"\n";
 		  
-		  int* bbr = basicBlockRange(lp);
+      DP(".");
+	    
+		  /*int* bbr = basicBlockRange(lp);
 		  fd<<"#basic block with <"<<BBSI <<" insts = "<<bbr[0]<<"\n";
 		  fd<<"#basic block with "<< BBSI <<"-"<<BBSI*2 <<" insts = "<<bbr[1]<<"\n";
 		  fd<<"#basic block with >"<< BBSI*2 <<" insts = "<<bbr[2]<<"\n";
-		  fd<<"\n\n";
+		  fd<<"\n\n";*/
+      DP(". done\n\n");
 		}
 		
     else {
@@ -632,7 +653,7 @@ struct myPass : FunctionPass, InstVisitor<myPass>
 		int loopID = 1;
 		if(!LI->empty()) {
       for (LoopInfo::iterator LIT = LI->begin(), LEND = LI->end(); LIT != LEND; ++LIT) {
-			  analyseLoop(*LIT, fd, numInst(&F), F.getName().str(), loopID);
+			  analyseLoop(*LIT, fd, numInst(&F), F.getName().str(), to_string(loopID));
 			  loopID++;
       }
     }

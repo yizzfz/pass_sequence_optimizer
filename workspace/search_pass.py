@@ -31,7 +31,10 @@ def list_to_string(pass_list):
     for ele in pass_list:
       s += ' ' + ele
     return s
-   
+
+def clean_workdir(idx):
+    workdir = 'work_' + str(idx)
+    os.system('rm -rf '+workdir)
    
 def generate_list(all_list, parent_list):
     new_list = parent_list[:]
@@ -62,12 +65,12 @@ def generate_list(all_list, parent_list):
 
 def record_list(prefix, time, size, cnt):
     subdir = 'data_' + prefix + str(cnt)
-    os.environ["SUBDIR"] = subdir
-    os.system('mkdir -p $SUBDIR')
+    workdir = 'work_' + str(cnt)
+    os.system('mkdir -p ' + subdir)
     os.system('touch tmp_empty.ll')
-    os.system('opt tmp_empty.ll -S $OPTFLAGS -debug-pass=Structure -o tmp_empty1.ll 2> $SUBDIR/passList.txt')
+    os.system('opt tmp_empty.ll -S $OPTFLAGS -debug-pass=Structure -o tmp_empty1.ll 2> '+subdir+'/passList.txt')
     os.system('rm tmp*.ll')
-    os.system('cp IRinfo.txt $SUBDIR/IRinfo.txt')
+    os.system('cp '+workdir+'/IRinfo.txt '+subdir+'/IRinfo.txt')
     #os.system('cp *.ll $SUBDIR/')
     with open(subdir+'/performance.txt', "wb") as f:
       f.write('execution time: ' + str(time) + '\n')
@@ -82,9 +85,8 @@ def ga(all_list, parent_list, current_dir, time_baseline, size_baseline):
     #num of children per run
     for i in range (1,6):
       cnt+=1
-      os.system('rm IRinfo*')
       child_list = generate_list(all_list, parent_list)
-      res = create_child(child_list, current_dir)
+      res = create_child(child_list, current_dir, cnt)
       if res[0] == 0:
         child_time = res[1]
         child_size = res[2]
@@ -101,18 +103,24 @@ def ga(all_list, parent_list, current_dir, time_baseline, size_baseline):
         else:
           record_list('B', child_time, child_size, cnt)
     
+    clean_workdir(cnt)
     return (improved, best_time, best_list, size)
         
       
       
-def create_child(child_list, current_dir):
+def create_child(child_list, current_dir, cnt):
     list_str = list_to_string(child_list)
     os.environ["OPTFLAGS"] = list_str
+    subdir = 'work_' + str(cnt)
+    os.system('mkdir -p ' + subdir)
+    os.system('cp * ' + subdir + '/ 2>/dev/null ')  
+    work_dir = current_dir + '/' + subdir
+    
     #print '\n', list_str, '\n'
     
     DEVNULL = open(os.devnull, 'wb', 0)
     try:
-      check_call(['make'], cwd = current_dir, shell = True)
+      check_call(['make'], cwd = work_dir, shell = True)
     except subprocess.CalledProcessError as e:
       with open(current_dir+"/error.txt","ab") as f:
         f.write(list_to_string(child_list))
@@ -123,7 +131,7 @@ def create_child(child_list, current_dir):
     etime = -1.0
     size = -1
     start = time.time()
-    check_call(['make run'], stdout=DEVNULL, stderr=STDOUT, cwd = current_dir, shell = True)
+    check_call(['make run'], stdout=DEVNULL, stderr=STDOUT, cwd = work_dir, shell = True)
     end = time.time()
     etime = end - start
     size = int(check_output('ls -nl a.out | awk \'{print $5}\'', cwd = current_dir, shell = True))
@@ -156,9 +164,12 @@ def read_O3_time(current_dir):
 def compare_with_other(current_dir, testcodes, current_list):
     with open(current_dir+"/workedFor.txt","ab") as f:
       for testcode in testcodes:
+        
+        O3time = read_O3_time(testcode)
         os.chdir(testcode)
-        O3time = read_O3_time(current_dir)
-        res = create_child(current_list, testcode)
+        idx = random.randint(0, 1e5)
+        res = create_child(current_list, testcode, idx)
+        clean_workdir(idx)
         if res[0] == 0:
           if res[1] < O3time:
             f.write(testcode)
@@ -224,7 +235,7 @@ def t_GA(current_dir, all_list, O3_list, testcodes):
           current_size = res[3]
       print '['+current_dir+'] final time = ', current_time, ', bin size = ', current_size
       compare_with_other(current_dir, testcodes, current_list)
-
+      os.chdir(current_dir)
 
     
 def main():
@@ -245,7 +256,7 @@ def main():
       print 'cannot find any MARKER, run \'generate_makefile\''
       
       
-    #testcodes = random_select(testcodes, 4)
+    testcodes = random_select(testcodes, 2)
     
     print 'found ' + str(len(testcodes)) + ' benchmarks:'
     print testcodes
@@ -265,7 +276,7 @@ def main():
       threads = []
       i=0
       for testcode in testcodes:
-        thread = Process(target = t_prepare, args = (testcode, O3_list))
+        thread = Process(target = t_GA, args = (testcode, all_list, O3_list, testcodes))
         threads.append(thread)
         threads[i].start()
         i+=1

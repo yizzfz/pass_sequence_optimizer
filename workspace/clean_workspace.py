@@ -14,7 +14,7 @@ def main():
         
     for file in files:
       if ('IRinfo' in file or file.endswith('ll') or 'hotpath' in file or 
-          file.endswith('.out') or 'prof' in file or 'MARKER' in file):
+          file.endswith('.out') or 'prof' in file or 'MARKER' in file or file=='workedFor.txt'):
         os.system('rm '+(os.path.join(root, file)))
         file_cnt+=1
   

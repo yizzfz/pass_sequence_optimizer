@@ -70,18 +70,18 @@ def record_list(prefix, time, size, cnt):
     os.system('touch tmp_empty.ll')
     os.system('opt tmp_empty.ll -S $OPTFLAGS -debug-pass=Structure -o tmp_empty1.ll 2> '+subdir+'/passList.txt')
     os.system('rm tmp*.ll')
-    os.system('cp '+workdir+'/IRinfo.txt '+subdir+'/IRinfo.txt')
+    if cnt > 0:
+      os.system('cp '+workdir+'/IRinfo.txt '+subdir+'/IRinfo.txt')
     #os.system('cp *.ll $SUBDIR/')
     with open(subdir+'/performance.txt', "wb") as f:
       f.write('execution time: ' + str(time) + '\n')
       f.write('binary size: ' + str(size) + '\n')
    
-def ga(all_list, parent_list, current_dir, time_baseline, size_baseline):
+def ga(all_list, parent_list, current_dir, time_baseline, size_baseline, cnt):
     best_time = time_baseline
     best_list = parent_list[:]
     size = size_baseline
     improved = 0
-    cnt = 0
     #num of children per run
     for i in range (1,6):
       cnt+=1
@@ -102,9 +102,10 @@ def ga(all_list, parent_list, current_dir, time_baseline, size_baseline):
             record_list('A', child_time, child_size, cnt)
         else:
           record_list('B', child_time, child_size, cnt)
+      clean_workdir(cnt)
     
-    clean_workdir(cnt)
-    return (improved, best_time, best_list, size)
+    
+    return (improved, best_time, best_list, size, cnt)
         
       
       
@@ -150,9 +151,9 @@ def get_testcodes(base_dir):
 def read_O3_time(current_dir):
     time = 0
     try:
-      os.chdir(current_dir+'/data_O3_1')
+      os.chdir(current_dir+'/data_O3_0')
     except OSError as e:
-      print current_dir + ' does not have /data_O3_1'
+      print current_dir + ' does not have /data_O3_0'
       return -1
       
     with open("performance.txt","rb") as f:
@@ -202,8 +203,10 @@ def t_prepare(current_dir, O3_list):
       print 'cannot compile with O3: ' + current_dir
       return
     
+    
     print '['+ current_dir + '] O3 time = ', O3time, ', bin size = ', O3size
-    record_list('O3_', O3time, O3size, 1)
+    record_list('O3_', O3time, O3size, 0)
+    os.system('cp IRinfo.txt data_O3_0/IRinfo.txt')
       
   
 def t_GA(current_dir, all_list, O3_list, testcodes):  
@@ -220,7 +223,8 @@ def t_GA(current_dir, all_list, O3_list, testcodes):
       
       #### num. ga steps ####
       for i in range(1,100):                        
-        res = ga(all_list, current_list, current_dir, current_time, current_size)
+        res = ga(all_list, current_list, current_dir, current_time, current_size, cnt)
+        cnt = res[4]
         improved = res[0]
         if improved == 0:
           print 'did not improve'
@@ -239,7 +243,6 @@ def t_GA(current_dir, all_list, O3_list, testcodes):
 
     
 def main():
-    global cnt
     all_list = load_from_txt('allPassList.txt')
     O3_list = load_from_txt('O3List.txt')
     

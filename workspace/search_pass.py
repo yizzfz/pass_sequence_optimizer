@@ -20,9 +20,9 @@ def random_gen(n):
 
 def random_select(plist, n):
     new_list = []
-    rng = min(len(plist)-1, n-1)
+    rng = len(plist)-1
     for i in range(0, n):
-        index = random.randint(0 , rng-1)
+        index = random.randint(0 , rng)
         new_list.append(plist[index])
     return list(set(new_list))
 
@@ -32,9 +32,6 @@ def list_to_string(pass_list):
       s += ' ' + ele
     return s
 
-def clean_workdir(idx):
-    workdir = 'work_' + str(idx)
-    os.system('rm -rf '+workdir)
    
 def generate_list(all_list, parent_list):
     new_list = parent_list[:]
@@ -65,13 +62,13 @@ def generate_list(all_list, parent_list):
 
 def record_list(prefix, time, size, cnt):
     subdir = 'data_' + prefix + str(cnt)
-    workdir = 'work_' + str(cnt)
     os.system('mkdir -p ' + subdir)
     os.system('touch tmp_empty.ll')
-    os.system('opt tmp_empty.ll -S $OPTFLAGS -debug-pass=Structure -o tmp_empty1.ll 2> '+subdir+'/passList.txt')
+    os.system('echo "$OPTFLAGS\n" > ' +subdir+'/passList.txt')
+    os.system('opt tmp_empty.ll -S $OPTFLAGS -debug-pass=Structure -o tmp_empty1.ll 2>> '+subdir+'/passList.txt')
     os.system('rm tmp*.ll')
     if cnt > 0:
-      os.system('cp '+workdir+'/IRinfo.txt '+subdir+'/IRinfo.txt')
+      os.system('cp IRinfo.txt '+subdir+'/IRinfo.txt')
     #os.system('cp *.ll $SUBDIR/')
     with open(subdir+'/performance.txt', "wb") as f:
       f.write('execution time: ' + str(time) + '\n')
@@ -86,7 +83,8 @@ def ga(all_list, parent_list, current_dir, time_baseline, size_baseline, cnt):
     for i in range (1,6):
       cnt+=1
       child_list = generate_list(all_list, parent_list)
-      res = create_child(child_list, current_dir, cnt)
+      list_str = list_to_string(child_list)
+      res = create_child(list_str, current_dir)
       if res[0] == 0:
         child_time = res[1]
         child_size = res[2]
@@ -102,37 +100,33 @@ def ga(all_list, parent_list, current_dir, time_baseline, size_baseline, cnt):
             record_list('A', child_time, child_size, cnt)
         else:
           record_list('B', child_time, child_size, cnt)
-      clean_workdir(cnt)
     
     
     return (improved, best_time, best_list, size, cnt)
         
       
       
-def create_child(child_list, current_dir, cnt):
-    list_str = list_to_string(child_list)
+def create_child(list_str, current_dir):
     os.environ["OPTFLAGS"] = list_str
-    subdir = 'work_' + str(cnt)
-    os.system('mkdir -p ' + subdir)
-    os.system('cp * ' + subdir + '/ 2>/dev/null ')  
-    work_dir = current_dir + '/' + subdir
     
-    #print '\n', list_str, '\n'
+#    print '\n', list_str, '\n'
     
     DEVNULL = open(os.devnull, 'wb', 0)
     try:
-      check_call(['make'], cwd = work_dir, shell = True)
-    except subprocess.CalledProcessError as e:
+      check_call(['timeout 60 make'], cwd = current_dir, shell = True)
+    except subprocess.CalledProcessError:
       with open(current_dir+"/error.txt","ab") as f:
-        f.write(list_to_string(child_list))
+        f.write(list_str)
         f.write('\n')
       record_list('err_', -1, -1, 0)
       return (1,-1,-1)
-    
+      
     etime = -1.0
     size = -1
     start = time.time()
-    check_call(['make run'], stdout=DEVNULL, stderr=STDOUT, cwd = work_dir, shell = True)
+    
+    check_call(['make run'], stdout=DEVNULL, stderr=STDOUT, cwd = current_dir, shell = True)
+    
     end = time.time()
     etime = end - start
     size = int(check_output('ls -nl a.out | awk \'{print $5}\'', cwd = current_dir, shell = True))
@@ -161,20 +155,40 @@ def read_O3_time(current_dir):
     s = lines[0].split(': ')
     time = float(s[1])
     return time
+    
+def read_list(target_dir):
+    optimal = ''
+    lmax = 0
+    for root, dirs, files in os.walk(target_dir):
+      for dir in dirs:
+        if 'data_A' in dir:
+          idx = dir[6:]
+          if idx > lmax:
+            lmax = idx
+            optimal = dir
+            
+    if optimal == '':
+      return ''
+          
+    #print 'found optimal ' + optimal + ' in ' + target_dir
+    pass_list = ''
+    with open(target_dir+'/'+optimal+'/passList.txt', 'rb') as f:
+      pass_list = f.read().split('\n')[0]
+    return pass_list
+    
 
-def compare_with_other(current_dir, testcodes, current_list):
-    with open(current_dir+"/workedFor.txt","ab") as f:
+def compare_with_other(current_dir, testcodes):
+    O3time = read_O3_time(current_dir)
+    os.chdir(current_dir)
+    with open(current_dir+"/workedForMe.txt","ab") as f:
       for testcode in testcodes:
-        
-        O3time = read_O3_time(testcode)
-        os.chdir(testcode)
-        idx = random.randint(0, 1e5)
-        res = create_child(current_list, testcode, idx)
-        clean_workdir(idx)
-        if res[0] == 0:
-          if res[1] < O3time:
-            f.write(testcode)
-            f.write('\n')
+        others_list = read_list(testcode)
+        if others_list != '':
+          res = create_child(others_list, current_dir)
+          if res[0] == 0:
+            if res[1] < O3time:
+              f.write(testcode)
+              f.write('\n')
 
 
 
@@ -222,7 +236,7 @@ def t_GA(current_dir, all_list, O3_list, testcodes):
       fail_in_a_row = 0
       
       #### num. ga steps ####
-      for i in range(1,100):                        
+      for i in range(1,10):                        
         res = ga(all_list, current_list, current_dir, current_time, current_size, cnt)
         cnt = res[4]
         improved = res[0]
@@ -238,15 +252,13 @@ def t_GA(current_dir, all_list, O3_list, testcodes):
           current_list = res[2][:]
           current_size = res[3]
       print '['+current_dir+'] final time = ', current_time, ', bin size = ', current_size
-      compare_with_other(current_dir, testcodes, current_list)
+      compare_with_other(current_dir, testcodes)
       os.chdir(current_dir)
 
     
 def main():
     all_list = load_from_txt('allPassList.txt')
     O3_list = load_from_txt('O3List.txt')
-    
-    
     
     
     base_dir = '.'
@@ -257,9 +269,9 @@ def main():
     
     if len(testcodes) == 0:
       print 'cannot find any MARKER, run \'generate_makefile\''
+      return
       
-      
-    #testcodes = random_select(testcodes, 2)
+    testcodes = random_select(testcodes, 3)
     
     print 'found ' + str(len(testcodes)) + ' benchmarks:'
     print testcodes

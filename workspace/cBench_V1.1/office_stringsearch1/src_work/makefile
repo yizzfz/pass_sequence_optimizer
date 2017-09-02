@@ -1,7 +1,7 @@
-FILES= pbmsrch_large.c bmhasrch.c bmhsrch.c bmhisrch.c
-LL1= pbmsrch_large.1.ll bmhasrch.1.ll bmhsrch.1.ll bmhisrch.1.ll
-LL2= pbmsrch_large.2.ll bmhasrch.2.ll bmhsrch.2.ll bmhisrch.2.ll
-LL3= pbmsrch_large.3.ll bmhasrch.3.ll bmhsrch.3.ll bmhisrch.3.ll
+FILES= bmhisrch.c bmhsrch.c bmhasrch.c pbmsrch_large.c
+LL1= bmhisrch.1.ll bmhsrch.1.ll bmhasrch.1.ll pbmsrch_large.1.ll
+LL2= bmhisrch.2.ll bmhsrch.2.ll bmhasrch.2.ll pbmsrch_large.2.ll
+LL3= bmhisrch.3.ll bmhsrch.3.ll bmhasrch.3.ll pbmsrch_large.3.ll
 CC_FLAGS=-DUNIX -DPORTABLE 
 LD_FLAGS=-lm 
 

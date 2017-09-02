@@ -1,7 +1,7 @@
-FILES= bitcnt_4.c loop-wrap.c bstr_i.c bitcnt_3.c bitstrng.c bitcnts.c bitfiles.c bitcnt_2.c bitcnt_1.c bitarray.c
-LL1= bitcnt_4.1.ll loop-wrap.1.ll bstr_i.1.ll bitcnt_3.1.ll bitstrng.1.ll bitcnts.1.ll bitfiles.1.ll bitcnt_2.1.ll bitcnt_1.1.ll bitarray.1.ll
-LL2= bitcnt_4.2.ll loop-wrap.2.ll bstr_i.2.ll bitcnt_3.2.ll bitstrng.2.ll bitcnts.2.ll bitfiles.2.ll bitcnt_2.2.ll bitcnt_1.2.ll bitarray.2.ll
-LL3= bitcnt_4.3.ll loop-wrap.3.ll bstr_i.3.ll bitcnt_3.3.ll bitstrng.3.ll bitcnts.3.ll bitfiles.3.ll bitcnt_2.3.ll bitcnt_1.3.ll bitarray.3.ll
+FILES= bitcnt_1.c bitcnt_2.c bitcnt_3.c bitstrng.c loop-wrap.c bitarray.c bitcnt_4.c bstr_i.c bitfiles.c bitcnts.c
+LL1= bitcnt_1.1.ll bitcnt_2.1.ll bitcnt_3.1.ll bitstrng.1.ll loop-wrap.1.ll bitarray.1.ll bitcnt_4.1.ll bstr_i.1.ll bitfiles.1.ll bitcnts.1.ll
+LL2= bitcnt_1.2.ll bitcnt_2.2.ll bitcnt_3.2.ll bitstrng.2.ll loop-wrap.2.ll bitarray.2.ll bitcnt_4.2.ll bstr_i.2.ll bitfiles.2.ll bitcnts.2.ll
+LL3= bitcnt_1.3.ll bitcnt_2.3.ll bitcnt_3.3.ll bitstrng.3.ll loop-wrap.3.ll bitarray.3.ll bitcnt_4.3.ll bstr_i.3.ll bitfiles.3.ll bitcnts.3.ll
 CC_FLAGS=
 LD_FLAGS=-lm 
 

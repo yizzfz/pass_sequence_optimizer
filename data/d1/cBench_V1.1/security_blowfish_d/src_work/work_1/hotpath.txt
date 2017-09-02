@@ -1,0 +1,69 @@
+Counters:
+  BF_ofb64_encrypt:
+    Hash: 0x0000000c5094b80f
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+  BF_ofb64_encrypt:
+    Hash: 0x0000000c5094b80f
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+  BF_cfb64_encrypt:
+    Hash: 0x0000001420535435
+    Counters: 6
+    Block counts: [0, 712103736, 0, 89102970, 0, 17820594]
+  BF_cfb64_encrypt:
+    Hash: 0x0000001420535435
+    Counters: 6
+    Block counts: [0, 712103736, 0, 89102970, 0, 17820594]
+  BF_set_key:
+    Hash: 0x00000020c5601a70
+    Counters: 9
+    Block counts: [18, 9, 512, 0, 0, 0, 9, 1, 0]
+  BF_set_key:
+    Hash: 0x00000020c5601a70
+    Counters: 9
+    Block counts: [18, 9, 512, 0, 0, 0, 9, 1, 0]
+  BF_options:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  BF_ecb_encrypt:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  BF_options:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  BF_ecb_encrypt:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  BF_cbc_encrypt:
+    Hash: 0x0000003888eae26c
+    Counters: 22
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  BF_cbc_encrypt:
+    Hash: 0x0000003888eae26c
+    Counters: 22
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  BF_encrypt:
+    Hash: 0x00000006e852da94
+    Counters: 2
+    Block counts: [89103491, 0]
+  BF_encrypt:
+    Hash: 0x00000006e852da94
+    Counters: 2
+    Block counts: [89103491, 0]
+  main:
+    Hash: 0x00000049da5413d0
+    Counters: 22
+    Block counts: [1, 3956, 17820594, 3956, 99, 33, 0, 16, 20, 12, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0]
+  main:
+    Hash: 0x0000004eea622fa3
+    Counters: 22
+    Block counts: [3956, 17820594, 3956, 99, 33, 16, 16, 12, 20, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0]
+Functions shown: 16
+Total functions: 16
+Maximum function count: 89103491
+Maximum internal block count: 712103736

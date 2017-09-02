@@ -1,0 +1,2796 @@
+loop ID = jpeg_resync_to_restart_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = next_marker_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = next_marker_D2N12
+loop execution count = 78750 times
+number of instructions executed here (excluding subloops) = 3307500
+number of instructions executed here = 3307500
+
+
+loop ID = next_marker_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 3307500
+
+
+loop ID = jinit_marker_reader_D1N1
+loop execution count = 140000 times
+number of instructions executed here (excluding subloops) = 2660000
+number of instructions executed here = 2660000
+
+
+loop ID = read_markers_D1N1
+loop execution count = 183750 times
+number of instructions executed here (excluding subloops) = 67620000
+number of instructions executed here = 67620000
+
+
+loop ID = get_app0_D1N1
+loop execution count = 122500 times
+number of instructions executed here (excluding subloops) = 5880000
+number of instructions executed here = 5880000
+
+
+loop ID = get_app14_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = get_soi_D1N1
+loop execution count = 140000 times
+number of instructions executed here (excluding subloops) = 4060000
+number of instructions executed here = 4060000
+
+
+loop ID = get_sof_D1N1
+loop execution count = 26250 times
+number of instructions executed here (excluding subloops) = 4961250
+number of instructions executed here = 4961250
+
+
+loop ID = get_sos_D2N11
+loop execution count = 26250 times
+number of instructions executed here (excluding subloops) = 603750
+number of instructions executed here = 603750
+
+
+loop ID = get_sos_D1N1
+loop execution count = 26250 times
+number of instructions executed here (excluding subloops) = 4567500
+number of instructions executed here = 5171250
+
+
+loop ID = get_dac_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = get_dht_D2N11
+loop execution count = 560000 times
+number of instructions executed here (excluding subloops) = 31360000
+number of instructions executed here = 31360000
+
+
+loop ID = get_dht_D2N12
+loop execution count = 3045000 times
+number of instructions executed here (excluding subloops) = 149205000
+number of instructions executed here = 149205000
+
+
+loop ID = get_dht_D1N1
+loop execution count = 140000 times
+number of instructions executed here (excluding subloops) = 47460000
+number of instructions executed here = 228025000
+
+
+loop ID = get_dqt_D2N11
+loop execution count = 1120000 times
+number of instructions executed here (excluding subloops) = 152320000
+number of instructions executed here = 152320000
+
+
+loop ID = get_dqt_D2N12
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = get_dqt_D1N1
+loop execution count = 17500 times
+number of instructions executed here (excluding subloops) = 2887500
+number of instructions executed here = 155207500
+
+
+loop ID = jpeg_make_c_derived_tbl_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = jpeg_make_c_derived_tbl_D2N21
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = jpeg_make_c_derived_tbl_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = jpeg_make_c_derived_tbl_D2N31
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = jpeg_make_c_derived_tbl_D1N3
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = jpeg_gen_optimal_table_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = jpeg_gen_optimal_table_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = jpeg_gen_optimal_table_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = jpeg_gen_optimal_table_D3N311
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = jpeg_gen_optimal_table_D2N31
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = jpeg_gen_optimal_table_D1N3
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = jpeg_gen_optimal_table_D1N4
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = jpeg_gen_optimal_table_D2N51
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = jpeg_gen_optimal_table_D2N52
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = jpeg_gen_optimal_table_D2N53
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = jpeg_gen_optimal_table_D2N54
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = jpeg_gen_optimal_table_D1N5
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = jpeg_gen_optimal_table_D1N6
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = jinit_huff_encoder_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = start_pass_huff_D1N1
+loop execution count = 166250 times
+number of instructions executed here (excluding subloops) = 41562500
+number of instructions executed here = 41562500
+
+
+loop ID = encode_mcu_gather_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = encode_mcu_gather_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = finish_pass_gather_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = encode_mcu_huff_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = htest_one_block_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = htest_one_block_D2N12
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = htest_one_block_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = htest_one_block_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = emit_restart_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = encode_one_block_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = encode_one_block_D2N12
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = encode_one_block_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = encode_one_block_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = emit_bits_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = jinit_phuff_encoder_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = start_pass_phuff_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = encode_mcu_DC_first_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = encode_mcu_DC_first_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = encode_mcu_AC_first_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = encode_mcu_AC_first_D2N12
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = encode_mcu_AC_first_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = encode_mcu_DC_refine_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = encode_mcu_AC_refine_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = encode_mcu_AC_refine_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = encode_mcu_AC_refine_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = finish_pass_gather_phuff_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = emit_restart_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = emit_bits_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = emit_eobrun_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = emit_buffered_bits_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = copy_pixel_rows_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = put_demapped_gray_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = put_demapped_rgb_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = jpeg_CreateDecompress_D1N1
+loop execution count = 35000 times
+number of instructions executed here (excluding subloops) = 805000
+number of instructions executed here = 805000
+
+
+loop ID = jpeg_CreateDecompress_D1N2
+loop execution count = 35000 times
+number of instructions executed here (excluding subloops) = 595000
+number of instructions executed here = 595000
+
+
+loop ID = jpeg_finish_decompress_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = jinit_d_coef_controller_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = jinit_d_coef_controller_D1N2
+loop execution count = 87500 times
+number of instructions executed here (excluding subloops) = 1837500
+number of instructions executed here = 1837500
+
+
+loop ID = consume_data_D5N11111
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = consume_data_D4N1111
+loop execution count = 139999999589272 times
+number of instructions executed here (excluding subloops) = 4199999987678160
+number of instructions executed here = 4199999987678160
+
+
+loop ID = consume_data_D3N111
+loop execution count = 32 times
+number of instructions executed here (excluding subloops) = 928
+number of instructions executed here = 4199999987679088
+
+
+loop ID = consume_data_D2N11
+loop execution count = 139999999589240 times
+number of instructions executed here (excluding subloops) = 4339999987266440
+number of instructions executed here = 8539999974945528
+
+
+loop ID = consume_data_D1N1
+loop execution count = 8209 times
+number of instructions executed here (excluding subloops) = 180598
+number of instructions executed here = 8539999975126126
+
+
+loop ID = consume_data_D1N2
+loop execution count = 33 times
+number of instructions executed here (excluding subloops) = 1749
+number of instructions executed here = 1749
+
+
+loop ID = decompress_data_D3N111
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = decompress_data_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = decompress_data_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = decompress_data_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = decompress_onepass_D5N11111
+loop execution count = 7280000 times
+number of instructions executed here (excluding subloops) = 254800000
+number of instructions executed here = 254800000
+
+
+loop ID = decompress_onepass_D4N1111
+loop execution count = 5005000 times
+number of instructions executed here (excluding subloops) = 260260000
+number of instructions executed here = 515060000
+
+
+loop ID = decompress_onepass_D3N111
+loop execution count = 3753750 times
+number of instructions executed here (excluding subloops) = 319068750
+number of instructions executed here = 834128750
+
+
+loop ID = decompress_onepass_D2N11
+loop execution count = 1251250 times
+number of instructions executed here (excluding subloops) = 50050000
+number of instructions executed here = 884178750
+
+
+loop ID = decompress_onepass_D1N1
+loop execution count = 113750 times
+number of instructions executed here (excluding subloops) = 2502500
+number of instructions executed here = 886681250
+
+
+loop ID = smoothing_ok_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = smoothing_ok_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = decompress_smooth_data_D3N111
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = decompress_smooth_data_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = decompress_smooth_data_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = decompress_smooth_data_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = grayscale_convert_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = grayscale_convert_D1N1
+loop execution count = 84406784 times
+number of instructions executed here (excluding subloops) = 2278983168
+number of instructions executed here = 2278983168
+
+
+loop ID = rgb_ycc_start_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = rgb_gray_convert_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = rgb_gray_convert_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = null_convert_D3N111
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = null_convert_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = null_convert_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = rgb_ycc_convert_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = rgb_ycc_convert_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = cmyk_ycck_convert_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = cmyk_ycck_convert_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = jpeg_read_coefficients_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = jpeg_add_quant_table_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = jpeg_set_defaults_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = jpeg_set_colorspace_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = fill_dc_scans_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = fill_scans_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = main_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = jpeg_copy_critical_parameters_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = jpeg_copy_critical_parameters_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = jpeg_copy_critical_parameters_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = transencode_coef_controller_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = compress_output_D5N11111
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = compress_output_D5N11112
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = compress_output_D4N1111
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = compress_output_D3N111
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = compress_output_D2N11
+loop execution count = -8 times
+number of instructions executed here (excluding subloops) = -232
+number of instructions executed here = -232
+
+
+loop ID = compress_output_D1N1
+loop execution count = 209 times
+number of instructions executed here (excluding subloops) = 4598
+number of instructions executed here = 4366
+
+
+loop ID = compress_output_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = jpeg_idct_4x4_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = jpeg_idct_4x4_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = jpeg_idct_2x2_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = jpeg_idct_2x2_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = jinit_c_coef_controller_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = jinit_c_coef_controller_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = compress_data_D5N11111
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = compress_data_D5N11112
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = compress_data_D4N1111
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = compress_data_D3N111
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = compress_data_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = compress_data_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = compress_first_pass_D3N111
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = compress_first_pass_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = compress_first_pass_D4N1211
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = compress_first_pass_D3N121
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = compress_first_pass_D2N12
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = compress_first_pass_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = compress_output_D5N11111
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = compress_output_D4N1111
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = compress_output_D3N111
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = compress_output_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = compress_output_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = compress_output_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = jcopy_sample_rows_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = start_pass_1_quant_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = create_colormap_D4N1111
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = create_colormap_D3N111
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = create_colormap_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = create_colormap_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = create_colorindex_D3N111
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = create_colorindex_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = create_colorindex_D2N12
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = create_colorindex_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = alloc_fs_workspace_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = color_quantize3_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = color_quantize3_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = color_quantize_D3N111
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = color_quantize_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = color_quantize_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = quantize3_ord_dither_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = quantize3_ord_dither_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = quantize_ord_dither_D3N111
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = quantize_ord_dither_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = quantize_ord_dither_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = create_odither_tables_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = create_odither_tables_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = quantize_fs_dither_D3N111
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = quantize_fs_dither_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = quantize_fs_dither_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = make_odither_array_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = make_odither_array_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = select_ncolors_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = select_ncolors_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = select_ncolors_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = select_ncolors_D2N31
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = select_ncolors_D1N3
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = jinit_memory_mgr_D1N1
+loop execution count = 17500 times
+number of instructions executed here (excluding subloops) = 402500
+number of instructions executed here = 402500
+
+
+loop ID = alloc_small_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = alloc_small_D1N2
+loop execution count = 26250 times
+number of instructions executed here (excluding subloops) = 551250
+number of instructions executed here = 551250
+
+
+loop ID = alloc_sarray_D2N11
+loop execution count = 385000 times
+number of instructions executed here (excluding subloops) = 9240000
+number of instructions executed here = 9240000
+
+
+loop ID = alloc_sarray_D1N1
+loop execution count = 43750 times
+number of instructions executed here (excluding subloops) = 1662500
+number of instructions executed here = 10902500
+
+
+loop ID = alloc_barray_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = alloc_barray_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = realize_virt_arrays_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = realize_virt_arrays_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = realize_virt_arrays_D1N3
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = realize_virt_arrays_D1N4
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = access_virt_sarray_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = access_virt_barray_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = free_pool_D1N1
+loop execution count = 35000 times
+number of instructions executed here (excluding subloops) = 1260000
+number of instructions executed here = 1260000
+
+
+loop ID = free_pool_D1N2
+loop execution count = 52500 times
+number of instructions executed here (excluding subloops) = 1890000
+number of instructions executed here = 1890000
+
+
+loop ID = free_pool_D1N3
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = free_pool_D1N4
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = self_destruct_D1N1
+loop execution count = 17500 times
+number of instructions executed here (excluding subloops) = 245000
+number of instructions executed here = 245000
+
+
+loop ID = do_sarray_io_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = do_barray_io_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = main1_D1N1
+loop execution count = 1820000 times
+number of instructions executed here (excluding subloops) = 47320000
+number of instructions executed here = 47320000
+
+
+loop ID = COM_handler_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = parse_switches_D1N1
+loop execution count = 17500 times
+number of instructions executed here (excluding subloops) = 10132500
+number of instructions executed here = 10132500
+
+
+loop ID = jpeg_idct_islow_D1N1
+loop execution count = 58240000 times
+number of instructions executed here (excluding subloops) = 21898240000
+number of instructions executed here = 21898240000
+
+
+loop ID = jpeg_idct_islow_D1N2
+loop execution count = 58240000 times
+number of instructions executed here (excluding subloops) = 22189440000
+number of instructions executed here = 22189440000
+
+
+loop ID = jinit_write_bmp_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = finish_output_bmp_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = finish_output_bmp_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = put_gray_rows_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = put_gray_rows_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = put_pixel_rows_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = put_pixel_rows_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = write_colormap_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = write_colormap_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = write_colormap_D1N3
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = write_colormap_D1N4
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = jpeg_fdct_islow_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = jpeg_fdct_islow_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = jpeg_calc_output_dimensions_D1N1
+loop execution count = 17500 times
+number of instructions executed here (excluding subloops) = 1102500
+number of instructions executed here = 1102500
+
+
+loop ID = jpeg_calc_output_dimensions_D2N21
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = jpeg_calc_output_dimensions_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = prepare_range_limit_table_D1N1
+loop execution count = 3360000 times
+number of instructions executed here (excluding subloops) = 53760000
+number of instructions executed here = 53760000
+
+
+loop ID = prepare_range_limit_table_D1N2
+loop execution count = 2240000 times
+number of instructions executed here (excluding subloops) = 40320000
+number of instructions executed here = 40320000
+
+
+loop ID = jpeg_CreateCompress_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = jpeg_CreateCompress_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = jpeg_suppress_tables_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = jpeg_suppress_tables_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = jpeg_finish_compress_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = jpeg_finish_compress_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = jpeg_start_decompress_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = output_pass_setup_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = output_pass_setup_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = jpeg_finish_output_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = initial_setup_D1N1
+loop execution count = 26250 times
+number of instructions executed here (excluding subloops) = 2651250
+number of instructions executed here = 2651250
+
+
+loop ID = initial_setup_D1N2
+loop execution count = 113750 times
+number of instructions executed here (excluding subloops) = 12626250
+number of instructions executed here = 12626250
+
+
+loop ID = validate_script_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = validate_script_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = validate_script_D2N31
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = validate_script_D2N32
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = validate_script_D3N331
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = validate_script_D2N33
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = validate_script_D1N3
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = validate_script_D2N41
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = validate_script_D1N4
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = validate_script_D1N5
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = select_scan_parameters_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = select_scan_parameters_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = per_scan_setup_D2N11
+loop execution count = 52500 times
+number of instructions executed here (excluding subloops) = 1050000
+number of instructions executed here = 1050000
+
+
+loop ID = per_scan_setup_D1N1
+loop execution count = 70000 times
+number of instructions executed here (excluding subloops) = 8890000
+number of instructions executed here = 9940000
+
+
+loop ID = jpeg_fdct_float_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = jpeg_fdct_float_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = jpeg_fdct_ifast_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = jpeg_fdct_ifast_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = put_pixel_rows_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = emit_header_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = emit_header_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = output_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = compress_byte_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = start_output_tga_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = put_demapped_gray_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = put_gray_rows_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = put_pixel_rows_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = jpeg_idct_ifast_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = jpeg_idct_ifast_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = jpeg_make_d_derived_tbl_D3N111
+loop execution count = 13265000 times
+number of instructions executed here (excluding subloops) = 437745000
+number of instructions executed here = 437745000
+
+
+loop ID = jpeg_make_d_derived_tbl_D2N11
+loop execution count = 761250 times
+number of instructions executed here (excluding subloops) = 25882500
+number of instructions executed here = 463627500
+
+
+loop ID = jpeg_make_d_derived_tbl_D1N1
+loop execution count = 420000 times
+number of instructions executed here (excluding subloops) = 5460000
+number of instructions executed here = 469087500
+
+
+loop ID = jpeg_make_d_derived_tbl_D1N2
+loop execution count = 840000 times
+number of instructions executed here (excluding subloops) = 58800000
+number of instructions executed here = 58800000
+
+
+loop ID = jpeg_make_d_derived_tbl_D2N31
+loop execution count = 4567500 times
+number of instructions executed here (excluding subloops) = 100485000
+number of instructions executed here = 100485000
+
+
+loop ID = jpeg_make_d_derived_tbl_D1N3
+loop execution count = 638750 times
+number of instructions executed here (excluding subloops) = 10858750
+number of instructions executed here = 111343750
+
+
+loop ID = jpeg_make_d_derived_tbl_D2N41
+loop execution count = 4567500 times
+number of instructions executed here (excluding subloops) = 118755000
+number of instructions executed here = 118755000
+
+
+loop ID = jpeg_make_d_derived_tbl_D1N4
+loop execution count = 840000 times
+number of instructions executed here (excluding subloops) = 10920000
+number of instructions executed here = 129675000
+
+
+loop ID = jpeg_fill_bit_buffer_D2N11
+loop execution count = 245000 times
+number of instructions executed here (excluding subloops) = 13230000
+number of instructions executed here = 13230000
+
+
+loop ID = jpeg_fill_bit_buffer_D1N1
+loop execution count = 70612500 times
+number of instructions executed here (excluding subloops) = 9462075000
+number of instructions executed here = 9475305000
+
+
+loop ID = jpeg_huff_decode_D1N1
+loop execution count = 3316250 times
+number of instructions executed here (excluding subloops) = 172445000
+number of instructions executed here = 172445000
+
+
+loop ID = jinit_huff_decoder_D1N1
+loop execution count = 35000 times
+number of instructions executed here (excluding subloops) = 805000
+number of instructions executed here = 805000
+
+
+loop ID = start_pass_huff_decoder_D1N1
+loop execution count = 131250 times
+number of instructions executed here (excluding subloops) = 20475000
+number of instructions executed here = 20475000
+
+
+loop ID = decode_mcu_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = decode_mcu_D2N12
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = decode_mcu_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = process_restart_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = initial_setup_D1N1
+loop execution count = 26250 times
+number of instructions executed here (excluding subloops) = 2625000
+number of instructions executed here = 2625000
+
+
+loop ID = initial_setup_D1N2
+loop execution count = 113750 times
+number of instructions executed here (excluding subloops) = 12626250
+number of instructions executed here = 12626250
+
+
+loop ID = per_scan_setup_D2N11
+loop execution count = 52500 times
+number of instructions executed here (excluding subloops) = 1050000
+number of instructions executed here = 1050000
+
+
+loop ID = per_scan_setup_D1N1
+loop execution count = 70000 times
+number of instructions executed here (excluding subloops) = 9100000
+number of instructions executed here = 10150000
+
+
+loop ID = latch_quant_tables_D1N1
+loop execution count = 78750 times
+number of instructions executed here (excluding subloops) = 8426250
+number of instructions executed here = 8426250
+
+
+loop ID = skip_input_data_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = jinit_color_deconverter_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = ycc_rgb_convert_D2N11
+loop execution count = 294840000 times
+number of instructions executed here (excluding subloops) = 25356240000
+number of instructions executed here = 25356240000
+
+
+loop ID = ycc_rgb_convert_D1N1
+loop execution count = 1820000 times
+number of instructions executed here (excluding subloops) = 78260000
+number of instructions executed here = 25434500000
+
+
+loop ID = build_ycc_rgb_table_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = null_convert_D3N111
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = null_convert_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = null_convert_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = ycck_cmyk_convert_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = ycck_cmyk_convert_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = jinit_downsampler_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = sep_downsample_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = fullsize_smooth_downsample_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = fullsize_smooth_downsample_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = h2v1_downsample_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = h2v1_downsample_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = h2v2_smooth_downsample_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = h2v2_smooth_downsample_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = h2v2_downsample_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = h2v2_downsample_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = int_downsample_D4N1111
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = int_downsample_D3N111
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = int_downsample_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = int_downsample_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = expand_right_edge_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = expand_right_edge_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = jinit_forward_dct_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = start_pass_fdctmgr_D3N111
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = start_pass_fdctmgr_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = start_pass_fdctmgr_D2N12
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = start_pass_fdctmgr_D2N13
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = start_pass_fdctmgr_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = forward_DCT_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = forward_DCT_D2N12
+loop execution count = 48 times
+number of instructions executed here (excluding subloops) = 3888
+number of instructions executed here = 3888
+
+
+loop ID = forward_DCT_D1N1
+loop execution count = 177 times
+number of instructions executed here (excluding subloops) = 5664
+number of instructions executed here = 9552
+
+
+loop ID = forward_DCT_float_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = forward_DCT_float_D2N12
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = forward_DCT_float_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = jinit_phuff_decoder_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = jinit_phuff_decoder_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = jinit_phuff_decoder_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = start_pass_phuff_decoder_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = start_pass_phuff_decoder_D2N21
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = start_pass_phuff_decoder_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = decode_mcu_DC_first_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = decode_mcu_AC_first_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = decode_mcu_DC_refine_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = decode_mcu_AC_refine_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = decode_mcu_AC_refine_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = decode_mcu_AC_refine_D2N31
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = decode_mcu_AC_refine_D1N3
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = process_restart_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = jinit_d_main_controller_D1N1
+loop execution count = 26250 times
+number of instructions executed here (excluding subloops) = 1443750
+number of instructions executed here = 1443750
+
+
+loop ID = alloc_funny_pointers_D1N1
+loop execution count = 26250 times
+number of instructions executed here (excluding subloops) = 2073750
+number of instructions executed here = 2073750
+
+
+loop ID = make_funny_pointers_D2N11
+loop execution count = 350000 times
+number of instructions executed here (excluding subloops) = 10500000
+number of instructions executed here = 10500000
+
+
+loop ID = make_funny_pointers_D2N12
+loop execution count = 70000 times
+number of instructions executed here (excluding subloops) = 3570000
+number of instructions executed here = 3570000
+
+
+loop ID = make_funny_pointers_D2N13
+loop execution count = 35000 times
+number of instructions executed here (excluding subloops) = 770000
+number of instructions executed here = 770000
+
+
+loop ID = make_funny_pointers_D1N1
+loop execution count = 26250 times
+number of instructions executed here (excluding subloops) = 1575000
+number of instructions executed here = 16415000
+
+
+loop ID = set_bottom_pointers_D2N11
+loop execution count = 70000 times
+number of instructions executed here (excluding subloops) = 1820000
+number of instructions executed here = 1820000
+
+
+loop ID = set_bottom_pointers_D1N1
+loop execution count = 26250 times
+number of instructions executed here (excluding subloops) = 1995000
+number of instructions executed here = 3815000
+
+
+loop ID = set_wraparound_pointers_D2N11
+loop execution count = 35000 times
+number of instructions executed here (excluding subloops) = 2660000
+number of instructions executed here = 2660000
+
+
+loop ID = set_wraparound_pointers_D1N1
+loop execution count = 26250 times
+number of instructions executed here (excluding subloops) = 1286250
+number of instructions executed here = 3946250
+
+
+loop ID = jinit_2pass_quantizer_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = start_pass_2_quant_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = init_error_limit_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = init_error_limit_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = init_error_limit_D1N3
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = prescan_quantize_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = prescan_quantize_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = pass2_fs_dither_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = pass2_fs_dither_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = pass2_no_dither_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = pass2_no_dither_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = select_colors_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = update_box_D3N111
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = update_box_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = update_box_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = update_box_D3N211
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = update_box_D2N21
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = update_box_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = update_box_D3N311
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = update_box_D2N31
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = update_box_D1N3
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = update_box_D3N411
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = update_box_D2N41
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = update_box_D1N4
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = update_box_D3N511
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = update_box_D2N51
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = update_box_D1N5
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = update_box_D3N611
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = update_box_D2N61
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = update_box_D1N6
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = update_box_D3N711
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = update_box_D2N71
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = update_box_D1N7
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = median_cut_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = compute_color_D3N111
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = compute_color_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = compute_color_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = find_biggest_color_pop_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = find_biggest_volume_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = fill_inverse_cmap_D3N111
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = fill_inverse_cmap_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = fill_inverse_cmap_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = find_nearby_colors_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = find_nearby_colors_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = find_best_colors_D4N1111
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = find_best_colors_D3N111
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = find_best_colors_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = find_best_colors_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = find_best_colors_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = jinit_c_main_controller_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = process_data_simple_main_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = jinit_inverse_dct_D1N1
+loop execution count = 26250 times
+number of instructions executed here (excluding subloops) = 1050000
+number of instructions executed here = 1050000
+
+
+loop ID = start_pass_D3N111
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = start_pass_D2N11
+loop execution count = 133937 times
+number of instructions executed here (excluding subloops) = 1741181
+number of instructions executed here = 1741181
+
+
+loop ID = start_pass_D2N12
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = start_pass_D2N13
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = start_pass_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 1741181
+
+
+loop ID = format_message_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = jpeg_abort_D1N1
+loop execution count = 8750 times
+number of instructions executed here (excluding subloops) = 183750
+number of instructions executed here = 183750
+
+
+loop ID = jinit_upsampler_D1N1
+loop execution count = 105000 times
+number of instructions executed here (excluding subloops) = 30135000
+number of instructions executed here = 30135000
+
+
+loop ID = sep_upsample_D1N1
+loop execution count = 2730000 times
+number of instructions executed here (excluding subloops) = 136500000
+number of instructions executed here = 136500000
+
+
+loop ID = h2v1_fancy_upsample_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = h2v1_fancy_upsample_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = h2v1_upsample_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = h2v1_upsample_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = h2v2_fancy_upsample_D3N111
+loop execution count = 287560000 times
+number of instructions executed here (excluding subloops) = 14378000000
+number of instructions executed here = 14378000000
+
+
+loop ID = h2v2_fancy_upsample_D2N11
+loop execution count = 3640000 times
+number of instructions executed here (excluding subloops) = 447720000
+number of instructions executed here = 14825720000
+
+
+loop ID = h2v2_fancy_upsample_D1N1
+loop execution count = 1820000 times
+number of instructions executed here (excluding subloops) = 27300000
+number of instructions executed here = 14853020000
+
+
+loop ID = h2v2_upsample_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = h2v2_upsample_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = int_upsample_D3N111
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = int_upsample_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = int_upsample_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = write_any_marker_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = write_frame_header_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = write_frame_header_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = write_scan_header_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = write_tables_only_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = write_tables_only_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = emit_dqt_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = emit_dqt_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = emit_sof_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = emit_dht_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = emit_dht_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = emit_dht_D1N3
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = emit_sos_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = keymatch_D1N1
+loop execution count = 332500 times
+number of instructions executed here (excluding subloops) = 14630000
+number of instructions executed here = 14630000
+
+
+loop ID = h2v2_merged_upsample_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = h2v1_merged_upsample_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = build_ycc_rgb_table_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = jinit_c_prep_controller_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = pre_process_context_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = pre_process_context_D3N121
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = pre_process_context_D2N12
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = pre_process_context_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = create_context_buffer_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = create_context_buffer_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = pre_process_data_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = pre_process_data_D2N21
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = pre_process_data_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = expand_bottom_edge_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = read_gif_map_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = read_gif_map_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = read_ppm_map_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = read_ppm_map_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = read_ppm_map_D2N21
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = read_ppm_map_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = add_map_entry_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = read_pbm_integer_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = read_pbm_integer_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = pbm_getc_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = jpeg_idct_float_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = jpeg_idct_float_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+

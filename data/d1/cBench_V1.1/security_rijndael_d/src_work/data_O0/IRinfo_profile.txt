@@ -1,0 +1,84 @@
+loop ID = main_D1N1
+loop execution count = 3096168 times
+number of instructions executed here (excluding subloops) = 46442520
+number of instructions executed here = 46442520
+
+
+loop ID = fillrand_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = encfile_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = encfile_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = encfile_D2N31
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = encfile_D1N3
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = decfile_D2N11
+loop execution count = 509835664 times
+number of instructions executed here (excluding subloops) = 12745891600
+number of instructions executed here = 12745891600
+
+
+loop ID = decfile_D1N1
+loop execution count = 31864729 times
+number of instructions executed here (excluding subloops) = 1274589160
+number of instructions executed here = 14020480760
+
+
+loop ID = decfile_D1N2
+loop execution count = 2064112 times
+number of instructions executed here (excluding subloops) = 49538688
+number of instructions executed here = 49538688
+
+
+loop ID = main1_D1N1
+loop execution count = 31993736 times
+number of instructions executed here (excluding subloops) = 2783455032
+number of instructions executed here = 2783455032
+
+
+loop ID = set_key_D1N1
+loop execution count = 1677091 times
+number of instructions executed here (excluding subloops) = 283428379
+number of instructions executed here = 283428379
+
+
+loop ID = set_key_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = set_key_D1N3
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = set_key_D1N4
+loop execution count = 903049 times
+number of instructions executed here (excluding subloops) = 145390889
+number of instructions executed here = 145390889
+
+

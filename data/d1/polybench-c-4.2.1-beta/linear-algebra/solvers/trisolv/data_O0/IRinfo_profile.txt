@@ -1,0 +1,30 @@
+loop ID = init_array_D2N11
+loop execution count = 2001000 times
+number of instructions executed here (excluding subloops) = 62031000
+number of instructions executed here = 62031000
+
+
+loop ID = init_array_D1N1
+loop execution count = 2000 times
+number of instructions executed here (excluding subloops) = 52000
+number of instructions executed here = 62083000
+
+
+loop ID = kernel_trisolv_D2N11
+loop execution count = 1999000 times
+number of instructions executed here (excluding subloops) = 65967000
+number of instructions executed here = 65967000
+
+
+loop ID = kernel_trisolv_D1N1
+loop execution count = 2000 times
+number of instructions executed here (excluding subloops) = 86000
+number of instructions executed here = 66053000
+
+
+loop ID = print_array_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+

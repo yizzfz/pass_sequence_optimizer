@@ -1,0 +1,2 @@
+execution time: 1.13155794144
+binary size: 493000

@@ -1,0 +1,3 @@
+/local/scratch/hc475/pass_sequence_optimizer/workspace/polybench-c-4.2.1-beta/linear-algebra/solvers/trisolv
+/local/scratch/hc475/pass_sequence_optimizer/workspace/polybench-c-4.2.1-beta/linear-algebra/solvers/ludcmp
+/local/scratch/hc475/pass_sequence_optimizer/workspace/polybench-c-4.2.1-beta/linear-algebra/solvers/durbin

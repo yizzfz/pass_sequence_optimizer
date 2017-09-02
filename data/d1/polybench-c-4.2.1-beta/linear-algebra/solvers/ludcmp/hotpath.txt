@@ -1,0 +1,21 @@
+Counters:
+  main:
+    Hash: 0x00000007f24dd5e8
+    Counters: 3
+    Block counts: [1, 0, 0]
+  B.ll:init_array:
+    Hash: 0x0000003953b4b08d
+    Counters: 12
+    Block counts: [8000000000, 2001000, 1999000, 4000000, 4000000, 4000000, 2000, 2000, 2000, 2000, 2000, 1]
+  B.ll:kernel_ludcmp:
+    Hash: 0x0000002f18916727
+    Counters: 10
+    Block counts: [1331334000, 1333333000, 1999000, 2001000, 1999000, 1999000, 2000, 2000, 2000, 1]
+  B.ll:print_array:
+    Hash: 0x0000000a8202e3b6
+    Counters: 3
+    Block counts: [0, 0, 0]
+Functions shown: 4
+Total functions: 4
+Maximum function count: 8000000000
+Maximum internal block count: 1333333000

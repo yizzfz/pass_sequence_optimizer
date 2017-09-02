@@ -1,0 +1,24 @@
+loop ID = adpcm_coder_D1N1
+loop execution count = 2077153584 times
+number of instructions executed here (excluding subloops) = 396736334544
+number of instructions executed here = 396736334544
+
+
+loop ID = adpcm_decoder_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = main_D2N11
+loop execution count = 518232 times
+number of instructions executed here (excluding subloops) = 8809944
+number of instructions executed here = 8809944
+
+
+loop ID = main_D1N1
+loop execution count = 78 times
+number of instructions executed here (excluding subloops) = 1638
+number of instructions executed here = 8811582
+
+

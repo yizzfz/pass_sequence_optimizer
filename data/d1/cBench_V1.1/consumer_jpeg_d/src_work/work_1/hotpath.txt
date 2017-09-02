@@ -1,0 +1,3069 @@
+Counters:
+  jpeg_resync_to_restart:
+    Hash: 0x0002002454a569ea
+    Counters: 12
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:next_marker:
+    Hash: 0x0004002bf29a9a08
+    Counters: 11
+    Block counts: [0, 78750, 0, 0, 0, 0, 0, 0, 78750, 0, 0]
+  jinit_marker_reader:
+    Hash: 0x00010007f2c35b9c
+    Counters: 2
+    Block counts: [140000, 8750]
+  tmp1.ll:reset_marker_reader:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [17500]
+  tmp1.ll:read_markers:
+    Hash: 0x0006007acad1c359
+    Counters: 66
+    Block counts: [8750, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8750, 8750, 78750, 0, 0, 8750, 8750, 0, 8750, 0, 0, 0, 0, 35000, 17500, 0, 0, 0, 8750, 0, 8750, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:read_restart_marker:
+    Hash: 0x00020010d65bc00b
+    Counters: 5
+    Block counts: [0, 0, 0, 0, 0]
+  tmp1.ll:skip_variable:
+    Hash: 0x00040011664f6ffe
+    Counters: 5
+    Block counts: [0, 0, 0, 0, 0]
+  tmp1.ll:get_app0:
+    Hash: 0x000b004027008fd5
+    Counters: 19
+    Block counts: [122500, 0, 0, 0, 0, 0, 0, 0, 8750, 0, 0, 8750, 8750, 8750, 0, 0, 8750, 0, 0]
+  tmp1.ll:get_app14:
+    Hash: 0x000700339284bf90
+    Counters: 15
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:first_marker:
+    Hash: 0x0003001828c11bf6
+    Counters: 7
+    Block counts: [8750, 0, 8750, 8750, 0, 0, 0]
+  tmp1.ll:get_soi:
+    Hash: 0x0002000adade04a9
+    Counters: 3
+    Block counts: [140000, 8750, 0]
+  tmp1.ll:get_sof:
+    Hash: 0x0011006e416575db
+    Counters: 30
+    Block counts: [26250, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8750, 0, 8750, 0, 0, 0, 8750, 0, 0, 0, 0, 0, 0, 8750, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:get_sos:
+    Hash: 0x000e005dcda77733
+    Counters: 24
+    Block counts: [26250, 0, 26250, 0, 0, 0, 0, 8750, 0, 8750, 0, 8750, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:get_dac:
+    Hash: 0x00070031a2a441a9
+    Counters: 14
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:get_dht:
+    Hash: 0x000a004ca1a672f8
+    Counters: 20
+    Block counts: [560000, 3045000, 0, 0, 0, 0, 0, 35000, 35000, 17500, 17500, 0, 35000, 0, 0, 0, 0, 0, 35000, 0]
+  tmp1.ll:get_dqt:
+    Hash: 0x0009004fd0e3bee0
+    Counters: 21
+    Block counts: [0, 0, 1120000, 0, 0, 0, 17500, 0, 0, 17500, 0, 0, 0, 0, 0, 0, 0, 0, 0, 17500, 0]
+  tmp1.ll:get_dri:
+    Hash: 0x000600224eb90f6b
+    Counters: 10
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  jpeg_resync_to_restart:
+    Hash: 0x0002002454a569ea
+    Counters: 12
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  jdmarker.2.ll:next_marker:
+    Hash: 0x0004002bf29a9a08
+    Counters: 11
+    Block counts: [0, 78750, 0, 0, 0, 0, 0, 0, 78750, 0, 0]
+  jinit_marker_reader:
+    Hash: 0x00010007f2c35b9c
+    Counters: 2
+    Block counts: [140000, 8750]
+  jdmarker.2.ll:reset_marker_reader:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [17500]
+  jdmarker.2.ll:read_markers:
+    Hash: 0x0006009a575d5e90
+    Counters: 66
+    Block counts: [8750, 78750, 0, 0, 8750, 8750, 0, 8750, 0, 0, 0, 0, 0, 0, 0, 0, 8750, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8750, 0, 0, 0, 0, 35000, 17500, 0, 0, 0, 8750, 0, 8750, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  jdmarker.2.ll:read_restart_marker:
+    Hash: 0x00020010d65bc00b
+    Counters: 5
+    Block counts: [0, 0, 0, 0, 0]
+  jdmarker.2.ll:skip_variable:
+    Hash: 0x00040011664f6ffe
+    Counters: 5
+    Block counts: [0, 0, 0, 0, 0]
+  jdmarker.2.ll:get_app0:
+    Hash: 0x000b004027008fd5
+    Counters: 19
+    Block counts: [122500, 0, 0, 0, 0, 0, 0, 0, 8750, 0, 0, 8750, 8750, 8750, 0, 0, 8750, 0, 0]
+  jdmarker.2.ll:get_app14:
+    Hash: 0x000700339284bf90
+    Counters: 15
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  jdmarker.2.ll:first_marker:
+    Hash: 0x0003001828c11bf6
+    Counters: 7
+    Block counts: [8750, 0, 8750, 8750, 0, 0, 0]
+  jdmarker.2.ll:get_soi:
+    Hash: 0x0002000adade04a9
+    Counters: 3
+    Block counts: [140000, 8750, 0]
+  jdmarker.2.ll:get_sof:
+    Hash: 0x0011006e416575db
+    Counters: 30
+    Block counts: [26250, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8750, 0, 8750, 0, 0, 0, 8750, 0, 0, 0, 0, 0, 0, 8750, 0, 0, 0, 0, 0, 0]
+  jdmarker.2.ll:get_sos:
+    Hash: 0x000e005dcda77733
+    Counters: 24
+    Block counts: [26250, 0, 26250, 0, 0, 0, 0, 8750, 0, 8750, 0, 8750, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  jdmarker.2.ll:get_dac:
+    Hash: 0x00070031a2a441a9
+    Counters: 14
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  jdmarker.2.ll:get_dht:
+    Hash: 0x000a004ca1a672f8
+    Counters: 20
+    Block counts: [560000, 3045000, 0, 0, 0, 0, 0, 35000, 35000, 17500, 17500, 0, 35000, 0, 0, 0, 0, 0, 35000, 0]
+  jdmarker.2.ll:get_dqt:
+    Hash: 0x0009004fd0e3bee0
+    Counters: 21
+    Block counts: [0, 0, 1120000, 0, 0, 0, 17500, 0, 0, 17500, 0, 0, 0, 0, 0, 0, 0, 0, 0, 17500, 0]
+  jdmarker.2.ll:get_dri:
+    Hash: 0x000600224eb90f6b
+    Counters: 10
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  jpeg_make_c_derived_tbl:
+    Hash: 0x0001001cea4d1b2e
+    Counters: 7
+    Block counts: [0, 0, 0, 0, 0, 0, 0]
+  jpeg_gen_optimal_table:
+    Hash: 0x00010053b8f53ccf
+    Counters: 22
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  jinit_huff_encoder:
+    Hash: 0x00010007f2c35b9c
+    Counters: 2
+    Block counts: [0, 0]
+  tmp1.ll:start_pass_huff:
+    Hash: 0x0004002730bb9122
+    Counters: 14
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:encode_mcu_gather:
+    Hash: 0x000000128626b23d
+    Counters: 5
+    Block counts: [0, 0, 0, 0, 0]
+  tmp1.ll:finish_pass_gather:
+    Hash: 0x0000001395154458
+    Counters: 6
+    Block counts: [0, 0, 0, 0, 0, 0]
+  tmp1.ll:encode_mcu_huff:
+    Hash: 0x0000001a5515a33b
+    Counters: 8
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:finish_pass_huff:
+    Hash: 0x000100054c976867
+    Counters: 2
+    Block counts: [0, 0]
+  tmp1.ll:htest_one_block:
+    Hash: 0x000000203def016a
+    Counters: 9
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:emit_restart:
+    Hash: 0x00000017945ef8c1
+    Counters: 7
+    Block counts: [0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:encode_one_block:
+    Hash: 0x000000363a76e801
+    Counters: 16
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:flush_bits:
+    Hash: 0x00000006e852da94
+    Counters: 2
+    Block counts: [0, 0]
+  tmp1.ll:dump_buffer:
+    Hash: 0x00010006e852da94
+    Counters: 2
+    Block counts: [0, 0]
+  tmp1.ll:emit_bits:
+    Hash: 0x00010019691b94e2
+    Counters: 8
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0]
+  jpeg_make_c_derived_tbl:
+    Hash: 0x0001001cea4d1b2e
+    Counters: 7
+    Block counts: [0, 0, 0, 0, 0, 0, 0]
+  jpeg_gen_optimal_table:
+    Hash: 0x00010053b8f53ccf
+    Counters: 22
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  jinit_huff_encoder:
+    Hash: 0x00010007f2c35b9c
+    Counters: 2
+    Block counts: [0, 0]
+  jchuff.2.ll:start_pass_huff:
+    Hash: 0x0004002730bb9122
+    Counters: 14
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  jchuff.2.ll:encode_mcu_gather:
+    Hash: 0x000000128626b23d
+    Counters: 5
+    Block counts: [0, 0, 0, 0, 0]
+  jchuff.2.ll:finish_pass_gather:
+    Hash: 0x0000001395154458
+    Counters: 6
+    Block counts: [0, 0, 0, 0, 0, 0]
+  jchuff.2.ll:encode_mcu_huff:
+    Hash: 0x0000001a5515a33b
+    Counters: 8
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0]
+  jchuff.2.ll:finish_pass_huff:
+    Hash: 0x000100054c976867
+    Counters: 2
+    Block counts: [0, 0]
+  jchuff.2.ll:htest_one_block:
+    Hash: 0x000000203def016a
+    Counters: 9
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0]
+  jchuff.2.ll:emit_restart:
+    Hash: 0x00000017945ef8c1
+    Counters: 7
+    Block counts: [0, 0, 0, 0, 0, 0, 0]
+  jchuff.2.ll:encode_one_block:
+    Hash: 0x000000363a76e801
+    Counters: 16
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  jchuff.2.ll:flush_bits:
+    Hash: 0x00000006e852da94
+    Counters: 2
+    Block counts: [0, 0]
+  jchuff.2.ll:dump_buffer:
+    Hash: 0x00010006e852da94
+    Counters: 2
+    Block counts: [0, 0]
+  jchuff.2.ll:emit_bits:
+    Hash: 0x00010019691b94e2
+    Counters: 8
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0]
+  jpeg_stdio_dest:
+    Hash: 0x00010005f42b0f02
+    Counters: 2
+    Block counts: [0, 0]
+  tmp1.ll:init_destination:
+    Hash: 0x00010002ffffffff
+    Counters: 1
+    Block counts: [0]
+  tmp1.ll:empty_output_buffer:
+    Hash: 0x00010005f42b0f02
+    Counters: 2
+    Block counts: [0, 0]
+  tmp1.ll:term_destination:
+    Hash: 0x0002000b395f155f
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+  jpeg_stdio_dest:
+    Hash: 0x00010005f42b0f02
+    Counters: 2
+    Block counts: [0, 0]
+  jdatadst.2.ll:init_destination:
+    Hash: 0x00010002ffffffff
+    Counters: 1
+    Block counts: [0]
+  jdatadst.2.ll:empty_output_buffer:
+    Hash: 0x00010005f42b0f02
+    Counters: 2
+    Block counts: [0, 0]
+  jdatadst.2.ll:term_destination:
+    Hash: 0x0002000b395f155f
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+  jinit_phuff_encoder:
+    Hash: 0x00010007f2c35b9c
+    Counters: 2
+    Block counts: [0, 0]
+  tmp1.ll:start_pass_phuff:
+    Hash: 0x0004003ee2f7c0f1
+    Counters: 20
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:encode_mcu_DC_first:
+    Hash: 0x0000001da3e9ffa5
+    Counters: 9
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:encode_mcu_AC_first:
+    Hash: 0x0000002e79837e08
+    Counters: 14
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:encode_mcu_DC_refine:
+    Hash: 0x00000013e79e437b
+    Counters: 6
+    Block counts: [0, 0, 0, 0, 0, 0]
+  tmp1.ll:encode_mcu_AC_refine:
+    Hash: 0x01000035cea4d5cc
+    Counters: 18
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:finish_pass_gather_phuff:
+    Hash: 0x00000018e399be83
+    Counters: 7
+    Block counts: [0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:finish_pass_phuff:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  tmp1.ll:emit_restart:
+    Hash: 0x00000014daace353
+    Counters: 6
+    Block counts: [0, 0, 0, 0, 0, 0]
+  tmp1.ll:emit_symbol:
+    Hash: 0x00000006e852da94
+    Counters: 2
+    Block counts: [0, 0]
+  tmp1.ll:emit_bits:
+    Hash: 0x00010016eb1f9e46
+    Counters: 7
+    Block counts: [0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:emit_eobrun:
+    Hash: 0x0000000c45960be5
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+  tmp1.ll:flush_bits:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  tmp1.ll:dump_buffer:
+    Hash: 0x000200054c976867
+    Counters: 2
+    Block counts: [0, 0]
+  tmp1.ll:emit_buffered_bits:
+    Hash: 0x000000094ce7b663
+    Counters: 3
+    Block counts: [0, 0, 0]
+  jinit_phuff_encoder:
+    Hash: 0x00010007f2c35b9c
+    Counters: 2
+    Block counts: [0, 0]
+  jcphuff.2.ll:start_pass_phuff:
+    Hash: 0x0004003ee2f7c0f1
+    Counters: 20
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  jcphuff.2.ll:encode_mcu_DC_first:
+    Hash: 0x0000001da3e9ffa5
+    Counters: 9
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0]
+  jcphuff.2.ll:encode_mcu_AC_first:
+    Hash: 0x0000002e79837e08
+    Counters: 14
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  jcphuff.2.ll:encode_mcu_DC_refine:
+    Hash: 0x00000013e79e437b
+    Counters: 6
+    Block counts: [0, 0, 0, 0, 0, 0]
+  jcphuff.2.ll:encode_mcu_AC_refine:
+    Hash: 0x01000035cea4d5cc
+    Counters: 18
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  jcphuff.2.ll:finish_pass_gather_phuff:
+    Hash: 0x00000018e399be83
+    Counters: 7
+    Block counts: [0, 0, 0, 0, 0, 0, 0]
+  jcphuff.2.ll:finish_pass_phuff:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  jcphuff.2.ll:emit_restart:
+    Hash: 0x00000014daace353
+    Counters: 6
+    Block counts: [0, 0, 0, 0, 0, 0]
+  jcphuff.2.ll:emit_symbol:
+    Hash: 0x00000006e852da94
+    Counters: 2
+    Block counts: [0, 0]
+  jcphuff.2.ll:emit_bits:
+    Hash: 0x00010016eb1f9e46
+    Counters: 7
+    Block counts: [0, 0, 0, 0, 0, 0, 0]
+  jcphuff.2.ll:emit_eobrun:
+    Hash: 0x0000000c45960be5
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+  jcphuff.2.ll:flush_bits:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  jcphuff.2.ll:dump_buffer:
+    Hash: 0x000200054c976867
+    Counters: 2
+    Block counts: [0, 0]
+  jcphuff.2.ll:emit_buffered_bits:
+    Hash: 0x000000094ce7b663
+    Counters: 3
+    Block counts: [0, 0, 0]
+  jinit_write_ppm:
+    Hash: 0x0003000ede01701d
+    Counters: 4
+    Block counts: [8750, 0, 0, 0]
+  tmp1.ll:start_output_ppm:
+    Hash: 0x00010008190071db
+    Counters: 3
+    Block counts: [8750, 0, 0]
+  tmp1.ll:finish_output_ppm:
+    Hash: 0x00010005f42b0f02
+    Counters: 2
+    Block counts: [8750, 0]
+  tmp1.ll:copy_pixel_rows:
+    Hash: 0x00000007f2c35b9c
+    Counters: 2
+    Block counts: [0, 0]
+  tmp1.ll:put_demapped_gray:
+    Hash: 0x00000007f2c35b9c
+    Counters: 2
+    Block counts: [0, 0]
+  tmp1.ll:put_demapped_rgb:
+    Hash: 0x00000007f2c35b9c
+    Counters: 2
+    Block counts: [0, 0]
+  tmp1.ll:put_pixel_rows:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [1820000]
+  jinit_write_ppm:
+    Hash: 0x0003000ede01701d
+    Counters: 4
+    Block counts: [8750, 0, 0, 0]
+  wrppm.2.ll:start_output_ppm:
+    Hash: 0x00010008190071db
+    Counters: 3
+    Block counts: [8750, 0, 0]
+  wrppm.2.ll:finish_output_ppm:
+    Hash: 0x00010005f42b0f02
+    Counters: 2
+    Block counts: [8750, 0]
+  wrppm.2.ll:copy_pixel_rows:
+    Hash: 0x00000007f2c35b9c
+    Counters: 2
+    Block counts: [0, 0]
+  wrppm.2.ll:put_demapped_gray:
+    Hash: 0x00000007f2c35b9c
+    Counters: 2
+    Block counts: [0, 0]
+  wrppm.2.ll:put_demapped_rgb:
+    Hash: 0x00000007f2c35b9c
+    Counters: 2
+    Block counts: [0, 0]
+  wrppm.2.ll:put_pixel_rows:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [1820000]
+  jpeg_CreateDecompress:
+    Hash: 0x0002001272e91207
+    Counters: 5
+    Block counts: [35000, 35000, 8750, 0, 0]
+  jpeg_destroy_decompress:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [8750]
+  jpeg_abort_decompress:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  jpeg_set_marker_processor:
+    Hash: 0x0001000cd980ef07
+    Counters: 4
+    Block counts: [8750, 0, 0, 0]
+  jpeg_read_header:
+    Hash: 0x00020011a576b4e8
+    Counters: 7
+    Block counts: [8750, 0, 0, 8750, 0, 0, 0]
+  jpeg_consume_input:
+    Hash: 0x00050015a4587ae2
+    Counters: 12
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 8750, 8750, 0, 8750, 0]
+  tmp1.ll:default_decompress_parms:
+    Hash: 0x00030034962a49f4
+    Counters: 17
+    Block counts: [0, 0, 8750, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  jpeg_input_complete:
+    Hash: 0x00010007f43fa13e
+    Counters: 3
+    Block counts: [0, 0, 0]
+  jpeg_has_multiple_scans:
+    Hash: 0x00010007f43fa13e
+    Counters: 3
+    Block counts: [0, 0, 0]
+  jpeg_finish_decompress:
+    Hash: 0x0005001cddc9bbd5
+    Counters: 9
+    Block counts: [0, 8750, 0, 0, 0, 0, 8750, 0, 0]
+  jpeg_CreateDecompress:
+    Hash: 0x0002001272e91207
+    Counters: 5
+    Block counts: [35000, 35000, 8750, 0, 0]
+  jpeg_destroy_decompress:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [8750]
+  jpeg_abort_decompress:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  jpeg_set_marker_processor:
+    Hash: 0x0001000cd980ef07
+    Counters: 4
+    Block counts: [8750, 0, 0, 0]
+  jpeg_read_header:
+    Hash: 0x00020011a576b4e8
+    Counters: 7
+    Block counts: [8750, 0, 0, 8750, 0, 0, 0]
+  jpeg_consume_input:
+    Hash: 0x0005001b23331001
+    Counters: 12
+    Block counts: [0, 8750, 8750, 0, 8750, 0, 0, 0, 0, 0, 0, 0]
+  jdapimin.2.ll:default_decompress_parms:
+    Hash: 0x00030034962a49f4
+    Counters: 17
+    Block counts: [0, 0, 8750, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  jpeg_input_complete:
+    Hash: 0x00010007f43fa13e
+    Counters: 3
+    Block counts: [0, 0, 0]
+  jpeg_has_multiple_scans:
+    Hash: 0x00010007f43fa13e
+    Counters: 3
+    Block counts: [0, 0, 0]
+  jpeg_finish_decompress:
+    Hash: 0x0005001dc4f65342
+    Counters: 9
+    Block counts: [8750, 0, 0, 0, 0, 8750, 0, 0, 0]
+  jinit_d_coef_controller:
+    Hash: 0x00030013678adf43
+    Counters: 5
+    Block counts: [0, 0, 87500, 0, 8750]
+  tmp1.ll:start_input_pass:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [8750]
+  tmp1.ll:start_output_pass:
+    Hash: 0x0000000bd1a0ea49
+    Counters: 4
+    Block counts: [8750, 0, 0, 0]
+  tmp1.ll:consume_data:
+    Hash: 0x0003002701497960
+    Counters: 9
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:decompress_data:
+    Hash: 0x0003002c5b31daf7
+    Counters: 12
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:dummy_consume_data:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  tmp1.ll:decompress_onepass:
+    Hash: 0x0003002ec89a374e
+    Counters: 12
+    Block counts: [7280000, 5005000, 5005000, 385000, 0, 3412500, 341250, 1251250, 113750, 0, 105000, 8750]
+  tmp1.ll:start_iMCU_row:
+    Hash: 0x0000000a3cccf005
+    Counters: 3
+    Block counts: [113750, 0, 0]
+  tmp1.ll:smoothing_ok:
+    Hash: 0x0001002b0f7cde9f
+    Counters: 15
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:decompress_smooth_data:
+    Hash: 0x010400a1e61fa0eb
+    Counters: 55
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  jinit_d_coef_controller:
+    Hash: 0x00030013678adf43
+    Counters: 5
+    Block counts: [0, 0, 87500, 0, 8750]
+  jdcoefct.2.ll:start_input_pass:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [8750]
+  jdcoefct.2.ll:start_output_pass:
+    Hash: 0x0000000bd1a0ea49
+    Counters: 4
+    Block counts: [8750, 0, 0, 0]
+  jdcoefct.2.ll:consume_data:
+    Hash: 0x0003002701497960
+    Counters: 9
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0]
+  jdcoefct.2.ll:decompress_data:
+    Hash: 0x0003002c5b31daf7
+    Counters: 12
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  jdcoefct.2.ll:dummy_consume_data:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  jdcoefct.2.ll:decompress_onepass:
+    Hash: 0x0003002ec89a374e
+    Counters: 12
+    Block counts: [7280000, 5005000, 5005000, 385000, 0, 3412500, 341250, 1251250, 113750, 0, 105000, 8750]
+  jdcoefct.2.ll:start_iMCU_row:
+    Hash: 0x0000000a3cccf005
+    Counters: 3
+    Block counts: [113750, 0, 0]
+  jdcoefct.2.ll:smoothing_ok:
+    Hash: 0x0001002b0f7cde9f
+    Counters: 15
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  jdcoefct.2.ll:decompress_smooth_data:
+    Hash: 0x010400a1e61fa0eb
+    Counters: 55
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  jinit_color_converter:
+    Hash: 0x0010005ca45b623f
+    Counters: 31
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:null_method:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  tmp1.ll:grayscale_convert:
+    Hash: 0x0000000bde0d3043
+    Counters: 3
+    Block counts: [0, 0, 0]
+  tmp1.ll:rgb_ycc_start:
+    Hash: 0x00010007f2c35b9c
+    Counters: 2
+    Block counts: [0, 0]
+  tmp1.ll:rgb_gray_convert:
+    Hash: 0x0000000bde0d3043
+    Counters: 3
+    Block counts: [0, 0, 0]
+  tmp1.ll:null_convert:
+    Hash: 0x0000001092740fa5
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+  tmp1.ll:rgb_ycc_convert:
+    Hash: 0x0000000bde0d3043
+    Counters: 3
+    Block counts: [0, 0, 0]
+  tmp1.ll:cmyk_ycck_convert:
+    Hash: 0x0000000bde0d3043
+    Counters: 3
+    Block counts: [0, 0, 0]
+  jinit_color_converter:
+    Hash: 0x0010005e7ba5091a
+    Counters: 31
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  jccolor.2.ll:null_method:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  jccolor.2.ll:grayscale_convert:
+    Hash: 0x0000000bde0d3043
+    Counters: 3
+    Block counts: [0, 0, 0]
+  jccolor.2.ll:rgb_ycc_start:
+    Hash: 0x00010007f2c35b9c
+    Counters: 2
+    Block counts: [0, 0]
+  jccolor.2.ll:rgb_gray_convert:
+    Hash: 0x0000000bde0d3043
+    Counters: 3
+    Block counts: [0, 0, 0]
+  jccolor.2.ll:null_convert:
+    Hash: 0x0000001092740fa5
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+  jccolor.2.ll:rgb_ycc_convert:
+    Hash: 0x0000000bde0d3043
+    Counters: 3
+    Block counts: [0, 0, 0]
+  jccolor.2.ll:cmyk_ycck_convert:
+    Hash: 0x0000000bde0d3043
+    Counters: 3
+    Block counts: [0, 0, 0]
+  jpeg_read_coefficients:
+    Hash: 0x0003001f0b83072d
+    Counters: 10
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:transdecode_master_selection:
+    Hash: 0x00030015d9a0ee4f
+    Counters: 6
+    Block counts: [0, 0, 0, 0, 0, 0]
+  jpeg_read_coefficients:
+    Hash: 0x0003001f0b83072d
+    Counters: 10
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  jdtrans.2.ll:transdecode_master_selection:
+    Hash: 0x00030015d9a0ee4f
+    Counters: 6
+    Block counts: [0, 0, 0, 0, 0, 0]
+  jpeg_add_quant_table:
+    Hash: 0x000100180984dbc4
+    Counters: 8
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0]
+  jpeg_set_linear_quality:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  jpeg_quality_scaling:
+    Hash: 0x0000000cca32ffe2
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+  jpeg_set_quality:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  jpeg_set_defaults:
+    Hash: 0x00020010c5e5df8d
+    Counters: 5
+    Block counts: [0, 0, 0, 0, 0]
+  tmp1.ll:std_huff_tables:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  jpeg_default_colorspace:
+    Hash: 0x00010010b6c1a4ce
+    Counters: 7
+    Block counts: [0, 0, 0, 0, 0, 0, 0]
+  jpeg_set_colorspace:
+    Hash: 0x0003001dde62593f
+    Counters: 11
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  jpeg_simple_progression:
+    Hash: 0x00020015111b40e2
+    Counters: 7
+    Block counts: [0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:fill_dc_scans:
+    Hash: 0x0000000b2fbf8877
+    Counters: 3
+    Block counts: [0, 0, 0]
+  tmp1.ll:fill_a_scan:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  tmp1.ll:fill_scans:
+    Hash: 0x00000007f2c35b9c
+    Counters: 2
+    Block counts: [0, 0]
+  tmp1.ll:add_huff_table:
+    Hash: 0x00000005f42b0f02
+    Counters: 2
+    Block counts: [0, 0]
+  jpeg_add_quant_table:
+    Hash: 0x000100180984dbc4
+    Counters: 8
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0]
+  jpeg_set_linear_quality:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  jpeg_quality_scaling:
+    Hash: 0x0000000cca32ffe2
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+  jpeg_set_quality:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  jpeg_set_defaults:
+    Hash: 0x00020010c5e5df8d
+    Counters: 5
+    Block counts: [0, 0, 0, 0, 0]
+  jcparam.2.ll:std_huff_tables:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  jpeg_default_colorspace:
+    Hash: 0x00010010b6c1a4ce
+    Counters: 7
+    Block counts: [0, 0, 0, 0, 0, 0, 0]
+  jpeg_set_colorspace:
+    Hash: 0x0003001dde62593f
+    Counters: 11
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  jpeg_simple_progression:
+    Hash: 0x00020015111b40e2
+    Counters: 7
+    Block counts: [0, 0, 0, 0, 0, 0, 0]
+  jcparam.2.ll:fill_dc_scans:
+    Hash: 0x0000000b2fbf8877
+    Counters: 3
+    Block counts: [0, 0, 0]
+  jcparam.2.ll:fill_a_scan:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  jcparam.2.ll:fill_scans:
+    Hash: 0x00000007f2c35b9c
+    Counters: 2
+    Block counts: [0, 0]
+  jcparam.2.ll:add_huff_table:
+    Hash: 0x00000005f42b0f02
+    Counters: 2
+    Block counts: [0, 0]
+  main:
+    Hash: 0x0000000bfb666f9f
+    Counters: 3
+    Block counts: [8750, 1, 0]
+  main:
+    Hash: 0x0000000bfb666f9f
+    Counters: 3
+    Block counts: [8750, 1, 0]
+  jpeg_write_coefficients:
+    Hash: 0x00030005f42b0f02
+    Counters: 2
+    Block counts: [0, 0]
+  tmp1.ll:transencode_master_selection:
+    Hash: 0x0003000a3cccf005
+    Counters: 3
+    Block counts: [0, 0, 0]
+  jpeg_copy_critical_parameters:
+    Hash: 0x0004002cdd3e5ebd
+    Counters: 14
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:transencode_coef_controller:
+    Hash: 0x00020007f2c35b9c
+    Counters: 2
+    Block counts: [0, 0]
+  tmp1.ll:start_pass_coef:
+    Hash: 0x00010005f42b0f02
+    Counters: 2
+    Block counts: [0, 0]
+  tmp1.ll:compress_output:
+    Hash: 0x00020033c33b67db
+    Counters: 12
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:start_iMCU_row:
+    Hash: 0x0000000a3cccf005
+    Counters: 3
+    Block counts: [0, 0, 0]
+  jpeg_write_coefficients:
+    Hash: 0x00030005f42b0f02
+    Counters: 2
+    Block counts: [0, 0]
+  jctrans.2.ll:transencode_master_selection:
+    Hash: 0x0003000a3cccf005
+    Counters: 3
+    Block counts: [0, 0, 0]
+  jpeg_copy_critical_parameters:
+    Hash: 0x0004002cdd3e5ebd
+    Counters: 14
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  jctrans.2.ll:transencode_coef_controller:
+    Hash: 0x00020007f2c35b9c
+    Counters: 2
+    Block counts: [0, 0]
+  jctrans.2.ll:start_pass_coef:
+    Hash: 0x00010005f42b0f02
+    Counters: 2
+    Block counts: [0, 0]
+  jctrans.2.ll:compress_output:
+    Hash: 0x00020033c33b67db
+    Counters: 12
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  jctrans.2.ll:start_iMCU_row:
+    Hash: 0x0000000a3cccf005
+    Counters: 3
+    Block counts: [0, 0, 0]
+  jpeg_idct_4x4:
+    Hash: 0x00000015f0f515fc
+    Counters: 6
+    Block counts: [0, 0, 0, 0, 0, 0]
+  jpeg_idct_2x2:
+    Hash: 0x000000192fa6fe76
+    Counters: 8
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0]
+  jpeg_idct_1x1:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  jpeg_idct_4x4:
+    Hash: 0x00000015f0f515fc
+    Counters: 6
+    Block counts: [0, 0, 0, 0, 0, 0]
+  jpeg_idct_2x2:
+    Hash: 0x000000192fa6fe76
+    Counters: 8
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0]
+  jpeg_idct_1x1:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  jinit_c_coef_controller:
+    Hash: 0x000300102dfc0f71
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+  tmp1.ll:start_pass_coef:
+    Hash: 0x000400134eb65f8a
+    Counters: 7
+    Block counts: [0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:start_iMCU_row:
+    Hash: 0x0000000a3cccf005
+    Counters: 3
+    Block counts: [0, 0, 0]
+  tmp1.ll:compress_data:
+    Hash: 0x00020031f9e3ce76
+    Counters: 12
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:compress_first_pass:
+    Hash: 0x00020030d3070879
+    Counters: 12
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:compress_output:
+    Hash: 0x000200243d4d268b
+    Counters: 8
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0]
+  jinit_c_coef_controller:
+    Hash: 0x000300102dfc0f71
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+  jccoefct.2.ll:start_pass_coef:
+    Hash: 0x000400134eb65f8a
+    Counters: 7
+    Block counts: [0, 0, 0, 0, 0, 0, 0]
+  jccoefct.2.ll:start_iMCU_row:
+    Hash: 0x0000000a3cccf005
+    Counters: 3
+    Block counts: [0, 0, 0]
+  jccoefct.2.ll:compress_data:
+    Hash: 0x00020031f9e3ce76
+    Counters: 12
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  jccoefct.2.ll:compress_first_pass:
+    Hash: 0x00020030d3070879
+    Counters: 12
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  jccoefct.2.ll:compress_output:
+    Hash: 0x000200243d4d268b
+    Counters: 8
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0]
+  jdiv_round_up:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [236250]
+  jround_up:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [17500]
+  jcopy_sample_rows:
+    Hash: 0x00000007f2c35b9c
+    Counters: 2
+    Block counts: [0, 0]
+  jcopy_block_row:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  jzero_far:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [1251250]
+  jdiv_round_up:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [236250]
+  jround_up:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [17500]
+  jcopy_sample_rows:
+    Hash: 0x00000007f2c35b9c
+    Counters: 2
+    Block counts: [0, 0]
+  jcopy_block_row:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  jzero_far:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [1251250]
+  jpeg_start_compress:
+    Hash: 0x010400087f5cc5c1
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+  jpeg_write_scanlines:
+    Hash: 0x00050011c0915c5c
+    Counters: 6
+    Block counts: [0, 0, 0, 0, 0, 0]
+  jpeg_write_raw_data:
+    Hash: 0x000600158463d863
+    Counters: 7
+    Block counts: [0, 0, 0, 0, 0, 0, 0]
+  jpeg_start_compress:
+    Hash: 0x010400087f5cc5c1
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+  jpeg_write_scanlines:
+    Hash: 0x00050011c0915c5c
+    Counters: 6
+    Block counts: [0, 0, 0, 0, 0, 0]
+  jpeg_write_raw_data:
+    Hash: 0x000600158463d863
+    Counters: 7
+    Block counts: [0, 0, 0, 0, 0, 0, 0]
+  jinit_1pass_quantizer:
+    Hash: 0x0003000befe2eacf
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+  tmp1.ll:start_pass_1_quant:
+    Hash: 0x000100209c10c9e9
+    Counters: 10
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:finish_pass_1_quant:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  tmp1.ll:new_color_map_1_quant:
+    Hash: 0x00010002ffffffff
+    Counters: 1
+    Block counts: [0]
+  tmp1.ll:create_colormap:
+    Hash: 0x0003001c1662bd96
+    Counters: 6
+    Block counts: [0, 0, 0, 0, 0, 0]
+  tmp1.ll:create_colorindex:
+    Hash: 0x0001001fe77e62dc
+    Counters: 8
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:alloc_fs_workspace:
+    Hash: 0x00010007f2c35b9c
+    Counters: 2
+    Block counts: [0, 0]
+  tmp1.ll:color_quantize3:
+    Hash: 0x0000000c8e6c4700
+    Counters: 3
+    Block counts: [0, 0, 0]
+  tmp1.ll:color_quantize:
+    Hash: 0x0000001157923ab7
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+  tmp1.ll:quantize3_ord_dither:
+    Hash: 0x0000000c8e6c4700
+    Counters: 3
+    Block counts: [0, 0, 0]
+  tmp1.ll:quantize_ord_dither:
+    Hash: 0x0000001157923ab7
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+  tmp1.ll:create_odither_tables:
+    Hash: 0x00000012934d15a0
+    Counters: 5
+    Block counts: [0, 0, 0, 0, 0]
+  tmp1.ll:quantize_fs_dither:
+    Hash: 0x010000152db006a8
+    Counters: 6
+    Block counts: [0, 0, 0, 0, 0, 0]
+  tmp1.ll:make_odither_array:
+    Hash: 0x000100105c3da1ab
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+  tmp1.ll:select_ncolors:
+    Hash: 0x000100236d731a91
+    Counters: 9
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:output_value:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  tmp1.ll:largest_input_value:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  jinit_1pass_quantizer:
+    Hash: 0x0003000befe2eacf
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+  jquant1.2.ll:start_pass_1_quant:
+    Hash: 0x000100209c10c9e9
+    Counters: 10
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  jquant1.2.ll:finish_pass_1_quant:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  jquant1.2.ll:new_color_map_1_quant:
+    Hash: 0x00010002ffffffff
+    Counters: 1
+    Block counts: [0]
+  jquant1.2.ll:create_colormap:
+    Hash: 0x0003001c1662bd96
+    Counters: 6
+    Block counts: [0, 0, 0, 0, 0, 0]
+  jquant1.2.ll:create_colorindex:
+    Hash: 0x0001001fe77e62dc
+    Counters: 8
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0]
+  jquant1.2.ll:alloc_fs_workspace:
+    Hash: 0x00010007f2c35b9c
+    Counters: 2
+    Block counts: [0, 0]
+  jquant1.2.ll:color_quantize3:
+    Hash: 0x0000000c8e6c4700
+    Counters: 3
+    Block counts: [0, 0, 0]
+  jquant1.2.ll:color_quantize:
+    Hash: 0x0000001157923ab7
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+  jquant1.2.ll:quantize3_ord_dither:
+    Hash: 0x0000000c8e6c4700
+    Counters: 3
+    Block counts: [0, 0, 0]
+  jquant1.2.ll:quantize_ord_dither:
+    Hash: 0x0000001157923ab7
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+  jquant1.2.ll:create_odither_tables:
+    Hash: 0x00000012934d15a0
+    Counters: 5
+    Block counts: [0, 0, 0, 0, 0]
+  jquant1.2.ll:quantize_fs_dither:
+    Hash: 0x010000152db006a8
+    Counters: 6
+    Block counts: [0, 0, 0, 0, 0, 0]
+  jquant1.2.ll:make_odither_array:
+    Hash: 0x000100105c3da1ab
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+  jquant1.2.ll:select_ncolors:
+    Hash: 0x000100236d731a91
+    Counters: 9
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0]
+  jquant1.2.ll:output_value:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  jquant1.2.ll:largest_input_value:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  jinit_memory_mgr:
+    Hash: 0x00020018e8a35e09
+    Counters: 8
+    Block counts: [17500, 8750, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:alloc_small:
+    Hash: 0x0001002ace26df78
+    Counters: 13
+    Block counts: [26250, 0, 0, 393750, 0, 393750, 0, 52500, 358750, 17500, 0, 17500, 17500]
+  tmp1.ll:alloc_large:
+    Hash: 0x00010010e1b8c985
+    Counters: 6
+    Block counts: [52500, 0, 52500, 0, 17500, 0]
+  tmp1.ll:alloc_sarray:
+    Hash: 0x00010016a3925de8
+    Counters: 6
+    Block counts: [385000, 0, 43750, 0, 0, 43750]
+  tmp1.ll:alloc_barray:
+    Hash: 0x00010016a3925de8
+    Counters: 6
+    Block counts: [0, 0, 0, 0, 0, 0]
+  tmp1.ll:request_virt_sarray:
+    Hash: 0x00010005f42b0f02
+    Counters: 2
+    Block counts: [0, 0]
+  tmp1.ll:request_virt_barray:
+    Hash: 0x00010005f42b0f02
+    Counters: 2
+    Block counts: [0, 0]
+  tmp1.ll:realize_virt_arrays:
+    Hash: 0x0000003438c78768
+    Counters: 14
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8750, 0, 0, 0]
+  tmp1.ll:access_virt_sarray:
+    Hash: 0x0004003694276649
+    Counters: 18
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:access_virt_barray:
+    Hash: 0x0004003694276649
+    Counters: 18
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:free_pool:
+    Hash: 0x0003002220c3d676
+    Counters: 10
+    Block counts: [52500, 35000, 0, 0, 0, 0, 26250, 0, 26250, 17500]
+  tmp1.ll:self_destruct:
+    Hash: 0x00000007f2c35b9c
+    Counters: 2
+    Block counts: [17500, 8750]
+  tmp1.ll:out_of_memory:
+    Hash: 0x00010002ffffffff
+    Counters: 1
+    Block counts: [0]
+  tmp1.ll:do_sarray_io:
+    Hash: 0x0002001a5726d631
+    Counters: 7
+    Block counts: [0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:do_barray_io:
+    Hash: 0x0002001a5726d631
+    Counters: 7
+    Block counts: [0, 0, 0, 0, 0, 0, 0]
+  jinit_memory_mgr:
+    Hash: 0x00020018e8a35e09
+    Counters: 8
+    Block counts: [17500, 8750, 0, 0, 0, 0, 0, 0]
+  jmemmgr.2.ll:alloc_small:
+    Hash: 0x0001002ace26df78
+    Counters: 13
+    Block counts: [26250, 0, 0, 393750, 0, 393750, 0, 52500, 358750, 17500, 0, 17500, 17500]
+  jmemmgr.2.ll:alloc_large:
+    Hash: 0x00010010e1b8c985
+    Counters: 6
+    Block counts: [52500, 0, 52500, 0, 17500, 0]
+  jmemmgr.2.ll:alloc_sarray:
+    Hash: 0x00010016a3925de8
+    Counters: 6
+    Block counts: [385000, 0, 43750, 0, 0, 43750]
+  jmemmgr.2.ll:alloc_barray:
+    Hash: 0x00010016a3925de8
+    Counters: 6
+    Block counts: [0, 0, 0, 0, 0, 0]
+  jmemmgr.2.ll:request_virt_sarray:
+    Hash: 0x00010005f42b0f02
+    Counters: 2
+    Block counts: [0, 0]
+  jmemmgr.2.ll:request_virt_barray:
+    Hash: 0x00010005f42b0f02
+    Counters: 2
+    Block counts: [0, 0]
+  jmemmgr.2.ll:realize_virt_arrays:
+    Hash: 0x0000003438c78768
+    Counters: 14
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8750, 0, 0, 0]
+  jmemmgr.2.ll:access_virt_sarray:
+    Hash: 0x0004003694276649
+    Counters: 18
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  jmemmgr.2.ll:access_virt_barray:
+    Hash: 0x0004003694276649
+    Counters: 18
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  jmemmgr.2.ll:free_pool:
+    Hash: 0x0003002220c3d676
+    Counters: 10
+    Block counts: [52500, 35000, 0, 0, 0, 0, 26250, 0, 26250, 17500]
+  jmemmgr.2.ll:self_destruct:
+    Hash: 0x00000007f2c35b9c
+    Counters: 2
+    Block counts: [17500, 8750]
+  jmemmgr.2.ll:out_of_memory:
+    Hash: 0x00010002ffffffff
+    Counters: 1
+    Block counts: [0]
+  jmemmgr.2.ll:do_sarray_io:
+    Hash: 0x0002001a5726d631
+    Counters: 7
+    Block counts: [0, 0, 0, 0, 0, 0, 0]
+  jmemmgr.2.ll:do_barray_io:
+    Hash: 0x0002001a5726d631
+    Counters: 7
+    Block counts: [0, 0, 0, 0, 0, 0, 0]
+  main1:
+    Hash: 0x0004002e0823ac95
+    Counters: 16
+    Block counts: [1820000, 8750, 8750, 8750, 0, 0, 8750, 0, 0, 0, 0, 8750, 0, 0, 0, 0]
+  tmp1.ll:COM_handler:
+    Hash: 0x000000223c8a952f
+    Counters: 10
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:parse_switches:
+    Hash: 0x000000a8318b8658
+    Counters: 50
+    Block counts: [0, 0, 0, 17500, 0, 52500, 52500, 17500, 0, 0, 0, 0, 0, 0, 0, 0, 0, 35000, 0, 0, 0, 0, 0, 0, 0, 0, 35000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 17500, 17500, 0, 17500, 0, 0, 0, 0, 0, 0, 17500, 0]
+  tmp1.ll:usage:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  tmp1.ll:jpeg_getc:
+    Hash: 0x00020008f0c12e99
+    Counters: 3
+    Block counts: [0, 0, 0]
+  main1:
+    Hash: 0x0004002e0823ac95
+    Counters: 16
+    Block counts: [1820000, 8750, 8750, 8750, 0, 0, 8750, 0, 0, 0, 0, 8750, 0, 0, 0, 0]
+  djpeg.2.ll:COM_handler:
+    Hash: 0x000000223c8a952f
+    Counters: 10
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  djpeg.2.ll:parse_switches:
+    Hash: 0x000000aa8d9c2d90
+    Counters: 50
+    Block counts: [0, 0, 0, 0, 0, 17500, 52500, 52500, 17500, 0, 0, 0, 0, 0, 0, 0, 0, 35000, 0, 0, 0, 0, 0, 0, 0, 0, 35000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 17500, 17500, 0, 17500, 0, 0, 0, 0, 0, 0, 17500, 0]
+  djpeg.2.ll:usage:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  djpeg.2.ll:jpeg_getc:
+    Hash: 0x00020008f0c12e99
+    Counters: 3
+    Block counts: [0, 0, 0]
+  jpeg_idct_islow:
+    Hash: 0x0000001249112bfc
+    Counters: 5
+    Block counts: [22636250, 43758750, 35603750, 14481250, 7280000]
+  jpeg_idct_islow:
+    Hash: 0x0000001249112bfc
+    Counters: 5
+    Block counts: [22636250, 43758750, 35603750, 14481250, 7280000]
+  jinit_write_bmp:
+    Hash: 0x000400158f5ae288
+    Counters: 6
+    Block counts: [0, 0, 0, 0, 0, 0]
+  tmp1.ll:start_output_bmp:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  tmp1.ll:finish_output_bmp:
+    Hash: 0x00030019d18370b4
+    Counters: 7
+    Block counts: [0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:put_gray_rows:
+    Hash: 0x0001000b587b577c
+    Counters: 3
+    Block counts: [0, 0, 0]
+  tmp1.ll:put_pixel_rows:
+    Hash: 0x0001000b587b577c
+    Counters: 3
+    Block counts: [0, 0, 0]
+  tmp1.ll:write_os2_header:
+    Hash: 0x00020013f604d0df
+    Counters: 6
+    Block counts: [0, 0, 0, 0, 0, 0]
+  tmp1.ll:write_bmp_header:
+    Hash: 0x00020016a50289a8
+    Counters: 7
+    Block counts: [0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:write_colormap:
+    Hash: 0x0001002dabbaae67
+    Counters: 12
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  jinit_write_bmp:
+    Hash: 0x000400158f5ae288
+    Counters: 6
+    Block counts: [0, 0, 0, 0, 0, 0]
+  wrbmp.2.ll:start_output_bmp:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  wrbmp.2.ll:finish_output_bmp:
+    Hash: 0x00030019d18370b4
+    Counters: 7
+    Block counts: [0, 0, 0, 0, 0, 0, 0]
+  wrbmp.2.ll:put_gray_rows:
+    Hash: 0x0001000b587b577c
+    Counters: 3
+    Block counts: [0, 0, 0]
+  wrbmp.2.ll:put_pixel_rows:
+    Hash: 0x0001000b587b577c
+    Counters: 3
+    Block counts: [0, 0, 0]
+  wrbmp.2.ll:write_os2_header:
+    Hash: 0x00020013f604d0df
+    Counters: 6
+    Block counts: [0, 0, 0, 0, 0, 0]
+  wrbmp.2.ll:write_bmp_header:
+    Hash: 0x00020016a50289a8
+    Counters: 7
+    Block counts: [0, 0, 0, 0, 0, 0, 0]
+  wrbmp.2.ll:write_colormap:
+    Hash: 0x0001002dabbaae67
+    Counters: 12
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  jpeg_fdct_islow:
+    Hash: 0x0000000c1d2a139a
+    Counters: 3
+    Block counts: [0, 0, 0]
+  jpeg_fdct_islow:
+    Hash: 0x0000000c1d2a139a
+    Counters: 3
+    Block counts: [0, 0, 0]
+  jpeg_calc_output_dimensions:
+    Hash: 0x00010036543e2c18
+    Counters: 17
+    Block counts: [0, 0, 0, 17500, 0, 52500, 52500, 0, 17500, 17500, 17500, 0, 0, 0, 0, 0, 17500]
+  tmp1.ll:use_merged_upsample:
+    Hash: 0x00000025e9fbd20e
+    Counters: 16
+    Block counts: [26250, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  jpeg_new_colormap:
+    Hash: 0x0003000df8830f62
+    Counters: 5
+    Block counts: [0, 0, 0, 0, 0]
+  jinit_master_decompress:
+    Hash: 0x00010002ffffffff
+    Counters: 1
+    Block counts: [8750]
+  tmp1.ll:prepare_for_output_pass:
+    Hash: 0x030b0026aad7710b
+    Counters: 16
+    Block counts: [0, 0, 0, 8750, 0, 0, 8750, 0, 0, 8750, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:finish_output_pass:
+    Hash: 0x00010005f42b0f02
+    Counters: 2
+    Block counts: [8750, 0]
+  tmp1.ll:master_selection:
+    Hash: 0x01050044e20e7ffd
+    Counters: 23
+    Block counts: [0, 0, 0, 8750, 0, 0, 0, 0, 8750, 8750, 0, 0, 0, 0, 0, 0, 8750, 8750, 0, 0, 0, 0, 0]
+  tmp1.ll:prepare_range_limit_table:
+    Hash: 0x0001000c1d2a139a
+    Counters: 3
+    Block counts: [2240000, 3360000, 8750]
+  jpeg_calc_output_dimensions:
+    Hash: 0x000100386ef569c2
+    Counters: 17
+    Block counts: [0, 0, 0, 52500, 52500, 0, 17500, 17500, 17500, 0, 0, 0, 17500, 0, 0, 0, 17500]
+  jdmaster.2.ll:use_merged_upsample:
+    Hash: 0x00000025e9fbd20e
+    Counters: 16
+    Block counts: [26250, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  jpeg_new_colormap:
+    Hash: 0x0003000df8830f62
+    Counters: 5
+    Block counts: [0, 0, 0, 0, 0]
+  jinit_master_decompress:
+    Hash: 0x00010002ffffffff
+    Counters: 1
+    Block counts: [8750]
+  jdmaster.2.ll:prepare_for_output_pass:
+    Hash: 0x030b0026aad7710b
+    Counters: 16
+    Block counts: [0, 0, 0, 8750, 0, 0, 8750, 0, 0, 8750, 0, 0, 0, 0, 0, 0]
+  jdmaster.2.ll:finish_output_pass:
+    Hash: 0x00010005f42b0f02
+    Counters: 2
+    Block counts: [8750, 0]
+  jdmaster.2.ll:master_selection:
+    Hash: 0x01050044e20e7ffd
+    Counters: 23
+    Block counts: [0, 0, 0, 8750, 0, 0, 0, 0, 8750, 8750, 0, 0, 0, 0, 0, 0, 8750, 8750, 0, 0, 0, 0, 0]
+  jdmaster.2.ll:prepare_range_limit_table:
+    Hash: 0x0001000c1d2a139a
+    Counters: 3
+    Block counts: [2240000, 3360000, 8750]
+  jpeg_CreateCompress:
+    Hash: 0x0002001272e91207
+    Counters: 5
+    Block counts: [0, 0, 0, 0, 0]
+  jpeg_destroy_compress:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  jpeg_abort_compress:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  jpeg_suppress_tables:
+    Hash: 0x0000001564e302c5
+    Counters: 6
+    Block counts: [0, 0, 0, 0, 0, 0]
+  jpeg_finish_compress:
+    Hash: 0x000a001da2012fcc
+    Counters: 9
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0]
+  jpeg_write_marker:
+    Hash: 0x0002000b2e4dc5f8
+    Counters: 5
+    Block counts: [0, 0, 0, 0, 0]
+  jpeg_write_tables:
+    Hash: 0x00050005f42b0f02
+    Counters: 2
+    Block counts: [0, 0]
+  jpeg_CreateCompress:
+    Hash: 0x0002001272e91207
+    Counters: 5
+    Block counts: [0, 0, 0, 0, 0]
+  jpeg_destroy_compress:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  jpeg_abort_compress:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  jpeg_suppress_tables:
+    Hash: 0x0000001564e302c5
+    Counters: 6
+    Block counts: [0, 0, 0, 0, 0, 0]
+  jpeg_finish_compress:
+    Hash: 0x000a001da2012fcc
+    Counters: 9
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0]
+  jpeg_write_marker:
+    Hash: 0x0002000b2e4dc5f8
+    Counters: 5
+    Block counts: [0, 0, 0, 0, 0]
+  jpeg_write_tables:
+    Hash: 0x00050005f42b0f02
+    Counters: 2
+    Block counts: [0, 0]
+  jpeg_start_decompress:
+    Hash: 0x00030028bdf8a41b
+    Counters: 13
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 8750, 8750, 0, 0, 0]
+  tmp1.ll:output_pass_setup:
+    Hash: 0x01050014bd09063b
+    Counters: 7
+    Block counts: [0, 0, 0, 0, 8750, 8750, 0]
+  jpeg_read_scanlines:
+    Hash: 0x0004000c59b8cbfb
+    Counters: 4
+    Block counts: [0, 0, 1820000, 0]
+  jpeg_read_raw_data:
+    Hash: 0x0005001223725bae
+    Counters: 6
+    Block counts: [0, 0, 0, 0, 0, 0]
+  jpeg_start_output:
+    Hash: 0x0001000f6c1d6446
+    Counters: 6
+    Block counts: [0, 0, 0, 0, 0, 0]
+  jpeg_finish_output:
+    Hash: 0x000300188d79fd71
+    Counters: 8
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0]
+  jpeg_start_decompress:
+    Hash: 0x00030028bdf8a41b
+    Counters: 13
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 8750, 8750, 0, 0, 0]
+  jdapistd.2.ll:output_pass_setup:
+    Hash: 0x01050014bd09063b
+    Counters: 7
+    Block counts: [0, 0, 0, 0, 8750, 8750, 0]
+  jpeg_read_scanlines:
+    Hash: 0x0004000c59b8cbfb
+    Counters: 4
+    Block counts: [0, 0, 1820000, 0]
+  jpeg_read_raw_data:
+    Hash: 0x0005001223725bae
+    Counters: 6
+    Block counts: [0, 0, 0, 0, 0, 0]
+  jpeg_start_output:
+    Hash: 0x0001000f6c1d6446
+    Counters: 6
+    Block counts: [0, 0, 0, 0, 0, 0]
+  jpeg_finish_output:
+    Hash: 0x00030019e06db113
+    Counters: 8
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0]
+  jinit_c_master_control:
+    Hash: 0x0001001518185d7f
+    Counters: 6
+    Block counts: [0, 0, 0, 0, 0, 0]
+  tmp1.ll:prepare_for_pass:
+    Hash: 0x010e0021cf27a057
+    Counters: 13
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:pass_startup:
+    Hash: 0x00020002ffffffff
+    Counters: 1
+    Block counts: [0]
+  tmp1.ll:finish_pass_master:
+    Hash: 0x0001000f4d1a2afb
+    Counters: 6
+    Block counts: [0, 0, 0, 0, 0, 0]
+  tmp1.ll:initial_setup:
+    Hash: 0x000600341f911956
+    Counters: 18
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:validate_script:
+    Hash: 0x000e0092c62ffb28
+    Counters: 46
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:select_scan_parameters:
+    Hash: 0x000100134548107a
+    Counters: 5
+    Block counts: [0, 0, 0, 0, 0]
+  tmp1.ll:per_scan_setup:
+    Hash: 0x00020027786bcebd
+    Counters: 12
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  jinit_c_master_control:
+    Hash: 0x0001001518185d7f
+    Counters: 6
+    Block counts: [0, 0, 0, 0, 0, 0]
+  jcmaster.2.ll:prepare_for_pass:
+    Hash: 0x010e0021cf27a057
+    Counters: 13
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  jcmaster.2.ll:pass_startup:
+    Hash: 0x00020002ffffffff
+    Counters: 1
+    Block counts: [0]
+  jcmaster.2.ll:finish_pass_master:
+    Hash: 0x0001000f4d1a2afb
+    Counters: 6
+    Block counts: [0, 0, 0, 0, 0, 0]
+  jcmaster.2.ll:initial_setup:
+    Hash: 0x000600341f911956
+    Counters: 18
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  jcmaster.2.ll:validate_script:
+    Hash: 0x000e0092c62ffb28
+    Counters: 46
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  jcmaster.2.ll:select_scan_parameters:
+    Hash: 0x000100134548107a
+    Counters: 5
+    Block counts: [0, 0, 0, 0, 0]
+  jcmaster.2.ll:per_scan_setup:
+    Hash: 0x00020027786bcebd
+    Counters: 12
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  jpeg_fdct_float:
+    Hash: 0x0000000c1d2a139a
+    Counters: 3
+    Block counts: [0, 0, 0]
+  jpeg_fdct_float:
+    Hash: 0x0000000c1d2a139a
+    Counters: 3
+    Block counts: [0, 0, 0]
+  jpeg_get_small:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [43750]
+  jpeg_free_small:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [43750]
+  jpeg_get_large:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [52500]
+  jpeg_free_large:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [52500]
+  jpeg_mem_available:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  jpeg_open_backing_store:
+    Hash: 0x00010005f42b0f02
+    Counters: 2
+    Block counts: [0, 0]
+  tmp1.ll:read_backing_store:
+    Hash: 0x000200087f5cc5c1
+    Counters: 3
+    Block counts: [0, 0, 0]
+  tmp1.ll:write_backing_store:
+    Hash: 0x000200087f5cc5c1
+    Counters: 3
+    Block counts: [0, 0, 0]
+  tmp1.ll:close_backing_store:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  jpeg_mem_init:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [8750]
+  jpeg_mem_term:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [8750]
+  jpeg_get_small:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [43750]
+  jpeg_free_small:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [43750]
+  jpeg_get_large:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [52500]
+  jpeg_free_large:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [52500]
+  jpeg_mem_available:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  jpeg_open_backing_store:
+    Hash: 0x00010005f42b0f02
+    Counters: 2
+    Block counts: [0, 0]
+  jmemansi.2.ll:read_backing_store:
+    Hash: 0x000200087f5cc5c1
+    Counters: 3
+    Block counts: [0, 0, 0]
+  jmemansi.2.ll:write_backing_store:
+    Hash: 0x000200087f5cc5c1
+    Counters: 3
+    Block counts: [0, 0, 0]
+  jmemansi.2.ll:close_backing_store:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  jpeg_mem_init:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [8750]
+  jpeg_mem_term:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [8750]
+  jpeg_fdct_ifast:
+    Hash: 0x0000000c1d2a139a
+    Counters: 3
+    Block counts: [0, 0, 0]
+  jpeg_fdct_ifast:
+    Hash: 0x0000000c1d2a139a
+    Counters: 3
+    Block counts: [0, 0, 0]
+  jinit_write_gif:
+    Hash: 0x00060012b865dbf6
+    Counters: 7
+    Block counts: [0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:start_output_gif:
+    Hash: 0x00000006e852da94
+    Counters: 2
+    Block counts: [0, 0]
+  tmp1.ll:put_pixel_rows:
+    Hash: 0x00000007f2c35b9c
+    Counters: 2
+    Block counts: [0, 0]
+  tmp1.ll:finish_output_gif:
+    Hash: 0x00010005f42b0f02
+    Counters: 2
+    Block counts: [0, 0]
+  tmp1.ll:emit_header:
+    Hash: 0x0001001e00e628bb
+    Counters: 8
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:put_word:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  tmp1.ll:put_3bytes:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  tmp1.ll:compress_init:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  tmp1.ll:clear_hash:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  tmp1.ll:output:
+    Hash: 0x000000104e3c80ee
+    Counters: 5
+    Block counts: [0, 0, 0, 0, 0]
+  tmp1.ll:flush_packet:
+    Hash: 0x000100083c6b2e07
+    Counters: 3
+    Block counts: [0, 0, 0]
+  tmp1.ll:compress_byte:
+    Hash: 0x000000224e43ceb9
+    Counters: 10
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:clear_block:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  tmp1.ll:compress_term:
+    Hash: 0x0000000bf63327c4
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+  jinit_write_gif:
+    Hash: 0x00060012b865dbf6
+    Counters: 7
+    Block counts: [0, 0, 0, 0, 0, 0, 0]
+  wrgif.2.ll:start_output_gif:
+    Hash: 0x00000006e852da94
+    Counters: 2
+    Block counts: [0, 0]
+  wrgif.2.ll:put_pixel_rows:
+    Hash: 0x00000007f2c35b9c
+    Counters: 2
+    Block counts: [0, 0]
+  wrgif.2.ll:finish_output_gif:
+    Hash: 0x00010005f42b0f02
+    Counters: 2
+    Block counts: [0, 0]
+  wrgif.2.ll:emit_header:
+    Hash: 0x0001001e00e628bb
+    Counters: 8
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0]
+  wrgif.2.ll:put_word:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  wrgif.2.ll:put_3bytes:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  wrgif.2.ll:compress_init:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  wrgif.2.ll:clear_hash:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  wrgif.2.ll:output:
+    Hash: 0x000000104e3c80ee
+    Counters: 5
+    Block counts: [0, 0, 0, 0, 0]
+  wrgif.2.ll:flush_packet:
+    Hash: 0x000100083c6b2e07
+    Counters: 3
+    Block counts: [0, 0, 0]
+  wrgif.2.ll:compress_byte:
+    Hash: 0x000000224e43ceb9
+    Counters: 10
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  wrgif.2.ll:clear_block:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  wrgif.2.ll:compress_term:
+    Hash: 0x0000000bf63327c4
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+  jinit_write_targa:
+    Hash: 0x00030002ffffffff
+    Counters: 1
+    Block counts: [0]
+  tmp1.ll:start_output_tga:
+    Hash: 0x0002001ac4f77eae
+    Counters: 7
+    Block counts: [0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:finish_output_tga:
+    Hash: 0x00010005f42b0f02
+    Counters: 2
+    Block counts: [0, 0]
+  tmp1.ll:write_header:
+    Hash: 0x00010010d85cdf45
+    Counters: 5
+    Block counts: [0, 0, 0, 0, 0]
+  tmp1.ll:put_demapped_gray:
+    Hash: 0x00000007f2c35b9c
+    Counters: 2
+    Block counts: [0, 0]
+  tmp1.ll:put_gray_rows:
+    Hash: 0x00000007f2c35b9c
+    Counters: 2
+    Block counts: [0, 0]
+  tmp1.ll:put_pixel_rows:
+    Hash: 0x00000007f2c35b9c
+    Counters: 2
+    Block counts: [0, 0]
+  jinit_write_targa:
+    Hash: 0x00030002ffffffff
+    Counters: 1
+    Block counts: [0]
+  wrtarga.2.ll:start_output_tga:
+    Hash: 0x0002001ac4f77eae
+    Counters: 7
+    Block counts: [0, 0, 0, 0, 0, 0, 0]
+  wrtarga.2.ll:finish_output_tga:
+    Hash: 0x00010005f42b0f02
+    Counters: 2
+    Block counts: [0, 0]
+  wrtarga.2.ll:write_header:
+    Hash: 0x00010010d85cdf45
+    Counters: 5
+    Block counts: [0, 0, 0, 0, 0]
+  wrtarga.2.ll:put_demapped_gray:
+    Hash: 0x00000007f2c35b9c
+    Counters: 2
+    Block counts: [0, 0]
+  wrtarga.2.ll:put_gray_rows:
+    Hash: 0x00000007f2c35b9c
+    Counters: 2
+    Block counts: [0, 0]
+  wrtarga.2.ll:put_pixel_rows:
+    Hash: 0x00000007f2c35b9c
+    Counters: 2
+    Block counts: [0, 0]
+  jpeg_idct_ifast:
+    Hash: 0x0000001249112bfc
+    Counters: 5
+    Block counts: [0, 0, 0, 0, 0]
+  jpeg_idct_ifast:
+    Hash: 0x0000001249112bfc
+    Counters: 5
+    Block counts: [0, 0, 0, 0, 0]
+  jpeg_make_d_derived_tbl:
+    Hash: 0x0001002fb6d92354
+    Counters: 11
+    Block counts: [13265000, 4567500, 4567500, 761250, 840000, 638750, 420000, 603750, 236250, 52500, 35000]
+  jpeg_fill_bit_buffer:
+    Hash: 0x00030028a344e05f
+    Counters: 12
+    Block counts: [245000, 0, 17500, 70332500, 0, 17500, 8750, 23082500, 0, 236250, 26250, 0]
+  jpeg_huff_decode:
+    Hash: 0x0001001636bb9393
+    Counters: 7
+    Block counts: [3316250, 227500, 148750, 0, 2537500, 0, 0]
+  jinit_huff_decoder:
+    Hash: 0x00010007f2c35b9c
+    Counters: 2
+    Block counts: [35000, 8750]
+  tmp1.ll:start_pass_huff_decoder:
+    Hash: 0x0003001ea0e4a152
+    Counters: 12
+    Block counts: [26250, 0, 0, 26250, 26250, 26250, 26250, 8750, 0, 8750, 8750, 8750]
+  tmp1.ll:decode_mcu:
+    Hash: 0x000000819f256f8b
+    Counters: 37
+    Block counts: [0, 0, 0, 0, 0, 0, 87500, 45893750, 44196250, 1032500, 2511250, 17500, 20457500, 0, 0, 0, 2896250, 3115000, 210000, 0, 8750, 980000, 7507500, 0, 0, 0, 0, 0, 0, 0, 0, 7157500, 0, 1251250, 0, 0, 0]
+  tmp1.ll:process_restart:
+    Hash: 0x0001000bfb666f9f
+    Counters: 3
+    Block counts: [0, 0, 0]
+  jpeg_make_d_derived_tbl:
+    Hash: 0x0001002fb6d92354
+    Counters: 11
+    Block counts: [13265000, 4567500, 4567500, 761250, 840000, 638750, 420000, 603750, 236250, 52500, 35000]
+  jpeg_fill_bit_buffer:
+    Hash: 0x00030028a344e05f
+    Counters: 12
+    Block counts: [245000, 0, 17500, 70332500, 0, 17500, 8750, 23082500, 0, 236250, 26250, 0]
+  jpeg_huff_decode:
+    Hash: 0x0001001636bb9393
+    Counters: 7
+    Block counts: [3316250, 227500, 148750, 0, 2537500, 0, 0]
+  jinit_huff_decoder:
+    Hash: 0x00010007f2c35b9c
+    Counters: 2
+    Block counts: [35000, 8750]
+  jdhuff.2.ll:start_pass_huff_decoder:
+    Hash: 0x0003001ea0e4a152
+    Counters: 12
+    Block counts: [26250, 0, 0, 26250, 26250, 26250, 26250, 8750, 0, 8750, 8750, 8750]
+  jdhuff.2.ll:decode_mcu:
+    Hash: 0x000000819f256f8b
+    Counters: 37
+    Block counts: [0, 0, 0, 0, 0, 0, 87500, 45893750, 44196250, 1032500, 2511250, 17500, 20457500, 0, 0, 0, 2896250, 3115000, 210000, 0, 8750, 980000, 7507500, 0, 0, 0, 0, 0, 0, 0, 0, 7157500, 0, 1251250, 0, 0, 0]
+  jdhuff.2.ll:process_restart:
+    Hash: 0x0001000bfb666f9f
+    Counters: 3
+    Block counts: [0, 0, 0]
+  jinit_input_controller:
+    Hash: 0x00010002ffffffff
+    Counters: 1
+    Block counts: [8750]
+  tmp1.ll:consume_markers:
+    Hash: 0x0003001ee99dedc3
+    Counters: 10
+    Block counts: [0, 17500, 0, 8750, 0, 0, 0, 8750, 0, 0]
+  tmp1.ll:reset_input_controller:
+    Hash: 0x00020002ffffffff
+    Counters: 1
+    Block counts: [8750]
+  tmp1.ll:start_input_pass:
+    Hash: 0x00020002ffffffff
+    Counters: 1
+    Block counts: [8750]
+  tmp1.ll:finish_input_pass:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [8750]
+  tmp1.ll:initial_setup:
+    Hash: 0x0004002ec5ce63eb
+    Counters: 15
+    Block counts: [26250, 0, 26250, 8750, 17500, 8750, 26250, 26250, 0, 0, 8750, 0, 0, 8750, 8750]
+  tmp1.ll:per_scan_setup:
+    Hash: 0x000200207a99c631
+    Counters: 10
+    Block counts: [52500, 26250, 0, 17500, 26250, 0, 8750, 0, 8750, 0]
+  tmp1.ll:latch_quant_tables:
+    Hash: 0x0002001150d49209
+    Counters: 6
+    Block counts: [0, 26250, 0, 26250, 26250, 8750]
+  jinit_input_controller:
+    Hash: 0x00010002ffffffff
+    Counters: 1
+    Block counts: [8750]
+  jdinput.2.ll:consume_markers:
+    Hash: 0x0003001ee99dedc3
+    Counters: 10
+    Block counts: [0, 17500, 0, 8750, 0, 0, 0, 8750, 0, 0]
+  jdinput.2.ll:reset_input_controller:
+    Hash: 0x00020002ffffffff
+    Counters: 1
+    Block counts: [8750]
+  jdinput.2.ll:start_input_pass:
+    Hash: 0x00020002ffffffff
+    Counters: 1
+    Block counts: [8750]
+  jdinput.2.ll:finish_input_pass:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [8750]
+  jdinput.2.ll:initial_setup:
+    Hash: 0x0004002ec5ce63eb
+    Counters: 15
+    Block counts: [26250, 0, 26250, 8750, 17500, 8750, 26250, 26250, 0, 0, 8750, 0, 0, 8750, 8750]
+  jdinput.2.ll:per_scan_setup:
+    Hash: 0x000200207a99c631
+    Counters: 10
+    Block counts: [52500, 26250, 0, 17500, 26250, 0, 8750, 0, 8750, 0]
+  jdinput.2.ll:latch_quant_tables:
+    Hash: 0x0002001150d49209
+    Counters: 6
+    Block counts: [0, 26250, 0, 26250, 26250, 8750]
+  jpeg_stdio_src:
+    Hash: 0x00020005f42b0f02
+    Counters: 2
+    Block counts: [8750, 8750]
+  tmp1.ll:init_source:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [8750]
+  tmp1.ll:fill_input_buffer:
+    Hash: 0x000200083c6b2e07
+    Counters: 3
+    Block counts: [26250, 0, 0]
+  tmp1.ll:skip_input_data:
+    Hash: 0x00000009698ce9bf
+    Counters: 3
+    Block counts: [0, 0, 0]
+  tmp1.ll:term_source:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [8750]
+  jpeg_stdio_src:
+    Hash: 0x00020005f42b0f02
+    Counters: 2
+    Block counts: [8750, 8750]
+  jdatasrc.2.ll:init_source:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [8750]
+  jdatasrc.2.ll:fill_input_buffer:
+    Hash: 0x000200083c6b2e07
+    Counters: 3
+    Block counts: [26250, 0, 0]
+  jdatasrc.2.ll:skip_input_data:
+    Hash: 0x00000009698ce9bf
+    Counters: 3
+    Block counts: [0, 0, 0]
+  jdatasrc.2.ll:term_source:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [8750]
+  jinit_color_deconverter:
+    Hash: 0x0009004309b2c8ba
+    Counters: 22
+    Block counts: [0, 0, 0, 8750, 0, 0, 0, 0, 0, 0, 8750, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:start_pass_dcolor:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [8750]
+  tmp1.ll:grayscale_convert:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  tmp1.ll:ycc_rgb_convert:
+    Hash: 0x0000000bde0d3043
+    Counters: 3
+    Block counts: [294840000, 1820000, 1820000]
+  tmp1.ll:build_ycc_rgb_table:
+    Hash: 0x00040007f2c35b9c
+    Counters: 2
+    Block counts: [2240000, 8750]
+  tmp1.ll:null_convert:
+    Hash: 0x0000001092740fa5
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+  tmp1.ll:ycck_cmyk_convert:
+    Hash: 0x0000000bde0d3043
+    Counters: 3
+    Block counts: [0, 0, 0]
+  jinit_color_deconverter:
+    Hash: 0x000900458bbe87bc
+    Counters: 22
+    Block counts: [0, 8750, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8750, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  jdcolor.2.ll:start_pass_dcolor:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [8750]
+  jdcolor.2.ll:grayscale_convert:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  jdcolor.2.ll:ycc_rgb_convert:
+    Hash: 0x0000000bde0d3043
+    Counters: 3
+    Block counts: [294840000, 1820000, 1820000]
+  jdcolor.2.ll:build_ycc_rgb_table:
+    Hash: 0x00040007f2c35b9c
+    Counters: 2
+    Block counts: [2240000, 8750]
+  jdcolor.2.ll:null_convert:
+    Hash: 0x0000001092740fa5
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+  jdcolor.2.ll:ycck_cmyk_convert:
+    Hash: 0x0000000bde0d3043
+    Counters: 3
+    Block counts: [0, 0, 0]
+  jinit_downsampler:
+    Hash: 0x0004002f45a5c23a
+    Counters: 15
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:start_pass_downsample:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  tmp1.ll:sep_downsample:
+    Hash: 0x00010007f2c35b9c
+    Counters: 2
+    Block counts: [0, 0]
+  tmp1.ll:fullsize_smooth_downsample:
+    Hash: 0x0000000c8e6c4700
+    Counters: 3
+    Block counts: [0, 0, 0]
+  tmp1.ll:fullsize_downsample:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  tmp1.ll:h2v1_downsample:
+    Hash: 0x0000000c8e6c4700
+    Counters: 3
+    Block counts: [0, 0, 0]
+  tmp1.ll:h2v2_smooth_downsample:
+    Hash: 0x0000000c8e6c4700
+    Counters: 3
+    Block counts: [0, 0, 0]
+  tmp1.ll:h2v2_downsample:
+    Hash: 0x0000000c8e6c4700
+    Counters: 3
+    Block counts: [0, 0, 0]
+  tmp1.ll:int_downsample:
+    Hash: 0x000000167eea1e08
+    Counters: 5
+    Block counts: [0, 0, 0, 0, 0]
+  tmp1.ll:expand_right_edge:
+    Hash: 0x0000000f13a90468
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+  jinit_downsampler:
+    Hash: 0x0004002f45a5c23a
+    Counters: 15
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  jcsample.2.ll:start_pass_downsample:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  jcsample.2.ll:sep_downsample:
+    Hash: 0x00010007f2c35b9c
+    Counters: 2
+    Block counts: [0, 0]
+  jcsample.2.ll:fullsize_smooth_downsample:
+    Hash: 0x0000000c8e6c4700
+    Counters: 3
+    Block counts: [0, 0, 0]
+  jcsample.2.ll:fullsize_downsample:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  jcsample.2.ll:h2v1_downsample:
+    Hash: 0x0000000c8e6c4700
+    Counters: 3
+    Block counts: [0, 0, 0]
+  jcsample.2.ll:h2v2_smooth_downsample:
+    Hash: 0x0000000c8e6c4700
+    Counters: 3
+    Block counts: [0, 0, 0]
+  jcsample.2.ll:h2v2_downsample:
+    Hash: 0x0000000c8e6c4700
+    Counters: 3
+    Block counts: [0, 0, 0]
+  jcsample.2.ll:int_downsample:
+    Hash: 0x000000167eea1e08
+    Counters: 5
+    Block counts: [0, 0, 0, 0, 0]
+  jcsample.2.ll:expand_right_edge:
+    Hash: 0x0000000f13a90468
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+  jinit_d_post_controller:
+    Hash: 0x000300092ba9eec2
+    Counters: 3
+    Block counts: [8750, 0, 0]
+  tmp1.ll:start_pass_dpost:
+    Hash: 0x000400172d0deabf
+    Counters: 8
+    Block counts: [0, 0, 0, 0, 8750, 0, 0, 0]
+  tmp1.ll:post_process_1pass:
+    Hash: 0x00020005f42b0f02
+    Counters: 2
+    Block counts: [0, 0]
+  tmp1.ll:post_process_prepass:
+    Hash: 0x0003000befe2eacf
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+  tmp1.ll:post_process_2pass:
+    Hash: 0x0002000e55790d6b
+    Counters: 5
+    Block counts: [0, 0, 0, 0, 0]
+  jinit_d_post_controller:
+    Hash: 0x000300092ba9eec2
+    Counters: 3
+    Block counts: [8750, 0, 0]
+  jdpostct.2.ll:start_pass_dpost:
+    Hash: 0x000400172d0deabf
+    Counters: 8
+    Block counts: [0, 0, 0, 0, 8750, 0, 0, 0]
+  jdpostct.2.ll:post_process_1pass:
+    Hash: 0x00020005f42b0f02
+    Counters: 2
+    Block counts: [0, 0]
+  jdpostct.2.ll:post_process_prepass:
+    Hash: 0x0003000befe2eacf
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+  jdpostct.2.ll:post_process_2pass:
+    Hash: 0x0002000e55790d6b
+    Counters: 5
+    Block counts: [0, 0, 0, 0, 0]
+  jinit_forward_dct:
+    Hash: 0x0002000f471d96c0
+    Counters: 5
+    Block counts: [0, 0, 0, 0, 0]
+  tmp1.ll:start_pass_fdctmgr:
+    Hash: 0x000500330ce270a8
+    Counters: 15
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:forward_DCT:
+    Hash: 0x0001001dfe0b3c02
+    Counters: 7
+    Block counts: [0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:forward_DCT_float:
+    Hash: 0x00010011ec547682
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+  jinit_forward_dct:
+    Hash: 0x0002000f471d96c0
+    Counters: 5
+    Block counts: [0, 0, 0, 0, 0]
+  jcdctmgr.2.ll:start_pass_fdctmgr:
+    Hash: 0x000500330ce270a8
+    Counters: 15
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  jcdctmgr.2.ll:forward_DCT:
+    Hash: 0x0001001dfe0b3c02
+    Counters: 7
+    Block counts: [0, 0, 0, 0, 0, 0, 0]
+  jcdctmgr.2.ll:forward_DCT_float:
+    Hash: 0x00010011ec547682
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+  jinit_phuff_decoder:
+    Hash: 0x000200112b862b89
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+  tmp1.ll:start_pass_phuff_decoder:
+    Hash: 0x00050059ba0991b8
+    Counters: 28
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:decode_mcu_DC_first:
+    Hash: 0x0000002fcad7a33d
+    Counters: 14
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:decode_mcu_AC_first:
+    Hash: 0x00000041c9357532
+    Counters: 19
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:decode_mcu_DC_refine:
+    Hash: 0x0000001a2d9177dc
+    Counters: 8
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:decode_mcu_AC_refine:
+    Hash: 0x0001008032b9a0ff
+    Counters: 38
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:process_restart:
+    Hash: 0x0001000bfb666f9f
+    Counters: 3
+    Block counts: [0, 0, 0]
+  jinit_phuff_decoder:
+    Hash: 0x000200112b862b89
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+  jdphuff.2.ll:start_pass_phuff_decoder:
+    Hash: 0x00050059ba0991b8
+    Counters: 28
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  jdphuff.2.ll:decode_mcu_DC_first:
+    Hash: 0x0000002fcad7a33d
+    Counters: 14
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  jdphuff.2.ll:decode_mcu_AC_first:
+    Hash: 0x00000041c9357532
+    Counters: 19
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  jdphuff.2.ll:decode_mcu_DC_refine:
+    Hash: 0x0000001a2d9177dc
+    Counters: 8
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0]
+  jdphuff.2.ll:decode_mcu_AC_refine:
+    Hash: 0x0001008032b9a0ff
+    Counters: 38
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  jdphuff.2.ll:process_restart:
+    Hash: 0x0001000bfb666f9f
+    Counters: 3
+    Block counts: [0, 0, 0]
+  jinit_d_main_controller:
+    Hash: 0x00040011645a1af5
+    Counters: 5
+    Block counts: [26250, 0, 8750, 0, 0]
+  tmp1.ll:start_pass_main:
+    Hash: 0x0001000c3d3ec12e
+    Counters: 4
+    Block counts: [0, 0, 8750, 0]
+  tmp1.ll:alloc_funny_pointers:
+    Hash: 0x00020007f2c35b9c
+    Counters: 2
+    Block counts: [26250, 8750]
+  tmp1.ll:process_data_context_main:
+    Hash: 0x0003001e379636d1
+    Counters: 11
+    Block counts: [1820000, 113750, 1496250, 113750, 113750, 0, 8750, 8750, 105000, 105000, 0]
+  tmp1.ll:make_funny_pointers:
+    Hash: 0x0000001622de87c2
+    Counters: 5
+    Block counts: [350000, 70000, 35000, 26250, 8750]
+  tmp1.ll:process_data_simple_main:
+    Hash: 0x0002000bd72de290
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+  tmp1.ll:process_data_crank_post:
+    Hash: 0x00010002ffffffff
+    Counters: 1
+    Block counts: [0]
+  tmp1.ll:set_bottom_pointers:
+    Hash: 0x000000128eb2d6c0
+    Counters: 5
+    Block counts: [70000, 26250, 26250, 8750, 8750]
+  tmp1.ll:set_wraparound_pointers:
+    Hash: 0x0000000c8e6c4700
+    Counters: 3
+    Block counts: [35000, 26250, 8750]
+  jinit_d_main_controller:
+    Hash: 0x00040011645a1af5
+    Counters: 5
+    Block counts: [26250, 0, 8750, 0, 0]
+  jdmainct.2.ll:start_pass_main:
+    Hash: 0x0001000c3d3ec12e
+    Counters: 4
+    Block counts: [0, 0, 8750, 0]
+  jdmainct.2.ll:alloc_funny_pointers:
+    Hash: 0x00020007f2c35b9c
+    Counters: 2
+    Block counts: [26250, 8750]
+  jdmainct.2.ll:process_data_context_main:
+    Hash: 0x0003001e379636d1
+    Counters: 11
+    Block counts: [1820000, 113750, 1496250, 113750, 113750, 0, 8750, 8750, 105000, 105000, 0]
+  jdmainct.2.ll:make_funny_pointers:
+    Hash: 0x0000001622de87c2
+    Counters: 5
+    Block counts: [350000, 70000, 35000, 26250, 8750]
+  jdmainct.2.ll:process_data_simple_main:
+    Hash: 0x0002000bd72de290
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+  jdmainct.2.ll:process_data_crank_post:
+    Hash: 0x00010002ffffffff
+    Counters: 1
+    Block counts: [0]
+  jdmainct.2.ll:set_bottom_pointers:
+    Hash: 0x000000128eb2d6c0
+    Counters: 5
+    Block counts: [70000, 26250, 26250, 8750, 8750]
+  jdmainct.2.ll:set_wraparound_pointers:
+    Hash: 0x0000000c8e6c4700
+    Counters: 3
+    Block counts: [35000, 26250, 8750]
+  jinit_compress_master:
+    Hash: 0x000300105d5154fc
+    Counters: 5
+    Block counts: [0, 0, 0, 0, 0]
+  jinit_compress_master:
+    Hash: 0x000300105d5154fc
+    Counters: 5
+    Block counts: [0, 0, 0, 0, 0]
+  jinit_2pass_quantizer:
+    Hash: 0x0008001a94cabf3f
+    Counters: 8
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:start_pass_2_quant:
+    Hash: 0x00030024846297dd
+    Counters: 11
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:new_color_map_2_quant:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  tmp1.ll:init_error_limit:
+    Hash: 0x01010011da6682f3
+    Counters: 5
+    Block counts: [0, 0, 0, 0, 0]
+  tmp1.ll:prescan_quantize:
+    Hash: 0x0000000f3de7ad2c
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+  tmp1.ll:finish_pass1:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  tmp1.ll:pass2_fs_dither:
+    Hash: 0x00000013c3fdd956
+    Counters: 5
+    Block counts: [0, 0, 0, 0, 0]
+  tmp1.ll:pass2_no_dither:
+    Hash: 0x0000000f3de7ad2c
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+  tmp1.ll:finish_pass2:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  tmp1.ll:select_colors:
+    Hash: 0x00020007f2c35b9c
+    Counters: 2
+    Block counts: [0, 0]
+  tmp1.ll:update_box:
+    Hash: 0x00000098d0e07e8c
+    Counters: 35
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:median_cut:
+    Hash: 0x0000001acbaad6d1
+    Counters: 9
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:compute_color:
+    Hash: 0x00000014dd7b5fec
+    Counters: 5
+    Block counts: [0, 0, 0, 0, 0]
+  tmp1.ll:find_biggest_color_pop:
+    Hash: 0x0000000c15da63c5
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+  tmp1.ll:find_biggest_volume:
+    Hash: 0x0000000a8202e3b6
+    Counters: 3
+    Block counts: [0, 0, 0]
+  tmp1.ll:fill_inverse_cmap:
+    Hash: 0x0000001157923ab7
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+  tmp1.ll:find_nearby_colors:
+    Hash: 0x00000036230b2d23
+    Counters: 14
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:find_best_colors:
+    Hash: 0x0000001e91a5cc0e
+    Counters: 7
+    Block counts: [0, 0, 0, 0, 0, 0, 0]
+  jinit_2pass_quantizer:
+    Hash: 0x0008001a94cabf3f
+    Counters: 8
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0]
+  jquant2.2.ll:start_pass_2_quant:
+    Hash: 0x00030024846297dd
+    Counters: 11
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  jquant2.2.ll:new_color_map_2_quant:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  jquant2.2.ll:init_error_limit:
+    Hash: 0x01010011da6682f3
+    Counters: 5
+    Block counts: [0, 0, 0, 0, 0]
+  jquant2.2.ll:prescan_quantize:
+    Hash: 0x0000000f3de7ad2c
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+  jquant2.2.ll:finish_pass1:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  jquant2.2.ll:pass2_fs_dither:
+    Hash: 0x00000013c3fdd956
+    Counters: 5
+    Block counts: [0, 0, 0, 0, 0]
+  jquant2.2.ll:pass2_no_dither:
+    Hash: 0x0000000f3de7ad2c
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+  jquant2.2.ll:finish_pass2:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  jquant2.2.ll:select_colors:
+    Hash: 0x00020007f2c35b9c
+    Counters: 2
+    Block counts: [0, 0]
+  jquant2.2.ll:update_box:
+    Hash: 0x00000098d0e07e8c
+    Counters: 35
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  jquant2.2.ll:median_cut:
+    Hash: 0x0000001acbaad6d1
+    Counters: 9
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0]
+  jquant2.2.ll:compute_color:
+    Hash: 0x00000014dd7b5fec
+    Counters: 5
+    Block counts: [0, 0, 0, 0, 0]
+  jquant2.2.ll:find_biggest_color_pop:
+    Hash: 0x0000000c15da63c5
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+  jquant2.2.ll:find_biggest_volume:
+    Hash: 0x0000000a8202e3b6
+    Counters: 3
+    Block counts: [0, 0, 0]
+  jquant2.2.ll:fill_inverse_cmap:
+    Hash: 0x0000001157923ab7
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+  jquant2.2.ll:find_nearby_colors:
+    Hash: 0x00000036230b2d23
+    Counters: 14
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  jquant2.2.ll:find_best_colors:
+    Hash: 0x0000001e91a5cc0e
+    Counters: 7
+    Block counts: [0, 0, 0, 0, 0, 0, 0]
+  jinit_c_main_controller:
+    Hash: 0x0003000e247d68d6
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+  tmp1.ll:start_pass_main:
+    Hash: 0x00010009f45bd106
+    Counters: 3
+    Block counts: [0, 0, 0]
+  tmp1.ll:process_data_simple_main:
+    Hash: 0x000200154895118e
+    Counters: 7
+    Block counts: [0, 0, 0, 0, 0, 0, 0]
+  jinit_c_main_controller:
+    Hash: 0x0003000e247d68d6
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+  jcmainct.2.ll:start_pass_main:
+    Hash: 0x00010009f45bd106
+    Counters: 3
+    Block counts: [0, 0, 0]
+  jcmainct.2.ll:process_data_simple_main:
+    Hash: 0x000200154895118e
+    Counters: 7
+    Block counts: [0, 0, 0, 0, 0, 0, 0]
+  jinit_inverse_dct:
+    Hash: 0x00020007f2c35b9c
+    Counters: 2
+    Block counts: [26250, 8750]
+  tmp1.ll:start_pass:
+    Hash: 0x0003003dcd0b75eb
+    Counters: 19
+    Block counts: [0, 1680000, 0, 0, 26250, 0, 0, 0, 0, 0, 26250, 0, 0, 0, 26250, 0, 0, 0, 8750]
+  jinit_inverse_dct:
+    Hash: 0x00020007f2c35b9c
+    Counters: 2
+    Block counts: [26250, 8750]
+  jddctmgr.2.ll:start_pass:
+    Hash: 0x0003003dcd0b75eb
+    Counters: 19
+    Block counts: [0, 1680000, 0, 0, 26250, 0, 0, 0, 0, 0, 26250, 0, 0, 0, 26250, 0, 0, 0, 8750]
+  jpeg_std_error:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [8750]
+  tmp1.ll:error_exit:
+    Hash: 0x00010002ffffffff
+    Counters: 1
+    Block counts: [0]
+  tmp1.ll:emit_message:
+    Hash: 0x0002000e3ca07442
+    Counters: 5
+    Block counts: [227500, 0, 0, 0, 0]
+  tmp1.ll:output_message:
+    Hash: 0x00010002ffffffff
+    Counters: 1
+    Block counts: [0]
+  tmp1.ll:format_message:
+    Hash: 0x000000203c6d3589
+    Counters: 11
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:reset_error_mgr:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [8750]
+  jpeg_std_error:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [8750]
+  jerror.2.ll:error_exit:
+    Hash: 0x00010002ffffffff
+    Counters: 1
+    Block counts: [0]
+  jerror.2.ll:emit_message:
+    Hash: 0x0002000e3ca07442
+    Counters: 5
+    Block counts: [227500, 0, 0, 0, 0]
+  jerror.2.ll:output_message:
+    Hash: 0x00010002ffffffff
+    Counters: 1
+    Block counts: [0]
+  jerror.2.ll:format_message:
+    Hash: 0x000000203c6d3589
+    Counters: 11
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  jerror.2.ll:reset_error_mgr:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [8750]
+  jpeg_abort:
+    Hash: 0x01010007f2c35b9c
+    Counters: 3
+    Block counts: [8750, 8750, 8750]
+  jpeg_destroy:
+    Hash: 0x00010005f42b0f02
+    Counters: 2
+    Block counts: [8750, 8750]
+  jpeg_alloc_quant_table:
+    Hash: 0x00010002ffffffff
+    Counters: 1
+    Block counts: [17500]
+  jpeg_alloc_huff_table:
+    Hash: 0x00010002ffffffff
+    Counters: 1
+    Block counts: [35000]
+  jpeg_abort:
+    Hash: 0x01010007f2c35b9c
+    Counters: 3
+    Block counts: [8750, 8750, 8750]
+  jpeg_destroy:
+    Hash: 0x00010005f42b0f02
+    Counters: 2
+    Block counts: [8750, 8750]
+  jpeg_alloc_quant_table:
+    Hash: 0x00010002ffffffff
+    Counters: 1
+    Block counts: [17500]
+  jpeg_alloc_huff_table:
+    Hash: 0x00010002ffffffff
+    Counters: 1
+    Block counts: [35000]
+  jinit_upsampler:
+    Hash: 0x000400382e2e9693
+    Counters: 18
+    Block counts: [17500, 0, 8750, 17500, 0, 17500, 8750, 0, 0, 0, 0, 17500, 0, 0, 8750, 17500, 0, 8750]
+  tmp1.ll:start_pass_upsample:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [8750]
+  tmp1.ll:sep_upsample:
+    Hash: 0x00020013654c377a
+    Counters: 6
+    Block counts: [2730000, 1820000, 910000, 0, 910000, 910000]
+  tmp1.ll:noop_upsample:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  tmp1.ll:fullsize_upsample:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [910000]
+  tmp1.ll:h2v1_fancy_upsample:
+    Hash: 0x0000000c8e6c4700
+    Counters: 3
+    Block counts: [0, 0, 0]
+  tmp1.ll:h2v1_upsample:
+    Hash: 0x0000000bdba7247c
+    Counters: 3
+    Block counts: [0, 0, 0]
+  tmp1.ll:h2v2_fancy_upsample:
+    Hash: 0x0000001475132d86
+    Counters: 5
+    Block counts: [287560000, 1820000, 1820000, 1820000, 1820000]
+  tmp1.ll:h2v2_upsample:
+    Hash: 0x0000000a5b82a8a4
+    Counters: 3
+    Block counts: [0, 0, 0]
+  tmp1.ll:int_upsample:
+    Hash: 0x0000001249cf03a7
+    Counters: 5
+    Block counts: [0, 0, 0, 0, 0]
+  jinit_upsampler:
+    Hash: 0x000400382e2e9693
+    Counters: 18
+    Block counts: [17500, 0, 8750, 17500, 0, 17500, 8750, 0, 0, 0, 0, 17500, 0, 0, 8750, 17500, 0, 8750]
+  jdsample.2.ll:start_pass_upsample:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [8750]
+  jdsample.2.ll:sep_upsample:
+    Hash: 0x00020013654c377a
+    Counters: 6
+    Block counts: [2730000, 1820000, 910000, 0, 910000, 910000]
+  jdsample.2.ll:noop_upsample:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  jdsample.2.ll:fullsize_upsample:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [910000]
+  jdsample.2.ll:h2v1_fancy_upsample:
+    Hash: 0x0000000c8e6c4700
+    Counters: 3
+    Block counts: [0, 0, 0]
+  jdsample.2.ll:h2v1_upsample:
+    Hash: 0x0000000bdba7247c
+    Counters: 3
+    Block counts: [0, 0, 0]
+  jdsample.2.ll:h2v2_fancy_upsample:
+    Hash: 0x0000001475132d86
+    Counters: 5
+    Block counts: [287560000, 1820000, 1820000, 1820000, 1820000]
+  jdsample.2.ll:h2v2_upsample:
+    Hash: 0x0000000a5b82a8a4
+    Counters: 3
+    Block counts: [0, 0, 0]
+  jdsample.2.ll:int_upsample:
+    Hash: 0x0000001249cf03a7
+    Counters: 5
+    Block counts: [0, 0, 0, 0, 0]
+  jinit_marker_writer:
+    Hash: 0x00010002ffffffff
+    Counters: 1
+    Block counts: [0]
+  tmp1.ll:write_any_marker:
+    Hash: 0x00000009698ce9bf
+    Counters: 3
+    Block counts: [0, 0, 0]
+  tmp1.ll:write_file_header:
+    Hash: 0x000000087f5cc5c1
+    Counters: 3
+    Block counts: [0, 0, 0]
+  tmp1.ll:write_frame_header:
+    Hash: 0x0001002a4c6157dd
+    Counters: 13
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:write_scan_header:
+    Hash: 0x00000019e54d2c95
+    Counters: 7
+    Block counts: [0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:write_file_trailer:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  tmp1.ll:write_tables_only:
+    Hash: 0x000000185adf2677
+    Counters: 7
+    Block counts: [0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:emit_marker:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  tmp1.ll:emit_2bytes:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  tmp1.ll:emit_byte:
+    Hash: 0x00020008f0c12e99
+    Counters: 3
+    Block counts: [0, 0, 0]
+  tmp1.ll:emit_jfif_app0:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  tmp1.ll:emit_adobe_app14:
+    Hash: 0x00000008190071db
+    Counters: 3
+    Block counts: [0, 0, 0]
+  tmp1.ll:emit_dqt:
+    Hash: 0x010100185cbe01c7
+    Counters: 8
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:emit_sof:
+    Hash: 0x0001000c48a747b2
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+  tmp1.ll:emit_dac:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  tmp1.ll:emit_dht:
+    Hash: 0x0001001b41bf410e
+    Counters: 7
+    Block counts: [0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:emit_dri:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  tmp1.ll:emit_sos:
+    Hash: 0x000000132d5a4bac
+    Counters: 6
+    Block counts: [0, 0, 0, 0, 0, 0]
+  jinit_marker_writer:
+    Hash: 0x00010002ffffffff
+    Counters: 1
+    Block counts: [0]
+  jcmarker.2.ll:write_any_marker:
+    Hash: 0x00000009698ce9bf
+    Counters: 3
+    Block counts: [0, 0, 0]
+  jcmarker.2.ll:write_file_header:
+    Hash: 0x000000087f5cc5c1
+    Counters: 3
+    Block counts: [0, 0, 0]
+  jcmarker.2.ll:write_frame_header:
+    Hash: 0x0001002a4c6157dd
+    Counters: 13
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  jcmarker.2.ll:write_scan_header:
+    Hash: 0x00000019e54d2c95
+    Counters: 7
+    Block counts: [0, 0, 0, 0, 0, 0, 0]
+  jcmarker.2.ll:write_file_trailer:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  jcmarker.2.ll:write_tables_only:
+    Hash: 0x000000185adf2677
+    Counters: 7
+    Block counts: [0, 0, 0, 0, 0, 0, 0]
+  jcmarker.2.ll:emit_marker:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  jcmarker.2.ll:emit_2bytes:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  jcmarker.2.ll:emit_byte:
+    Hash: 0x00020008f0c12e99
+    Counters: 3
+    Block counts: [0, 0, 0]
+  jcmarker.2.ll:emit_jfif_app0:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  jcmarker.2.ll:emit_adobe_app14:
+    Hash: 0x00000008190071db
+    Counters: 3
+    Block counts: [0, 0, 0]
+  jcmarker.2.ll:emit_dqt:
+    Hash: 0x010100185cbe01c7
+    Counters: 8
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0]
+  jcmarker.2.ll:emit_sof:
+    Hash: 0x0001000c48a747b2
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+  jcmarker.2.ll:emit_dac:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  jcmarker.2.ll:emit_dht:
+    Hash: 0x0001001b41bf410e
+    Counters: 7
+    Block counts: [0, 0, 0, 0, 0, 0, 0]
+  jcmarker.2.ll:emit_dri:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  jcmarker.2.ll:emit_sos:
+    Hash: 0x000000132d5a4bac
+    Counters: 6
+    Block counts: [0, 0, 0, 0, 0, 0]
+  keymatch:
+    Hash: 0x00000013bde0f407
+    Counters: 6
+    Block counts: [332500, 0, 0, 752500, 0, 70000]
+  read_stdin:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  write_stdout:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  keymatch:
+    Hash: 0x00000013bde0f407
+    Counters: 6
+    Block counts: [332500, 0, 0, 752500, 0, 70000]
+  read_stdin:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  write_stdout:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  jinit_merged_upsampler:
+    Hash: 0x00020006e852da94
+    Counters: 2
+    Block counts: [0, 0]
+  tmp1.ll:start_pass_merged_upsample:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  tmp1.ll:merged_2v_upsample:
+    Hash: 0x00010013c3e7c028
+    Counters: 6
+    Block counts: [0, 0, 0, 0, 0, 0]
+  tmp1.ll:h2v2_merged_upsample:
+    Hash: 0x0000000a61ed5f03
+    Counters: 3
+    Block counts: [0, 0, 0]
+  tmp1.ll:merged_1v_upsample:
+    Hash: 0x00010002ffffffff
+    Counters: 1
+    Block counts: [0]
+  tmp1.ll:h2v1_merged_upsample:
+    Hash: 0x0000000a61ed5f03
+    Counters: 3
+    Block counts: [0, 0, 0]
+  tmp1.ll:build_ycc_rgb_table:
+    Hash: 0x00040007f2c35b9c
+    Counters: 2
+    Block counts: [0, 0]
+  jinit_merged_upsampler:
+    Hash: 0x00020006e852da94
+    Counters: 2
+    Block counts: [0, 0]
+  jdmerge.2.ll:start_pass_merged_upsample:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  jdmerge.2.ll:merged_2v_upsample:
+    Hash: 0x00010013c3e7c028
+    Counters: 6
+    Block counts: [0, 0, 0, 0, 0, 0]
+  jdmerge.2.ll:h2v2_merged_upsample:
+    Hash: 0x0000000a61ed5f03
+    Counters: 3
+    Block counts: [0, 0, 0]
+  jdmerge.2.ll:merged_1v_upsample:
+    Hash: 0x00010002ffffffff
+    Counters: 1
+    Block counts: [0]
+  jdmerge.2.ll:h2v1_merged_upsample:
+    Hash: 0x0000000a61ed5f03
+    Counters: 3
+    Block counts: [0, 0, 0]
+  jdmerge.2.ll:build_ycc_rgb_table:
+    Hash: 0x00040007f2c35b9c
+    Counters: 2
+    Block counts: [0, 0]
+  jinit_c_prep_controller:
+    Hash: 0x0003000e2b4d751a
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+  tmp1.ll:start_pass_prep:
+    Hash: 0x00010005f42b0f02
+    Counters: 2
+    Block counts: [0, 0]
+  tmp1.ll:pre_process_context:
+    Hash: 0x0002002fea48c89e
+    Counters: 13
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:create_context_buffer:
+    Hash: 0x0002000c8e6c4700
+    Counters: 3
+    Block counts: [0, 0, 0]
+  tmp1.ll:pre_process_data:
+    Hash: 0x000200249a48e7fa
+    Counters: 11
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:expand_bottom_edge:
+    Hash: 0x00000007f2c35b9c
+    Counters: 2
+    Block counts: [0, 0]
+  jinit_c_prep_controller:
+    Hash: 0x0003000e2b4d751a
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+  jcprepct.2.ll:start_pass_prep:
+    Hash: 0x00010005f42b0f02
+    Counters: 2
+    Block counts: [0, 0]
+  jcprepct.2.ll:pre_process_context:
+    Hash: 0x0002002fea48c89e
+    Counters: 13
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  jcprepct.2.ll:create_context_buffer:
+    Hash: 0x0002000c8e6c4700
+    Counters: 3
+    Block counts: [0, 0, 0]
+  jcprepct.2.ll:pre_process_data:
+    Hash: 0x000200249a48e7fa
+    Counters: 11
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  jcprepct.2.ll:expand_bottom_edge:
+    Hash: 0x00000007f2c35b9c
+    Counters: 2
+    Block counts: [0, 0]
+  read_color_map:
+    Hash: 0x00020008190071db
+    Counters: 3
+    Block counts: [0, 0, 0]
+  tmp1.ll:read_gif_map:
+    Hash: 0x0004001e40c8fa5e
+    Counters: 10
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:read_ppm_map:
+    Hash: 0x0004002d08c6c547
+    Counters: 14
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:add_map_entry:
+    Hash: 0x0001001227c8ba80
+    Counters: 6
+    Block counts: [0, 0, 0, 0, 0, 0]
+  tmp1.ll:read_pbm_integer:
+    Hash: 0x0002001c3544150e
+    Counters: 10
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:pbm_getc:
+    Hash: 0x0000000cef350bae
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+  read_color_map:
+    Hash: 0x00020008190071db
+    Counters: 3
+    Block counts: [0, 0, 0]
+  rdcolmap.2.ll:read_gif_map:
+    Hash: 0x0004001e40c8fa5e
+    Counters: 10
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  rdcolmap.2.ll:read_ppm_map:
+    Hash: 0x0004002d08c6c547
+    Counters: 14
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  rdcolmap.2.ll:add_map_entry:
+    Hash: 0x0001001227c8ba80
+    Counters: 6
+    Block counts: [0, 0, 0, 0, 0, 0]
+  rdcolmap.2.ll:read_pbm_integer:
+    Hash: 0x0002001c3544150e
+    Counters: 10
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  rdcolmap.2.ll:pbm_getc:
+    Hash: 0x0000000cef350bae
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+  jpeg_idct_float:
+    Hash: 0x0000000fefd4d3a0
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+  jpeg_idct_float:
+    Hash: 0x0000000fefd4d3a0
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+Functions shown: 766
+Total functions: 766
+Maximum function count: 294840000
+Maximum internal block count: 70332500

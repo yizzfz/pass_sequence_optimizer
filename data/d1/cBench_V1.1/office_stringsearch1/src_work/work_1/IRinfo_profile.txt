@@ -1,0 +1,174 @@
+loop ID = init_search_D1N1
+loop execution count = 455 times
+number of instructions executed here (excluding subloops) = 10465
+number of instructions executed here = 10465
+
+
+loop ID = init_search_D1N2
+loop execution count = 15104 times
+number of instructions executed here (excluding subloops) = 226560
+number of instructions executed here = 226560
+
+
+loop ID = strsearch_D2N11
+loop execution count = 1252986240 times
+number of instructions executed here (excluding subloops) = 33830628480
+number of instructions executed here = 33830628480
+
+
+loop ID = strsearch_D1N1
+loop execution count = 155581440 times
+number of instructions executed here (excluding subloops) = 4978606080
+number of instructions executed here = 38809234560
+
+
+loop ID = main_D2N11
+loop execution count = 163916160 times
+number of instructions executed here (excluding subloops) = 2950490880
+number of instructions executed here = 2950490880
+
+
+loop ID = main_D1N1
+loop execution count = 59 times
+number of instructions executed here (excluding subloops) = 2950
+number of instructions executed here = 2950493830
+
+
+loop ID = main_D1N2
+loop execution count = 59 times
+number of instructions executed here (excluding subloops) = 2714
+number of instructions executed here = 2714
+
+
+loop ID = main_D1N3
+loop execution count = 94 times
+number of instructions executed here (excluding subloops) = 4324
+number of instructions executed here = 4324
+
+
+loop ID = main_D1N4
+loop execution count = 59 times
+number of instructions executed here (excluding subloops) = 1475
+number of instructions executed here = 1475
+
+
+loop ID = main_D1N5
+loop execution count = 94 times
+number of instructions executed here (excluding subloops) = 2350
+number of instructions executed here = 2350
+
+
+loop ID = bmha_init_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = bmha_init_D2N21
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = bmha_init_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = bmha_search_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = bmha_search_D2N12
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = bmha_search_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = bmh_init_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = bmh_init_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = bmh_init_D1N3
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = bmh_search_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = bmh_search_D2N12
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = bmh_search_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = bmhi_init_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = bmhi_init_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = bmhi_init_D1N3
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = bmhi_init_D1N4
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = bmhi_search_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = bmhi_search_D2N12
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = bmhi_search_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+

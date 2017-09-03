@@ -1,0 +1,54 @@
+loop ID = init_array_D2N11
+loop execution count = 1690000 times
+number of instructions executed here (excluding subloops) = 81120000
+number of instructions executed here = 81120000
+
+
+loop ID = init_array_D1N1
+loop execution count = 1300 times
+number of instructions executed here (excluding subloops) = 18200
+number of instructions executed here = 81138200
+
+
+loop ID = kernel_jacobi_2d_D3N111
+loop execution count = 842402000 times
+number of instructions executed here (excluding subloops) = 58968140000
+number of instructions executed here = 58968140000
+
+
+loop ID = kernel_jacobi_2d_D2N11
+loop execution count = 649000 times
+number of instructions executed here (excluding subloops) = 9735000
+number of instructions executed here = 58977875000
+
+
+loop ID = kernel_jacobi_2d_D3N121
+loop execution count = 842402000 times
+number of instructions executed here (excluding subloops) = 58968140000
+number of instructions executed here = 58968140000
+
+
+loop ID = kernel_jacobi_2d_D2N12
+loop execution count = 649000 times
+number of instructions executed here (excluding subloops) = 9735000
+number of instructions executed here = 58977875000
+
+
+loop ID = kernel_jacobi_2d_D1N1
+loop execution count = 500 times
+number of instructions executed here (excluding subloops) = 8000
+number of instructions executed here = 117955758000
+
+
+loop ID = print_array_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = print_array_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+

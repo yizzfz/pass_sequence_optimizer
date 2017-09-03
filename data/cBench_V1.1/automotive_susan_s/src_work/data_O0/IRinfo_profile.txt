@@ -1,0 +1,288 @@
+loop ID = main_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = getint_D1N1
+loop execution count = 294 times
+number of instructions executed here (excluding subloops) = 7350
+number of instructions executed here = 7350
+
+
+loop ID = getint_D1N2
+loop execution count = 49 times
+number of instructions executed here (excluding subloops) = 1421
+number of instructions executed here = 1421
+
+
+loop ID = int_to_uchar_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = int_to_uchar_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = setup_brightness_lut_D1N1
+loop execution count = 25137 times
+number of instructions executed here (excluding subloops) = 1206576
+number of instructions executed here = 1206576
+
+
+loop ID = susan_principle_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = susan_principle_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = susan_principle_small_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = susan_principle_small_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = median_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = median_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = enlarge_D2N11
+loop execution count = 159152 times
+number of instructions executed here (excluding subloops) = 13368768
+number of instructions executed here = 13368768
+
+
+loop ID = enlarge_D1N1
+loop execution count = 343 times
+number of instructions executed here (excluding subloops) = 4802
+number of instructions executed here = 13373570
+
+
+loop ID = enlarge_D1N2
+loop execution count = 343 times
+number of instructions executed here (excluding subloops) = 25382
+number of instructions executed here = 25382
+
+
+loop ID = enlarge_D1N3
+loop execution count = 22050 times
+number of instructions executed here (excluding subloops) = 882000
+number of instructions executed here = 882000
+
+
+loop ID = susan_smoothing_D4N1111
+loop execution count = 2976750000 times
+number of instructions executed here (excluding subloops) = 125023500000
+number of instructions executed here = 125023500000
+
+
+loop ID = susan_smoothing_D3N111
+loop execution count = 198450000 times
+number of instructions executed here (excluding subloops) = 4167450000
+number of instructions executed here = 129190950000
+
+
+loop ID = susan_smoothing_D2N11
+loop execution count = 13230000 times
+number of instructions executed here (excluding subloops) = 1124550000
+number of instructions executed here = 130315500000
+
+
+loop ID = susan_smoothing_D1N1
+loop execution count = 22050 times
+number of instructions executed here (excluding subloops) = 374850
+number of instructions executed here = 130315874850
+
+
+loop ID = susan_smoothing_D2N21
+loop execution count = 11025 times
+number of instructions executed here (excluding subloops) = 363825
+number of instructions executed here = 363825
+
+
+loop ID = susan_smoothing_D1N2
+loop execution count = 735 times
+number of instructions executed here (excluding subloops) = 11760
+number of instructions executed here = 375585
+
+
+loop ID = susan_smoothing_D2N31
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = susan_smoothing_D1N3
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = edge_draw_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = edge_draw_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = susan_thin_D4N1111
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = susan_thin_D3N111
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = susan_thin_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = susan_thin_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = susan_edges_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = susan_edges_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = susan_edges_D2N21
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = susan_edges_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = susan_edges_small_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = susan_edges_small_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = susan_edges_small_D2N21
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = susan_edges_small_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = corner_draw_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = susan_corners_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = susan_corners_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = susan_corners_D2N21
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = susan_corners_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = susan_corners_quick_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = susan_corners_quick_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = susan_corners_quick_D2N21
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = susan_corners_quick_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = main1_D1N1
+loop execution count = 98 times
+number of instructions executed here (excluding subloops) = 11466
+number of instructions executed here = 11466
+
+

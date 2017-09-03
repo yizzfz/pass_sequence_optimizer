@@ -1,0 +1,21 @@
+Counters:
+  main:
+    Hash: 0x00000007f24dd5e8
+    Counters: 3
+    Block counts: [1, 0, 0]
+  B.ll:init_array:
+    Hash: 0x0000000c8e6c4700
+    Counters: 3
+    Block counts: [4000000, 2000, 1]
+  B.ll:kernel_gemver:
+    Hash: 0x00000025defd6205
+    Counters: 8
+    Block counts: [4000000, 4000000, 4000000, 2000, 2000, 2000, 2000, 1]
+  B.ll:print_array:
+    Hash: 0x0000000a8202e3b6
+    Counters: 3
+    Block counts: [0, 0, 0]
+Functions shown: 4
+Total functions: 4
+Maximum function count: 4000000
+Maximum internal block count: 4000000

@@ -1,0 +1,96 @@
+loop ID = init_array_D2N11
+loop execution count = 8847360 times
+number of instructions executed here (excluding subloops) = 247726080
+number of instructions executed here = 247726080
+
+
+loop ID = init_array_D1N1
+loop execution count = 4096 times
+number of instructions executed here (excluding subloops) = 57344
+number of instructions executed here = 247783424
+
+
+loop ID = kernel_deriche_D2N11
+loop execution count = 8847360 times
+number of instructions executed here (excluding subloops) = 345047040
+number of instructions executed here = 345047040
+
+
+loop ID = kernel_deriche_D1N1
+loop execution count = 4096 times
+number of instructions executed here (excluding subloops) = 57344
+number of instructions executed here = 345104384
+
+
+loop ID = kernel_deriche_D2N21
+loop execution count = 8847360 times
+number of instructions executed here (excluding subloops) = 495452160
+number of instructions executed here = 495452160
+
+
+loop ID = kernel_deriche_D1N2
+loop execution count = 2160 times
+number of instructions executed here (excluding subloops) = 43200
+number of instructions executed here = 495495360
+
+
+loop ID = kernel_deriche_D2N31
+loop execution count = 8847360 times
+number of instructions executed here (excluding subloops) = 548536320
+number of instructions executed here = 548536320
+
+
+loop ID = kernel_deriche_D1N3
+loop execution count = 2160 times
+number of instructions executed here (excluding subloops) = 36720
+number of instructions executed here = 548573040
+
+
+loop ID = kernel_deriche_D2N41
+loop execution count = 8847360 times
+number of instructions executed here (excluding subloops) = 345047040
+number of instructions executed here = 345047040
+
+
+loop ID = kernel_deriche_D1N4
+loop execution count = 4096 times
+number of instructions executed here (excluding subloops) = 57344
+number of instructions executed here = 345104384
+
+
+loop ID = kernel_deriche_D2N51
+loop execution count = 8847360 times
+number of instructions executed here (excluding subloops) = 495452160
+number of instructions executed here = 495452160
+
+
+loop ID = kernel_deriche_D1N5
+loop execution count = 4096 times
+number of instructions executed here (excluding subloops) = 81920
+number of instructions executed here = 495534080
+
+
+loop ID = kernel_deriche_D2N61
+loop execution count = 8847360 times
+number of instructions executed here (excluding subloops) = 548536320
+number of instructions executed here = 548536320
+
+
+loop ID = kernel_deriche_D1N6
+loop execution count = 4096 times
+number of instructions executed here (excluding subloops) = 69632
+number of instructions executed here = 548605952
+
+
+loop ID = print_array_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = print_array_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+

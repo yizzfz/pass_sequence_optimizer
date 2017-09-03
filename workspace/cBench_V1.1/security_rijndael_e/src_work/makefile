@@ -1,7 +1,7 @@
-FILES= aes.c aesxam.c loop-wrap.c
-LL1= aes.1.ll aesxam.1.ll loop-wrap.1.ll
-LL2= aes.2.ll aesxam.2.ll loop-wrap.2.ll
-LL3= aes.3.ll aesxam.3.ll loop-wrap.3.ll
+FILES= loop-wrap.c aesxam.c aes.c
+LL1= loop-wrap.1.ll aesxam.1.ll aes.1.ll
+LL2= loop-wrap.2.ll aesxam.2.ll aes.2.ll
+LL3= loop-wrap.3.ll aesxam.3.ll aes.3.ll
 CC_FLAGS=
 LD_FLAGS=-lm 
 

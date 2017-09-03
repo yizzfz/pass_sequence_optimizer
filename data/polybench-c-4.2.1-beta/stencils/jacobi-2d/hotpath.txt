@@ -1,0 +1,21 @@
+Counters:
+  main:
+    Hash: 0x00000007f24dd5e8
+    Counters: 3
+    Block counts: [1, 0, 0]
+  B.ll:init_array:
+    Hash: 0x0000000c8e6c4700
+    Counters: 3
+    Block counts: [1690000, 1300, 1]
+  B.ll:kernel_jacobi_2d:
+    Hash: 0x0000001bb9670c14
+    Counters: 6
+    Block counts: [842402000, 842402000, 649000, 649000, 500, 1]
+  B.ll:print_array:
+    Hash: 0x0000000f3de7ad2c
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+Functions shown: 4
+Total functions: 4
+Maximum function count: 842402000
+Maximum internal block count: 842402000

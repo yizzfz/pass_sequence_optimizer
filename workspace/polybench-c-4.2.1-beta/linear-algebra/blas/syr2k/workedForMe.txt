@@ -1,0 +1,4 @@
+/local/scratch/hc475/pass_sequence_optimizer/workspace/polybench-c-4.2.1-beta/linear-algebra/blas/syr2k
+/local/scratch/hc475/pass_sequence_optimizer/workspace/polybench-c-4.2.1-beta/linear-algebra/blas/gemm
+/local/scratch/hc475/pass_sequence_optimizer/workspace/polybench-c-4.2.1-beta/linear-algebra/kernels/doitgen
+/local/scratch/hc475/pass_sequence_optimizer/workspace/cBench_V1.1/bzip2e/src_work

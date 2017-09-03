@@ -1,0 +1,53 @@
+Counters:
+  print_path:
+    Hash: 0x00000005f42b0f02
+    Counters: 2
+    Block counts: [11, 6]
+  enqueue:
+    Hash: 0x0000000d118e8fe4
+    Counters: 4
+    Block counts: [9000000, 9000000, 5500000, 0]
+  dequeue:
+    Hash: 0x00000005f42b0f02
+    Counters: 2
+    Block counts: [14500000, 14500000]
+  qcount:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [17000000]
+  dijkstra:
+    Hash: 0x0000001c733f0cde
+    Counters: 8
+    Block counts: [72500000, 72500000, 12000000, 62500000, 12500000, 14500000, 0, 2500000]
+  main:
+    Hash: 0x0000001c374d3b8c
+    Counters: 7
+    Block counts: [25, 2500000, 5, 5, 1, 0, 0]
+  print_path:
+    Hash: 0x00000005f42b0f02
+    Counters: 2
+    Block counts: [11, 6]
+  enqueue:
+    Hash: 0x0000000d118e8fe4
+    Counters: 4
+    Block counts: [9000000, 9000000, 5500000, 0]
+  dequeue:
+    Hash: 0x00000005f42b0f02
+    Counters: 2
+    Block counts: [14500000, 14500000]
+  qcount:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [17000000]
+  dijkstra:
+    Hash: 0x0000001c733f0cde
+    Counters: 8
+    Block counts: [72500000, 72500000, 12000000, 62500000, 12500000, 14500000, 0, 2500000]
+  main:
+    Hash: 0x0000001c374d3b8c
+    Counters: 7
+    Block counts: [25, 2500000, 5, 5, 1, 0, 0]
+Functions shown: 12
+Total functions: 12
+Maximum function count: 72500000
+Maximum internal block count: 72500000

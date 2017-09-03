@@ -1,0 +1,42 @@
+loop ID = init_array_D2N11
+loop execution count = 4000000 times
+number of instructions executed here (excluding subloops) = 120000000
+number of instructions executed here = 120000000
+
+
+loop ID = init_array_D1N1
+loop execution count = 2000 times
+number of instructions executed here (excluding subloops) = 28000
+number of instructions executed here = 120028000
+
+
+loop ID = kernel_seidel_2d_D3N111
+loop execution count = 1996002000 times
+number of instructions executed here (excluding subloops) = 227544228000
+number of instructions executed here = 227544228000
+
+
+loop ID = kernel_seidel_2d_D2N11
+loop execution count = 999000 times
+number of instructions executed here (excluding subloops) = 14985000
+number of instructions executed here = 227559213000
+
+
+loop ID = kernel_seidel_2d_D1N1
+loop execution count = 500 times
+number of instructions executed here (excluding subloops) = 7500
+number of instructions executed here = 227559220500
+
+
+loop ID = print_array_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = print_array_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+

@@ -1,0 +1,3 @@
+/local/scratch/hc475/pass_sequence_optimizer/workspace/polybench-c-4.2.1-beta/linear-algebra/blas/gemm
+/local/scratch/hc475/pass_sequence_optimizer/workspace/polybench-c-4.2.1-beta/linear-algebra/kernels/3mm
+/local/scratch/hc475/pass_sequence_optimizer/workspace/polybench-c-4.2.1-beta/stencils/jacobi-1d

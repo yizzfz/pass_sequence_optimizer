@@ -1,7 +1,7 @@
-FILES= susan.c loop-wrap.c
-LL1= susan.1.ll loop-wrap.1.ll
-LL2= susan.2.ll loop-wrap.2.ll
-LL3= susan.3.ll loop-wrap.3.ll
+FILES= loop-wrap.c susan.c
+LL1= loop-wrap.1.ll susan.1.ll
+LL2= loop-wrap.2.ll susan.2.ll
+LL3= loop-wrap.3.ll susan.3.ll
 CC_FLAGS=
 LD_FLAGS=-lm 
 

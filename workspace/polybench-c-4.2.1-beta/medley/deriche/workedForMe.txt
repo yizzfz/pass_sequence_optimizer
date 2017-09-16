@@ -1,4 +1,2 @@
-/local/scratch/hc475/pass_sequence_optimizer/workspace/polybench-c-4.2.1-beta/datamining/correlation
-/local/scratch/hc475/pass_sequence_optimizer/workspace/polybench-c-4.2.1-beta/linear-algebra/solvers/durbin
-/local/scratch/hc475/pass_sequence_optimizer/workspace/polybench-c-4.2.1-beta/linear-algebra/solvers/gramschmidt
-/local/scratch/hc475/pass_sequence_optimizer/workspace/cBench_V1.1/telecom_adpcm_d/src_work
+/home/naim/compiler/workspace/polybench-c-4.2.1-beta/medley/deriche	28.1996993453
+/home/naim/compiler/workspace/polybench-c-4.2.1-beta/stencils/jacobi-1d	27.8089740526

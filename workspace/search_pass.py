@@ -3,7 +3,8 @@ import os
 import time
 import subprocess
 from subprocess import check_call, check_output, STDOUT
-from multiprocessing import Process, Queue
+from multiprocessing import Process, Queue, Value
+
 
 def load_from_txt(file):
     with open(file,"rb") as f:
@@ -90,7 +91,7 @@ def ga(all_list, parent_list, current_dir, time_baseline, size_baseline, cnt):
         child_size = res[2]
         time_improve = (time_baseline - child_time)*100/time_baseline
         size_improve = (size_baseline - child_size)*100/size_baseline
-        print 'child ', i, ': num of passes ', len(child_list), ', time {:.3f} '.format(child_time), '({:.3f}%)'.format(time_improve), ', bin size ', child_size , '(', size_improve, '%)'
+        #print 'child ', i, ': num of passes ', len(child_list), ', time {:.3f} '.format(child_time), '({:.3f}%)'.format(time_improve), ', bin size ', child_size , '(', size_improve, '%)'
         if time_improve > 0.5:      #choose this child if improvment is greater than ?%
           if child_time < best_time:
             best_time = child_time
@@ -123,12 +124,14 @@ def create_child(list_str, current_dir):
       
     etime = -1.0
     size = -1
-    start = time.time()
-    
-    check_call(['make run'], stdout=DEVNULL, stderr=STDOUT, cwd = current_dir, shell = True)
-    
-    end = time.time()
-    etime = end - start
+    timing = []
+    for i in range (1, 10):
+      start = time.time()
+      check_call(['make run'], stdout=DEVNULL, stderr=STDOUT, cwd = current_dir, shell = True)
+      end = time.time()
+      timing.append(end-start)
+      
+    etime = average_timing(timing)
     size = int(check_output('ls -nl a.out | awk \'{print $5}\'', cwd = current_dir, shell = True))
     return (0, etime, size)
     
@@ -180,15 +183,22 @@ def read_list(target_dir):
 def compare_with_other(current_dir, testcodes):
     O3time = read_O3_time(current_dir)
     os.chdir(current_dir)
+    
+    output = []
+    
+    for testcode in testcodes:
+      others_list = read_list(testcode)
+      if others_list != '':
+        res = create_child(others_list, current_dir)
+        if res[0] == 0:
+          if res[1] < O3time:
+            output.append(((O3time-res[1])*100/O3time, testcode))
+            
+    output.sort(reverse=1)
     with open(current_dir+"/workedForMe.txt","ab") as f:
-      for testcode in testcodes:
-        others_list = read_list(testcode)
-        if others_list != '':
-          res = create_child(others_list, current_dir)
-          if res[0] == 0:
-            if res[1] < O3time:
-              f.write(testcode)
-              f.write('\n')
+      for (t, c) in output:
+        f.write(c+'\t')
+        f.write(str(t)+'\n')
 
 
 
@@ -208,22 +218,27 @@ def t_prepare(current_dir, O3_list):
     O3size = -1
     if err==0:
       DEVNULL = open(os.devnull, 'wb', 0)
-      start = time.time()
-      check_call(['make run'], stdout=DEVNULL, stderr=STDOUT, cwd = current_dir, shell = True)
-      end = time.time()
-      O3time = end - start
+      timing = []
+      for i in range (1, 10):
+        start = time.time()
+        check_call(['make run'], stdout=DEVNULL, stderr=STDOUT, cwd = current_dir, shell = True)
+        end = time.time()
+        timing.append(end-start)
+      
+      O3time = average_timing(timing)
       O3size = int(check_output('ls -nl a.out | awk \'{print $5}\'', cwd = current_dir, shell = True))
     else:
       print 'cannot compile with O3: ' + current_dir
       return
     
     
-    print '['+ current_dir + '] O3 time = ', O3time, ', bin size = ', O3size
+    print '['+ shorten(current_dir) + '] O3 time = ', O3time, ', bin size = ', O3size
     record_list('O3_', O3time, O3size, 0)
     os.system('cp IRinfo.txt data_O3_0/IRinfo.txt')
       
   
-def t_GA(current_dir, all_list, O3_list, testcodes):  
+def t_GA(current_dir, all_list, O3_list, testcodes, progress): 
+      #global progress 
       cnt=0
       os.chdir(current_dir)
       current_list = O3_list[:]
@@ -241,37 +256,44 @@ def t_GA(current_dir, all_list, O3_list, testcodes):
         cnt = res[4]
         improved = res[0]
         if improved == 0:
-          print 'did not improve'
+          #print 'did not improve'
           fail_in_a_row += 1
           if fail_in_a_row > 10:
-            print 'stop at step ', i
+            #print 'stop at step ', i
             break
         else:
           fail_in_a_row = 0
           current_time = res[1]
           current_list = res[2][:]
           current_size = res[3]
-      print '['+current_dir+'] final time = ', current_time, ', bin size = ', current_size
+      print '['+shorten(current_dir)+'] final time = ', current_time, ', bin size = ', current_size
       compare_with_other(current_dir, testcodes)
       os.chdir(current_dir)
+      
+      with progress.get_lock():
+        progress.value += 1
+      print 'progress: ' + str(progress.value) +'/'+ str(len(testcodes))
+      
 
     
 def main():
     all_list = load_from_txt('allPassList.txt')
     O3_list = load_from_txt('O3List.txt')
     
+    progress = Value('i', 0)
     
     base_dir = '.'
-    #base_dir = './polybench-c-4.2.1-beta/linear-algebra/blas/gemm'
+    #base_dir = './polybench-c-4.2.1-beta/stencils/jacobi-1d'
     #base_dir = './cBench_V1.1/automotive_bitcount'
     
     testcodes = get_testcodes(base_dir)
+    #testcodes = ['/home/naim/compiler/workspace/polybench-c-4.2.1-beta/medley/deriche','/home/naim/compiler/workspace/polybench-c-4.2.1-beta/stencils/jacobi-1d']
     
     if len(testcodes) == 0:
       print 'cannot find any MARKER, run \'generate_makefile\''
       return
       
-    #testcodes = random_select(testcodes, 3)
+    #testcodes = random_select(testcodes, 2)
     
     print 'found ' + str(len(testcodes)) + ' benchmarks:'
     print testcodes
@@ -291,15 +313,28 @@ def main():
       threads = []
       i=0
       for testcode in testcodes:
-        thread = Process(target = t_GA, args = (testcode, all_list, O3_list, testcodes))
+        thread = Process(target = t_GA, args = (testcode, all_list, O3_list, testcodes, progress))
         threads.append(thread)
         threads[i].start()
         i+=1
       
       for thread in threads:
-        thread.join()    
+        thread.join()
       
     
+def average_timing(t1):
+    t1.sort()
+    t2 = t1[1:-1]
+    avg = sum(t2)/float(len(t2))
+    return avg    
+
+def shorten(s):
+    if 'poly' in s:
+      return s[s.find('poly'):]
+    elif 'cBench' in s:
+      return s[s.find('cBench'):]
+    else:
+      return s
 
 if __name__=="__main__":
     main()

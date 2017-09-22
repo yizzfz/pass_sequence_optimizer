@@ -1,0 +1,66 @@
+loop ID = init_array_D2N11
+loop execution count = 1000000 times
+number of instructions executed here (excluding subloops) = 29000000
+number of instructions executed here = 29000000
+
+
+loop ID = init_array_D1N1
+loop execution count = 1000 times
+number of instructions executed here (excluding subloops) = 14000
+number of instructions executed here = 29014000
+
+
+loop ID = kernel_adi_D3N111
+loop execution count = 498002000 times
+number of instructions executed here (excluding subloops) = 53784216000
+number of instructions executed here = 53784216000
+
+
+loop ID = kernel_adi_D3N112
+loop execution count = 498002000 times
+number of instructions executed here (excluding subloops) = 22908092000
+number of instructions executed here = 22908092000
+
+
+loop ID = kernel_adi_D2N11
+loop execution count = 499000 times
+number of instructions executed here (excluding subloops) = 25948000
+number of instructions executed here = 76718256000
+
+
+loop ID = kernel_adi_D3N121
+loop execution count = 498002000 times
+number of instructions executed here (excluding subloops) = 53784216000
+number of instructions executed here = 53784216000
+
+
+loop ID = kernel_adi_D3N122
+loop execution count = 498002000 times
+number of instructions executed here (excluding subloops) = 22908092000
+number of instructions executed here = 22908092000
+
+
+loop ID = kernel_adi_D2N12
+loop execution count = 499000 times
+number of instructions executed here (excluding subloops) = 25948000
+number of instructions executed here = 76718256000
+
+
+loop ID = kernel_adi_D1N1
+loop execution count = 500 times
+number of instructions executed here (excluding subloops) = 8000
+number of instructions executed here = 153436520000
+
+
+loop ID = print_array_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = print_array_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+

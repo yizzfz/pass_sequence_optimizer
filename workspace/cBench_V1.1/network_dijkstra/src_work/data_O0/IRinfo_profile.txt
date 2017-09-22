@@ -1,0 +1,48 @@
+loop ID = enqueue_D1N1
+loop execution count = 9000000 times
+number of instructions executed here (excluding subloops) = 117000000
+number of instructions executed here = 117000000
+
+
+loop ID = dijkstra_D2N11
+loop execution count = 72500000 times
+number of instructions executed here (excluding subloops) = 5510000000
+number of instructions executed here = 5510000000
+
+
+loop ID = dijkstra_D1N1
+loop execution count = 14500000 times
+number of instructions executed here (excluding subloops) = 145000000
+number of instructions executed here = 5655000000
+
+
+loop ID = dijkstra_D1N2
+loop execution count = 12500000 times
+number of instructions executed here (excluding subloops) = 300000000
+number of instructions executed here = 300000000
+
+
+loop ID = main_D2N11
+loop execution count = 2500000 times
+number of instructions executed here (excluding subloops) = 37500000
+number of instructions executed here = 37500000
+
+
+loop ID = main_D1N1
+loop execution count = 5 times
+number of instructions executed here (excluding subloops) = 165
+number of instructions executed here = 37500165
+
+
+loop ID = main_D2N21
+loop execution count = 25 times
+number of instructions executed here (excluding subloops) = 600
+number of instructions executed here = 600
+
+
+loop ID = main_D1N2
+loop execution count = 5 times
+number of instructions executed here (excluding subloops) = 70
+number of instructions executed here = 670
+
+

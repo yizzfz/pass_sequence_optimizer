@@ -1,0 +1,42 @@
+loop ID = init_array_D2N11
+loop execution count = 7840000 times
+number of instructions executed here (excluding subloops) = 478240000
+number of instructions executed here = 478240000
+
+
+loop ID = init_array_D1N1
+loop execution count = 2800 times
+number of instructions executed here (excluding subloops) = 39200
+number of instructions executed here = 478279200
+
+
+loop ID = kernel_floyd_warshall_D3N111
+loop execution count = 21952000000 times
+number of instructions executed here (excluding subloops) = 1712256000000
+number of instructions executed here = 1712256000000
+
+
+loop ID = kernel_floyd_warshall_D2N11
+loop execution count = 7840000 times
+number of instructions executed here (excluding subloops) = 109760000
+number of instructions executed here = 1712365760000
+
+
+loop ID = kernel_floyd_warshall_D1N1
+loop execution count = 2800 times
+number of instructions executed here (excluding subloops) = 39200
+number of instructions executed here = 1712365799200
+
+
+loop ID = print_array_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = print_array_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+

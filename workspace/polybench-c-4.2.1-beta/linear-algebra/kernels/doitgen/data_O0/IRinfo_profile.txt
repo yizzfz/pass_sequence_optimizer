@@ -1,0 +1,78 @@
+loop ID = kernel_doitgen_D4N1111
+loop execution count = 537600000 times
+number of instructions executed here (excluding subloops) = 20966400000
+number of instructions executed here = 20966400000
+
+
+loop ID = kernel_doitgen_D3N111
+loop execution count = 3360000 times
+number of instructions executed here (excluding subloops) = 63840000
+number of instructions executed here = 21030240000
+
+
+loop ID = kernel_doitgen_D3N112
+loop execution count = 3360000 times
+number of instructions executed here (excluding subloops) = 94080000
+number of instructions executed here = 94080000
+
+
+loop ID = kernel_doitgen_D2N11
+loop execution count = 21000 times
+number of instructions executed here (excluding subloops) = 336000
+number of instructions executed here = 21124656000
+
+
+loop ID = kernel_doitgen_D1N1
+loop execution count = 150 times
+number of instructions executed here (excluding subloops) = 2100
+number of instructions executed here = 21124658100
+
+
+loop ID = init_array_D2N11
+loop execution count = 25600 times
+number of instructions executed here (excluding subloops) = 742400
+number of instructions executed here = 742400
+
+
+loop ID = init_array_D1N1
+loop execution count = 160 times
+number of instructions executed here (excluding subloops) = 2240
+number of instructions executed here = 744640
+
+
+loop ID = init_array_D3N211
+loop execution count = 3360000 times
+number of instructions executed here (excluding subloops) = 114240000
+number of instructions executed here = 114240000
+
+
+loop ID = init_array_D2N21
+loop execution count = 21000 times
+number of instructions executed here (excluding subloops) = 294000
+number of instructions executed here = 114534000
+
+
+loop ID = init_array_D1N2
+loop execution count = 150 times
+number of instructions executed here (excluding subloops) = 2100
+number of instructions executed here = 114536100
+
+
+loop ID = print_array_D3N111
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = print_array_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = print_array_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+

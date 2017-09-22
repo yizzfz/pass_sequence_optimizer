@@ -1,20 +1,23 @@
-/local/scratch/hc475/pass_sequence_optimizer/workspace/polybench-c-4.2.1-beta/datamining/correlation
-/local/scratch/hc475/pass_sequence_optimizer/workspace/polybench-c-4.2.1-beta/datamining/covariance
-/local/scratch/hc475/pass_sequence_optimizer/workspace/polybench-c-4.2.1-beta/linear-algebra/solvers/lu
-/local/scratch/hc475/pass_sequence_optimizer/workspace/polybench-c-4.2.1-beta/linear-algebra/solvers/durbin
-/local/scratch/hc475/pass_sequence_optimizer/workspace/polybench-c-4.2.1-beta/linear-algebra/solvers/cholesky
-/local/scratch/hc475/pass_sequence_optimizer/workspace/polybench-c-4.2.1-beta/linear-algebra/blas/gemver
-/local/scratch/hc475/pass_sequence_optimizer/workspace/polybench-c-4.2.1-beta/linear-algebra/blas/gemm
-/local/scratch/hc475/pass_sequence_optimizer/workspace/polybench-c-4.2.1-beta/linear-algebra/blas/syrk
-/local/scratch/hc475/pass_sequence_optimizer/workspace/polybench-c-4.2.1-beta/linear-algebra/kernels/doitgen
-/local/scratch/hc475/pass_sequence_optimizer/workspace/polybench-c-4.2.1-beta/linear-algebra/kernels/3mm
-/local/scratch/hc475/pass_sequence_optimizer/workspace/polybench-c-4.2.1-beta/linear-algebra/kernels/atax
-/local/scratch/hc475/pass_sequence_optimizer/workspace/polybench-c-4.2.1-beta/linear-algebra/kernels/2mm
-/local/scratch/hc475/pass_sequence_optimizer/workspace/polybench-c-4.2.1-beta/medley/floyd-warshall
-/local/scratch/hc475/pass_sequence_optimizer/workspace/polybench-c-4.2.1-beta/stencils/jacobi-1d
-/local/scratch/hc475/pass_sequence_optimizer/workspace/polybench-c-4.2.1-beta/stencils/adi
-/local/scratch/hc475/pass_sequence_optimizer/workspace/cBench_V1.1/consumer_tiffmedian/src_work
-/local/scratch/hc475/pass_sequence_optimizer/workspace/cBench_V1.1/network_patricia/src_work
-/local/scratch/hc475/pass_sequence_optimizer/workspace/cBench_V1.1/automotive_qsort1/src_work
-/local/scratch/hc475/pass_sequence_optimizer/workspace/cBench_V1.1/automotive_susan_e/src_work
-/local/scratch/hc475/pass_sequence_optimizer/workspace/cBench_V1.1/telecom_gsm/src_work
+/local/scratch/hc475/pass_sequence_optimizer/workspace/cBench_V1.1/network_patricia/src_work	4.1920347268
+/local/scratch/hc475/pass_sequence_optimizer/workspace/cBench_V1.1/security_rijndael_e/src_work	2.65405946836
+/local/scratch/hc475/pass_sequence_optimizer/workspace/polybench-c-4.2.1-beta/linear-algebra/kernels/bicg	2.16996682448
+/local/scratch/hc475/pass_sequence_optimizer/workspace/polybench-c-4.2.1-beta/medley/floyd-warshall	2.12438170908
+/local/scratch/hc475/pass_sequence_optimizer/workspace/polybench-c-4.2.1-beta/linear-algebra/blas/trmm	2.11938646614
+/local/scratch/hc475/pass_sequence_optimizer/workspace/cBench_V1.1/automotive_qsort1/src_work	2.10454012915
+/local/scratch/hc475/pass_sequence_optimizer/workspace/polybench-c-4.2.1-beta/linear-algebra/blas/syrk	2.05681641496
+/local/scratch/hc475/pass_sequence_optimizer/workspace/polybench-c-4.2.1-beta/linear-algebra/kernels/mvt	1.73472101983
+/local/scratch/hc475/pass_sequence_optimizer/workspace/polybench-c-4.2.1-beta/linear-algebra/blas/gemver	1.58188478692
+/local/scratch/hc475/pass_sequence_optimizer/workspace/polybench-c-4.2.1-beta/linear-algebra/solvers/lu	1.40670302672
+/local/scratch/hc475/pass_sequence_optimizer/workspace/cBench_V1.1/automotive_susan_c/src_work	1.14996307728
+/local/scratch/hc475/pass_sequence_optimizer/workspace/polybench-c-4.2.1-beta/stencils/adi	1.04618854232
+/local/scratch/hc475/pass_sequence_optimizer/workspace/polybench-c-4.2.1-beta/linear-algebra/kernels/3mm	1.0214908893
+/local/scratch/hc475/pass_sequence_optimizer/workspace/polybench-c-4.2.1-beta/linear-algebra/kernels/2mm	0.999278538889
+/local/scratch/hc475/pass_sequence_optimizer/workspace/polybench-c-4.2.1-beta/datamining/correlation	0.983153037931
+/local/scratch/hc475/pass_sequence_optimizer/workspace/cBench_V1.1/consumer_jpeg_c/src_work	0.815243623409
+/local/scratch/hc475/pass_sequence_optimizer/workspace/cBench_V1.1/security_blowfish_e/src_work	0.741181960927
+/local/scratch/hc475/pass_sequence_optimizer/workspace/cBench_V1.1/automotive_susan_e/src_work	0.522014539698
+/local/scratch/hc475/pass_sequence_optimizer/workspace/polybench-c-4.2.1-beta/linear-algebra/kernels/doitgen	0.449634901253
+/local/scratch/hc475/pass_sequence_optimizer/workspace/polybench-c-4.2.1-beta/linear-algebra/kernels/atax	0.422029109027
+/local/scratch/hc475/pass_sequence_optimizer/workspace/polybench-c-4.2.1-beta/stencils/jacobi-1d	0.380771798412
+/local/scratch/hc475/pass_sequence_optimizer/workspace/polybench-c-4.2.1-beta/medley/deriche	0.360954412286
+/local/scratch/hc475/pass_sequence_optimizer/workspace/cBench_V1.1/automotive_susan_s/src_work	0.112211734688

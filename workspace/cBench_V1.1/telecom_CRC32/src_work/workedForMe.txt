@@ -1,7 +1,16 @@
-/local/scratch/hc475/pass_sequence_optimizer/workspace/polybench-c-4.2.1-beta/linear-algebra/kernels/atax
-/local/scratch/hc475/pass_sequence_optimizer/workspace/polybench-c-4.2.1-beta/stencils/adi
-/local/scratch/hc475/pass_sequence_optimizer/workspace/cBench_V1.1/bzip2e/src_work
-/local/scratch/hc475/pass_sequence_optimizer/workspace/cBench_V1.1/network_patricia/src_work
-/local/scratch/hc475/pass_sequence_optimizer/workspace/cBench_V1.1/automotive_qsort1/src_work
-/local/scratch/hc475/pass_sequence_optimizer/workspace/cBench_V1.1/telecom_adpcm_d/src_work
-/local/scratch/hc475/pass_sequence_optimizer/workspace/cBench_V1.1/telecom_adpcm_c/src_work
+/local/scratch/hc475/pass_sequence_optimizer/workspace/cBench_V1.1/automotive_susan_c/src_work	0.0870935943416
+/local/scratch/hc475/pass_sequence_optimizer/workspace/cBench_V1.1/security_blowfish_e/src_work	0.0738005860836
+/local/scratch/hc475/pass_sequence_optimizer/workspace/cBench_V1.1/consumer_tiffdither/src_work	0.0686328937544
+/local/scratch/hc475/pass_sequence_optimizer/workspace/cBench_V1.1/security_rijndael_e/src_work	0.0666361696021
+/local/scratch/hc475/pass_sequence_optimizer/workspace/cBench_V1.1/telecom_adpcm_d/src_work	0.0631736493668
+/local/scratch/hc475/pass_sequence_optimizer/workspace/cBench_V1.1/network_patricia/src_work	0.0600914144252
+/local/scratch/hc475/pass_sequence_optimizer/workspace/cBench_V1.1/automotive_susan_s/src_work	0.0559810510288
+/local/scratch/hc475/pass_sequence_optimizer/workspace/cBench_V1.1/network_dijkstra/src_work	0.0536693465275
+/local/scratch/hc475/pass_sequence_optimizer/workspace/cBench_V1.1/telecom_adpcm_c/src_work	0.0367172241189
+/local/scratch/hc475/pass_sequence_optimizer/workspace/cBench_V1.1/consumer_tiff2bw/src_work	0.0352500698741
+/local/scratch/hc475/pass_sequence_optimizer/workspace/cBench_V1.1/automotive_qsort1/src_work	0.0302632394198
+/local/scratch/hc475/pass_sequence_optimizer/workspace/cBench_V1.1/automotive_bitcount/src_work	0.0295179481522
+/local/scratch/hc475/pass_sequence_optimizer/workspace/polybench-c-4.2.1-beta/medley/deriche	0.0269480797358
+/local/scratch/hc475/pass_sequence_optimizer/workspace/cBench_V1.1/consumer_jpeg_c/src_work	0.0244985218156
+/local/scratch/hc475/pass_sequence_optimizer/workspace/cBench_V1.1/consumer_tiffmedian/src_work	0.0166088469526
+/local/scratch/hc475/pass_sequence_optimizer/workspace/polybench-c-4.2.1-beta/medley/floyd-warshall	0.0164663531476

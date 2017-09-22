@@ -1,0 +1,765 @@
+Counters:
+  main:
+    Hash: 0x0000000bfb666f9f
+    Counters: 3
+    Block counts: [558, 1, 0]
+  main:
+    Hash: 0x0000000bfb666f9f
+    Counters: 3
+    Block counts: [558, 1, 0]
+  tmp1.ll:generic_init:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  main1:
+    Hash: 0x0000002884305012
+    Counters: 16
+    Block counts: [558, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 558, 0, 0, 0]
+  tmp1.ll:parse_argv0:
+    Hash: 0x0000000ec3d2506c
+    Counters: 5
+    Block counts: [558, 558, 0, 0, 0]
+  tmp1.ll:set_format:
+    Hash: 0x000000077585e22d
+    Counters: 3
+    Block counts: [1, 0, 0]
+  tmp1.ll:version:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  tmp1.ll:help:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  tmp1.ll:catch_signals:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [558]
+  tmp1.ll:onintr:
+    Hash: 0x00000006f42b0f02
+    Counters: 2
+    Block counts: [0, 0]
+  tmp1.ll:process:
+    Hash: 0x0202005e6a86aac7
+    Counters: 34
+    Block counts: [558, 0, 0, 0, 0, 0, 0, 0, 0, 0, 558, 0, 0, 0, 0, 0, 0, 0, 0, 558, 0, 0, 0, 558, 558, 0, 558, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:endname:
+    Hash: 0x0000000a0f05515e
+    Counters: 4
+    Block counts: [558, 558, 558, 558]
+  tmp1.ll:open_input:
+    Hash: 0x0000001d768e8f42
+    Counters: 9
+    Block counts: [558, 0, 0, 558, 558, 0, 0, 0, 0]
+  tmp1.ll:open_output:
+    Hash: 0x0101001e6e5b1a7d
+    Counters: 10
+    Block counts: [558, 558, 0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:process_decode:
+    Hash: 0x0001002957a17c5c
+    Counters: 12
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:process_encode:
+    Hash: 0x00010023e312cdd6
+    Counters: 10
+    Block counts: [269514, 558, 0, 558, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:update_times:
+    Hash: 0x000000086d161620
+    Counters: 3
+    Block counts: [0, 0, 0]
+  tmp1.ll:update_mode:
+    Hash: 0x000000086d161620
+    Counters: 3
+    Block counts: [0, 0, 0]
+  tmp1.ll:update_own:
+    Hash: 0x00000006e852da94
+    Counters: 2
+    Block counts: [0, 0]
+  tmp1.ll:codename:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  tmp1.ll:suffix:
+    Hash: 0x0000000c4b0d6415
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+  tmp1.ll:emalloc:
+    Hash: 0x00000005ca4d8805
+    Counters: 2
+    Block counts: [558, 0]
+  tmp1.ll:okay_as_input:
+    Hash: 0x00000010b9a9efa6
+    Counters: 6
+    Block counts: [0, 0, 558, 0, 0, 0]
+  tmp1.ll:grok_format:
+    Hash: 0x000000129c6cdfe1
+    Counters: 6
+    Block counts: [0, 0, 0, 0, 0, 0]
+  tmp1.ll:prepare_io:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [558]
+  tmp1.ll:normalname:
+    Hash: 0x0000000f4a29aa3e
+    Counters: 5
+    Block counts: [0, 0, 0, 0, 0]
+  tmp1.ll:plainname:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  tmp1.ll:length_okay:
+    Hash: 0x0000000bdefdbc1f
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+  tmp1.ll:ok_to_replace:
+    Hash: 0x00000014806638d3
+    Counters: 6
+    Block counts: [0, 0, 0, 0, 0, 0]
+  toast.2.ll:generic_init:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  main1:
+    Hash: 0x0000002884305012
+    Counters: 16
+    Block counts: [558, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 558, 0, 0, 0]
+  toast.2.ll:parse_argv0:
+    Hash: 0x0000000ec3d2506c
+    Counters: 5
+    Block counts: [558, 558, 0, 0, 0]
+  toast.2.ll:set_format:
+    Hash: 0x000000077585e22d
+    Counters: 3
+    Block counts: [1, 0, 0]
+  toast.2.ll:version:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  toast.2.ll:help:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  toast.2.ll:catch_signals:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [558]
+  toast.2.ll:onintr:
+    Hash: 0x00000006f42b0f02
+    Counters: 2
+    Block counts: [0, 0]
+  toast.2.ll:process:
+    Hash: 0x0202005e6a86aac7
+    Counters: 34
+    Block counts: [558, 0, 0, 0, 0, 0, 0, 0, 0, 0, 558, 0, 0, 0, 0, 0, 0, 0, 0, 558, 0, 0, 0, 558, 558, 0, 558, 0, 0, 0, 0, 0, 0, 0]
+  toast.2.ll:endname:
+    Hash: 0x0000000a0f05515e
+    Counters: 4
+    Block counts: [558, 558, 558, 558]
+  toast.2.ll:open_input:
+    Hash: 0x0000001d768e8f42
+    Counters: 9
+    Block counts: [558, 0, 0, 558, 558, 0, 0, 0, 0]
+  toast.2.ll:open_output:
+    Hash: 0x0101001e6e5b1a7d
+    Counters: 10
+    Block counts: [558, 558, 0, 0, 0, 0, 0, 0, 0, 0]
+  toast.2.ll:process_decode:
+    Hash: 0x0001002957a17c5c
+    Counters: 12
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  toast.2.ll:process_encode:
+    Hash: 0x00010023e312cdd6
+    Counters: 10
+    Block counts: [269514, 558, 0, 558, 0, 0, 0, 0, 0, 0]
+  toast.2.ll:update_times:
+    Hash: 0x000000086d161620
+    Counters: 3
+    Block counts: [0, 0, 0]
+  toast.2.ll:update_mode:
+    Hash: 0x000000086d161620
+    Counters: 3
+    Block counts: [0, 0, 0]
+  toast.2.ll:update_own:
+    Hash: 0x00000006e852da94
+    Counters: 2
+    Block counts: [0, 0]
+  toast.2.ll:codename:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  toast.2.ll:suffix:
+    Hash: 0x0000000c4b0d6415
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+  toast.2.ll:emalloc:
+    Hash: 0x00000005ca4d8805
+    Counters: 2
+    Block counts: [558, 0]
+  toast.2.ll:okay_as_input:
+    Hash: 0x00000010b9a9efa6
+    Counters: 6
+    Block counts: [0, 0, 558, 0, 0, 0]
+  toast.2.ll:grok_format:
+    Hash: 0x000000129c6cdfe1
+    Counters: 6
+    Block counts: [0, 0, 0, 0, 0, 0]
+  toast.2.ll:prepare_io:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [558]
+  toast.2.ll:normalname:
+    Hash: 0x0000000f4a29aa3e
+    Counters: 5
+    Block counts: [0, 0, 0, 0, 0]
+  toast.2.ll:plainname:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  toast.2.ll:length_okay:
+    Hash: 0x0000000bdefdbc1f
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+  toast.2.ll:ok_to_replace:
+    Hash: 0x00000014806638d3
+    Counters: 6
+    Block counts: [0, 0, 0, 0, 0, 0]
+  gsm_create:
+    Hash: 0x00000006e852da94
+    Counters: 2
+    Block counts: [558, 0]
+  gsm_create:
+    Hash: 0x00000006e852da94
+    Counters: 2
+    Block counts: [558, 0]
+  ulaw_input:
+    Hash: 0x0000001037142f9c
+    Counters: 5
+    Block counts: [0, 0, 0, 0, 0]
+  ulaw_output:
+    Hash: 0x0000000be316c968
+    Counters: 3
+    Block counts: [0, 0, 0]
+  ulaw_input:
+    Hash: 0x0000001037142f9c
+    Counters: 5
+    Block counts: [0, 0, 0, 0, 0]
+  ulaw_output:
+    Hash: 0x0000000be316c968
+    Counters: 3
+    Block counts: [0, 0, 0]
+  Gsm_Long_Term_Predictor:
+    Hash: 0x0000002001b64cb9
+    Counters: 7
+    Block counts: [1078056, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:Calculation_of_the_LTP_parameters:
+    Hash: 0x00000053a2652c62
+    Counters: 21
+    Block counts: [43122240, 87322536, 43122240, 22201704, 4851252, 3699540, 0, 20920536, 1730916, 1076382, 2790, 2790, 25668, 1049598, 883872, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:Long_term_analysis_filtering:
+    Hash: 0x0000003fa0785692
+    Counters: 17
+    Block counts: [0, 0, 0, 558, 0, 1919520, 0, 17744400, 0, 15802560, 0, 7655202, 1078056, 47988, 443610, 395064, 191394]
+  Gsm_Long_Term_Synthesis_Filtering:
+    Hash: 0x01000022d48e77c0
+    Counters: 10
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  Gsm_Long_Term_Predictor:
+    Hash: 0x0000002001b64cb9
+    Counters: 7
+    Block counts: [1078056, 0, 0, 0, 0, 0, 0]
+  long_term.2.ll:Calculation_of_the_LTP_parameters:
+    Hash: 0x000000557ad59b01
+    Counters: 21
+    Block counts: [43122240, 87322536, 43122240, 22201704, 4851252, 3699540, 0, 20920536, 1730916, 1076382, 2790, 2790, 25668, 1049598, 883872, 0, 0, 0, 0, 0, 0]
+  long_term.2.ll:Long_term_analysis_filtering:
+    Hash: 0x0000003fa0785692
+    Counters: 17
+    Block counts: [0, 0, 0, 558, 0, 1919520, 0, 17744400, 0, 15802560, 0, 7655202, 1078056, 47988, 443610, 395064, 191394]
+  Gsm_Long_Term_Synthesis_Filtering:
+    Hash: 0x01000023c352d866
+    Counters: 10
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  gsm_implode:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  gsm_implode:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  Gsm_Coder:
+    Hash: 0x010000105c3da1ab
+    Counters: 5
+    Block counts: [2232, 43120008, 1078056, 269514, 558]
+  Gsm_Coder:
+    Hash: 0x010000105c3da1ab
+    Counters: 5
+    Block counts: [2232, 43120008, 1078056, 269514, 558]
+  gsm_option:
+    Hash: 0x0000000b770ac9ec
+    Counters: 4
+    Block counts: [558, 558, 0, 558]
+  gsm_option:
+    Hash: 0x0000000b770ac9ec
+    Counters: 4
+    Block counts: [558, 558, 0, 558]
+  alaw_input:
+    Hash: 0x0000001037142f9c
+    Counters: 5
+    Block counts: [0, 0, 0, 0, 0]
+  alaw_output:
+    Hash: 0x0000000be316c968
+    Counters: 3
+    Block counts: [0, 0, 0]
+  alaw_input:
+    Hash: 0x0000001037142f9c
+    Counters: 5
+    Block counts: [0, 0, 0, 0, 0]
+  alaw_output:
+    Hash: 0x0000000be316c968
+    Counters: 3
+    Block counts: [0, 0, 0]
+  gsm_debug_words:
+    Hash: 0x0000000cc9e35442
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+  gsm_debug_longwords:
+    Hash: 0x0000000cc9e35442
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+  gsm_debug_longword:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  gsm_debug_word:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  gsm_debug_words:
+    Hash: 0x0000000cc9e35442
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+  gsm_debug_longwords:
+    Hash: 0x0000000cc9e35442
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+  gsm_debug_longword:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  gsm_debug_word:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  Gsm_RPE_Encoding:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [1078056]
+  tmp1.ll:Weighting_filter:
+    Hash: 0x0000000f7e757e79
+    Counters: 4
+    Block counts: [20088, 15624, 43086528, 1078056]
+  tmp1.ll:RPE_grid_selection:
+    Hash: 0x00000010dfc827d6
+    Counters: 5
+    Block counts: [14014728, 1078056, 571392, 377208, 185814]
+  tmp1.ll:APCM_quantization:
+    Hash: 0x00000047864bb866
+    Counters: 19
+    Block counts: [6468336, 14014728, 7102782, 3401010, 4851252, 5022, 6906924, 1078056, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:APCM_inverse_quantization:
+    Hash: 0x0100001fdf40b44b
+    Counters: 10
+    Block counts: [0, 14014728, 1078056, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:RPE_grid_positioning:
+    Hash: 0x0000001a6d72949d
+    Counters: 9
+    Block counts: [1651680, 13809384, 13460634, 1078056, 1078056, 523962, 185814, 0, 0]
+  Gsm_RPE_Decoding:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  tmp1.ll:APCM_quantization_xmaxc_to_exp_mant:
+    Hash: 0x0000001b89c9c6c4
+    Counters: 8
+    Block counts: [2232, 1075266, 1074150, 2790, 0, 0, 0, 0]
+  Gsm_RPE_Encoding:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [1078056]
+  rpe.2.ll:Weighting_filter:
+    Hash: 0x0000000f7e757e79
+    Counters: 4
+    Block counts: [20088, 15624, 43086528, 1078056]
+  rpe.2.ll:RPE_grid_selection:
+    Hash: 0x00000010dfc827d6
+    Counters: 5
+    Block counts: [14014728, 1078056, 571392, 377208, 185814]
+  rpe.2.ll:APCM_quantization:
+    Hash: 0x0000004c64987326
+    Counters: 19
+    Block counts: [6468336, 14014728, 7102782, 3401010, 4851252, 5022, 6906924, 1078056, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  rpe.2.ll:APCM_inverse_quantization:
+    Hash: 0x0100002294474209
+    Counters: 10
+    Block counts: [0, 14014728, 1078056, 0, 0, 0, 0, 0, 0, 0]
+  rpe.2.ll:RPE_grid_positioning:
+    Hash: 0x0000001b5659c3bf
+    Counters: 9
+    Block counts: [1651680, 13809384, 13460634, 1078056, 1078056, 523962, 185814, 0, 0]
+  Gsm_RPE_Decoding:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  rpe.2.ll:APCM_quantization_xmaxc_to_exp_mant:
+    Hash: 0x0000001dd3313a1f
+    Counters: 8
+    Block counts: [2232, 1075266, 1074150, 2790, 0, 0, 0, 0]
+  gsm_add:
+    Hash: 0x0000000a3cccf005
+    Counters: 3
+    Block counts: [0, 0, 1078056]
+  gsm_sub:
+    Hash: 0x0000000a3cccf005
+    Counters: 3
+    Block counts: [0, 0, 2156112]
+  gsm_mult:
+    Hash: 0x00000008f63dd43b
+    Counters: 3
+    Block counts: [2614788, 0, 0]
+  gsm_mult_r:
+    Hash: 0x00000008f63dd43b
+    Counters: 3
+    Block counts: [0, 0, 0]
+  gsm_abs:
+    Hash: 0x0000000ab5dc1384
+    Counters: 3
+    Block counts: [0, 0, 0]
+  gsm_L_mult:
+    Hash: 0x00000009d1345450
+    Counters: 3
+    Block counts: [0, 0, 0]
+  gsm_L_add:
+    Hash: 0x00000014b86dcfde
+    Counters: 6
+    Block counts: [0, 0, 0, 0, 0, 0]
+  gsm_L_sub:
+    Hash: 0x00000014b86dcfde
+    Counters: 6
+    Block counts: [0, 0, 0, 0, 0, 0]
+  gsm_norm:
+    Hash: 0x0000001abf732dcc
+    Counters: 7
+    Block counts: [2146068, 517266, 558, 0, 0, 0, 0]
+  gsm_L_asl:
+    Hash: 0x0000000c8fee2613
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+  gsm_L_asr:
+    Hash: 0x0000000c8fee2613
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+  gsm_asl:
+    Hash: 0x0000000c8fee2613
+    Counters: 4
+    Block counts: [0, 0, 612126, 465930]
+  gsm_asr:
+    Hash: 0x0000000c8fee2613
+    Counters: 4
+    Block counts: [0, 0, 14480658, 0]
+  gsm_div:
+    Hash: 0x00000014bf6ccfa4
+    Counters: 6
+    Block counts: [32341680, 13603482, 2156112, 0, 0, 0]
+  gsm_add:
+    Hash: 0x0000000a3cccf005
+    Counters: 3
+    Block counts: [0, 0, 1078056]
+  gsm_sub:
+    Hash: 0x0000000a3cccf005
+    Counters: 3
+    Block counts: [0, 0, 2156112]
+  gsm_mult:
+    Hash: 0x00000008f63dd43b
+    Counters: 3
+    Block counts: [2614788, 0, 0]
+  gsm_mult_r:
+    Hash: 0x00000008f63dd43b
+    Counters: 3
+    Block counts: [0, 0, 0]
+  gsm_abs:
+    Hash: 0x0000000ab5dc1384
+    Counters: 3
+    Block counts: [0, 0, 0]
+  gsm_L_mult:
+    Hash: 0x00000009d1345450
+    Counters: 3
+    Block counts: [0, 0, 0]
+  gsm_L_add:
+    Hash: 0x00000014b86dcfde
+    Counters: 6
+    Block counts: [0, 0, 0, 0, 0, 0]
+  gsm_L_sub:
+    Hash: 0x00000014b86dcfde
+    Counters: 6
+    Block counts: [0, 0, 0, 0, 0, 0]
+  gsm_norm:
+    Hash: 0x0000001abf732dcc
+    Counters: 7
+    Block counts: [2146068, 517266, 558, 0, 0, 0, 0]
+  gsm_L_asl:
+    Hash: 0x0000000c8fee2613
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+  gsm_L_asr:
+    Hash: 0x0000000c8fee2613
+    Counters: 4
+    Block counts: [0, 0, 0, 0]
+  gsm_asl:
+    Hash: 0x0000000c8fee2613
+    Counters: 4
+    Block counts: [0, 0, 612126, 465930]
+  gsm_asr:
+    Hash: 0x0000000c8fee2613
+    Counters: 4
+    Block counts: [0, 0, 14480658, 0]
+  gsm_div:
+    Hash: 0x00000015c8df79d9
+    Counters: 6
+    Block counts: [32341680, 13603482, 2156112, 0, 0, 0]
+  gsm_decode:
+    Hash: 0x00000006e852da94
+    Counters: 2
+    Block counts: [0, 0]
+  gsm_decode:
+    Hash: 0x00000006e852da94
+    Counters: 2
+    Block counts: [0, 0]
+  linear_input:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [270072]
+  linear_output:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  linear_input:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [270072]
+  linear_output:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  Gsm_Short_Term_Analysis_Filter:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [269514]
+  tmp1.ll:Decoding_of_the_coded_Log_Area_Ratios:
+    Hash: 0x10000082a7c96d78
+    Counters: 49
+    Block counts: [269514, 269514, 269514, 269514, 269514, 269514, 269514, 269514, 269514, 269514, 269514, 269514, 269514, 269514, 269514, 0, 269514, 0, 269514, 0, 269514, 0, 269514, 0, 269514, 0, 269514, 0, 269514, 0, 269514, 0, 269514, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:Coefficients_0_12:
+    Hash: 0x0200000fc7f04cc1
+    Counters: 6
+    Block counts: [2156112, 0, 2156112, 269514, 0, 0]
+  tmp1.ll:LARp_to_rp:
+    Hash: 0x020000279faa2e4c
+    Counters: 12
+    Block counts: [5714478, 2896578, 2896578, 13392, 0, 0, 0, 0, 0, 1078056, 0, 0]
+  tmp1.ll:Short_term_analysis_filtering:
+    Hash: 0x02000014db1449f3
+    Counters: 7
+    Block counts: [344976804, 0, 344977920, 43122240, 1078056, 0, 0]
+  tmp1.ll:Coefficients_13_26:
+    Hash: 0x0100000b379cbae3
+    Counters: 4
+    Block counts: [0, 2156112, 269514, 0]
+  tmp1.ll:Coefficients_27_39:
+    Hash: 0x0200000fc7f04cc1
+    Counters: 6
+    Block counts: [2156112, 0, 2156112, 269514, 0, 0]
+  tmp1.ll:Coefficients_40_159:
+    Hash: 0x00000007f2c35b9c
+    Counters: 2
+    Block counts: [2156112, 269514]
+  Gsm_Short_Term_Synthesis_Filter:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  tmp1.ll:Short_term_synthesis_filtering:
+    Hash: 0x0100002237862fcf
+    Counters: 11
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  Gsm_Short_Term_Analysis_Filter:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [269514]
+  short_term.2.ll:Decoding_of_the_coded_Log_Area_Ratios:
+    Hash: 0x10000082a7c96d78
+    Counters: 49
+    Block counts: [269514, 269514, 269514, 269514, 269514, 269514, 269514, 269514, 269514, 269514, 269514, 269514, 269514, 269514, 269514, 0, 269514, 0, 269514, 0, 269514, 0, 269514, 0, 269514, 0, 269514, 0, 269514, 0, 269514, 0, 269514, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  short_term.2.ll:Coefficients_0_12:
+    Hash: 0x0200000fc7f04cc1
+    Counters: 6
+    Block counts: [2156112, 0, 2156112, 269514, 0, 0]
+  short_term.2.ll:LARp_to_rp:
+    Hash: 0x020000279faa2e4c
+    Counters: 12
+    Block counts: [5714478, 2896578, 2896578, 13392, 0, 0, 0, 0, 0, 1078056, 0, 0]
+  short_term.2.ll:Short_term_analysis_filtering:
+    Hash: 0x02000014db1449f3
+    Counters: 7
+    Block counts: [344976804, 0, 344977920, 43122240, 1078056, 0, 0]
+  short_term.2.ll:Coefficients_13_26:
+    Hash: 0x0100000b379cbae3
+    Counters: 4
+    Block counts: [0, 2156112, 269514, 0]
+  short_term.2.ll:Coefficients_27_39:
+    Hash: 0x0200000fc7f04cc1
+    Counters: 6
+    Block counts: [2156112, 0, 2156112, 269514, 0, 0]
+  short_term.2.ll:Coefficients_40_159:
+    Hash: 0x00000007f2c35b9c
+    Counters: 2
+    Block counts: [2156112, 269514]
+  Gsm_Short_Term_Synthesis_Filter:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [0]
+  short_term.2.ll:Short_term_synthesis_filtering:
+    Hash: 0x0100002237862fcf
+    Counters: 11
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  gsm_explode:
+    Hash: 0x00000006e852da94
+    Counters: 2
+    Block counts: [0, 0]
+  gsm_explode:
+    Hash: 0x00000006e852da94
+    Counters: 2
+    Block counts: [0, 0]
+  gsm_encode:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [269514]
+  gsm_encode:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [269514]
+  gsm_print:
+    Hash: 0x00000006e852da94
+    Counters: 2
+    Block counts: [0, 0]
+  gsm_print:
+    Hash: 0x00000006e852da94
+    Counters: 2
+    Block counts: [0, 0]
+  gsm_destroy:
+    Hash: 0x00000005f42b0f02
+    Counters: 2
+    Block counts: [558, 558]
+  gsm_destroy:
+    Hash: 0x00000005f42b0f02
+    Counters: 2
+    Block counts: [558, 558]
+  Gsm_LPC_Analysis:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [269514]
+  tmp1.ll:Autocorrelation:
+    Hash: 0x00000057cbab158b
+    Counters: 22
+    Block counts: [2425626, 40966128, 2425626, 21859650, 43032960, 1565748, 0, 21262590, 0, 8749440, 11606400, 22677120, 268956, 269514, 268956, 0, 0, 54684, 72540, 141732, 0, 0]
+  tmp1.ll:Reflection_coefficients:
+    Hash: 0x0300005bc0c435a1
+    Counters: 25
+    Block counts: [7546392, 0, 7546392, 2425626, 1886598, 2425626, 0, 0, 756648, 0, 1886598, 0, 1399464, 269514, 0, 0, 269514, 0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:Transformation_to_Log_Area_Ratios:
+    Hash: 0x0000002f8d83731e
+    Counters: 11
+    Block counts: [2152764, 756648, 3348, 0, 0, 756648, 269514, 0, 0, 0, 0]
+  tmp1.ll:Quantization_and_coding:
+    Hash: 0x1000008293cf5624
+    Counters: 49
+    Block counts: [269514, 269514, 269514, 269514, 269514, 269514, 269514, 269514, 269514, 269514, 269514, 269514, 269514, 269514, 269514, 269514, 0, 0, 269514, 0, 269514, 0, 269514, 0, 269514, 0, 269514, 0, 269514, 0, 269514, 0, 269514, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  Gsm_LPC_Analysis:
+    Hash: 0x00000002ffffffff
+    Counters: 1
+    Block counts: [269514]
+  lpc.2.ll:Autocorrelation:
+    Hash: 0x00000057cbab158b
+    Counters: 22
+    Block counts: [2425626, 40966128, 2425626, 21859650, 43032960, 1565748, 0, 21262590, 0, 8749440, 11606400, 22677120, 268956, 269514, 268956, 0, 0, 54684, 72540, 141732, 0, 0]
+  lpc.2.ll:Reflection_coefficients:
+    Hash: 0x0300005cd31fea90
+    Counters: 25
+    Block counts: [7546392, 0, 7546392, 2425626, 1886598, 2425626, 0, 0, 756648, 0, 1886598, 0, 1399464, 269514, 0, 0, 269514, 0, 0, 0, 0, 0, 0, 0, 0]
+  lpc.2.ll:Transformation_to_Log_Area_Ratios:
+    Hash: 0x0000002f8d83731e
+    Counters: 11
+    Block counts: [2152764, 756648, 3348, 0, 0, 756648, 269514, 0, 0, 0, 0]
+  lpc.2.ll:Quantization_and_coding:
+    Hash: 0x1000008293cf5624
+    Counters: 49
+    Block counts: [269514, 269514, 269514, 269514, 269514, 269514, 269514, 269514, 269514, 269514, 269514, 269514, 269514, 269514, 269514, 269514, 0, 0, 269514, 0, 269514, 0, 269514, 0, 269514, 0, 269514, 0, 269514, 0, 269514, 0, 269514, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  Gsm_Preprocess:
+    Hash: 0x010000357b981111
+    Counters: 14
+    Block counts: [43122240, 13640310, 0, 24201018, 12123108, 0, 10561266, 0, 6797556, 269514, 0, 0, 0, 0]
+  Gsm_Preprocess:
+    Hash: 0x010000357b981111
+    Counters: 14
+    Block counts: [43122240, 13640310, 0, 24201018, 12123108, 0, 10561266, 0, 6797556, 269514, 0, 0, 0, 0]
+  Gsm_Decoder:
+    Hash: 0x0000000c8e6c4700
+    Counters: 3
+    Block counts: [0, 0, 0]
+  tmp1.ll:Postprocessing:
+    Hash: 0x0200000fc7f04cc1
+    Counters: 6
+    Block counts: [0, 0, 0, 0, 0, 0]
+  Gsm_Decoder:
+    Hash: 0x0000000c8e6c4700
+    Counters: 3
+    Block counts: [0, 0, 0]
+  decode.2.ll:Postprocessing:
+    Hash: 0x0200000fc7f04cc1
+    Counters: 6
+    Block counts: [0, 0, 0, 0, 0, 0]
+  audio_init_input:
+    Hash: 0x00000020105a949e
+    Counters: 13
+    Block counts: [0, 558, 0, 558, 558, 558, 558, 558, 558, 0, 0, 558, 0]
+  tmp1.ll:get_u32:
+    Hash: 0x0000000cc427cf2d
+    Counters: 5
+    Block counts: [0, 1674, 1674, 1674, 1674]
+  audio_init_output:
+    Hash: 0x0000001403c5d0a0
+    Counters: 9
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0]
+  tmp1.ll:put_u32:
+    Hash: 0x0000000cc427cf2d
+    Counters: 5
+    Block counts: [0, 0, 0, 0, 0]
+  audio_init_input:
+    Hash: 0x00000020105a949e
+    Counters: 13
+    Block counts: [0, 558, 0, 558, 558, 558, 558, 558, 558, 0, 0, 558, 0]
+  toast_audio.2.ll:get_u32:
+    Hash: 0x0000000cc427cf2d
+    Counters: 5
+    Block counts: [0, 1674, 1674, 1674, 1674]
+  audio_init_output:
+    Hash: 0x0000001403c5d0a0
+    Counters: 9
+    Block counts: [0, 0, 0, 0, 0, 0, 0, 0, 0]
+  toast_audio.2.ll:put_u32:
+    Hash: 0x0000000cc427cf2d
+    Counters: 5
+    Block counts: [0, 0, 0, 0, 0]
+Functions shown: 190
+Total functions: 190
+Maximum function count: 344976804
+Maximum internal block count: 344977920

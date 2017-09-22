@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/naim/compiler/LoopInfo/LoopInfo.cc" "/home/naim/compiler/LoopInfo/CMakeFiles/LoopInfo.dir/LoopInfo.cc.o"
+  "/local/scratch/hc475/pass_sequence_optimizer/LoopInfo/LoopInfo.cc" "/local/scratch/hc475/pass_sequence_optimizer/LoopInfo/CMakeFiles/LoopInfo.dir/LoopInfo.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "Clang")
 
@@ -18,7 +18,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/usr/local/include"
+  "/local/scratch/hc475/llvm/install/include"
   )
 
 # Targets to which this target links.

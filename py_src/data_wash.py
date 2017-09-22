@@ -45,14 +45,32 @@ class Data_wash(object):
         ir_info, profile_info = raw_data
         # compute avg of O0 IR info
         self.average_O0(ir_info)
+        # parse ir_info find top k
         names, _ = self.top_k_IR_info(ir_info)
+        # parse hot path info, find top k
+        profile_names, _ = self.top_k_profile_info(profile_info)
         sys.exit()
-        # parse ir_info
-        for item in ir_info:
-            print(type(item))
-            print(item)
-            sys.exit()
         # self.O0_info
+
+    def top_k_profile_info(self, info, k=5):
+        names = []
+        local_inst = []
+        total_inst = []
+        loop_exe_cnt = []
+        scores = []
+        for item in info:
+            names.append(item['loop ID'])
+            local_inst.append(item['number of instructions executed here (excluding subloops)'])
+            total_inst.append(item['number of instructions executed here'])
+            loop_exe_cnt.append(item['loop execution count'])
+        scores = local_inst
+        indexes = sorted(range(len(scores)), key=lambda i: scores[i])[-k:]
+        top_k_names = []
+        top_k_scores = []
+        for index in indexes:
+            top_k_names.append(names[index])
+            top_k_scores.append(scores[index])
+        return(top_k_names, top_k_scores)
 
     def average_O0(self, info):
         self.O0_avg = {}
@@ -72,7 +90,6 @@ class Data_wash(object):
         # avg
         for key in self.O0_avg.keys():
             self.O0_avg[key] = self.O0_avg[key]/len(info)
-        print(self.O0_avg)
 
     def top_k_IR_info(self, info, k=5):
         """
@@ -91,8 +108,6 @@ class Data_wash(object):
         for index in indexes:
             top_k_names.append(names[index])
             top_k_scores.append(scores[index])
-        print(top_k_names)
-        print(top_k_scores)
         return(top_k_names, top_k_scores)
 
     def score_IR_info(self, item):

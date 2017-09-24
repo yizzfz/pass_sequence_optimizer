@@ -1,0 +1,398 @@
+ -tbaa -dce -domtree -instcombine -always-inline -jump-threading -simplifycfg -basicaa -tailcallelim -simplifycfg -reassociate -domtree -loops -dce -loop-simplify -lcssa-verification -lcssa -basicaa -aa -bb-vectorize -scalar-evolution -loop-rotate -deadargelim -licm -loop-unswitch -simplifycfg -domtree -basicaa -aa -instcombine -inline -loops -break-crit-edges -loop-simplify -die -lcssa-verification -lcssa -scalar-evolution -indvars -loop-idiom -deadargelim -loop-deletion -die -loop-unroll -memdep -globaldce -memcpyopt -sccp -gvn -domtree -demanded-bits -gvn -bdce -globalopt -inline -basicaa -aa -instcombine -lazy-value-info -jump-threading -correlated-propagation -domtree -basicaa -aa -instcombine -functionattrs -memdep -dse -argpromotion -indvars -codegenprepare -loops -loop-simplify -lcssa-verification -lcssa -functionattrs -aa -scalar-evolution -argpromotion -licm -postdomtree -adce -simplifycfg -domtree -basicaa -aa -instcombine -barrier -basiccg -rpo-functionattrs -globals-aa -float2int -domtree -loops -dce -loop-simplify -lcssa-verification -lcssa -dce -basicaa -deadargelim -aa -scalar-evolution -dce -loop-rotate -constmerge -bb-vectorize -loop-accesses -constprop -lazy-branch-prob -constprop -lazy-block-freq -opt-remark-emitter -loop-distribute -loop-simplify -lcssa-verification -bb-vectorize -lcssa -branch-prob -block-freq -scalar-evolution -basicaa -aa -loop-accesses -demanded-bits -lazy-branch-prob -lazy-block-freq -always-inline -opt-remark-emitter -loop-vectorize -functionattrs -loop-simplify -globaldce -scalar-evolution -aa -loop-accesses -instcombine -loop-load-elim -basicaa -aa -instcombine -simplifycfg -domtree -basicaa -inline -aa -instcombine -loops -constmerge -dce -loop-simplify -gvn -lcssa-verification -lcssa -scalar-evolution -loop-unroll -instcombine -loop-simplify -lcssa-verification -constprop -lcssa -scalar-evolution -licm -alignment-from-assumptions -strip-dead-prototypes -domtree -gvn -loops -branch-prob -block-freq -loop-simplify -lcssa-verification -lcssa -basicaa -bb-vectorize -aa -scalar-evolution -branch-prob -always-inline -block-freq -loop-sink -instsimplify
+
+Pass Arguments:  -targetlibinfo -tti -tbaa -assumption-cache-tracker -profile-summary-info -dce -domtree -basicaa -aa -instcombine -basiccg -always-inline -lazy-value-info -jump-threading -simplifycfg -domtree -basicaa -tailcallelim -simplifycfg -reassociate -domtree -loops -dce -loop-simplify -lcssa-verification -lcssa -basicaa -aa -scalar-evolution -bb-vectorize -loop-rotate -deadargelim -domtree -loops -loop-simplify -lcssa-verification -lcssa -basicaa -aa -scalar-evolution -licm -loop-unswitch -simplifycfg -domtree -basicaa -aa -instcombine -basiccg -inline -domtree -loops -break-crit-edges -loop-simplify -die -lcssa-verification -lcssa -scalar-evolution -basicaa -aa -indvars -loop-idiom -deadargelim -domtree -loops -loop-simplify -lcssa-verification -lcssa -basicaa -aa -scalar-evolution -loop-deletion -die -loop-unroll -memdep -globaldce -domtree -basicaa -aa -memdep -memcpyopt -sccp -domtree -basicaa -aa -memdep -loops -lazy-branch-prob -lazy-block-freq -opt-remark-emitter -gvn -demanded-bits -basicaa -aa -memdep -loops -lazy-branch-prob -lazy-block-freq -opt-remark-emitter -gvn -demanded-bits -bdce -globalopt -basiccg -inline -domtree -basicaa -aa -instcombine -lazy-value-info -jump-threading -correlated-propagation -domtree -basicaa -aa -instcombine -basiccg -functionattrs -domtree -basicaa -aa -memdep -dse -basiccg -argpromotion -domtree -loops -loop-simplify -lcssa-verification -lcssa -basicaa -aa -scalar-evolution -indvars -codegenprepare -domtree -loops -loop-simplify -lcssa-verification -lcssa -basiccg -functionattrs -domtree -basicaa -aa -loops -scalar-evolution -argpromotion -domtree -loops -loop-simplify -lcssa-verification -lcssa -basicaa -aa -scalar-evolution -licm -postdomtree -adce -simplifycfg -domtree -basicaa -aa -instcombine -barrier -basiccg -rpo-functionattrs -globals-aa -float2int -domtree -loops -dce -loop-simplify -lcssa-verification -lcssa -dce -basicaa -deadargelim -domtree -basicaa -aa -loops -scalar-evolution -dce -loop-simplify -lcssa-verification -lcssa -aa -scalar-evolution -loop-rotate -constmerge -domtree -basicaa -aa -loops -scalar-evolution -bb-vectorize -loop-accesses -constprop -lazy-branch-prob -constprop -lazy-block-freq -opt-remark-emitter -scalar-evolution -aa -loop-accesses -loop-distribute -loop-simplify -lcssa-verification -basicaa -aa -scalar-evolution -bb-vectorize -lcssa -branch-prob -block-freq -loop-accesses -demanded-bits -lazy-branch-prob -lazy-block-freq -basiccg -always-inline -domtree -loops -lazy-branch-prob -lazy-block-freq -opt-remark-emitter -loop-simplify -lcssa-verification -lcssa -branch-prob -block-freq -scalar-evolution -basicaa -aa -loop-accesses -demanded-bits -lazy-branch-prob -lazy-block-freq -opt-remark-emitter -loop-vectorize -basiccg -functionattrs -domtree -loops -loop-simplify -globaldce -domtree -loops -scalar-evolution -basicaa -aa -loop-accesses -instcombine -loop-simplify -scalar-evolution -loop-accesses -loop-load-elim -basicaa -aa -instcombine -simplifycfg -domtree -basicaa -basiccg -inline -domtree -basicaa -aa -instcombine -loops -constmerge -dce -domtree -loops -loop-simplify -basicaa -aa -memdep -lazy-branch-prob -lazy-block-freq -opt-remark-emitter -gvn -lcssa-verification -loops -lcssa -scalar-evolution -loop-simplify -lcssa-verification -basicaa -aa -loop-unroll -instcombine -loop-simplify -lcssa-verification -constprop -lcssa-verification -lcssa -scalar-evolution -loop-simplify -lcssa-verification -aa -licm -alignment-from-assumptions -strip-dead-prototypes -domtree -basicaa -aa -memdep -loops -lazy-branch-prob -lazy-block-freq -opt-remark-emitter -gvn -loops -branch-prob -block-freq -loop-simplify -lcssa-verification -lcssa -basicaa -aa -scalar-evolution -bb-vectorize -branch-prob -basiccg -always-inline -domtree -loops -branch-prob -block-freq -loop-simplify -lcssa-verification -lcssa -basicaa -aa -scalar-evolution -branch-prob -block-freq -loop-sink -instsimplify -verify -print-module
+Target Library Information
+Target Transform Information
+Type-Based Alias Analysis
+Assumption Cache Tracker
+Profile summary info
+  ModulePass Manager
+    FunctionPass Manager
+      Dead Code Elimination
+      Dominator Tree Construction
+      Basic Alias Analysis (stateless AA impl)
+      Function Alias Analysis Results
+      Combine redundant instructions
+    CallGraph Construction
+    Call Graph SCC Pass Manager
+      Inliner for always_inline functions
+      FunctionPass Manager
+        Lazy Value Information Analysis
+        Jump Threading
+        Simplify the CFG
+        Dominator Tree Construction
+        Basic Alias Analysis (stateless AA impl)
+        Tail Call Elimination
+        Simplify the CFG
+        Reassociate expressions
+        Dominator Tree Construction
+        Natural Loop Information
+        Dead Code Elimination
+        Canonicalize natural loops
+        LCSSA Verifier
+        Loop-Closed SSA Form Pass
+        Basic Alias Analysis (stateless AA impl)
+        Function Alias Analysis Results
+        Scalar Evolution Analysis
+        BasicBlockPass Manager
+          Basic-Block Vectorization
+        Loop Pass Manager
+          Rotate Loops
+    Dead Argument Elimination
+    FunctionPass Manager
+      Dominator Tree Construction
+      Natural Loop Information
+      Canonicalize natural loops
+      LCSSA Verifier
+      Loop-Closed SSA Form Pass
+      Basic Alias Analysis (stateless AA impl)
+      Function Alias Analysis Results
+      Scalar Evolution Analysis
+      Loop Pass Manager
+        Loop Invariant Code Motion
+        Unswitch loops
+      Simplify the CFG
+      Dominator Tree Construction
+      Basic Alias Analysis (stateless AA impl)
+      Function Alias Analysis Results
+      Combine redundant instructions
+    CallGraph Construction
+    Call Graph SCC Pass Manager
+      Function Integration/Inlining
+      FunctionPass Manager
+        Dominator Tree Construction
+        Natural Loop Information
+        Break critical edges in CFG
+        Canonicalize natural loops
+        BasicBlockPass Manager
+          Dead Instruction Elimination
+        LCSSA Verifier
+        Loop-Closed SSA Form Pass
+        Scalar Evolution Analysis
+        Basic Alias Analysis (stateless AA impl)
+        Function Alias Analysis Results
+        Loop Pass Manager
+          Induction Variable Simplification
+          Recognize loop idioms
+    Dead Argument Elimination
+    FunctionPass Manager
+      Dominator Tree Construction
+      Natural Loop Information
+      Canonicalize natural loops
+      LCSSA Verifier
+      Loop-Closed SSA Form Pass
+      Basic Alias Analysis (stateless AA impl)
+      Function Alias Analysis Results
+      Scalar Evolution Analysis
+      Loop Pass Manager
+        Delete dead loops
+      BasicBlockPass Manager
+        Dead Instruction Elimination
+      Loop Pass Manager
+        Unroll loops
+      Memory Dependence Analysis
+    Dead Global Elimination
+    FunctionPass Manager
+      Dominator Tree Construction
+      Basic Alias Analysis (stateless AA impl)
+      Function Alias Analysis Results
+      Memory Dependence Analysis
+      MemCpy Optimization
+      Sparse Conditional Constant Propagation
+      Dominator Tree Construction
+      Basic Alias Analysis (stateless AA impl)
+      Function Alias Analysis Results
+      Memory Dependence Analysis
+      Natural Loop Information
+      Lazy Branch Probability Analysis
+      Lazy Block Frequency Analysis
+      Optimization Remark Emitter
+      Global Value Numbering
+      Demanded bits analysis
+      Basic Alias Analysis (stateless AA impl)
+      Function Alias Analysis Results
+      Memory Dependence Analysis
+      Natural Loop Information
+      Lazy Branch Probability Analysis
+      Lazy Block Frequency Analysis
+      Optimization Remark Emitter
+      Global Value Numbering
+      Demanded bits analysis
+      Bit-Tracking Dead Code Elimination
+    Global Variable Optimizer
+      Unnamed pass: implement Pass::getPassName()
+    CallGraph Construction
+    Call Graph SCC Pass Manager
+      Function Integration/Inlining
+      FunctionPass Manager
+        Dominator Tree Construction
+        Basic Alias Analysis (stateless AA impl)
+        Function Alias Analysis Results
+        Combine redundant instructions
+        Lazy Value Information Analysis
+        Jump Threading
+        Value Propagation
+        Dominator Tree Construction
+        Basic Alias Analysis (stateless AA impl)
+        Function Alias Analysis Results
+        Combine redundant instructions
+    CallGraph Construction
+    Call Graph SCC Pass Manager
+      Deduce function attributes
+      FunctionPass Manager
+        Dominator Tree Construction
+        Basic Alias Analysis (stateless AA impl)
+        Function Alias Analysis Results
+        Memory Dependence Analysis
+        Dead Store Elimination
+    CallGraph Construction
+    Call Graph SCC Pass Manager
+      Promote 'by reference' arguments to scalars
+      FunctionPass Manager
+        Dominator Tree Construction
+        Natural Loop Information
+        Canonicalize natural loops
+        LCSSA Verifier
+        Loop-Closed SSA Form Pass
+        Basic Alias Analysis (stateless AA impl)
+        Function Alias Analysis Results
+        Scalar Evolution Analysis
+        Loop Pass Manager
+          Induction Variable Simplification
+        CodeGen Prepare
+        Dominator Tree Construction
+        Natural Loop Information
+        Canonicalize natural loops
+        LCSSA Verifier
+        Loop-Closed SSA Form Pass
+    CallGraph Construction
+    Call Graph SCC Pass Manager
+      Deduce function attributes
+      FunctionPass Manager
+        Dominator Tree Construction
+        Basic Alias Analysis (stateless AA impl)
+        Function Alias Analysis Results
+        Natural Loop Information
+        Scalar Evolution Analysis
+      Promote 'by reference' arguments to scalars
+      FunctionPass Manager
+        Dominator Tree Construction
+        Natural Loop Information
+        Canonicalize natural loops
+        LCSSA Verifier
+        Loop-Closed SSA Form Pass
+        Basic Alias Analysis (stateless AA impl)
+        Function Alias Analysis Results
+        Scalar Evolution Analysis
+        Loop Pass Manager
+          Loop Invariant Code Motion
+        Post-Dominator Tree Construction
+        Aggressive Dead Code Elimination
+        Simplify the CFG
+        Dominator Tree Construction
+        Basic Alias Analysis (stateless AA impl)
+        Function Alias Analysis Results
+        Combine redundant instructions
+    A No-Op Barrier Pass
+    CallGraph Construction
+    Deduce function attributes in RPO
+    Globals Alias Analysis
+    FunctionPass Manager
+      Float to int
+      Dominator Tree Construction
+      Natural Loop Information
+      Dead Code Elimination
+      Canonicalize natural loops
+      LCSSA Verifier
+      Loop-Closed SSA Form Pass
+      Dead Code Elimination
+      Basic Alias Analysis (stateless AA impl)
+    Dead Argument Elimination
+    FunctionPass Manager
+      Dominator Tree Construction
+      Basic Alias Analysis (stateless AA impl)
+      Function Alias Analysis Results
+      Natural Loop Information
+      Scalar Evolution Analysis
+      Dead Code Elimination
+      Canonicalize natural loops
+      LCSSA Verifier
+      Loop-Closed SSA Form Pass
+      Function Alias Analysis Results
+      Scalar Evolution Analysis
+      Loop Pass Manager
+        Rotate Loops
+    Merge Duplicate Global Constants
+    FunctionPass Manager
+      Dominator Tree Construction
+      Basic Alias Analysis (stateless AA impl)
+      Function Alias Analysis Results
+      Natural Loop Information
+      Scalar Evolution Analysis
+      BasicBlockPass Manager
+        Basic-Block Vectorization
+      Loop Access Analysis
+      Simple constant propagation
+      Lazy Branch Probability Analysis
+      Simple constant propagation
+      Lazy Block Frequency Analysis
+      Optimization Remark Emitter
+      Scalar Evolution Analysis
+      Function Alias Analysis Results
+      Loop Access Analysis
+      Loop Distribution
+      Canonicalize natural loops
+      LCSSA Verifier
+      Basic Alias Analysis (stateless AA impl)
+      Function Alias Analysis Results
+      Scalar Evolution Analysis
+      BasicBlockPass Manager
+        Basic-Block Vectorization
+      Loop-Closed SSA Form Pass
+      Branch Probability Analysis
+      Block Frequency Analysis
+      Loop Access Analysis
+      Demanded bits analysis
+      Lazy Branch Probability Analysis
+      Lazy Block Frequency Analysis
+    CallGraph Construction
+    Call Graph SCC Pass Manager
+      Inliner for always_inline functions
+      FunctionPass Manager
+        Dominator Tree Construction
+        Natural Loop Information
+        Lazy Branch Probability Analysis
+        Lazy Block Frequency Analysis
+        Optimization Remark Emitter
+        Canonicalize natural loops
+        LCSSA Verifier
+        Loop-Closed SSA Form Pass
+        Branch Probability Analysis
+        Block Frequency Analysis
+        Scalar Evolution Analysis
+        Basic Alias Analysis (stateless AA impl)
+        Function Alias Analysis Results
+        Loop Access Analysis
+        Demanded bits analysis
+        Lazy Branch Probability Analysis
+        Lazy Block Frequency Analysis
+        Optimization Remark Emitter
+        Loop Vectorization
+    CallGraph Construction
+    Call Graph SCC Pass Manager
+      Deduce function attributes
+      FunctionPass Manager
+        Dominator Tree Construction
+        Natural Loop Information
+        Canonicalize natural loops
+    Dead Global Elimination
+    FunctionPass Manager
+      Dominator Tree Construction
+      Natural Loop Information
+      Scalar Evolution Analysis
+      Basic Alias Analysis (stateless AA impl)
+      Function Alias Analysis Results
+      Loop Access Analysis
+      Combine redundant instructions
+      Canonicalize natural loops
+      Scalar Evolution Analysis
+      Loop Access Analysis
+      Loop Load Elimination
+      Basic Alias Analysis (stateless AA impl)
+      Function Alias Analysis Results
+      Combine redundant instructions
+      Simplify the CFG
+      Dominator Tree Construction
+      Basic Alias Analysis (stateless AA impl)
+    CallGraph Construction
+    Call Graph SCC Pass Manager
+      Function Integration/Inlining
+      FunctionPass Manager
+        Dominator Tree Construction
+        Basic Alias Analysis (stateless AA impl)
+        Function Alias Analysis Results
+        Combine redundant instructions
+        Natural Loop Information
+    Merge Duplicate Global Constants
+    FunctionPass Manager
+      Dead Code Elimination
+      Dominator Tree Construction
+      Natural Loop Information
+      Canonicalize natural loops
+      Basic Alias Analysis (stateless AA impl)
+      Function Alias Analysis Results
+      Memory Dependence Analysis
+      Lazy Branch Probability Analysis
+      Lazy Block Frequency Analysis
+      Optimization Remark Emitter
+      Global Value Numbering
+      LCSSA Verifier
+      Natural Loop Information
+      Loop-Closed SSA Form Pass
+      Scalar Evolution Analysis
+      Canonicalize natural loops
+      LCSSA Verifier
+      Basic Alias Analysis (stateless AA impl)
+      Function Alias Analysis Results
+      Loop Pass Manager
+        Unroll loops
+      Combine redundant instructions
+      Canonicalize natural loops
+      LCSSA Verifier
+      Simple constant propagation
+      LCSSA Verifier
+      Loop-Closed SSA Form Pass
+      Scalar Evolution Analysis
+      Canonicalize natural loops
+      LCSSA Verifier
+      Function Alias Analysis Results
+      Loop Pass Manager
+        Loop Invariant Code Motion
+      Alignment from assumptions
+    Strip Unused Function Prototypes
+    FunctionPass Manager
+      Dominator Tree Construction
+      Basic Alias Analysis (stateless AA impl)
+      Function Alias Analysis Results
+      Memory Dependence Analysis
+      Natural Loop Information
+      Lazy Branch Probability Analysis
+      Lazy Block Frequency Analysis
+      Optimization Remark Emitter
+      Global Value Numbering
+      Natural Loop Information
+      Branch Probability Analysis
+      Block Frequency Analysis
+      Canonicalize natural loops
+      LCSSA Verifier
+      Loop-Closed SSA Form Pass
+      Basic Alias Analysis (stateless AA impl)
+      Function Alias Analysis Results
+      Scalar Evolution Analysis
+      BasicBlockPass Manager
+        Basic-Block Vectorization
+      Branch Probability Analysis
+    CallGraph Construction
+    Call Graph SCC Pass Manager
+      Inliner for always_inline functions
+      FunctionPass Manager
+        Dominator Tree Construction
+        Natural Loop Information
+        Branch Probability Analysis
+        Block Frequency Analysis
+        Canonicalize natural loops
+        LCSSA Verifier
+        Loop-Closed SSA Form Pass
+        Basic Alias Analysis (stateless AA impl)
+        Function Alias Analysis Results
+        Scalar Evolution Analysis
+        Branch Probability Analysis
+        Block Frequency Analysis
+        Loop Pass Manager
+          Loop Sink
+        Remove redundant instructions
+        Module Verifier
+    Print module to stderr
+Pass Arguments:  -domtree
+  FunctionPass Manager
+    Dominator Tree Construction

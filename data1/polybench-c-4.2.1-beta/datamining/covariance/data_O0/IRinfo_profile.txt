@@ -1,0 +1,66 @@
+loop ID = init_array_D2N11
+loop execution count = 1680000 times
+number of instructions executed here (excluding subloops) = 42000000
+number of instructions executed here = 42000000
+
+
+loop ID = init_array_D1N1
+loop execution count = 1400 times
+number of instructions executed here (excluding subloops) = 18200
+number of instructions executed here = 42018200
+
+
+loop ID = kernel_covariance_D3N111
+loop execution count = 1008840000 times
+number of instructions executed here (excluding subloops) = 39344760000
+number of instructions executed here = 39344760000
+
+
+loop ID = kernel_covariance_D2N11
+loop execution count = 720600 times
+number of instructions executed here (excluding subloops) = 36030000
+number of instructions executed here = 39380790000
+
+
+loop ID = kernel_covariance_D1N1
+loop execution count = 1200 times
+number of instructions executed here (excluding subloops) = 18000
+number of instructions executed here = 39380808000
+
+
+loop ID = kernel_covariance_D2N21
+loop execution count = 1680000 times
+number of instructions executed here (excluding subloops) = 45360000
+number of instructions executed here = 45360000
+
+
+loop ID = kernel_covariance_D1N2
+loop execution count = 1400 times
+number of instructions executed here (excluding subloops) = 19600
+number of instructions executed here = 45379600
+
+
+loop ID = kernel_covariance_D2N31
+loop execution count = 1680000 times
+number of instructions executed here (excluding subloops) = 45360000
+number of instructions executed here = 45360000
+
+
+loop ID = kernel_covariance_D1N3
+loop execution count = 1200 times
+number of instructions executed here (excluding subloops) = 32400
+number of instructions executed here = 45392400
+
+
+loop ID = print_array_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = print_array_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+

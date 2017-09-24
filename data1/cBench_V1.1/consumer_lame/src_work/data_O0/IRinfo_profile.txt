@@ -1,0 +1,3036 @@
+loop ID = lame_parse_args_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = lame_parse_args_D2N12
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = lame_parse_args_D1N1
+loop execution count = 912 times
+number of instructions executed here (excluding subloops) = 784320
+number of instructions executed here = 784320
+
+
+loop ID = III_format_bitstream_D2N11
+loop execution count = 62472 times
+number of instructions executed here (excluding subloops) = 5372592
+number of instructions executed here = 5372592
+
+
+loop ID = III_format_bitstream_D1N1
+loop execution count = 31236 times
+number of instructions executed here (excluding subloops) = 499776
+number of instructions executed here = 5872368
+
+
+loop ID = III_format_bitstream_D1N2
+loop execution count = 62472 times
+number of instructions executed here (excluding subloops) = 1624272
+number of instructions executed here = 1624272
+
+
+loop ID = III_format_bitstream_D2N31
+loop execution count = 4 times
+number of instructions executed here (excluding subloops) = 172
+number of instructions executed here = 172
+
+
+loop ID = III_format_bitstream_D1N3
+loop execution count = 2 times
+number of instructions executed here (excluding subloops) = 26
+number of instructions executed here = 198
+
+
+loop ID = III_format_bitstream_D1N4
+loop execution count = 2 times
+number of instructions executed here (excluding subloops) = 32
+number of instructions executed here = 32
+
+
+loop ID = encodeSideInfo_D3N111
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = encodeSideInfo_D3N112
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = encodeSideInfo_D3N113
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = encodeSideInfo_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = encodeSideInfo_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = encodeSideInfo_D2N21
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = encodeSideInfo_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = encodeSideInfo_D2N31
+loop execution count = 164160 times
+number of instructions executed here (excluding subloops) = 3611520
+number of instructions executed here = 3611520
+
+
+loop ID = encodeSideInfo_D2N32
+loop execution count = 15504 times
+number of instructions executed here (excluding subloops) = 341088
+number of instructions executed here = 341088
+
+
+loop ID = encodeSideInfo_D2N33
+loop execution count = 23256 times
+number of instructions executed here (excluding subloops) = 511632
+number of instructions executed here = 511632
+
+
+loop ID = encodeSideInfo_D1N3
+loop execution count = 62472 times
+number of instructions executed here (excluding subloops) = 8496192
+number of instructions executed here = 12960432
+
+
+loop ID = encodeSideInfo_D2N41
+loop execution count = 62472 times
+number of instructions executed here (excluding subloops) = 1561800
+number of instructions executed here = 1561800
+
+
+loop ID = encodeSideInfo_D1N4
+loop execution count = 31236 times
+number of instructions executed here (excluding subloops) = 499776
+number of instructions executed here = 2061576
+
+
+loop ID = encodeSideInfo_D1N5
+loop execution count = 62472 times
+number of instructions executed here (excluding subloops) = 1374384
+number of instructions executed here = 1374384
+
+
+loop ID = encodeMainData_D3N111
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = encodeMainData_D3N112
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = encodeMainData_D3N113
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = encodeMainData_D3N114
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = encodeMainData_D4N1151
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = encodeMainData_D3N115
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = encodeMainData_D4N1161
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = encodeMainData_D3N116
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = encodeMainData_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = encodeMainData_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = encodeMainData_D3N211
+loop execution count = 1244880 times
+number of instructions executed here (excluding subloops) = 41081040
+number of instructions executed here = 41081040
+
+
+loop ID = encodeMainData_D2N21
+loop execution count = 237120 times
+number of instructions executed here (excluding subloops) = 6639360
+number of instructions executed here = 47720400
+
+
+loop ID = encodeMainData_D4N2211
+loop execution count = 47880 times
+number of instructions executed here (excluding subloops) = 1532160
+number of instructions executed here = 1532160
+
+
+loop ID = encodeMainData_D3N221
+loop execution count = 15960 times
+number of instructions executed here (excluding subloops) = 271320
+number of instructions executed here = 1803480
+
+
+loop ID = encodeMainData_D2N22
+loop execution count = 12768 times
+number of instructions executed here (excluding subloops) = 370272
+number of instructions executed here = 2173752
+
+
+loop ID = encodeMainData_D1N2
+loop execution count = 62472 times
+number of instructions executed here (excluding subloops) = 4497984
+number of instructions executed here = 54392136
+
+
+loop ID = encodeMainData_D2N31
+loop execution count = 62472 times
+number of instructions executed here (excluding subloops) = 1561800
+number of instructions executed here = 1561800
+
+
+loop ID = encodeMainData_D1N3
+loop execution count = 31236 times
+number of instructions executed here (excluding subloops) = 499776
+number of instructions executed here = 2061576
+
+
+loop ID = encodeMainData_D2N41
+loop execution count = 62472 times
+number of instructions executed here (excluding subloops) = 1561800
+number of instructions executed here = 1561800
+
+
+loop ID = encodeMainData_D1N4
+loop execution count = 31236 times
+number of instructions executed here (excluding subloops) = 499776
+number of instructions executed here = 2061576
+
+
+loop ID = drain_into_ancillary_data_D1N1
+loop execution count = 354312 times
+number of instructions executed here (excluding subloops) = 5314680
+number of instructions executed here = 5314680
+
+
+loop ID = Huffmancodebits_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = Huffmancodebits_D1N2
+loop execution count = 60876 times
+number of instructions executed here (excluding subloops) = 3287304
+number of instructions executed here = 3287304
+
+
+loop ID = Huffmancodebits_D1N3
+loop execution count = 11243136 times
+number of instructions executed here (excluding subloops) = 1045611648
+number of instructions executed here = 1045611648
+
+
+loop ID = Huffmancodebits_D3N411
+loop execution count = 459648 times
+number of instructions executed here (excluding subloops) = 24820992
+number of instructions executed here = 24820992
+
+
+loop ID = Huffmancodebits_D2N41
+loop execution count = 62244 times
+number of instructions executed here (excluding subloops) = 871416
+number of instructions executed here = 25692408
+
+
+loop ID = Huffmancodebits_D1N4
+loop execution count = 20748 times
+number of instructions executed here (excluding subloops) = 995904
+number of instructions executed here = 26688312
+
+
+loop ID = CRC_BF_addEntry_D1N1
+loop execution count = 4747872 times
+number of instructions executed here (excluding subloops) = 156679776
+number of instructions executed here = 156679776
+
+
+loop ID = GetVbrTag_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = InitVbrTag_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = InitVbrTag_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = PutVbrTag_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = iteration_loop_D3N111
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = iteration_loop_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = iteration_loop_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = init_outer_loop_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = init_outer_loop_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = init_outer_loop_D1N3
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = init_outer_loop_D2N41
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = init_outer_loop_D1N4
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = init_outer_loop_D1N5
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = init_outer_loop_D1N6
+loop execution count = 18385920 times
+number of instructions executed here (excluding subloops) = 349332480
+number of instructions executed here = 349332480
+
+
+loop ID = init_outer_loop_D1N7
+loop execution count = 249888 times
+number of instructions executed here (excluding subloops) = 4248096
+number of instructions executed here = 4248096
+
+
+loop ID = outer_loop_D2N11
+loop execution count = 17597952 times
+number of instructions executed here (excluding subloops) = 475144704
+number of instructions executed here = 475144704
+
+
+loop ID = outer_loop_D1N1
+loop execution count = 321480 times
+number of instructions executed here (excluding subloops) = 86478120
+number of instructions executed here = 561622824
+
+
+loop ID = VBR_iteration_loop_D3N111
+loop execution count = 140015238540152 times
+number of instructions executed here (excluding subloops) = 5740624780146232
+number of instructions executed here = 5740624780146232
+
+
+loop ID = VBR_iteration_loop_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 5740624780146232
+
+
+loop ID = VBR_iteration_loop_D1N1
+loop execution count = 3474023674371126837 times
+number of instructions executed here (excluding subloops) = 244146568809374544
+number of instructions executed here = 249887193589520776
+
+
+loop ID = VBR_iteration_loop_D2N21
+loop execution count = 3184104525735731244 times
+number of instructions executed here (excluding subloops) = 3394726281312627236
+number of instructions executed here = 3394726281312627236
+
+
+loop ID = VBR_iteration_loop_D1N2
+loop execution count = 3688505407601391157 times
+number of instructions executed here (excluding subloops) = 3675854300493603664
+number of instructions executed here = 7070580581806230900
+
+
+loop ID = VBR_iteration_loop_D2N31
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = VBR_iteration_loop_D1N3
+loop execution count = 3688505407601391157 times
+number of instructions executed here (excluding subloops) = 3675854300493603664
+number of instructions executed here = 3675854300493603664
+
+
+loop ID = VBR_iteration_loop_D2N41
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = VBR_iteration_loop_D1N4
+loop execution count = 3689918280043477299 times
+number of instructions executed here (excluding subloops) = 3698460259566981936
+number of instructions executed here = 3698460259566981936
+
+
+loop ID = VBR_iteration_loop_D2N51
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = VBR_iteration_loop_D1N5
+loop execution count = 3906365940063810103 times
+number of instructions executed here (excluding subloops) = 7161622819892306800
+number of instructions executed here = 7161622819892306800
+
+
+loop ID = VBR_iteration_loop_D1N6
+loop execution count = 3474022660557255728 times
+number of instructions executed here (excluding subloops) = 1564891466498146576
+number of instructions executed here = 1564891466498146576
+
+
+loop ID = VBR_iteration_loop_D1N7
+loop execution count = 7228642862565844326 times
+number of instructions executed here (excluding subloops) = 3953452040873346224
+number of instructions executed here = 3953452040873346224
+
+
+loop ID = VBR_iteration_loop_D3N811
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = VBR_iteration_loop_D2N81
+loop execution count = 57278945 times
+number of instructions executed here (excluding subloops) = 15808988820
+number of instructions executed here = 15808988820
+
+
+loop ID = VBR_iteration_loop_D1N8
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 15808988820
+
+
+loop ID = VBR_iteration_loop_D1N9
+loop execution count = 140015238540184 times
+number of instructions executed here (excluding subloops) = 6860746688469016
+number of instructions executed here = 6860746688469016
+
+
+loop ID = calc_noise1_D3N111
+loop execution count = 833112 times
+number of instructions executed here (excluding subloops) = 34990704
+number of instructions executed here = 34990704
+
+
+loop ID = calc_noise1_D2N11
+loop execution count = 98040 times
+number of instructions executed here (excluding subloops) = 17941320
+number of instructions executed here = 52932024
+
+
+loop ID = calc_noise1_D1N1
+loop execution count = 175788 times
+number of instructions executed here (excluding subloops) = 2812608
+number of instructions executed here = 55744632
+
+
+loop ID = calc_noise1_D2N21
+loop execution count = 29754000 times
+number of instructions executed here (excluding subloops) = 1071144000
+number of instructions executed here = 1071144000
+
+
+loop ID = calc_noise1_D1N2
+loop execution count = 2368920 times
+number of instructions executed here (excluding subloops) = 409823160
+number of instructions executed here = 1480967160
+
+
+loop ID = amp_scalefac_bands_D3N111
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = amp_scalefac_bands_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = amp_scalefac_bands_D1N1
+loop execution count = 84816 times
+number of instructions executed here (excluding subloops) = 1357056
+number of instructions executed here = 1357056
+
+
+loop ID = amp_scalefac_bands_D2N21
+loop execution count = 1469688 times
+number of instructions executed here (excluding subloops) = 29393760
+number of instructions executed here = 29393760
+
+
+loop ID = amp_scalefac_bands_D1N2
+loop execution count = 639996 times
+number of instructions executed here (excluding subloops) = 31359804
+number of instructions executed here = 60753564
+
+
+loop ID = amp_scalefac_bands_D2N31
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = amp_scalefac_bands_D1N3
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = amp_scalefac_bands_D1N4
+loop execution count = 593712 times
+number of instructions executed here (excluding subloops) = 21967344
+number of instructions executed here = 21967344
+
+
+loop ID = main_D1N1
+loop execution count = 31008 times
+number of instructions executed here (excluding subloops) = 465120
+number of instructions executed here = 465120
+
+
+loop ID = calc_sfb_ave_noise_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = find_scalefac_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = find_scalefac_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = compute_scalefacs_short_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = compute_scalefacs_short_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = compute_scalefacs_long_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = compute_scalefacs_long_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = compute_scalefacs_long_D1N3
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = VBR_iteration_loop_new_D3N111
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = VBR_iteration_loop_new_D3N112
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = VBR_iteration_loop_new_D4N1131
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = VBR_iteration_loop_new_D3N113
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = VBR_iteration_loop_new_D3N114
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = VBR_iteration_loop_new_D4N1151
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = VBR_iteration_loop_new_D3N115
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = VBR_iteration_loop_new_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = VBR_iteration_loop_new_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = store_side_info_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = store_side_info_D2N21
+loop execution count = 62472 times
+number of instructions executed here (excluding subloops) = 3560904
+number of instructions executed here = 3560904
+
+
+loop ID = store_side_info_D1N2
+loop execution count = 31236 times
+number of instructions executed here (excluding subloops) = 499776
+number of instructions executed here = 4060680
+
+
+loop ID = store_side_info_D1N3
+loop execution count = 62472 times
+number of instructions executed here (excluding subloops) = 2811240
+number of instructions executed here = 2811240
+
+
+loop ID = store_side_info_D2N41
+loop execution count = 912 times
+number of instructions executed here (excluding subloops) = 32832
+number of instructions executed here = 32832
+
+
+loop ID = store_side_info_D1N4
+loop execution count = 456 times
+number of instructions executed here (excluding subloops) = 7296
+number of instructions executed here = 40128
+
+
+loop ID = store_side_info_D1N5
+loop execution count = 912 times
+number of instructions executed here (excluding subloops) = 27360
+number of instructions executed here = 27360
+
+
+loop ID = main_data_D2N11
+loop execution count = 62472 times
+number of instructions executed here (excluding subloops) = 4060680
+number of instructions executed here = 4060680
+
+
+loop ID = main_data_D1N1
+loop execution count = 31236 times
+number of instructions executed here (excluding subloops) = 499776
+number of instructions executed here = 4560456
+
+
+loop ID = side_queue_elements_D1N1
+loop execution count = 31008 times
+number of instructions executed here (excluding subloops) = 961248
+number of instructions executed here = 961248
+
+
+loop ID = BF_FlushBitstream_D1N1
+loop execution count = 10716 times
+number of instructions executed here (excluding subloops) = 117876
+number of instructions executed here = 117876
+
+
+loop ID = free_side_queues_D1N1
+loop execution count = 456 times
+number of instructions executed here (excluding subloops) = 7296
+number of instructions executed here = 7296
+
+
+loop ID = free_side_queues_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = BF_PartLength_D1N1
+loop execution count = 1233708 times
+number of instructions executed here (excluding subloops) = 29608992
+number of instructions executed here = 29608992
+
+
+loop ID = BF_LoadHolderFromBitstreamPart_D1N1
+loop execution count = 1233708 times
+number of instructions executed here (excluding subloops) = 30842700
+number of instructions executed here = 30842700
+
+
+loop ID = BF_resizePartHolder_D1N1
+loop execution count = 5602 times
+number of instructions executed here (excluding subloops) = 173662
+number of instructions executed here = 173662
+
+
+loop ID = writePartMainData_D1N1
+loop execution count = 8561856 times
+number of instructions executed here (excluding subloops) = 282541248
+number of instructions executed here = 282541248
+
+
+loop ID = write_side_info_D2N11
+loop execution count = 62472 times
+number of instructions executed here (excluding subloops) = 1999104
+number of instructions executed here = 1999104
+
+
+loop ID = write_side_info_D1N1
+loop execution count = 31236 times
+number of instructions executed here (excluding subloops) = 499776
+number of instructions executed here = 2498880
+
+
+loop ID = write_side_info_D1N2
+loop execution count = 62472 times
+number of instructions executed here (excluding subloops) = 1811688
+number of instructions executed here = 1811688
+
+
+loop ID = writePartSideInfo_D1N1
+loop execution count = 1233708 times
+number of instructions executed here (excluding subloops) = 39478656
+number of instructions executed here = 39478656
+
+
+loop ID = free_side_info_link_D2N11
+loop execution count = 912 times
+number of instructions executed here (excluding subloops) = 32832
+number of instructions executed here = 32832
+
+
+loop ID = free_side_info_link_D1N1
+loop execution count = 456 times
+number of instructions executed here (excluding subloops) = 7752
+number of instructions executed here = 40584
+
+
+loop ID = free_side_info_link_D1N2
+loop execution count = 912 times
+number of instructions executed here (excluding subloops) = 27360
+number of instructions executed here = 27360
+
+
+loop ID = main1_D1N1
+loop execution count = 31008 times
+number of instructions executed here (excluding subloops) = 930240
+number of instructions executed here = 930240
+
+
+loop ID = mdct_sub48_D4N1111
+loop execution count = 8995968 times
+number of instructions executed here (excluding subloops) = 170923392
+number of instructions executed here = 170923392
+
+
+loop ID = mdct_sub48_D3N111
+loop execution count = 562248 times
+number of instructions executed here (excluding subloops) = 15180696
+number of instructions executed here = 186104088
+
+
+loop ID = mdct_sub48_D4N1121
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = mdct_sub48_D4N1122
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = mdct_sub48_D3N112
+loop execution count = 1374384 times
+number of instructions executed here (excluding subloops) = 137438400
+number of instructions executed here = 137438400
+
+
+loop ID = mdct_sub48_D4N1131
+loop execution count = 11737440 times
+number of instructions executed here (excluding subloops) = 1326330720
+number of instructions executed here = 1326330720
+
+
+loop ID = mdct_sub48_D4N1132
+loop execution count = 210672 times
+number of instructions executed here (excluding subloops) = 49507920
+number of instructions executed here = 49507920
+
+
+loop ID = mdct_sub48_D4N1133
+loop execution count = 14701440 times
+number of instructions executed here (excluding subloops) = 1029100800
+number of instructions executed here = 1029100800
+
+
+loop ID = mdct_sub48_D3N113
+loop execution count = 5270448 times
+number of instructions executed here (excluding subloops) = 384742704
+number of instructions executed here = 2789682144
+
+
+loop ID = mdct_sub48_D2N11
+loop execution count = 124944 times
+number of instructions executed here (excluding subloops) = 7871472
+number of instructions executed here = 3121096104
+
+
+loop ID = mdct_sub48_D1N1
+loop execution count = 124944 times
+number of instructions executed here (excluding subloops) = 4997760
+number of instructions executed here = 3126093864
+
+
+loop ID = mdct_init48_D2N11
+loop execution count = 18 times
+number of instructions executed here (excluding subloops) = 972
+number of instructions executed here = 972
+
+
+loop ID = mdct_init48_D1N1
+loop execution count = 3 times
+number of instructions executed here (excluding subloops) = 99
+number of instructions executed here = 1071
+
+
+loop ID = mdct_init48_D1N2
+loop execution count = 36 times
+number of instructions executed here (excluding subloops) = 1260
+number of instructions executed here = 1260
+
+
+loop ID = mdct_init48_D1N3
+loop execution count = 4 times
+number of instructions executed here (excluding subloops) = 572
+number of instructions executed here = 572
+
+
+loop ID = mdct_init48_D2N41
+loop execution count = 496 times
+number of instructions executed here (excluding subloops) = 14880
+number of instructions executed here = 14880
+
+
+loop ID = mdct_init48_D1N4
+loop execution count = 16 times
+number of instructions executed here (excluding subloops) = 208
+number of instructions executed here = 15088
+
+
+loop ID = mdct_init48_D1N5
+loop execution count = 7 times
+number of instructions executed here (excluding subloops) = 147
+number of instructions executed here = 147
+
+
+loop ID = mdct_init48_D2N61
+loop execution count = 225 times
+number of instructions executed here (excluding subloops) = 4725
+number of instructions executed here = 4725
+
+
+loop ID = mdct_init48_D1N6
+loop execution count = 15 times
+number of instructions executed here (excluding subloops) = 450
+number of instructions executed here = 5175
+
+
+loop ID = mdct_init48_D1N7
+loop execution count = 7 times
+number of instructions executed here (excluding subloops) = 147
+number of instructions executed here = 147
+
+
+loop ID = mdct_init48_D1N8
+loop execution count = 2 times
+number of instructions executed here (excluding subloops) = 80
+number of instructions executed here = 80
+
+
+loop ID = mdct_init48_D2N91
+loop execution count = 12 times
+number of instructions executed here (excluding subloops) = 348
+number of instructions executed here = 348
+
+
+loop ID = mdct_init48_D2N92
+loop execution count = 12 times
+number of instructions executed here (excluding subloops) = 348
+number of instructions executed here = 348
+
+
+loop ID = mdct_init48_D1N9
+loop execution count = 4 times
+number of instructions executed here (excluding subloops) = 72
+number of instructions executed here = 768
+
+
+loop ID = mdct_init48_D2N101
+loop execution count = 108 times
+number of instructions executed here (excluding subloops) = 3132
+number of instructions executed here = 3132
+
+
+loop ID = mdct_init48_D2N102
+loop execution count = 108 times
+number of instructions executed here (excluding subloops) = 3132
+number of instructions executed here = 3132
+
+
+loop ID = mdct_init48_D1N10
+loop execution count = 12 times
+number of instructions executed here (excluding subloops) = 216
+number of instructions executed here = 6480
+
+
+loop ID = mdct_init48_D1N11
+loop execution count = 36 times
+number of instructions executed here (excluding subloops) = 720
+number of instructions executed here = 720
+
+
+loop ID = mdct_init48_D1N12
+loop execution count = 6 times
+number of instructions executed here (excluding subloops) = 90
+number of instructions executed here = 90
+
+
+loop ID = mdct_init48_D1N13
+loop execution count = 6 times
+number of instructions executed here (excluding subloops) = 120
+number of instructions executed here = 120
+
+
+loop ID = mdct_init48_D1N14
+loop execution count = 6 times
+number of instructions executed here (excluding subloops) = 90
+number of instructions executed here = 90
+
+
+loop ID = mdct_init48_D1N15
+loop execution count = 18 times
+number of instructions executed here (excluding subloops) = 342
+number of instructions executed here = 342
+
+
+loop ID = mdct_init48_D1N16
+loop execution count = 36 times
+number of instructions executed here (excluding subloops) = 720
+number of instructions executed here = 720
+
+
+loop ID = mdct_init48_D1N17
+loop execution count = 8 times
+number of instructions executed here (excluding subloops) = 328
+number of instructions executed here = 328
+
+
+loop ID = window_subband_D2N11
+loop execution count = 269879040 times
+number of instructions executed here (excluding subloops) = 9445766400
+number of instructions executed here = 9445766400
+
+
+loop ID = window_subband_D1N1
+loop execution count = 17991936 times
+number of instructions executed here (excluding subloops) = 755661312
+number of instructions executed here = 10201427712
+
+
+loop ID = window_subband_D1N2
+loop execution count = 16867440 times
+number of instructions executed here (excluding subloops) = 7084324800
+number of instructions executed here = 7084324800
+
+
+loop ID = mdct_short_D2N11
+loop execution count = 1264032 times
+number of instructions executed here (excluding subloops) = 97330464
+number of instructions executed here = 97330464
+
+
+loop ID = mdct_short_D1N1
+loop execution count = 421344 times
+number of instructions executed here (excluding subloops) = 20645856
+number of instructions executed here = 117976320
+
+
+loop ID = mdct_long_D1N1
+loop execution count = 15649920 times
+number of instructions executed here (excluding subloops) = 2550936960
+number of instructions executed here = 2550936960
+
+
+loop ID = ReadBytes_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = ReadBytesSwapped_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = ReadBytesSwapped_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = WriteBytes_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = WriteBytesSwapped_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = lame_decode_initfile_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = lame_decode_fromfile_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = lame_decode_fromfile_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = lame_decode_fromfile_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = lame_decode_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = lame_decode_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = count_bits_D1N1
+loop execution count = 12950172 times
+number of instructions executed here (excluding subloops) = 246053268
+number of instructions executed here = 246053268
+
+
+loop ID = choose_table_short_D1N1
+loop execution count = 18014 times
+number of instructions executed here (excluding subloops) = 342266
+number of instructions executed here = 342266
+
+
+loop ID = choose_table_short_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = count_bits_long_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = count_bits_long_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = count_bits_long_D1N3
+loop execution count = 2359344 times
+number of instructions executed here (excluding subloops) = 30671472
+number of instructions executed here = 30671472
+
+
+loop ID = count_bits_long_D1N4
+loop execution count = 728688 times
+number of instructions executed here (excluding subloops) = 88899936
+number of instructions executed here = 88899936
+
+
+loop ID = count_bits_long_D1N5
+loop execution count = 12950172 times
+number of instructions executed here (excluding subloops) = 336704472
+number of instructions executed here = 336704472
+
+
+loop ID = best_huffman_divide_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = best_huffman_divide_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = best_huffman_divide_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = best_huffman_divide_D1N3
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = choose_table_D1N1
+loop execution count = 255588 times
+number of instructions executed here (excluding subloops) = 4856172
+number of instructions executed here = 4856172
+
+
+loop ID = choose_table_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = best_scalefac_store_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = best_scalefac_store_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = best_scalefac_store_D1N2
+loop execution count = 81396 times
+number of instructions executed here (excluding subloops) = 2279088
+number of instructions executed here = 2279088
+
+
+loop ID = best_scalefac_store_D2N31
+loop execution count = 114912 times
+number of instructions executed here (excluding subloops) = 3332448
+number of instructions executed here = 3332448
+
+
+loop ID = best_scalefac_store_D1N3
+loop execution count = 38304 times
+number of instructions executed here (excluding subloops) = 497952
+number of instructions executed here = 3830400
+
+
+loop ID = best_scalefac_store_D1N4
+loop execution count = 1244880 times
+number of instructions executed here (excluding subloops) = 36101520
+number of instructions executed here = 36101520
+
+
+loop ID = best_scalefac_store_D3N511
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = best_scalefac_store_D2N51
+loop execution count = 114912 times
+number of instructions executed here (excluding subloops) = 8388576
+number of instructions executed here = 8388576
+
+
+loop ID = best_scalefac_store_D1N5
+loop execution count = 187416 times
+number of instructions executed here (excluding subloops) = 2998656
+number of instructions executed here = 11387232
+
+
+loop ID = best_scalefac_store_D2N61
+loop execution count = 27588 times
+number of instructions executed here (excluding subloops) = 689700
+number of instructions executed here = 689700
+
+
+loop ID = best_scalefac_store_D1N6
+loop execution count = 1244880 times
+number of instructions executed here (excluding subloops) = 87141600
+number of instructions executed here = 87831300
+
+
+loop ID = scfsi_calc_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = scfsi_calc_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = scfsi_calc_D1N3
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = scfsi_calc_D2N41
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = scfsi_calc_D2N42
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = scfsi_calc_D1N4
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = scfsi_calc_D1N5
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = ix_max_D1N1
+loop execution count = 30922932 times
+number of instructions executed here (excluding subloops) = 1175071416
+number of instructions executed here = 1175071416
+
+
+loop ID = count_bit_short_noESC_D2N11
+loop execution count = 317466 times
+number of instructions executed here (excluding subloops) = 19365426
+number of instructions executed here = 19365426
+
+
+loop ID = count_bit_short_noESC_D1N1
+loop execution count = 105822 times
+number of instructions executed here (excluding subloops) = 1375686
+number of instructions executed here = 20741112
+
+
+loop ID = count_bit_noESC2_D1N1
+loop execution count = 25709370 times
+number of instructions executed here (excluding subloops) = 617024880
+number of instructions executed here = 617024880
+
+
+loop ID = count_bit_short_ESC_D2N11
+loop execution count = 2507832 times
+number of instructions executed here (excluding subloops) = 243259704
+number of instructions executed here = 243259704
+
+
+loop ID = count_bit_short_ESC_D1N1
+loop execution count = 835944 times
+number of instructions executed here (excluding subloops) = 10867272
+number of instructions executed here = 254126976
+
+
+loop ID = count_bit_noESC_D1N1
+loop execution count = 36771840 times
+number of instructions executed here (excluding subloops) = 2169538560
+number of instructions executed here = 2169538560
+
+
+loop ID = count_bit_ESC_D1N1
+loop execution count = 10064832 times
+number of instructions executed here (excluding subloops) = 956159040
+number of instructions executed here = 956159040
+
+
+loop ID = make_decode_tables_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = make_decode_tables_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = make_decode_tables_D2N31
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = make_decode_tables_D1N3
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = fft_short_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = fft_short_D2N12
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = fft_short_D2N13
+loop execution count = 5997312 times
+number of instructions executed here (excluding subloops) = 1733223168
+number of instructions executed here = 1733223168
+
+
+loop ID = fft_short_D1N1
+loop execution count = 187416 times
+number of instructions executed here (excluding subloops) = 8621136
+number of instructions executed here = 1741844304
+
+
+loop ID = fht_D2N11
+loop execution count = 9245856 times
+number of instructions executed here (excluding subloops) = 1497828672
+number of instructions executed here = 1497828672
+
+
+loop ID = fht_D3N121
+loop execution count = 40731744 times
+number of instructions executed here (excluding subloops) = 9449764608
+number of instructions executed here = 9449764608
+
+
+loop ID = fht_D2N12
+loop execution count = 17679576 times
+number of instructions executed here (excluding subloops) = 1219890744
+number of instructions executed here = 10669655352
+
+
+loop ID = fht_D1N1
+loop execution count = 812136 times
+number of instructions executed here (excluding subloops) = 45479616
+number of instructions executed here = 12212963640
+
+
+loop ID = fft_long_D1N1
+loop execution count = 7996416 times
+number of instructions executed here (excluding subloops) = 2095060992
+number of instructions executed here = 2095060992
+
+
+loop ID = fft_long_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = fft_long_D1N3
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = init_fft_D1N1
+loop execution count = 29184 times
+number of instructions executed here (excluding subloops) = 700416
+number of instructions executed here = 700416
+
+
+loop ID = init_fft_D1N2
+loop execution count = 116736 times
+number of instructions executed here (excluding subloops) = 2801664
+number of instructions executed here = 2801664
+
+
+loop ID = init_fft_D1N3
+loop execution count = 912 times
+number of instructions executed here (excluding subloops) = 31920
+number of instructions executed here = 31920
+
+
+loop ID = synth_1to1_mono_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = synth_1to1_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = synth_1to1_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = lame_init_params_D1N1
+loop execution count = 3192 times
+number of instructions executed here (excluding subloops) = 95760
+number of instructions executed here = 95760
+
+
+loop ID = lame_init_params_D1N2
+loop execution count = 5244 times
+number of instructions executed here (excluding subloops) = 157320
+number of instructions executed here = 157320
+
+
+loop ID = lame_init_params_D1N3
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = lame_init_params_D1N4
+loop execution count = 7296 times
+number of instructions executed here (excluding subloops) = 817152
+number of instructions executed here = 817152
+
+
+loop ID = lame_encode_frame_D2N11
+loop execution count = 70224 times
+number of instructions executed here (excluding subloops) = 2949408
+number of instructions executed here = 2949408
+
+
+loop ID = lame_encode_frame_D1N1
+loop execution count = 31236 times
+number of instructions executed here (excluding subloops) = 499776
+number of instructions executed here = 3449184
+
+
+loop ID = lame_encode_frame_D2N21
+loop execution count = 62472 times
+number of instructions executed here (excluding subloops) = 1749216
+number of instructions executed here = 1749216
+
+
+loop ID = lame_encode_frame_D2N22
+loop execution count = 62472 times
+number of instructions executed here (excluding subloops) = 1749216
+number of instructions executed here = 1749216
+
+
+loop ID = lame_encode_frame_D1N2
+loop execution count = 31236 times
+number of instructions executed here (excluding subloops) = 1218204
+number of instructions executed here = 4716636
+
+
+loop ID = lame_encode_frame_D2N31
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = lame_encode_frame_D1N3
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = fill_buffer_resample_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = fill_buffer_resample_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = lame_encode_buffer_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = lame_encode_buffer_D3N121
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = lame_encode_buffer_D2N12
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = lame_encode_buffer_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = lame_encode_buffer_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = lame_encode_buffer_interleaved_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = lame_encode_buffer_interleaved_D2N21
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = lame_encode_buffer_interleaved_D3N221
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = lame_encode_buffer_interleaved_D2N22
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = lame_encode_buffer_interleaved_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = lame_encode_buffer_interleaved_D1N3
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = lame_encode_finish_D1N1
+loop execution count = 456 times
+number of instructions executed here (excluding subloops) = 19608
+number of instructions executed here = 19608
+
+
+loop ID = get_audio_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = read_samples_mp3_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = read_samples_pcm_D1N1
+loop execution count = 262656 times
+number of instructions executed here (excluding subloops) = 4202496
+number of instructions executed here = 4202496
+
+
+loop ID = fskip_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = parse_wave_header_D1N1
+loop execution count = 228 times
+number of instructions executed here (excluding subloops) = 23256
+number of instructions executed here = 23256
+
+
+loop ID = parse_aiff_header_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = display_bitrates_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = display_bitrates_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = BitrateIndex_D1N1
+loop execution count = 4104 times
+number of instructions executed here (excluding subloops) = 139536
+number of instructions executed here = 139536
+
+
+loop ID = SwapBytesInWords_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = copy_buffer_D1N1
+loop execution count = 6519660 times
+number of instructions executed here (excluding subloops) = 182550480
+number of instructions executed here = 182550480
+
+
+loop ID = putbits_D1N1
+loop execution count = 21434280 times
+number of instructions executed here (excluding subloops) = 2079125160
+number of instructions executed here = 2079125160
+
+
+loop ID = init_layer3_D3N111
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = init_layer3_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = init_layer3_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = init_layer3_D4N2111
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = init_layer3_D3N211
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = init_layer3_D2N21
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = init_layer3_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = init_layer3_D2N31
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = init_layer3_D1N3
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = init_layer3_D3N411
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = init_layer3_D2N41
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = init_layer3_D1N4
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = init_layer3_D3N511
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = init_layer3_D2N51
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = init_layer3_D1N5
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = init_layer3_D2N61
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = init_layer3_D2N62
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = init_layer3_D1N6
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = init_layer3_D2N71
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = init_layer3_D3N721
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = init_layer3_D2N72
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = init_layer3_D3N731
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = init_layer3_D2N73
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = init_layer3_D2N74
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = init_layer3_D1N7
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = init_layer3_D2N81
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = init_layer3_D1N8
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = init_layer3_D2N91
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = init_layer3_D2N92
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = init_layer3_D1N9
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = init_layer3_D2N101
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = init_layer3_D1N10
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = init_layer3_D1N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = init_layer3_D1N12
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = init_layer3_D1N13
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = init_layer3_D1N14
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = init_layer3_D1N15
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = init_layer3_D1N16
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = init_layer3_D1N17
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = init_layer3_D1N18
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = do_layer3_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = do_layer3_D2N12
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = do_layer3_D2N13
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = do_layer3_D2N14
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = do_layer3_D2N15
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = do_layer3_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = III_get_side_info_2_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = III_get_side_info_2_D2N12
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = III_get_side_info_2_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = III_get_side_info_1_D3N111
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = III_get_side_info_1_D3N112
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = III_get_side_info_1_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = III_get_side_info_1_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = III_get_side_info_1_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = III_get_scale_factors_2_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = III_get_scale_factors_2_D2N21
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = III_get_scale_factors_2_D2N22
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = III_get_scale_factors_2_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = III_get_scale_factors_1_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = III_get_scale_factors_1_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = III_get_scale_factors_1_D1N3
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = III_get_scale_factors_1_D1N4
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = III_get_scale_factors_1_D1N5
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = III_get_scale_factors_1_D1N6
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = III_get_scale_factors_1_D1N7
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = III_get_scale_factors_1_D1N8
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = III_get_scale_factors_1_D1N9
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = III_dequantize_sample_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = III_dequantize_sample_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = III_dequantize_sample_D2N31
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = III_dequantize_sample_D2N32
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = III_dequantize_sample_D1N3
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = III_dequantize_sample_D3N411
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = III_dequantize_sample_D2N41
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = III_dequantize_sample_D1N4
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = III_dequantize_sample_D1N5
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = III_dequantize_sample_D2N61
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = III_dequantize_sample_D2N62
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = III_dequantize_sample_D1N6
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = III_dequantize_sample_D3N711
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = III_dequantize_sample_D2N71
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = III_dequantize_sample_D1N7
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = III_i_stereo_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = III_i_stereo_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = III_i_stereo_D3N211
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = III_i_stereo_D2N21
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = III_i_stereo_D2N22
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = III_i_stereo_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = III_i_stereo_D1N3
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = III_i_stereo_D2N41
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = III_i_stereo_D1N4
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = III_antialias_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = III_antialias_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = III_hybrid_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = III_hybrid_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = III_hybrid_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = III_hybrid_D1N3
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = id3_pad_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = iteration_init_D2N11
+loop execution count = 249888 times
+number of instructions executed here (excluding subloops) = 4997760
+number of instructions executed here = 4997760
+
+
+loop ID = iteration_init_D1N1
+loop execution count = 62472 times
+number of instructions executed here (excluding subloops) = 999552
+number of instructions executed here = 5997312
+
+
+loop ID = iteration_init_D2N21
+loop execution count = 62472 times
+number of instructions executed here (excluding subloops) = 2936184
+number of instructions executed here = 2936184
+
+
+loop ID = iteration_init_D1N2
+loop execution count = 31236 times
+number of instructions executed here (excluding subloops) = 499776
+number of instructions executed here = 3435960
+
+
+loop ID = iteration_init_D1N3
+loop execution count = 58368 times
+number of instructions executed here (excluding subloops) = 1692672
+number of instructions executed here = 1692672
+
+
+loop ID = iteration_init_D1N4
+loop execution count = 1871196 times
+number of instructions executed here (excluding subloops) = 58007076
+number of instructions executed here = 58007076
+
+
+loop ID = iteration_init_D1N5
+loop execution count = 1871196 times
+number of instructions executed here (excluding subloops) = 58007076
+number of instructions executed here = 58007076
+
+
+loop ID = iteration_init_D1N6
+loop execution count = 1871424 times
+number of instructions executed here (excluding subloops) = 33685632
+number of instructions executed here = 33685632
+
+
+loop ID = iteration_init_D1N7
+loop execution count = 3192 times
+number of instructions executed here (excluding subloops) = 95760
+number of instructions executed here = 95760
+
+
+loop ID = iteration_init_D1N8
+loop execution count = 5244 times
+number of instructions executed here (excluding subloops) = 157320
+number of instructions executed here = 157320
+
+
+loop ID = compute_ath_D2N11
+loop execution count = 39672 times
+number of instructions executed here (excluding subloops) = 1785240
+number of instructions executed here = 1785240
+
+
+loop ID = compute_ath_D1N1
+loop execution count = 2736 times
+number of instructions executed here (excluding subloops) = 82080
+number of instructions executed here = 1867320
+
+
+loop ID = compute_ath_D2N21
+loop execution count = 119016 times
+number of instructions executed here (excluding subloops) = 5355720
+number of instructions executed here = 5355720
+
+
+loop ID = compute_ath_D1N2
+loop execution count = 4788 times
+number of instructions executed here (excluding subloops) = 143640
+number of instructions executed here = 5499360
+
+
+loop ID = ms_convert_D1N1
+loop execution count = 17991936 times
+number of instructions executed here (excluding subloops) = 809637120
+number of instructions executed here = 809637120
+
+
+loop ID = on_pe_D1N1
+loop execution count = 62472 times
+number of instructions executed here (excluding subloops) = 10182936
+number of instructions executed here = 10182936
+
+
+loop ID = reduce_side_D1N1
+loop execution count = 62928 times
+number of instructions executed here (excluding subloops) = 2831760
+number of instructions executed here = 2831760
+
+
+loop ID = inner_loop_D1N1
+loop execution count = 49248 times
+number of instructions executed here (excluding subloops) = 935712
+number of instructions executed here = 935712
+
+
+loop ID = scale_bitcount_D1N1
+loop execution count = 48108 times
+number of instructions executed here (excluding subloops) = 2790264
+number of instructions executed here = 2790264
+
+
+loop ID = scale_bitcount_D2N21
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = scale_bitcount_D2N22
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = scale_bitcount_D1N2
+loop execution count = 128592 times
+number of instructions executed here (excluding subloops) = 1928880
+number of instructions executed here = 1928880
+
+
+loop ID = scale_bitcount_D1N3
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = scale_bitcount_D1N4
+loop execution count = 32148 times
+number of instructions executed here (excluding subloops) = 739404
+number of instructions executed here = 739404
+
+
+loop ID = scale_bitcount_D1N5
+loop execution count = 32148 times
+number of instructions executed here (excluding subloops) = 739404
+number of instructions executed here = 739404
+
+
+loop ID = scale_bitcount_D1N6
+loop execution count = 128592 times
+number of instructions executed here (excluding subloops) = 3986352
+number of instructions executed here = 3986352
+
+
+loop ID = scale_bitcount_lsf_D1N1
+loop execution count = 127680 times
+number of instructions executed here (excluding subloops) = 3830400
+number of instructions executed here = 3830400
+
+
+loop ID = scale_bitcount_lsf_D1N2
+loop execution count = 127680 times
+number of instructions executed here (excluding subloops) = 3064320
+number of instructions executed here = 3064320
+
+
+loop ID = scale_bitcount_lsf_D1N3
+loop execution count = 128820 times
+number of instructions executed here (excluding subloops) = 3993420
+number of instructions executed here = 3993420
+
+
+loop ID = scale_bitcount_lsf_D3N411
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = scale_bitcount_lsf_D2N41
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = scale_bitcount_lsf_D1N4
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = scale_bitcount_lsf_D2N51
+loop execution count = 675108 times
+number of instructions executed here (excluding subloops) = 28354536
+number of instructions executed here = 28354536
+
+
+loop ID = scale_bitcount_lsf_D1N5
+loop execution count = 128592 times
+number of instructions executed here (excluding subloops) = 2443248
+number of instructions executed here = 30797784
+
+
+loop ID = scale_bitcount_lsf_D1N6
+loop execution count = 128592 times
+number of instructions executed here (excluding subloops) = 1928880
+number of instructions executed here = 1928880
+
+
+loop ID = calc_xmin_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = calc_xmin_D2N21
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = calc_xmin_D1N2
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = calc_xmin_D2N31
+loop execution count = 15115032 times
+number of instructions executed here (excluding subloops) = 423220896
+number of instructions executed here = 423220896
+
+
+loop ID = calc_xmin_D1N3
+loop execution count = 1772016 times
+number of instructions executed here (excluding subloops) = 187833696
+number of instructions executed here = 611054592
+
+
+loop ID = calc_xmin_D3N411
+loop execution count = 833112 times
+number of instructions executed here (excluding subloops) = 24160248
+number of instructions executed here = 24160248
+
+
+loop ID = calc_xmin_D2N41
+loop execution count = 151848 times
+number of instructions executed here (excluding subloops) = 14729256
+number of instructions executed here = 38889504
+
+
+loop ID = calc_xmin_D1N4
+loop execution count = 19152 times
+number of instructions executed here (excluding subloops) = 536256
+number of instructions executed here = 39425760
+
+
+loop ID = loop_break_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = loop_break_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = loop_break_D1N2
+loop execution count = 912 times
+number of instructions executed here (excluding subloops) = 20064
+number of instructions executed here = 20064
+
+
+loop ID = bin_search_StepSize2_D1N1
+loop execution count = 138406 times
+number of instructions executed here (excluding subloops) = 12733352
+number of instructions executed here = 12733352
+
+
+loop ID = quantize_xrpow_D1N1
+loop execution count = 51779734 times
+number of instructions executed here (excluding subloops) = 4919074730
+number of instructions executed here = 4919074730
+
+
+loop ID = quantize_xrpow_ISO_D1N1
+loop execution count = 89046720 times
+number of instructions executed here (excluding subloops) = 3561868800
+number of instructions executed here = 3561868800
+
+
+loop ID = L3psycho_anal_D1N1
+loop execution count = 17159280 times
+number of instructions executed here (excluding subloops) = 1698768720
+number of instructions executed here = 1698768720
+
+
+loop ID = L3psycho_anal_D1N2
+loop execution count = 62472 times
+number of instructions executed here (excluding subloops) = 1124496
+number of instructions executed here = 1124496
+
+
+loop ID = L3psycho_anal_D2N31
+loop execution count = 1746024 times
+number of instructions executed here (excluding subloops) = 188570592
+number of instructions executed here = 188570592
+
+
+loop ID = L3psycho_anal_D1N3
+loop execution count = 6840 times
+number of instructions executed here (excluding subloops) = 88920
+number of instructions executed here = 188659512
+
+
+loop ID = L3psycho_anal_D1N4
+loop execution count = 5547240 times
+number of instructions executed here (excluding subloops) = 465968160
+number of instructions executed here = 465968160
+
+
+loop ID = L3psycho_anal_D2N51
+loop execution count = 4485672 times
+number of instructions executed here (excluding subloops) = 1350187272
+number of instructions executed here = 1350187272
+
+
+loop ID = L3psycho_anal_D1N5
+loop execution count = 93708 times
+number of instructions executed here (excluding subloops) = 1218204
+number of instructions executed here = 1351405476
+
+
+loop ID = L3psycho_anal_D1N6
+loop execution count = 374832 times
+number of instructions executed here (excluding subloops) = 89959680
+number of instructions executed here = 89959680
+
+
+loop ID = L3psycho_anal_D2N71
+loop execution count = 93708 times
+number of instructions executed here (excluding subloops) = 3467196
+number of instructions executed here = 3467196
+
+
+loop ID = L3psycho_anal_D3N721
+loop execution count = 23989248 times
+number of instructions executed here (excluding subloops) = 1175473152
+number of instructions executed here = 1175473152
+
+
+loop ID = L3psycho_anal_D2N72
+loop execution count = 783684 times
+number of instructions executed here (excluding subloops) = 10187892
+number of instructions executed here = 1185661044
+
+
+loop ID = L3psycho_anal_D2N73
+loop execution count = 374832 times
+number of instructions executed here (excluding subloops) = 18366768
+number of instructions executed here = 18366768
+
+
+loop ID = L3psycho_anal_D3N741
+loop execution count = 47978496 times
+number of instructions executed here (excluding subloops) = 2254989312
+number of instructions executed here = 2254989312
+
+
+loop ID = L3psycho_anal_D2N74
+loop execution count = 7246752 times
+number of instructions executed here (excluding subloops) = 260883072
+number of instructions executed here = 2515872384
+
+
+loop ID = L3psycho_anal_D2N75
+loop execution count = 16478016 times
+number of instructions executed here (excluding subloops) = 4597366464
+number of instructions executed here = 4597366464
+
+
+loop ID = L3psycho_anal_D2N76
+loop execution count = 37378320 times
+number of instructions executed here (excluding subloops) = 8746526880
+number of instructions executed here = 8746526880
+
+
+loop ID = L3psycho_anal_D3N771
+loop execution count = 45979392 times
+number of instructions executed here (excluding subloops) = 1609278720
+number of instructions executed here = 1609278720
+
+
+loop ID = L3psycho_anal_D2N77
+loop execution count = 249888 times
+number of instructions executed here (excluding subloops) = 11994624
+number of instructions executed here = 1621273344
+
+
+loop ID = L3psycho_anal_D3N781
+loop execution count = 7621584 times
+number of instructions executed here (excluding subloops) = 160053264
+number of instructions executed here = 160053264
+
+
+loop ID = L3psycho_anal_D2N78
+loop execution count = 2623824 times
+number of instructions executed here (excluding subloops) = 99705312
+number of instructions executed here = 259758576
+
+
+loop ID = L3psycho_anal_D3N791
+loop execution count = 88085520 times
+number of instructions executed here (excluding subloops) = 4051933920
+number of instructions executed here = 4051933920
+
+
+loop ID = L3psycho_anal_D2N79
+loop execution count = 173885016 times
+number of instructions executed here (excluding subloops) = 44688449112
+number of instructions executed here = 48740383032
+
+
+loop ID = L3psycho_anal_D2N710
+loop execution count = 62472 times
+number of instructions executed here (excluding subloops) = 1999104
+number of instructions executed here = 1999104
+
+
+loop ID = L3psycho_anal_D3N7111
+loop execution count = 4747872 times
+number of instructions executed here (excluding subloops) = 137688288
+number of instructions executed here = 137688288
+
+
+loop ID = L3psycho_anal_D2N711
+loop execution count = 374832 times
+number of instructions executed here (excluding subloops) = 32985216
+number of instructions executed here = 170673504
+
+
+loop ID = L3psycho_anal_D4N71211
+loop execution count = 1124496 times
+number of instructions executed here (excluding subloops) = 25863408
+number of instructions executed here = 25863408
+
+
+loop ID = L3psycho_anal_D3N7121
+loop execution count = 16867440 times
+number of instructions executed here (excluding subloops) = 573492960
+number of instructions executed here = 599356368
+
+
+loop ID = L3psycho_anal_D4N71221
+loop execution count = 1124496 times
+number of instructions executed here (excluding subloops) = 34859376
+number of instructions executed here = 34859376
+
+
+loop ID = L3psycho_anal_D3N7122
+loop execution count = 29146608 times
+number of instructions executed here (excluding subloops) = 1224157536
+number of instructions executed here = 1259016912
+
+
+loop ID = L3psycho_anal_D4N71231
+loop execution count = 28487232 times
+number of instructions executed here (excluding subloops) = 826129728
+number of instructions executed here = 826129728
+
+
+loop ID = L3psycho_anal_D3N7123
+loop execution count = 4497984 times
+number of instructions executed here (excluding subloops) = 422810496
+number of instructions executed here = 1248940224
+
+
+loop ID = L3psycho_anal_D2N712
+loop execution count = 554040 times
+number of instructions executed here (excluding subloops) = 9972720
+number of instructions executed here = 3117286224
+
+
+loop ID = L3psycho_anal_D1N7
+loop execution count = 1556100 times
+number of instructions executed here (excluding subloops) = 462161700
+number of instructions executed here = 71440796220
+
+
+loop ID = L3psycho_anal_D2N81
+loop execution count = 95304 times
+number of instructions executed here (excluding subloops) = 2477904
+number of instructions executed here = 2477904
+
+
+loop ID = L3psycho_anal_D2N82
+loop execution count = 95304 times
+number of instructions executed here (excluding subloops) = 2954424
+number of instructions executed here = 2954424
+
+
+loop ID = L3psycho_anal_D1N8
+loop execution count = 13452 times
+number of instructions executed here (excluding subloops) = 363204
+number of instructions executed here = 5795532
+
+
+loop ID = L3psycho_anal_D1N9
+loop execution count = 10260 times
+number of instructions executed here (excluding subloops) = 225720
+number of instructions executed here = 225720
+
+
+loop ID = L3psycho_anal_D2N101
+loop execution count = 160740 times
+number of instructions executed here (excluding subloops) = 4179240
+number of instructions executed here = 4179240
+
+
+loop ID = L3psycho_anal_D2N102
+loop execution count = 160740 times
+number of instructions executed here (excluding subloops) = 4500720
+number of instructions executed here = 4500720
+
+
+loop ID = L3psycho_anal_D1N10
+loop execution count = 912 times
+number of instructions executed here (excluding subloops) = 24624
+number of instructions executed here = 8704584
+
+
+loop ID = L3psycho_anal_D2N111
+loop execution count = 182400 times
+number of instructions executed here (excluding subloops) = 3830400
+number of instructions executed here = 3830400
+
+
+loop ID = L3psycho_anal_D2N112
+loop execution count = 183996 times
+number of instructions executed here (excluding subloops) = 3679920
+number of instructions executed here = 3679920
+
+
+loop ID = L3psycho_anal_D1N11
+loop execution count = 2280 times
+number of instructions executed here (excluding subloops) = 86640
+number of instructions executed here = 7596960
+
+
+loop ID = L3psycho_anal_D2N121
+loop execution count = 329460 times
+number of instructions executed here (excluding subloops) = 6918660
+number of instructions executed here = 6918660
+
+
+loop ID = L3psycho_anal_D2N122
+loop execution count = 330600 times
+number of instructions executed here (excluding subloops) = 6612000
+number of instructions executed here = 6612000
+
+
+loop ID = L3psycho_anal_D1N12
+loop execution count = 10260 times
+number of instructions executed here (excluding subloops) = 389880
+number of instructions executed here = 13920540
+
+
+loop ID = L3psycho_anal_D1N13
+loop execution count = 13680 times
+number of instructions executed here (excluding subloops) = 191520
+number of instructions executed here = 191520
+
+
+loop ID = L3psycho_anal_D1N14
+loop execution count = 10260 times
+number of instructions executed here (excluding subloops) = 277020
+number of instructions executed here = 277020
+
+
+loop ID = L3psycho_anal_D1N15
+loop execution count = 13680 times
+number of instructions executed here (excluding subloops) = 205200
+number of instructions executed here = 205200
+
+
+loop ID = L3psycho_anal_D1N16
+loop execution count = 10260 times
+number of instructions executed here (excluding subloops) = 266760
+number of instructions executed here = 266760
+
+
+loop ID = L3psycho_anal_D1N17
+loop execution count = 116964 times
+number of instructions executed here (excluding subloops) = 3041064
+number of instructions executed here = 3041064
+
+
+loop ID = L3psycho_anal_D1N18
+loop execution count = 116964 times
+number of instructions executed here (excluding subloops) = 1754460
+number of instructions executed here = 1754460
+
+
+loop ID = L3para_read_D2N11
+loop execution count = 2736 times
+number of instructions executed here (excluding subloops) = 235296
+number of instructions executed here = 235296
+
+
+loop ID = L3para_read_D1N1
+loop execution count = 1368 times
+number of instructions executed here (excluding subloops) = 61560
+number of instructions executed here = 296856
+
+
+loop ID = L3para_read_D2N21
+loop execution count = 4788 times
+number of instructions executed here (excluding subloops) = 411768
+number of instructions executed here = 411768
+
+
+loop ID = L3para_read_D1N2
+loop execution count = 1368 times
+number of instructions executed here (excluding subloops) = 61560
+number of instructions executed here = 473328
+
+
+loop ID = L3para_read_D2N31
+loop execution count = 1152996 times
+number of instructions executed here (excluding subloops) = 164878428
+number of instructions executed here = 164878428
+
+
+loop ID = L3para_read_D1N3
+loop execution count = 10260 times
+number of instructions executed here (excluding subloops) = 143640
+number of instructions executed here = 165022068
+
+
+loop ID = L3para_read_D2N41
+loop execution count = 10260 times
+number of instructions executed here (excluding subloops) = 697680
+number of instructions executed here = 697680
+
+
+loop ID = L3para_read_D1N4
+loop execution count = 1368 times
+number of instructions executed here (excluding subloops) = 72504
+number of instructions executed here = 770184
+
+
+loop ID = L3para_read_D2N51
+loop execution count = 2055876 times
+number of instructions executed here (excluding subloops) = 293990268
+number of instructions executed here = 293990268
+
+
+loop ID = L3para_read_D1N5
+loop execution count = 13680 times
+number of instructions executed here (excluding subloops) = 191520
+number of instructions executed here = 294181788
+
+
+loop ID = L3para_read_D3N611
+loop execution count = 111492 times
+number of instructions executed here (excluding subloops) = 2675808
+number of instructions executed here = 2675808
+
+
+loop ID = L3para_read_D2N61
+loop execution count = 13680 times
+number of instructions executed here (excluding subloops) = 916560
+number of instructions executed here = 3592368
+
+
+loop ID = L3para_read_D1N6
+loop execution count = 1368 times
+number of instructions executed here (excluding subloops) = 65664
+number of instructions executed here = 3658032
+
+
+loop ID = ExitMP3_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = decodeMP3_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = read_buf_byte_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+

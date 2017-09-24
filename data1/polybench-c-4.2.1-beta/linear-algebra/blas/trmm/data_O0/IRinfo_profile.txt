@@ -1,0 +1,48 @@
+loop ID = init_array_D2N11
+loop execution count = 499500 times
+number of instructions executed here (excluding subloops) = 14485500
+number of instructions executed here = 14485500
+
+
+loop ID = init_array_D2N12
+loop execution count = 1200000 times
+number of instructions executed here (excluding subloops) = 37200000
+number of instructions executed here = 37200000
+
+
+loop ID = init_array_D1N1
+loop execution count = 1000 times
+number of instructions executed here (excluding subloops) = 24000
+number of instructions executed here = 51709500
+
+
+loop ID = kernel_trmm_D3N111
+loop execution count = 599400000 times
+number of instructions executed here (excluding subloops) = 23376600000
+number of instructions executed here = 23376600000
+
+
+loop ID = kernel_trmm_D2N11
+loop execution count = 1200000 times
+number of instructions executed here (excluding subloops) = 40800000
+number of instructions executed here = 23417400000
+
+
+loop ID = kernel_trmm_D1N1
+loop execution count = 1000 times
+number of instructions executed here (excluding subloops) = 14000
+number of instructions executed here = 23417414000
+
+
+loop ID = print_array_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = print_array_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+

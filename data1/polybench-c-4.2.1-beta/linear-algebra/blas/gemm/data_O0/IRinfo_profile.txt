@@ -1,0 +1,72 @@
+loop ID = init_array_D2N11
+loop execution count = 1320000 times
+number of instructions executed here (excluding subloops) = 39600000
+number of instructions executed here = 39600000
+
+
+loop ID = init_array_D1N1
+loop execution count = 1200 times
+number of instructions executed here (excluding subloops) = 16800
+number of instructions executed here = 39616800
+
+
+loop ID = init_array_D2N21
+loop execution count = 1200000 times
+number of instructions executed here (excluding subloops) = 36000000
+number of instructions executed here = 36000000
+
+
+loop ID = init_array_D1N2
+loop execution count = 1000 times
+number of instructions executed here (excluding subloops) = 14000
+number of instructions executed here = 36014000
+
+
+loop ID = init_array_D2N31
+loop execution count = 1100000 times
+number of instructions executed here (excluding subloops) = 33000000
+number of instructions executed here = 33000000
+
+
+loop ID = init_array_D1N3
+loop execution count = 1000 times
+number of instructions executed here (excluding subloops) = 14000
+number of instructions executed here = 33014000
+
+
+loop ID = kernel_gemm_D2N11
+loop execution count = 1100000 times
+number of instructions executed here (excluding subloops) = 25300000
+number of instructions executed here = 25300000
+
+
+loop ID = kernel_gemm_D3N121
+loop execution count = 1320000000 times
+number of instructions executed here (excluding subloops) = 54120000000
+number of instructions executed here = 54120000000
+
+
+loop ID = kernel_gemm_D2N12
+loop execution count = 1200000 times
+number of instructions executed here (excluding subloops) = 16800000
+number of instructions executed here = 54136800000
+
+
+loop ID = kernel_gemm_D1N1
+loop execution count = 1000 times
+number of instructions executed here (excluding subloops) = 16000
+number of instructions executed here = 54162116000
+
+
+loop ID = print_array_D2N11
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+
+loop ID = print_array_D1N1
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 0
+
+

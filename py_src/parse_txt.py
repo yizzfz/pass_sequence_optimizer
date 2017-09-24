@@ -173,14 +173,17 @@ def get_profile(file):
     with open(file, 'rb') as f:
       for line in f:
         if 'loop ID' in line:
+
           if tmp != None:
               loops_info.append(tmp)
           tmp = {}
           # split based on ' = '
           num = line.split(' = ')[1]
+
           # remove \n
-          num = num[0:len(num)-2]
+          num = num[0:len(num)-1]
           tmp['loop ID'] = num
+
         elif line=='\n':
           continue
         else:

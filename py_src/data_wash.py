@@ -51,11 +51,8 @@ class Data_wash(object):
         names, _ = self.top_k_IR_info(ir_info)
         # parse hot path info, find top k
         profile_names, _ = self.top_k_profile_info(profile_info)
-        print(profile_names)
         data, metric_names, loop_names = self.collect_all(names, profile_names, ir_info)
-        print(data)
         print(loop_names)
-        # self.O0_info
 
     def collect_all(self, names, p_names, ir_info):
         top5 = []
@@ -69,7 +66,10 @@ class Data_wash(object):
                 top5.append(vals)
                 metric_names.append(names)
                 loop_names.append(name)
-            self.compute_weighted_avg(item, self.O0_profile_ratio[name])
+            if name in self.O0_profile_ratio.keys():
+                self.compute_weighted_avg(item, self.O0_profile_ratio[name])
+            else:
+                self.compute_weighted_avg(item, 0)
         data = top5
         data.append(self.O0_avg.values())
         data.append(self.O0_weighted_avg.values())

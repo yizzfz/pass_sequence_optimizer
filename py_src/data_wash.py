@@ -154,6 +154,7 @@ class Data_wash(object):
             name, score = self.score_IR_info(item)
             names.append(name)
             scores.append(score)
+        print names
         indexes = sorted(range(len(scores)), key=lambda i: scores[i])[-k:]
         top_k_names = []
         top_k_scores = []
@@ -165,6 +166,7 @@ class Data_wash(object):
     def score_IR_info(self, item):
         # item: suppose to be a dict
         name = item['loop ID']
+        print name
         trip_cnt = item['trip count']
         if trip_cnt == -1:
             trip_cnt = 0

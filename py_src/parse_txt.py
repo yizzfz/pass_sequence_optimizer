@@ -211,7 +211,7 @@ def get_IRinfo(file):
           # split based on ' = '
           num = line.split(' = ')[1]
           # remove \n
-          num = num[0:len(num)-2]
+          num = num[0:len(num)-1]
           tmp['loop ID'] = num
         elif line=='\n':
           continue

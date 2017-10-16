@@ -6,7 +6,8 @@ Author:
 """
 import pickle
 import sys
-
+import itertools
+import pdb
 
 class Data_wash(object):
     def __init__(self):
@@ -20,19 +21,57 @@ class Data_wash(object):
     def parse(self):
         self.benchmark_names = []
         self.paths = []
-        self.ir_info_O0 = []
-        self.ir_info_O3 = []
-        self.profile_info = []
         # this includes time, size of bin
-        self.O3_performance = []
-        self.GA_performance = []
-        self.O3_sequence = []
         self.GA_sequence = []
+        self.similar_programs = []
+        self.inputs = []
+        # flatten array lambda func
+        flatten = lambda l: [item for sublist in l for item in sublist]
         for i, item in enumerate(self.raw_data):
             self.benchmark_names.append(item[0])
             self.paths.append(item[1])
-            self.parse_ir_info_O0(item[2])
-            sys.exit()
+            data = self.parse_ir_info_O0(item[2])
+            data_O3 = self.parse_ir_info_O3(item[3])
+            data.append(data_O3)
+            self.inputs.append(flatten(data))
+            if (i == 3):
+                pdb.set_trace()
+            self.GA_sequence.append(item[4][2])
+            self.similar_programs.append(item[5])
+        self.generate_data_one()
+
+    def generate_data_one(self):
+        self.in_g1 = []
+        self.out_g1 = []
+        for i, seq in enumerate(self.GA_sequence):
+            for j, ir in enumerate(self.inputs):
+                self.in_g1.append(itertools.chain(seq, ir))
+                ids, performances = zip(*self.similar_programs)
+                # re-encode outputs to one-hot
+                if j in ids:
+                    if performances > 10:
+                        self.out_g1.append([1, 0, 0, 0])
+                    elif performances > 5:
+                        self.out_g1.append([0, 1, 0, 0])
+                    else:
+                        self.out_g1.append([0, 0, 1, 0])
+                else:
+                    self.out_g1.append([0, 0, 0, 1])
+
+    def parse_ir_info_O3(self, raw_data):
+        """
+        parse IR info in O3
+        """
+        self.O3_avg = {}
+        time, size_bin, pass_sequence, ir_info = raw_data
+        self.average_ir_info(ir_info, 3)
+        return_list = []
+        for key, value in self.O3_avg.items():
+            if key == 'load/store ratio':
+                pass
+            else:
+                return_list.append(value)
+        return return_list
 
     def parse_ir_info_O0(self, raw_data):
         """
@@ -46,13 +85,14 @@ class Data_wash(object):
         self.O0_weighted_avg = {}
         ir_info, profile_info = raw_data
         # compute avg of O0 IR info
-        self.average_O0(ir_info)
+        self.average_ir_info(ir_info, 0)
         # parse ir_info find top k
         names, _ = self.top_k_IR_info(ir_info)
         # parse hot path info, find top k
         profile_names, _ = self.top_k_profile_info(profile_info)
-        data, metric_names, loop_names = self.collect_all(names, profile_names, ir_info)
-        print(loop_names)
+        data, metric_names, loop_names = self.collect_all(names, profile_names,
+                                                          ir_info)
+        return data
 
     def collect_all(self, names, p_names, ir_info):
         top5 = []
@@ -85,7 +125,10 @@ class Data_wash(object):
                 pass
             else:
                 if key in self.O0_weighted_avg.keys():
-                    self.O0_weighted_avg[key] += val * ratio
+                    if key == 'trip count' and val == -1:
+                        self.O0_weighted_avg[key] += 0
+                    else:
+                        self.O0_weighted_avg[key] += val * ratio
                 else:
                     self.O0_weighted_avg[key] = 0
 
@@ -111,37 +154,46 @@ class Data_wash(object):
             local_inst.append(item['number of instructions executed here '
                                    '(excluding subloops)'])
             total_inst.append(item['number of instructions executed here'])
-            loop_exe_cnt.append(item['loop execution count'])
+            if item['loop execution count'] >= 0:
+                loop_exe_cnt.append(item['loop execution count'])
+            else:
+                loop_exe_cnt.append(0)
             scores.append(local_inst[i] * loop_exe_cnt[i])
         indexes = sorted(range(len(scores)), key=lambda i: scores[i])[-k:]
         top_k_names = []
         top_k_scores = []
         self.O0_profile_ratio = {}
         for i, score in enumerate(scores):
-            self.O0_profile_ratio[names[i]] = score / sum(scores)
+            self.O0_profile_ratio[names[i]] = score / float(sum(scores))
         for index in indexes:
             top_k_names.append(names[index])
             top_k_scores.append(scores[index])
         return(top_k_names, top_k_scores)
 
-    def average_O0(self, info):
-        self.O0_avg = {}
+    def average_ir_info(self, info, O_level=0):
+        avg = {}
         # init
         for key in info[0].keys():
             if key == 'loop ID' or key == 'int/fp ratio':
                 pass
             else:
-                self.O0_avg[key] = 0
+                avg[key] = 0
         # accumulate each value
         for item in info:
             for key, val in item.items():
                 if key == 'loop ID' or key == 'int/fp ratio':
                     pass
                 else:
-                    self.O0_avg[key] += val
+                    avg[key] += val
         # avg
-        for key in self.O0_avg.keys():
-            self.O0_avg[key] = self.O0_avg[key]/len(info)
+        for key in avg.keys():
+            avg[key] = avg[key]/len(info)
+        if O_level == 0:
+            self.O0_avg = avg
+        elif O_level == 3:
+            self.O3_avg = avg
+        else:
+            raise("O_level {} is not supported".format(O_level))
 
     def top_k_IR_info(self, info, k=5):
         """
@@ -182,7 +234,6 @@ class Data_wash(object):
 
 def main():
     data_washer = Data_wash()
-    # print(type(data_washer.raw_data))
 
 
 if __name__ == "__main__":

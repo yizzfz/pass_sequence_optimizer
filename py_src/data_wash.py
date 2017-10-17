@@ -34,10 +34,12 @@ class Data_wash(object):
             data_O3 = self.parse_ir_info_O3(item[3])
             data.append(data_O3)
             self.inputs.append(flatten(data))
-            if (i == 3):
-                pdb.set_trace()
+
             self.GA_sequence.append(item[4][2])
             self.similar_programs.append(item[5])
+            print(item[5])
+            if (i == 3):
+                pdb.set_trace()
         self.generate_data_one()
 
     def generate_data_one(self):

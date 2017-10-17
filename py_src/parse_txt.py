@@ -39,6 +39,8 @@ def main():
 
   all_data = []
 
+  refine_list = []
+
   print rng
   for i in range (0, rng-1):
 
@@ -48,6 +50,8 @@ def main():
     similar.append(get_similar(bench_path[i], bench_dict))
     tup = (bench_list[i], bench_path[i], O0data[i], O3data[i], opt[i], similar[i])
     all_data.append(tup)
+    if opt[i]==None:
+      refine_list.append(bench_list[i])
 
 
   with open('data.pkl', 'wb') as f:
@@ -55,6 +59,11 @@ def main():
     pickle.dump(data_types, f)
     pickle.dump(pass_list, f)
     pickle.dump(performance_metrics, f)
+
+  if len(refine_list)>0:
+    print refine_list
+
+
 
 
 def get_similar(path, bench_dict):

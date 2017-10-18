@@ -467,33 +467,33 @@ number of instructions executed here = 0
 
 
 loop ID = consume_data_D4N1111
-loop execution count = 140600639376264 times
-number of instructions executed here (excluding subloops) = 4218019181287920
-number of instructions executed here = 4218019181287920
+loop execution count = 139997644114840 times
+number of instructions executed here (excluding subloops) = 4199929323445200
+number of instructions executed here = 4199929323445200
 
 
 loop ID = consume_data_D3N111
-loop execution count = 7378697628604702778 times
-number of instructions executed here (excluding subloops) = -7378697654978238830
-number of instructions executed here = -7374479635796950910
+loop execution count = 3545795468198686752 times
+number of instructions executed here (excluding subloops) = -7852395864495393888
+number of instructions executed here = -7848195935171948688
 
 
 loop ID = consume_data_D2N11
-loop execution count = 140600639376248 times
-number of instructions executed here (excluding subloops) = 4358619820663688
-number of instructions executed here = -7370121015976287222
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = -7848195935171948688
 
 
 loop ID = consume_data_D1N1
-loop execution count = 55771424 times
-number of instructions executed here (excluding subloops) = 1226971328
-number of instructions executed here = -7370121014749315894
+loop execution count = 59982112 times
+number of instructions executed here (excluding subloops) = 1319606464
+number of instructions executed here = -7848195933852342224
 
 
 loop ID = consume_data_D1N2
-loop execution count = 49 times
-number of instructions executed here (excluding subloops) = 2597
-number of instructions executed here = 2597
+loop execution count = 7281 times
+number of instructions executed here (excluding subloops) = 385893
+number of instructions executed here = 385893
 
 
 loop ID = decompress_data_D3N111
@@ -593,9 +593,9 @@ number of instructions executed here = 0
 
 
 loop ID = grayscale_convert_D1N1
-loop execution count = 140631755938712 times
-number of instructions executed here (excluding subloops) = 3797057410345224
-number of instructions executed here = 3797057410345224
+loop execution count = 58800752 times
+number of instructions executed here (excluding subloops) = 1587620304
+number of instructions executed here = 1587620304
 
 
 loop ID = rgb_ycc_start_D1N1
@@ -749,15 +749,15 @@ number of instructions executed here = 0
 
 
 loop ID = compress_output_D2N11
-loop execution count = 0 times
-number of instructions executed here (excluding subloops) = 0
-number of instructions executed here = 0
+loop execution count = 80 times
+number of instructions executed here (excluding subloops) = 2320
+number of instructions executed here = 2320
 
 
 loop ID = compress_output_D1N1
-loop execution count = 49 times
-number of instructions executed here (excluding subloops) = 1078
-number of instructions executed here = 1078
+loop execution count = 369 times
+number of instructions executed here (excluding subloops) = 8118
+number of instructions executed here = 10438
 
 
 loop ID = compress_output_D1N2
@@ -1943,15 +1943,15 @@ number of instructions executed here = 0
 
 
 loop ID = forward_DCT_D2N12
-loop execution count = 48 times
-number of instructions executed here (excluding subloops) = 3888
-number of instructions executed here = 3888
+loop execution count = -1 times
+number of instructions executed here (excluding subloops) = -81
+number of instructions executed here = -81
 
 
 loop ID = forward_DCT_D1N1
-loop execution count = 177 times
-number of instructions executed here (excluding subloops) = 5664
-number of instructions executed here = 9552
+loop execution count = 49 times
+number of instructions executed here (excluding subloops) = 1568
+number of instructions executed here = 1487
 
 
 loop ID = forward_DCT_float_D2N11
@@ -2435,9 +2435,9 @@ number of instructions executed here = 0
 
 
 loop ID = start_pass_D2N11
-loop execution count = 133937 times
-number of instructions executed here (excluding subloops) = 1741181
-number of instructions executed here = 1741181
+loop execution count = 133889 times
+number of instructions executed here (excluding subloops) = 1740557
+number of instructions executed here = 1740557
 
 
 loop ID = start_pass_D2N12
@@ -2455,7 +2455,7 @@ number of instructions executed here = 0
 loop ID = start_pass_D1N1
 loop execution count = 0 times
 number of instructions executed here (excluding subloops) = 0
-number of instructions executed here = 1741181
+number of instructions executed here = 1740557
 
 
 loop ID = format_message_D1N1

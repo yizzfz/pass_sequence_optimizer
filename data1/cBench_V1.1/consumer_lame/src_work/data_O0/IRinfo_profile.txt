@@ -407,21 +407,21 @@ number of instructions executed here = 561622824
 
 
 loop ID = VBR_iteration_loop_D3N111
-loop execution count = 140015238540152 times
-number of instructions executed here (excluding subloops) = 5740624780146232
-number of instructions executed here = 5740624780146232
+loop execution count = 140643615796280 times
+number of instructions executed here (excluding subloops) = 5766388247647480
+number of instructions executed here = 5766388247647480
 
 
 loop ID = VBR_iteration_loop_D2N11
 loop execution count = 0 times
 number of instructions executed here (excluding subloops) = 0
-number of instructions executed here = 5740624780146232
+number of instructions executed here = 5766388247647480
 
 
 loop ID = VBR_iteration_loop_D1N1
-loop execution count = 3474023674371126837 times
-number of instructions executed here (excluding subloops) = 244146568809374544
-number of instructions executed here = 249887193589520776
+loop execution count = 0 times
+number of instructions executed here (excluding subloops) = 0
+number of instructions executed here = 5766388247647480
 
 
 loop ID = VBR_iteration_loop_D2N21
@@ -491,21 +491,21 @@ number of instructions executed here = 0
 
 
 loop ID = VBR_iteration_loop_D2N81
-loop execution count = 57278945 times
-number of instructions executed here (excluding subloops) = 15808988820
-number of instructions executed here = 15808988820
+loop execution count = 68297057 times
+number of instructions executed here (excluding subloops) = 18849987732
+number of instructions executed here = 18849987732
 
 
 loop ID = VBR_iteration_loop_D1N8
-loop execution count = 0 times
-number of instructions executed here (excluding subloops) = 0
-number of instructions executed here = 15808988820
+loop execution count = 68300480 times
+number of instructions executed here (excluding subloops) = 3141822080
+number of instructions executed here = 21991809812
 
 
 loop ID = VBR_iteration_loop_D1N9
-loop execution count = 140015238540184 times
-number of instructions executed here (excluding subloops) = 6860746688469016
-number of instructions executed here = 6860746688469016
+loop execution count = 140643615796120 times
+number of instructions executed here (excluding subloops) = 6891537174009880
+number of instructions executed here = 6891537174009880
 
 
 loop ID = calc_noise1_D3N111

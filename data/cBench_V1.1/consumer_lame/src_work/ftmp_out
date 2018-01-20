@@ -1,6 +1,0 @@
-LAME version 3.70 (www.sulaco.org/mp3) 
-GPSYCHO: GPL psycho-acoustic and noise shaping model version 0.77. 
-Using polyphase lowpass filter,  transition band:  7557 Hz - 7824 Hz
-Encoding ../../consumer_data/1.wav to output_large.mp3
-Encoding as 22.1 kHz 64 kbps j-stereo MPEG2 LayerIII (11.0x)  qval=5
-    Frame          |  CPU/estimated  |  time/estimated | play/CPU |   ETA

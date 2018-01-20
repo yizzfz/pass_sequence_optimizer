@@ -51,7 +51,7 @@ def main():
     tup = (bench_list[i], bench_path[i], O0data[i], O3data[i], opt[i], similar[i])
     all_data.append(tup)
     if opt[i]==None:
-      refine_list.append(bench_list[i])
+      refine_list.append(bench_path[i])
 
 
   with open('data.pkl', 'wb') as f:

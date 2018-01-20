@@ -7,3 +7,6 @@ poly-e2/
 C++Benchmarks/
 cpu2006/
 *.iso
+workspace/
+data/
+data1/

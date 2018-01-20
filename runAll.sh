@@ -1,3 +1,6 @@
+rm -r workspace
+mkdir workspace
+cp -r benchmark_src/* workspace/
 cd LoopInfo
 ./compilePass.sh && make
 cd ../workspace

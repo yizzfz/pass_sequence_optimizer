@@ -1,7 +1,7 @@
-FILES= loop-wrap.c patricia.c patricia_test.c
-LL1= loop-wrap.1.ll patricia.1.ll patricia_test.1.ll
-LL2= loop-wrap.2.ll patricia.2.ll patricia_test.2.ll
-LL3= loop-wrap.3.ll patricia.3.ll patricia_test.3.ll
+FILES= patricia.c loop-wrap.c patricia_test.c
+LL1= patricia.1.ll loop-wrap.1.ll patricia_test.1.ll
+LL2= patricia.2.ll loop-wrap.2.ll patricia_test.2.ll
+LL3= patricia.3.ll loop-wrap.3.ll patricia_test.3.ll
 CC_FLAGS=
 LD_FLAGS=-lm 
 

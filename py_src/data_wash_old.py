@@ -1,11 +1,13 @@
-
+"""
+Funtionality:
+    wash data in data.pkl
+Author:
+    Aaron Zhao
+"""
 import pickle
 import sys
 import itertools
 import pdb
-import numpy as np
-
-test_data_list=[2, 9, 11, 25, 22, 30, 37, 45, 52, 33]
 
 class Data_wash(object):
     def __init__(self):
@@ -15,22 +17,6 @@ class Data_wash(object):
     def read_file(self, name='data.pkl'):
         with open(name, 'rb') as f:
             self.raw_data = pickle.load(f)
-            self.list_data_type = pickle.load(f)
-            self.list_pass = pickle.load(f)
-            self.list_metric = pickle.load(f)
-
-    def write_file(self):
-        with open('data/train_input.pkl', 'wb') as f1:
-            pickle.dump(self.train_input, f1)
-
-        with open('data/train_label.pkl', 'wb') as f2:
-            pickle.dump(self.train_label, f2)
-
-        with open('data/test_input.pkl', 'wb') as f3:
-            pickle.dump(self.test_input, f3)
-
-        with open('data/test_label.pkl', 'wb') as f4:
-            pickle.dump(self.test_label, f4)
 
     def parse(self):
         self.benchmark_names = []
@@ -44,86 +30,33 @@ class Data_wash(object):
         for i, item in enumerate(self.raw_data):
             self.benchmark_names.append(item[0])
             self.paths.append(item[1])
-
             data = self.parse_ir_info_O0(item[2])
             data_O3 = self.parse_ir_info_O3(item[3])
             data.append(data_O3)
-
             self.inputs.append(flatten(data))
-            if(item[4]!=None):
-                self.GA_sequence.append(item[4][2])
-            else:
-                self.GA_sequence.append([])
+            if (i == 3):
+                pdb.set_trace()
+            self.GA_sequence.append(item[4][2])
             self.similar_programs.append(item[5])
+        self.generate_data_one()
 
-        """
-        NN input = (N^N, M*2), NN output = (N^N, 3)
-        N = number of programs = 55
-        M = number of features = 155
-        NTrain = number of training programs = 45
-        NTest = number of test progrmas = 10
-        number of training data = NTrain*NTrain-NTrain
-        number of test data = Ntest*N-Ntest
-        (ignore identical programs)
-        (put new program into first half of M*2)
-        """
-
-        self.N=len(self.raw_data)
-        self.M=155 ##
-        self.NTest = len(test_data_list)
-        self.NTrain=self.N-self.NTest
-
-        self.generate_train_data()
-        self.generate_test_data()
-        self.write_file()
-
-
-
-    def generate_train_data(self):
-        n=self.N
-        size_train_data = self.NTrain*self.NTrain-self.NTrain
-        self.train_input=np.zeros((size_train_data, self.M*2))
-        self.train_label=np.zeros((size_train_data, 3))
-        idx=0
-        for i in range(0, n):
-            for j in range(0, n):
-                if(i!=j and not i in test_data_list and not j in test_data_list):
-                    self.train_input[idx]=self.inputs[i]+self.inputs[j]
-                    self.train_label[idx]=self.rank_similarity(i, j)
-                    idx=idx+1
-
-
-    def generate_test_data(self):
-        n=self.N
-        size_test_data = self.NTest*self.N-self.NTest
-
-        self.test_input=np.zeros((size_test_data, self.M*2))
-        self.test_label=np.zeros((size_test_data, 3))
-        idx = 0
-        for i in test_data_list:
-            for j in range(0, n):
-                if(i!=j):
-                    self.test_input[idx]=self.inputs[i]+self.inputs[j]
-                    self.test_label[idx]=self.rank_similarity(i, j)
-                    idx=idx+1
-
-
-
-    def rank_similarity(self, i, j):
-        similar_of_i=self.similar_programs[i]
-        for (program_id, improvement) in similar_of_i:
-            #if 2nd program appears in 1st program's similar_programs list
-            #i.e. OPT(2) is better than O3(1)
-            if(program_id==j):
-                #if OPT(2) is better than O3(1) by more than 10%
-                if((float)(improvement)>10):
-                    return (1, 0, 0)
-                #if OPT(2) is better than O3(1) by less than 10%
+    def generate_data_one(self):
+        self.in_g1 = []
+        self.out_g1 = []
+        for i, seq in enumerate(self.GA_sequence):
+            for j, ir in enumerate(self.inputs):
+                self.in_g1.append(itertools.chain(seq, ir))
+                ids, performances = zip(*self.similar_programs)
+                # re-encode outputs to one-hot
+                if j in ids:
+                    if performances > 10:
+                        self.out_g1.append([1, 0, 0, 0])
+                    elif performances > 5:
+                        self.out_g1.append([0, 1, 0, 0])
+                    else:
+                        self.out_g1.append([0, 0, 1, 0])
                 else:
-                    return (0, 1, 0)
-        #if OPT(2) is worse than O3(1)
-        return (0, 0, 1)
-
+                    self.out_g1.append([0, 0, 0, 1])
 
     def parse_ir_info_O3(self, raw_data):
         """
@@ -159,7 +92,6 @@ class Data_wash(object):
         profile_names, _ = self.top_k_profile_info(profile_info)
         data, metric_names, loop_names = self.collect_all(names, profile_names,
                                                           ir_info)
-
         return data
 
     def collect_all(self, names, p_names, ir_info):
@@ -178,10 +110,7 @@ class Data_wash(object):
                 self.compute_weighted_avg(item, self.O0_profile_ratio[name])
             else:
                 self.compute_weighted_avg(item, 0)
-
         data = top5
-
-
         data.append(self.O0_avg.values())
         data.append(self.O0_weighted_avg.values())
         metric_names.append(self.O0_avg.keys())
@@ -214,7 +143,7 @@ class Data_wash(object):
                 vals.append(val)
         return (names, vals)
 
-    def top_k_profile_info(self, info, k=3):
+    def top_k_profile_info(self, info, k=5):
         names = []
         local_inst = []
         total_inst = []
@@ -266,7 +195,7 @@ class Data_wash(object):
         else:
             raise("O_level {} is not supported".format(O_level))
 
-    def top_k_IR_info(self, info, k=3):
+    def top_k_IR_info(self, info, k=5):
         """
         Pick the k most valuable loop IR based on hand crafted socres
         """

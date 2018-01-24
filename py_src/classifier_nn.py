@@ -16,9 +16,9 @@ def main(args):
     # in case we need gpus
     kwargs = {'num_workers': 1, 'pin_memory': True} if args.cuda else {}
     train_loader = torch.utils.data.DataLoader(
-        data.train_datset, batch_size=batch_size, shuffle=True, **kwargs)
+        data.train_dataset, batch_size=batch_size, shuffle=True, **kwargs)
     eval_loader = torch.utils.data.DataLoader(
-        data.test_datset, batch_size=batch_size, shuffle=True, **kwargs)
+        data.test_dataset, batch_size=batch_size, shuffle=True, **kwargs)
     model = Net()
     if args.cuda:
         model.cuda()
@@ -30,13 +30,16 @@ def main(args):
 def train(epoch, model, train_loader, args):
     optimizer = optim.SGD(model.parameters(), lr=args.lr)
     model.train()
+    dtype = torch.FloatTensor
+    criterion = torch.nn.CrossEntropyLoss()
     for batch_idx, (data, target) in enumerate(train_loader):
         if args.cuda:
             data, target = data.cuda(), target.cuda()
-        data, target = Variable(data), Variable(target)
+        data = Variable(data.type(dtype), requires_grad=True)
+        target = Variable(target.type(torch.LongTensor))
         optimizer.zero_grad()
         output = model(data)
-        loss = F.nll_loss(output, target)
+        loss = criterion(output, target)
         loss.backward()
         optimizer.step()
         if batch_idx % args.log_interval == 0:
@@ -49,10 +52,12 @@ def test(model, loader, args):
     model.eval()
     test_loss = 0
     correct = 0
+    dtype = torch.FloatTensor
     for data, target in loader:
         if args.cuda:
             data, target = data.cuda(), target.cuda()
-        data, target = Variable(data, volatile=True), Variable(target)
+        data = Variable(data.type(dtype), requires_grad=True)
+        target = Variable(target.type(torch.LongTensor))
         output = model(data)
         # sum up batch loss
         test_loss += F.nll_loss(output, target, size_average=False).data[0]
@@ -67,33 +72,36 @@ def test(model, loader, args):
 
 
 class Data(object):
-    def __init__(self, directory='./Data/'):
+    def __init__(self, directory='./data/'):
         self.wrap_data(directory)
 
     def wrap_data(self, directory):
-        train_data = pickle.load(open(directory + 'train_input.pkl', 'r'))
-        train_label = pickle.load(open(directory + 'train_label.pkl', 'r'))
+        train_data = pickle.load(open(directory + 'train_input.pkl', 'rb'))
+        train_label = pickle.load(open(directory + 'train_label.pkl', 'rb'))
         self.train_dataset = self._wrap_to_dataset(train_data, train_label)
 
-        test_data = pickle.load(open(directory + 'test_input.pkl', 'r'))
-        test_label = pickle.load(open(directory + 'test_label.pkl', 'r'))
+        test_data = pickle.load(open(directory + 'test_input.pkl', 'rb'))
+        test_label = pickle.load(open(directory + 'test_label.pkl', 'rb'))
         self.test_dataset = self._wrap_to_dataset(test_data, test_label)
 
     def _wrap_to_dataset(self, data, label):
         data = self._wrap_to_tensor(data)
+        label = np.where(label > 0)[1]
         label = self._wrap_to_tensor(label)
         return torch.utils.data.TensorDataset(data, label)
 
     def _wrap_to_tensor(self, np_data):
-        return torch.stack(torch.Tensor(i) for i in np_data)
+        return torch.from_numpy(np_data)
 
 
 class Net(nn.Module):
     def __init__(self):
         super(Net, self).__init__()
-        self.fc1 = nn.Linear(320, 50)
+        self.fc1 = nn.Linear(310, 200)
         self.fc2 = nn.Linear(200, 200)
-        self.fc3 = nn.Linear(100, 10)
+        self.fc3 = nn.Linear(200, 200)
+        self.fc4 = nn.Linear(200, 200)
+        self.fc5 = nn.Linear(200, 3)
 
     def forward(self, x):
         x = F.relu(self.fc1(x))
@@ -101,6 +109,9 @@ class Net(nn.Module):
         x = self.fc2(x)
         x = F.dropout(x, training=self.training)
         x = self.fc3(x)
+        x = F.dropout(x, training=self.training)
+        x = self.fc4(x)
+        x = self.fc5(x)
         return F.log_softmax(x)
 
 
@@ -116,8 +127,8 @@ if __name__ == "__main__":
         '--epochs', type=int, default=100, metavar='N',
         help='number of epochs to train (default: 10)')
     parser.add_argument(
-        '--lr', type=float, default=0.01, metavar='LR',
-        help='learning rate (default: 0.01)')
+        '--lr', type=float, default=0.001, metavar='LR',
+        help='learning rate (default: 0.001)')
     parser.add_argument(
         '--momentum', type=float, default=0.5, metavar='M',
         help='SGD momentum (default: 0.5)')

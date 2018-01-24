@@ -98,10 +98,10 @@ class Net(nn.Module):
     def __init__(self):
         super(Net, self).__init__()
         self.fc1 = nn.Linear(310, 200)
-        self.fc2 = nn.Linear(200, 200)
-        self.fc3 = nn.Linear(200, 200)
-        self.fc4 = nn.Linear(200, 200)
-        self.fc5 = nn.Linear(200, 3)
+        self.fc2 = nn.Linear(200, 500)
+        self.fc3 = nn.Linear(500, 500)
+        self.fc4 = nn.Linear(500, 100)
+        self.fc5 = nn.Linear(100, 3)
 
     def forward(self, x):
         x = F.relu(self.fc1(x))

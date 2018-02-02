@@ -9,7 +9,7 @@ def list_to_string(list):
   for ele in list:
     s += ' ' + ele
   return s
-  
+
 def cfiles_to_objs(list, pf):
   s = ''
   for ele in list:
@@ -33,7 +33,7 @@ def get_cc_flags(root):
           if arg.startswith('-D') or arg.startswith('-I'):
             flags += arg + ' '
   return flags
-    
+
 def get_ld_flags(root):
   flags = ''
   with open(root+'/../src/Makefile', 'rb') as f1:
@@ -60,14 +60,10 @@ def thread_func(root, cfiles, makefile_content):
     f.write(makefile_content)
   os.system('touch '+root+'/MARKER')
   os.system('rm -f '+root+'/Make*')
-  try:
-    check_call(['make hotpath'], cwd = root, shell = True)
-  except subprocess.CalledProcessError as e:
-    print 'make error'
-    os.system('rm '+root+'/MARKER')
+
   print root + " - done"
 
-  
+
 def main():
   threads = []
   i = 0
@@ -75,7 +71,7 @@ def main():
   print 'work dir cleared\n'
   os.system('./all__create_work_dirs')
   print 'work dir created\n'
-  
+
   makefile_content = read_makefile()
   for root, dirs, files in os.walk("."):
     cfiles = []
@@ -88,8 +84,8 @@ def main():
       threads[i].start()
       i+=1
 
-  
-  
+
+
 
 if __name__=="__main__":
   main()

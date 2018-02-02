@@ -33,10 +33,10 @@ def train(epoch, model, train_loader, args):
     dtype = torch.FloatTensor
     criterion = torch.nn.CrossEntropyLoss()
     for batch_idx, (data, target) in enumerate(train_loader):
-        if args.cuda:
-            data, target = data.cuda(), target.cuda()
         data = Variable(data.type(dtype), requires_grad=True)
         target = Variable(target.type(torch.LongTensor))
+        if args.cuda:
+            data, target = data.cuda(), target.cuda()
         optimizer.zero_grad()
         output = model(data)
         loss = criterion(output, target)
@@ -54,10 +54,10 @@ def test(model, loader, args):
     correct = 0
     dtype = torch.FloatTensor
     for data, target in loader:
-        if args.cuda:
-            data, target = data.cuda(), target.cuda()
         data = Variable(data.type(dtype), requires_grad=True)
         target = Variable(target.type(torch.LongTensor))
+        if args.cuda:
+            data, target = data.cuda(), target.cuda()
         output = model(data)
         # sum up batch loss
         test_loss += F.nll_loss(output, target, size_average=False).data[0]
@@ -72,7 +72,7 @@ def test(model, loader, args):
 
 
 class Data(object):
-    def __init__(self, directory='./data/'):
+    def __init__(self, directory='./Data/'):
         self.wrap_data(directory)
 
     def wrap_data(self, directory):

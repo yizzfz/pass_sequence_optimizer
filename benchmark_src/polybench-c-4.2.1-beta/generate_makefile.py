@@ -5,7 +5,7 @@ from multiprocessing import Process, Queue
 
 makefile_content = "\
 ULT=$(WORKSPACE)/polybench-c-4.2.1-beta/utilities\n\
-FLAGS=-DPOLYBENCH_TIME -I$(ULT) \n\n\
+FLAGS=-I$(ULT) -DEXTRALARGE_DATASET \n\n\
 all: $(FILES)\n\
 \t@$(RM) IRinfo* *.profraw\n\
 \t@clang $(FILES) -O0 -emit-llvm -S -o A.ll -w $(FLAGS)\n\
@@ -42,14 +42,10 @@ def thread_func(root, cfiles):
     f.write(envvar_files+"\n")
     f.write(makefile_content)
   os.system('touch '+root+'/MARKER')
-  try:
-    check_call(['make hotpath'], cwd = root, shell = True)
-  except subprocess.CalledProcessError as e:
-    print 'make error'
-    os.system('rm '+root+'/MARKER')
+  
   print root+" - done"
 
-  
+
 def main():
   os.system('./compile_uti.sh')
   print('utility compiled')
@@ -66,8 +62,8 @@ def main():
       threads[i].start()
       i+=1
 
-  
-  
+
+
 
 if __name__=="__main__":
   main()

@@ -145,6 +145,17 @@ def get_testcodes(base_dir):
           testcodes.append(os.path.realpath(root))
     return testcodes
 
+def filter_testcodes(base_dir, testcodes_all):
+    testcodes = []
+    for root, dirs, files in os.walk(base_dir):
+      cfiles = []
+      for file in files:
+        if file == 'MARKER':
+            path = os.path.realpath(root)
+            if path in testcodes_all:
+                testcodes.append(path)
+    return testcodes
+
 def read_O3_time(current_dir):
     time = 0
     try:
@@ -205,10 +216,17 @@ def compare_with_other(current_dir, testcodes):
 def t_prepare(current_dir, O3_list):
     os.chdir(current_dir)
     O3_list_str = list_to_string(O3_list)
-
     os.system("rm -rf data* *.txt")
     os.system('mkdir data_O0')
-    os.system('make hotpath')
+
+    try:
+        check_call(['make hotpath'], cwd = current_dir, shell = True)
+    except subprocess.CalledProcessError as e:
+        print 'make error'
+        os.system('rm '+root+'/MARKER')
+        return
+
+
     os.system('cp IRinfo.txt data_O0/IRinfo.txt')
     os.system('cp IRinfo_profile.txt data_O0/IRinfo_profile.txt')
 
@@ -229,6 +247,7 @@ def t_prepare(current_dir, O3_list):
       O3size = int(check_output('ls -nl a.out | awk \'{print $5}\'', cwd = current_dir, shell = True))
     else:
       print 'cannot compile with O3: ' + current_dir
+      os.system('rm '+root+'/MARKER')
       return
 
 
@@ -311,10 +330,13 @@ def main():
       for thread in threads:
         thread.join()
 
+
+      testcodes_f = filter_testcodes(base_dir, testcodes)
+
       threads = []
       i=0
-      for testcode in testcodes:
-        thread = Process(target = t_GA, args = (testcode, all_list, O3_list, testcodes, progress))
+      for testcode in testcodes_f:
+        thread = Process(target = t_GA, args = (testcode, all_list, O3_list, testcodes_f, progress))
         threads.append(thread)
         threads[i].start()
         i+=1

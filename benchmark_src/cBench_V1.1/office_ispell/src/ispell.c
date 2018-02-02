@@ -884,7 +884,7 @@ static void dofile (filename)
 
     (void) fstat (fileno (infile), &statbuf);
     (void) strcpy (tempfile, TEMPNAME);
-    if (mktemp (tempfile) == NULL  ||  tempfile[0] == '\0'
+    if (mkstemp (tempfile) == NULL  ||  tempfile[0] == '\0'
       ||  (outfile = fopen (tempfile, "w")) == NULL)
 	{
 	if (cbench_print) fprintf (stderr, CANT_CREATE,

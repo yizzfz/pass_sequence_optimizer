@@ -38,7 +38,7 @@
 
 /* Library routines not declared in a standard header */
 extern char *getenv(P1(const char *));
-extern char *mktemp(P1(char *));
+extern char *mkstemp(P1(char *));
 
 /* ------ File naming and accessing ------ */
 
@@ -68,7 +68,7 @@ gp_open_scratch_file(const char *prefix, char *fname, const char *mode)
 	if ( *fname != 0 && fname[strlen(fname) - 1] == 'X' )
 		strcat(fname, "-");
 	strcat(fname, "XXXXXX");
-	mktemp(fname);
+	mkstemp(fname);
 	return fopen(fname, mode);
 }
 

@@ -15,4 +15,4 @@ cd ../cBench_V1.1/
 python generate_makefile.py
 cd ..
 
-python check_all.py && python search_pass.py
+python3 search_pass_st.py

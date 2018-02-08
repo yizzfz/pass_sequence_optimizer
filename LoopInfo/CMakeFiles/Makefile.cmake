@@ -14,6 +14,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/feature_tests.cxx"
   "CMakeLists.txt"
   "/usr/local/lib/cmake/llvm/AddLLVM.cmake"
+  "/usr/local/lib/cmake/llvm/AddLLVMDefinitions.cmake"
   "/usr/local/lib/cmake/llvm/CheckCompilerVersion.cmake"
   "/usr/local/lib/cmake/llvm/DetermineGCCCompatible.cmake"
   "/usr/local/lib/cmake/llvm/HandleLLVMOptions.cmake"

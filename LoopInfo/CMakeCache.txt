@@ -190,12 +190,6 @@ LLVM_ENABLE_RTTI:BOOL=OFF
 //Export symbols from LLVM tools so that plugins can import them
 LLVM_EXPORT_SYMBOLS_FOR_PLUGINS:BOOL=OFF
 
-//Define the maximum number of concurrent compilation jobs.
-LLVM_PARALLEL_COMPILE_JOBS:STRING=
-
-//Define the maximum number of concurrent link jobs.
-LLVM_PARALLEL_LINK_JOBS:STRING=
-
 //Dependencies for target
 LoopInfo_LIB_DEPENDS:STATIC=
 

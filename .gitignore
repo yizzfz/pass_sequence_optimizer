@@ -10,3 +10,6 @@ cpu2006/
 workspace/
 data/
 data1/
+*.tar*
+compbench*
+openbench*

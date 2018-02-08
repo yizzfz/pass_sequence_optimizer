@@ -312,7 +312,7 @@ def main():
       print 'cannot find any MARKER, run \'generate_makefile\''
       return
 
-    #testcodes = random_select(testcodes, 2)
+    testcodes = random_select(testcodes, 1)
 
     print 'found ' + str(len(testcodes)) + ' benchmarks:'
     print testcodes

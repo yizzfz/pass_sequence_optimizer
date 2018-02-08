@@ -27,7 +27,6 @@ CMakeFiles/LoopInfo.dir/LoopInfo.cc.o: /usr/local/include/llvm/ADT/SmallString.h
 CMakeFiles/LoopInfo.dir/LoopInfo.cc.o: /usr/local/include/llvm/ADT/SmallVector.h
 CMakeFiles/LoopInfo.dir/LoopInfo.cc.o: /usr/local/include/llvm/ADT/StringMap.h
 CMakeFiles/LoopInfo.dir/LoopInfo.cc.o: /usr/local/include/llvm/ADT/StringRef.h
-CMakeFiles/LoopInfo.dir/LoopInfo.cc.o: /usr/local/include/llvm/ADT/StringSwitch.h
 CMakeFiles/LoopInfo.dir/LoopInfo.cc.o: /usr/local/include/llvm/ADT/TinyPtrVector.h
 CMakeFiles/LoopInfo.dir/LoopInfo.cc.o: /usr/local/include/llvm/ADT/Triple.h
 CMakeFiles/LoopInfo.dir/LoopInfo.cc.o: /usr/local/include/llvm/ADT/Twine.h
@@ -123,8 +122,6 @@ CMakeFiles/LoopInfo.dir/LoopInfo.cc.o: /usr/local/include/llvm/Support/ErrorHand
 CMakeFiles/LoopInfo.dir/LoopInfo.cc.o: /usr/local/include/llvm/Support/ErrorOr.h
 CMakeFiles/LoopInfo.dir/LoopInfo.cc.o: /usr/local/include/llvm/Support/FileSystem.h
 CMakeFiles/LoopInfo.dir/LoopInfo.cc.o: /usr/local/include/llvm/Support/FileUtilities.h
-CMakeFiles/LoopInfo.dir/LoopInfo.cc.o: /usr/local/include/llvm/Support/FormatProviders.h
-CMakeFiles/LoopInfo.dir/LoopInfo.cc.o: /usr/local/include/llvm/Support/FormatVariadicDetails.h
 CMakeFiles/LoopInfo.dir/LoopInfo.cc.o: /usr/local/include/llvm/Support/GenericDomTree.h
 CMakeFiles/LoopInfo.dir/LoopInfo.cc.o: /usr/local/include/llvm/Support/Host.h
 CMakeFiles/LoopInfo.dir/LoopInfo.cc.o: /usr/local/include/llvm/Support/MD5.h
@@ -132,12 +129,10 @@ CMakeFiles/LoopInfo.dir/LoopInfo.cc.o: /usr/local/include/llvm/Support/ManagedSt
 CMakeFiles/LoopInfo.dir/LoopInfo.cc.o: /usr/local/include/llvm/Support/MathExtras.h
 CMakeFiles/LoopInfo.dir/LoopInfo.cc.o: /usr/local/include/llvm/Support/MemoryBuffer.h
 CMakeFiles/LoopInfo.dir/LoopInfo.cc.o: /usr/local/include/llvm/Support/Mutex.h
-CMakeFiles/LoopInfo.dir/LoopInfo.cc.o: /usr/local/include/llvm/Support/NativeFormatting.h
 CMakeFiles/LoopInfo.dir/LoopInfo.cc.o: /usr/local/include/llvm/Support/Options.h
 CMakeFiles/LoopInfo.dir/LoopInfo.cc.o: /usr/local/include/llvm/Support/Path.h
 CMakeFiles/LoopInfo.dir/LoopInfo.cc.o: /usr/local/include/llvm/Support/PointerLikeTypeTraits.h
 CMakeFiles/LoopInfo.dir/LoopInfo.cc.o: /usr/local/include/llvm/Support/RWMutex.h
-CMakeFiles/LoopInfo.dir/LoopInfo.cc.o: /usr/local/include/llvm/Support/ReverseIteration.h
 CMakeFiles/LoopInfo.dir/LoopInfo.cc.o: /usr/local/include/llvm/Support/SwapByteOrder.h
 CMakeFiles/LoopInfo.dir/LoopInfo.cc.o: /usr/local/include/llvm/Support/Threading.h
 CMakeFiles/LoopInfo.dir/LoopInfo.cc.o: /usr/local/include/llvm/Support/TypeName.h

@@ -8,7 +8,7 @@ from multiprocessing import Process, Queue, Value
 
 GA_MAX = 200
 CHILD_MAX = 6
-TIME_MAX = 8
+TIME_MAX = 10
 
 
 def load_from_txt(file):
@@ -122,7 +122,8 @@ def create_child(list_str, current_dir):
     os.environ["OPTFLAGS"] = list_str
     DEVNULL = open(os.devnull, 'wb', 0)
     try:
-        check_call(['timeout 60 make'], cwd=current_dir, shell=True)
+        check_call(['timeout 60 make'], stdout=DEVNULL,
+                   stderr=STDOUT, cwd=current_dir, shell=True)
     except subprocess.CalledProcessError:
         with open(current_dir + "/error.txt", "a") as f:
             f.write(list_str)
@@ -230,12 +231,14 @@ def t_prepare(current_dir, O3_list):
     O3_list_str = list_to_string(O3_list)
     os.system("rm -rf data* *.txt")
     os.system('mkdir data_O0')
+    DEVNULL = open(os.devnull, 'wb', 0)
 
     # first do O0 and profile
     try:
-        check_call(['make hotpath'], cwd=current_dir, shell=True)
+        check_call(['make hotpath'], stdout=DEVNULL,
+                   stderr=STDOUT, cwd=current_dir, shell=True)
     except subprocess.CalledProcessError as e:
-        print ('make error')
+        print ('make hotpath error')
         os.system('rm ' + root + '/MARKER')
         return
 
@@ -244,28 +247,31 @@ def t_prepare(current_dir, O3_list):
 
     # next do O3
     os.environ["OPTFLAGS"] = O3_list_str
-    err = os.system('make')
-    O3time = -1.0
-    O3size = -1
-    if err == 0:
-        DEVNULL = open(os.devnull, 'wb', 0)
-        timing = []
-        for i in range(0, TIME_MAX):
-            start = time.time()
-            check_call(['make run'], stdout=DEVNULL,
-                       stderr=STDOUT, cwd=current_dir, shell=True)
-            end = time.time()
-            timing.append(end - start)
-
-        O3time = average_timing(timing)
-        O3size = int(check_output(
-            'ls -nl a.out | awk \'{print $5}\'', cwd=current_dir, shell=True))
-    else:
-        print ('cannot compile with O3: ' + current_dir)
+    try:
+        check_call(['make'], stdout=DEVNULL,
+                   stderr=STDOUT, cwd=current_dir, shell=True)
+    except subprocess.CalledProcessError as e:
+        print ('make O3 error')
         os.system('rm ' + root + '/MARKER')
         return
 
-    print ('    O3 time = {:.4f}%'.format(O3time))
+    O3time = -1.0
+    O3size = -1
+
+    timing = []
+    for i in range(0, TIME_MAX):
+        start = time.time()
+        check_call(['make run'], stdout=DEVNULL,
+                   stderr=STDOUT, cwd=current_dir, shell=True)
+        end = time.time()
+        timing.append(end - start)
+
+    O3time = average_timing(timing)
+    O3size = int(check_output(
+        'ls -nl a.out | awk \'{print $5}\'', cwd=current_dir, shell=True))
+
+
+    print ('    O3 time = {:.4f}'.format(O3time))
     record_list('O3_', O3time, O3size, 0)
     os.system('cp IRinfo.txt data_O3_0/IRinfo.txt')
 
@@ -314,12 +320,12 @@ def main():
 
     base_dir = sys.path[0]
     #base_dir += '/polybench-c-4.2.1-beta/stencils/jacobi-1d'
-    #base_dir = './cBench_V1.1/automotive_bitcount'
+    #base_dir += '/cBench_V1.1/automotive_bitcount'
 
     testcodes = get_testcodes(base_dir)
 
     if len(testcodes) == 0:
-        print ('cannot find any MARKER, run \'generate_makefile\'')
+        print ('cannot find any MARKER in (', base_dir, )', run \'generate_makefile\'')
         return
 
     #testcodes = random_select(testcodes, 1)

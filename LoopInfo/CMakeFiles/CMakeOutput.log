@@ -28,28 +28,28 @@ The CXX compiler identification is Clang, found in "/home/hc/pass_sequence_optim
 Determining if the C compiler works passed with the following output:
 Change Dir: /home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_eef57/fast"
-/usr/bin/make -f CMakeFiles/cmTC_eef57.dir/build.make CMakeFiles/cmTC_eef57.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_c16cb/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c16cb.dir/build.make CMakeFiles/cmTC_c16cb.dir/build
 make[1]: Entering directory '/home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_eef57.dir/testCCompiler.c.o
-/usr/local/bin/clang     -o CMakeFiles/cmTC_eef57.dir/testCCompiler.c.o   -c /home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_eef57
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_eef57.dir/link.txt --verbose=1
-/usr/local/bin/clang       CMakeFiles/cmTC_eef57.dir/testCCompiler.c.o  -o cmTC_eef57 -rdynamic 
+Building C object CMakeFiles/cmTC_c16cb.dir/testCCompiler.c.o
+/usr/local/bin/clang     -o CMakeFiles/cmTC_c16cb.dir/testCCompiler.c.o   -c /home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_c16cb
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c16cb.dir/link.txt --verbose=1
+/usr/local/bin/clang       CMakeFiles/cmTC_c16cb.dir/testCCompiler.c.o  -o cmTC_c16cb -rdynamic 
 make[1]: Leaving directory '/home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp'
 
 
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: /home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_f22b6/fast"
-/usr/bin/make -f CMakeFiles/cmTC_f22b6.dir/build.make CMakeFiles/cmTC_f22b6.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_0a3a5/fast"
+/usr/bin/make -f CMakeFiles/cmTC_0a3a5.dir/build.make CMakeFiles/cmTC_0a3a5.dir/build
 make[1]: Entering directory '/home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_f22b6.dir/CMakeCCompilerABI.c.o
-/usr/local/bin/clang     -o CMakeFiles/cmTC_f22b6.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c
-Linking C executable cmTC_f22b6
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f22b6.dir/link.txt --verbose=1
-/usr/local/bin/clang      -v CMakeFiles/cmTC_f22b6.dir/CMakeCCompilerABI.c.o  -o cmTC_f22b6 -rdynamic  
+Building C object CMakeFiles/cmTC_0a3a5.dir/CMakeCCompilerABI.c.o
+/usr/local/bin/clang     -o CMakeFiles/cmTC_0a3a5.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_0a3a5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0a3a5.dir/link.txt --verbose=1
+/usr/local/bin/clang      -v CMakeFiles/cmTC_0a3a5.dir/CMakeCCompilerABI.c.o  -o cmTC_0a3a5 -rdynamic  
 clang version 4.0.1 (tags/RELEASE_401/final)
 Target: x86_64-unknown-linux-gnu
 Thread model: posix
@@ -62,7 +62,7 @@ Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/5.4.0
 Candidate multilib: .;@m64
 Selected multilib: .;@m64
 Found CUDA installation: /usr/local/cuda, version unknown
- "/usr/bin/ld" -export-dynamic -z relro --hash-style=gnu --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_f22b6 /usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5.4.0/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5.4.0 -L/usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/usr/lib/x86_64-linux-gnu/../../lib64 -L/usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../.. -L/usr/local/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_f22b6.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5.4.0/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu/crtn.o
+ "/usr/bin/ld" -export-dynamic -z relro --hash-style=gnu --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_0a3a5 /usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5.4.0/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5.4.0 -L/usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/usr/lib/x86_64-linux-gnu/../../lib64 -L/usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../.. -L/usr/local/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_0a3a5.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5.4.0/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu/crtn.o
 make[1]: Leaving directory '/home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp'
 
 
@@ -70,14 +70,14 @@ Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_f22b6/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_f22b6.dir/build.make CMakeFiles/cmTC_f22b6.dir/build]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_0a3a5/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_0a3a5.dir/build.make CMakeFiles/cmTC_0a3a5.dir/build]
   ignore line: [make[1]: Entering directory '/home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_f22b6.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/local/bin/clang     -o CMakeFiles/cmTC_f22b6.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTC_f22b6]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f22b6.dir/link.txt --verbose=1]
-  ignore line: [/usr/local/bin/clang      -v CMakeFiles/cmTC_f22b6.dir/CMakeCCompilerABI.c.o  -o cmTC_f22b6 -rdynamic  ]
+  ignore line: [Building C object CMakeFiles/cmTC_0a3a5.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/local/bin/clang     -o CMakeFiles/cmTC_0a3a5.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_0a3a5]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0a3a5.dir/link.txt --verbose=1]
+  ignore line: [/usr/local/bin/clang      -v CMakeFiles/cmTC_0a3a5.dir/CMakeCCompilerABI.c.o  -o cmTC_0a3a5 -rdynamic  ]
   ignore line: [clang version 4.0.1 (tags/RELEASE_401/final)]
   ignore line: [Target: x86_64-unknown-linux-gnu]
   ignore line: [Thread model: posix]
@@ -92,7 +92,7 @@ Parsed C implicit link information from above output:
   ignore line: [Selected multilib: .]
   ignore line: [@m64]
   ignore line: [Found CUDA installation: /usr/local/cuda, version unknown]
-  link line: [ "/usr/bin/ld" -export-dynamic -z relro --hash-style=gnu --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_f22b6 /usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5.4.0/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5.4.0 -L/usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/usr/lib/x86_64-linux-gnu/../../lib64 -L/usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../.. -L/usr/local/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_f22b6.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5.4.0/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu/crtn.o]
+  link line: [ "/usr/bin/ld" -export-dynamic -z relro --hash-style=gnu --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_0a3a5 /usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5.4.0/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5.4.0 -L/usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/usr/lib/x86_64-linux-gnu/../../lib64 -L/usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../.. -L/usr/local/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_0a3a5.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5.4.0/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/bin/ld] ==> ignore
     arg [-export-dynamic] ==> ignore
     arg [-zrelro] ==> ignore
@@ -104,7 +104,7 @@ Parsed C implicit link information from above output:
     arg [-dynamic-linker] ==> ignore
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_f22b6] ==> ignore
+    arg [cmTC_0a3a5] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu/crt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5.4.0/crtbegin.o] ==> ignore
@@ -120,7 +120,7 @@ Parsed C implicit link information from above output:
     arg [-L/usr/local/bin/../lib] ==> dir [/usr/local/bin/../lib]
     arg [-L/lib] ==> dir [/lib]
     arg [-L/usr/lib] ==> dir [/usr/lib]
-    arg [CMakeFiles/cmTC_f22b6.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_0a3a5.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--as-needed] ==> ignore
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -158,14 +158,14 @@ Parsed C implicit link information from above output:
 Detecting C [-std=c11] compiler features compiled with the following output:
 Change Dir: /home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_0ae00/fast"
-/usr/bin/make -f CMakeFiles/cmTC_0ae00.dir/build.make CMakeFiles/cmTC_0ae00.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_13b5d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_13b5d.dir/build.make CMakeFiles/cmTC_13b5d.dir/build
 make[1]: Entering directory '/home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_0ae00.dir/feature_tests.c.o
-/usr/local/bin/clang    -std=c11 -o CMakeFiles/cmTC_0ae00.dir/feature_tests.c.o   -c /home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/feature_tests.c
-Linking C executable cmTC_0ae00
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0ae00.dir/link.txt --verbose=1
-/usr/local/bin/clang       CMakeFiles/cmTC_0ae00.dir/feature_tests.c.o  -o cmTC_0ae00 -rdynamic 
+Building C object CMakeFiles/cmTC_13b5d.dir/feature_tests.c.o
+/usr/local/bin/clang    -std=c11 -o CMakeFiles/cmTC_13b5d.dir/feature_tests.c.o   -c /home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/feature_tests.c
+Linking C executable cmTC_13b5d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_13b5d.dir/link.txt --verbose=1
+/usr/local/bin/clang       CMakeFiles/cmTC_13b5d.dir/feature_tests.c.o  -o cmTC_13b5d -rdynamic 
 make[1]: Leaving directory '/home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp'
 
 
@@ -178,14 +178,14 @@ make[1]: Leaving directory '/home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles
 Detecting C [-std=c99] compiler features compiled with the following output:
 Change Dir: /home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_3f56c/fast"
-/usr/bin/make -f CMakeFiles/cmTC_3f56c.dir/build.make CMakeFiles/cmTC_3f56c.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_18d41/fast"
+/usr/bin/make -f CMakeFiles/cmTC_18d41.dir/build.make CMakeFiles/cmTC_18d41.dir/build
 make[1]: Entering directory '/home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_3f56c.dir/feature_tests.c.o
-/usr/local/bin/clang    -std=c99 -o CMakeFiles/cmTC_3f56c.dir/feature_tests.c.o   -c /home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/feature_tests.c
-Linking C executable cmTC_3f56c
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3f56c.dir/link.txt --verbose=1
-/usr/local/bin/clang       CMakeFiles/cmTC_3f56c.dir/feature_tests.c.o  -o cmTC_3f56c -rdynamic 
+Building C object CMakeFiles/cmTC_18d41.dir/feature_tests.c.o
+/usr/local/bin/clang    -std=c99 -o CMakeFiles/cmTC_18d41.dir/feature_tests.c.o   -c /home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/feature_tests.c
+Linking C executable cmTC_18d41
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_18d41.dir/link.txt --verbose=1
+/usr/local/bin/clang       CMakeFiles/cmTC_18d41.dir/feature_tests.c.o  -o cmTC_18d41 -rdynamic 
 make[1]: Leaving directory '/home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp'
 
 
@@ -198,14 +198,14 @@ make[1]: Leaving directory '/home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles
 Detecting C [-std=c90] compiler features compiled with the following output:
 Change Dir: /home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_117b5/fast"
-/usr/bin/make -f CMakeFiles/cmTC_117b5.dir/build.make CMakeFiles/cmTC_117b5.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_53cc3/fast"
+/usr/bin/make -f CMakeFiles/cmTC_53cc3.dir/build.make CMakeFiles/cmTC_53cc3.dir/build
 make[1]: Entering directory '/home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_117b5.dir/feature_tests.c.o
-/usr/local/bin/clang    -std=c90 -o CMakeFiles/cmTC_117b5.dir/feature_tests.c.o   -c /home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/feature_tests.c
-Linking C executable cmTC_117b5
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_117b5.dir/link.txt --verbose=1
-/usr/local/bin/clang       CMakeFiles/cmTC_117b5.dir/feature_tests.c.o  -o cmTC_117b5 -rdynamic 
+Building C object CMakeFiles/cmTC_53cc3.dir/feature_tests.c.o
+/usr/local/bin/clang    -std=c90 -o CMakeFiles/cmTC_53cc3.dir/feature_tests.c.o   -c /home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/feature_tests.c
+Linking C executable cmTC_53cc3
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_53cc3.dir/link.txt --verbose=1
+/usr/local/bin/clang       CMakeFiles/cmTC_53cc3.dir/feature_tests.c.o  -o cmTC_53cc3 -rdynamic 
 make[1]: Leaving directory '/home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp'
 
 
@@ -216,28 +216,28 @@ make[1]: Leaving directory '/home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles
 Determining if the CXX compiler works passed with the following output:
 Change Dir: /home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_88cfe/fast"
-/usr/bin/make -f CMakeFiles/cmTC_88cfe.dir/build.make CMakeFiles/cmTC_88cfe.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_a13cf/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a13cf.dir/build.make CMakeFiles/cmTC_a13cf.dir/build
 make[1]: Entering directory '/home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_88cfe.dir/testCXXCompiler.cxx.o
-/usr/local/bin/clang++     -Wno-unknown-warning-option    -o CMakeFiles/cmTC_88cfe.dir/testCXXCompiler.cxx.o -c /home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_88cfe
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_88cfe.dir/link.txt --verbose=1
-/usr/local/bin/clang++   -Wno-unknown-warning-option     CMakeFiles/cmTC_88cfe.dir/testCXXCompiler.cxx.o  -o cmTC_88cfe -rdynamic 
+Building CXX object CMakeFiles/cmTC_a13cf.dir/testCXXCompiler.cxx.o
+/usr/local/bin/clang++     -Wno-unknown-warning-option    -o CMakeFiles/cmTC_a13cf.dir/testCXXCompiler.cxx.o -c /home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_a13cf
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a13cf.dir/link.txt --verbose=1
+/usr/local/bin/clang++   -Wno-unknown-warning-option     CMakeFiles/cmTC_a13cf.dir/testCXXCompiler.cxx.o  -o cmTC_a13cf -rdynamic 
 make[1]: Leaving directory '/home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp'
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: /home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_85813/fast"
-/usr/bin/make -f CMakeFiles/cmTC_85813.dir/build.make CMakeFiles/cmTC_85813.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_c4d73/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c4d73.dir/build.make CMakeFiles/cmTC_c4d73.dir/build
 make[1]: Entering directory '/home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_85813.dir/CMakeCXXCompilerABI.cpp.o
-/usr/local/bin/clang++     -Wno-unknown-warning-option    -o CMakeFiles/cmTC_85813.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_85813
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_85813.dir/link.txt --verbose=1
-/usr/local/bin/clang++   -Wno-unknown-warning-option    -v CMakeFiles/cmTC_85813.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_85813 -rdynamic  
+Building CXX object CMakeFiles/cmTC_c4d73.dir/CMakeCXXCompilerABI.cpp.o
+/usr/local/bin/clang++     -Wno-unknown-warning-option    -o CMakeFiles/cmTC_c4d73.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_c4d73
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c4d73.dir/link.txt --verbose=1
+/usr/local/bin/clang++   -Wno-unknown-warning-option    -v CMakeFiles/cmTC_c4d73.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_c4d73 -rdynamic  
 clang version 4.0.1 (tags/RELEASE_401/final)
 Target: x86_64-unknown-linux-gnu
 Thread model: posix
@@ -250,7 +250,7 @@ Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/5.4.0
 Candidate multilib: .;@m64
 Selected multilib: .;@m64
 Found CUDA installation: /usr/local/cuda, version unknown
- "/usr/bin/ld" -export-dynamic -z relro --hash-style=gnu --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_85813 /usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5.4.0/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5.4.0 -L/usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/usr/lib/x86_64-linux-gnu/../../lib64 -L/usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../.. -L/usr/local/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_85813.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5.4.0/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu/crtn.o
+ "/usr/bin/ld" -export-dynamic -z relro --hash-style=gnu --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_c4d73 /usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5.4.0/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5.4.0 -L/usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/usr/lib/x86_64-linux-gnu/../../lib64 -L/usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../.. -L/usr/local/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_c4d73.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5.4.0/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu/crtn.o
 make[1]: Leaving directory '/home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp'
 
 
@@ -258,14 +258,14 @@ Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_85813/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_85813.dir/build.make CMakeFiles/cmTC_85813.dir/build]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_c4d73/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_c4d73.dir/build.make CMakeFiles/cmTC_c4d73.dir/build]
   ignore line: [make[1]: Entering directory '/home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_85813.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/local/bin/clang++     -Wno-unknown-warning-option    -o CMakeFiles/cmTC_85813.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTC_85813]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_85813.dir/link.txt --verbose=1]
-  ignore line: [/usr/local/bin/clang++   -Wno-unknown-warning-option    -v CMakeFiles/cmTC_85813.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_85813 -rdynamic  ]
+  ignore line: [Building CXX object CMakeFiles/cmTC_c4d73.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/local/bin/clang++     -Wno-unknown-warning-option    -o CMakeFiles/cmTC_c4d73.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_c4d73]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c4d73.dir/link.txt --verbose=1]
+  ignore line: [/usr/local/bin/clang++   -Wno-unknown-warning-option    -v CMakeFiles/cmTC_c4d73.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_c4d73 -rdynamic  ]
   ignore line: [clang version 4.0.1 (tags/RELEASE_401/final)]
   ignore line: [Target: x86_64-unknown-linux-gnu]
   ignore line: [Thread model: posix]
@@ -280,7 +280,7 @@ Parsed CXX implicit link information from above output:
   ignore line: [Selected multilib: .]
   ignore line: [@m64]
   ignore line: [Found CUDA installation: /usr/local/cuda, version unknown]
-  link line: [ "/usr/bin/ld" -export-dynamic -z relro --hash-style=gnu --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_85813 /usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5.4.0/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5.4.0 -L/usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/usr/lib/x86_64-linux-gnu/../../lib64 -L/usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../.. -L/usr/local/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_85813.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5.4.0/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu/crtn.o]
+  link line: [ "/usr/bin/ld" -export-dynamic -z relro --hash-style=gnu --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_c4d73 /usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5.4.0/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5.4.0 -L/usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/usr/lib/x86_64-linux-gnu/../../lib64 -L/usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../.. -L/usr/local/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_c4d73.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5.4.0/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/bin/ld] ==> ignore
     arg [-export-dynamic] ==> ignore
     arg [-zrelro] ==> ignore
@@ -292,7 +292,7 @@ Parsed CXX implicit link information from above output:
     arg [-dynamic-linker] ==> ignore
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_85813] ==> ignore
+    arg [cmTC_c4d73] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu/crt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5.4.0/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5.4.0/crtbegin.o] ==> ignore
@@ -308,7 +308,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/usr/local/bin/../lib] ==> dir [/usr/local/bin/../lib]
     arg [-L/lib] ==> dir [/lib]
     arg [-L/usr/lib] ==> dir [/usr/lib]
-    arg [CMakeFiles/cmTC_85813.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_c4d73.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -344,14 +344,14 @@ Parsed CXX implicit link information from above output:
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
 Change Dir: /home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_a140f/fast"
-/usr/bin/make -f CMakeFiles/cmTC_a140f.dir/build.make CMakeFiles/cmTC_a140f.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_704d9/fast"
+/usr/bin/make -f CMakeFiles/cmTC_704d9.dir/build.make CMakeFiles/cmTC_704d9.dir/build
 make[1]: Entering directory '/home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_a140f.dir/feature_tests.cxx.o
-/usr/local/bin/clang++     -Wno-unknown-warning-option    -std=c++14 -o CMakeFiles/cmTC_a140f.dir/feature_tests.cxx.o -c /home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_a140f
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a140f.dir/link.txt --verbose=1
-/usr/local/bin/clang++   -Wno-unknown-warning-option     CMakeFiles/cmTC_a140f.dir/feature_tests.cxx.o  -o cmTC_a140f -rdynamic 
+Building CXX object CMakeFiles/cmTC_704d9.dir/feature_tests.cxx.o
+/usr/local/bin/clang++     -Wno-unknown-warning-option    -std=c++14 -o CMakeFiles/cmTC_704d9.dir/feature_tests.cxx.o -c /home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_704d9
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_704d9.dir/link.txt --verbose=1
+/usr/local/bin/clang++   -Wno-unknown-warning-option     CMakeFiles/cmTC_704d9.dir/feature_tests.cxx.o  -o cmTC_704d9 -rdynamic 
 make[1]: Leaving directory '/home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp'
 
 
@@ -417,14 +417,14 @@ make[1]: Leaving directory '/home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
 Change Dir: /home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_7c6ff/fast"
-/usr/bin/make -f CMakeFiles/cmTC_7c6ff.dir/build.make CMakeFiles/cmTC_7c6ff.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_b5818/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b5818.dir/build.make CMakeFiles/cmTC_b5818.dir/build
 make[1]: Entering directory '/home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_7c6ff.dir/feature_tests.cxx.o
-/usr/local/bin/clang++     -Wno-unknown-warning-option    -std=c++11 -o CMakeFiles/cmTC_7c6ff.dir/feature_tests.cxx.o -c /home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_7c6ff
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7c6ff.dir/link.txt --verbose=1
-/usr/local/bin/clang++   -Wno-unknown-warning-option     CMakeFiles/cmTC_7c6ff.dir/feature_tests.cxx.o  -o cmTC_7c6ff -rdynamic 
+Building CXX object CMakeFiles/cmTC_b5818.dir/feature_tests.cxx.o
+/usr/local/bin/clang++     -Wno-unknown-warning-option    -std=c++11 -o CMakeFiles/cmTC_b5818.dir/feature_tests.cxx.o -c /home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_b5818
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b5818.dir/link.txt --verbose=1
+/usr/local/bin/clang++   -Wno-unknown-warning-option     CMakeFiles/cmTC_b5818.dir/feature_tests.cxx.o  -o cmTC_b5818 -rdynamic 
 make[1]: Leaving directory '/home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp'
 
 
@@ -490,14 +490,14 @@ make[1]: Leaving directory '/home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
 Change Dir: /home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_b93aa/fast"
-/usr/bin/make -f CMakeFiles/cmTC_b93aa.dir/build.make CMakeFiles/cmTC_b93aa.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_54a7c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_54a7c.dir/build.make CMakeFiles/cmTC_54a7c.dir/build
 make[1]: Entering directory '/home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_b93aa.dir/feature_tests.cxx.o
-/usr/local/bin/clang++     -Wno-unknown-warning-option    -std=c++98 -o CMakeFiles/cmTC_b93aa.dir/feature_tests.cxx.o -c /home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_b93aa
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b93aa.dir/link.txt --verbose=1
-/usr/local/bin/clang++   -Wno-unknown-warning-option     CMakeFiles/cmTC_b93aa.dir/feature_tests.cxx.o  -o cmTC_b93aa -rdynamic 
+Building CXX object CMakeFiles/cmTC_54a7c.dir/feature_tests.cxx.o
+/usr/local/bin/clang++     -Wno-unknown-warning-option    -std=c++98 -o CMakeFiles/cmTC_54a7c.dir/feature_tests.cxx.o -c /home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_54a7c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_54a7c.dir/link.txt --verbose=1
+/usr/local/bin/clang++   -Wno-unknown-warning-option     CMakeFiles/cmTC_54a7c.dir/feature_tests.cxx.o  -o cmTC_54a7c -rdynamic 
 make[1]: Leaving directory '/home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp'
 
 
@@ -561,14 +561,14 @@ make[1]: Leaving directory '/home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles
 Performing C++ SOURCE FILE Test LLVM_NO_OLD_LIBSTDCXX succeeded with the following output:
 Change Dir: /home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_1f334/fast"
-/usr/bin/make -f CMakeFiles/cmTC_1f334.dir/build.make CMakeFiles/cmTC_1f334.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_fecbf/fast"
+/usr/bin/make -f CMakeFiles/cmTC_fecbf.dir/build.make CMakeFiles/cmTC_fecbf.dir/build
 make[1]: Entering directory '/home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_1f334.dir/src.cxx.o
-/usr/local/bin/clang++     -Wno-unknown-warning-option -std=c++11 -Wno-vla-extension -DLLVM_NO_OLD_LIBSTDCXX -std=c++0x   -o CMakeFiles/cmTC_1f334.dir/src.cxx.o -c /home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_1f334
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1f334.dir/link.txt --verbose=1
-/usr/local/bin/clang++   -Wno-unknown-warning-option -std=c++11 -Wno-vla-extension -DLLVM_NO_OLD_LIBSTDCXX -std=c++0x    CMakeFiles/cmTC_1f334.dir/src.cxx.o  -o cmTC_1f334 -rdynamic 
+Building CXX object CMakeFiles/cmTC_fecbf.dir/src.cxx.o
+/usr/local/bin/clang++     -Wno-unknown-warning-option -std=c++11 -Wno-vla-extension -DLLVM_NO_OLD_LIBSTDCXX -std=c++0x   -o CMakeFiles/cmTC_fecbf.dir/src.cxx.o -c /home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_fecbf
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fecbf.dir/link.txt --verbose=1
+/usr/local/bin/clang++   -Wno-unknown-warning-option -std=c++11 -Wno-vla-extension -DLLVM_NO_OLD_LIBSTDCXX -std=c++0x    CMakeFiles/cmTC_fecbf.dir/src.cxx.o  -o cmTC_fecbf -rdynamic 
 make[1]: Leaving directory '/home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp'
 
 Source file was:
@@ -579,14 +579,14 @@ int main() { return (float)x; }
 Performing C++ SOURCE FILE Test SUPPORTS_FVISIBILITY_INLINES_HIDDEN_FLAG succeeded with the following output:
 Change Dir: /home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_b1e79/fast"
-/usr/bin/make -f CMakeFiles/cmTC_b1e79.dir/build.make CMakeFiles/cmTC_b1e79.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_def48/fast"
+/usr/bin/make -f CMakeFiles/cmTC_def48.dir/build.make CMakeFiles/cmTC_def48.dir/build
 make[1]: Entering directory '/home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_b1e79.dir/src.cxx.o
-/usr/local/bin/clang++     -Wno-unknown-warning-option -std=c++11 -Wno-vla-extension -DSUPPORTS_FVISIBILITY_INLINES_HIDDEN_FLAG   -fvisibility-inlines-hidden -o CMakeFiles/cmTC_b1e79.dir/src.cxx.o -c /home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_b1e79
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b1e79.dir/link.txt --verbose=1
-/usr/local/bin/clang++   -Wno-unknown-warning-option -std=c++11 -Wno-vla-extension -DSUPPORTS_FVISIBILITY_INLINES_HIDDEN_FLAG    CMakeFiles/cmTC_b1e79.dir/src.cxx.o  -o cmTC_b1e79 -rdynamic 
+Building CXX object CMakeFiles/cmTC_def48.dir/src.cxx.o
+/usr/local/bin/clang++     -Wno-unknown-warning-option -std=c++11 -Wno-vla-extension -DSUPPORTS_FVISIBILITY_INLINES_HIDDEN_FLAG   -fvisibility-inlines-hidden -o CMakeFiles/cmTC_def48.dir/src.cxx.o -c /home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_def48
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_def48.dir/link.txt --verbose=1
+/usr/local/bin/clang++   -Wno-unknown-warning-option -std=c++11 -Wno-vla-extension -DSUPPORTS_FVISIBILITY_INLINES_HIDDEN_FLAG    CMakeFiles/cmTC_def48.dir/src.cxx.o  -o cmTC_def48 -rdynamic 
 make[1]: Leaving directory '/home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp'
 
 Source file was:
@@ -594,14 +594,14 @@ int main() { return 0; }
 Performing C SOURCE FILE Test C_SUPPORTS_WERROR_DATE_TIME succeeded with the following output:
 Change Dir: /home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_db02e/fast"
-/usr/bin/make -f CMakeFiles/cmTC_db02e.dir/build.make CMakeFiles/cmTC_db02e.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_e2918/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e2918.dir/build.make CMakeFiles/cmTC_e2918.dir/build
 make[1]: Entering directory '/home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_db02e.dir/src.c.o
-/usr/local/bin/clang    -DC_SUPPORTS_WERROR_DATE_TIME   -Werror -Werror=date-time -o CMakeFiles/cmTC_db02e.dir/src.c.o   -c /home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_db02e
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_db02e.dir/link.txt --verbose=1
-/usr/local/bin/clang   -DC_SUPPORTS_WERROR_DATE_TIME    CMakeFiles/cmTC_db02e.dir/src.c.o  -o cmTC_db02e -rdynamic 
+Building C object CMakeFiles/cmTC_e2918.dir/src.c.o
+/usr/local/bin/clang    -DC_SUPPORTS_WERROR_DATE_TIME   -Werror -Werror=date-time -o CMakeFiles/cmTC_e2918.dir/src.c.o   -c /home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_e2918
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e2918.dir/link.txt --verbose=1
+/usr/local/bin/clang   -DC_SUPPORTS_WERROR_DATE_TIME    CMakeFiles/cmTC_e2918.dir/src.c.o  -o cmTC_e2918 -rdynamic 
 make[1]: Leaving directory '/home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp'
 
 Source file was:
@@ -609,14 +609,14 @@ int main(void) { return 0; }
 Performing C++ SOURCE FILE Test CXX_SUPPORTS_WERROR_DATE_TIME succeeded with the following output:
 Change Dir: /home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_802fa/fast"
-/usr/bin/make -f CMakeFiles/cmTC_802fa.dir/build.make CMakeFiles/cmTC_802fa.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_e5848/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e5848.dir/build.make CMakeFiles/cmTC_e5848.dir/build
 make[1]: Entering directory '/home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_802fa.dir/src.cxx.o
-/usr/local/bin/clang++     -Wno-unknown-warning-option -std=c++11 -Wno-vla-extension -fvisibility-inlines-hidden -DCXX_SUPPORTS_WERROR_DATE_TIME   -Werror -Werror=date-time -o CMakeFiles/cmTC_802fa.dir/src.cxx.o -c /home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_802fa
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_802fa.dir/link.txt --verbose=1
-/usr/local/bin/clang++   -Wno-unknown-warning-option -std=c++11 -Wno-vla-extension -fvisibility-inlines-hidden -DCXX_SUPPORTS_WERROR_DATE_TIME    CMakeFiles/cmTC_802fa.dir/src.cxx.o  -o cmTC_802fa -rdynamic 
+Building CXX object CMakeFiles/cmTC_e5848.dir/src.cxx.o
+/usr/local/bin/clang++     -Wno-unknown-warning-option -std=c++11 -Wno-vla-extension -fvisibility-inlines-hidden -DCXX_SUPPORTS_WERROR_DATE_TIME   -Werror -Werror=date-time -o CMakeFiles/cmTC_e5848.dir/src.cxx.o -c /home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_e5848
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e5848.dir/link.txt --verbose=1
+/usr/local/bin/clang++   -Wno-unknown-warning-option -std=c++11 -Wno-vla-extension -fvisibility-inlines-hidden -DCXX_SUPPORTS_WERROR_DATE_TIME    CMakeFiles/cmTC_e5848.dir/src.cxx.o  -o cmTC_e5848 -rdynamic 
 make[1]: Leaving directory '/home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp'
 
 Source file was:
@@ -624,14 +624,14 @@ int main() { return 0; }
 Performing C++ SOURCE FILE Test CXX_SUPPORTS_CXX11 succeeded with the following output:
 Change Dir: /home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_1bdb3/fast"
-/usr/bin/make -f CMakeFiles/cmTC_1bdb3.dir/build.make CMakeFiles/cmTC_1bdb3.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_a672f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a672f.dir/build.make CMakeFiles/cmTC_a672f.dir/build
 make[1]: Entering directory '/home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_1bdb3.dir/src.cxx.o
-/usr/local/bin/clang++     -Wno-unknown-warning-option -std=c++11 -Wno-vla-extension -fvisibility-inlines-hidden -Werror=date-time -DCXX_SUPPORTS_CXX11   -std=c++11 -o CMakeFiles/cmTC_1bdb3.dir/src.cxx.o -c /home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_1bdb3
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1bdb3.dir/link.txt --verbose=1
-/usr/local/bin/clang++   -Wno-unknown-warning-option -std=c++11 -Wno-vla-extension -fvisibility-inlines-hidden -Werror=date-time -DCXX_SUPPORTS_CXX11    CMakeFiles/cmTC_1bdb3.dir/src.cxx.o  -o cmTC_1bdb3 -rdynamic 
+Building CXX object CMakeFiles/cmTC_a672f.dir/src.cxx.o
+/usr/local/bin/clang++     -Wno-unknown-warning-option -std=c++11 -Wno-vla-extension -fvisibility-inlines-hidden -Werror=date-time -DCXX_SUPPORTS_CXX11   -std=c++11 -o CMakeFiles/cmTC_a672f.dir/src.cxx.o -c /home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_a672f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a672f.dir/link.txt --verbose=1
+/usr/local/bin/clang++   -Wno-unknown-warning-option -std=c++11 -Wno-vla-extension -fvisibility-inlines-hidden -Werror=date-time -DCXX_SUPPORTS_CXX11    CMakeFiles/cmTC_a672f.dir/src.cxx.o  -o cmTC_a672f -rdynamic 
 make[1]: Leaving directory '/home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp'
 
 Source file was:
@@ -639,14 +639,14 @@ int main() { return 0; }
 Performing C SOURCE FILE Test C_SUPPORTS_FNO_FUNCTION_SECTIONS succeeded with the following output:
 Change Dir: /home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_16a0f/fast"
-/usr/bin/make -f CMakeFiles/cmTC_16a0f.dir/build.make CMakeFiles/cmTC_16a0f.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_6acc4/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6acc4.dir/build.make CMakeFiles/cmTC_6acc4.dir/build
 make[1]: Entering directory '/home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_16a0f.dir/src.c.o
-/usr/local/bin/clang    -Werror=date-time -DC_SUPPORTS_FNO_FUNCTION_SECTIONS   -Werror -fno-function-sections -o CMakeFiles/cmTC_16a0f.dir/src.c.o   -c /home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_16a0f
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_16a0f.dir/link.txt --verbose=1
-/usr/local/bin/clang   -Werror=date-time -DC_SUPPORTS_FNO_FUNCTION_SECTIONS    CMakeFiles/cmTC_16a0f.dir/src.c.o  -o cmTC_16a0f -rdynamic 
+Building C object CMakeFiles/cmTC_6acc4.dir/src.c.o
+/usr/local/bin/clang    -Werror=date-time -DC_SUPPORTS_FNO_FUNCTION_SECTIONS   -Werror -fno-function-sections -o CMakeFiles/cmTC_6acc4.dir/src.c.o   -c /home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_6acc4
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6acc4.dir/link.txt --verbose=1
+/usr/local/bin/clang   -Werror=date-time -DC_SUPPORTS_FNO_FUNCTION_SECTIONS    CMakeFiles/cmTC_6acc4.dir/src.c.o  -o cmTC_6acc4 -rdynamic 
 make[1]: Leaving directory '/home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp'
 
 Source file was:
@@ -654,14 +654,14 @@ int main(void) { return 0; }
 Performing C SOURCE FILE Test C_SUPPORTS_FFUNCTION_SECTIONS succeeded with the following output:
 Change Dir: /home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_b2d81/fast"
-/usr/bin/make -f CMakeFiles/cmTC_b2d81.dir/build.make CMakeFiles/cmTC_b2d81.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_4e031/fast"
+/usr/bin/make -f CMakeFiles/cmTC_4e031.dir/build.make CMakeFiles/cmTC_4e031.dir/build
 make[1]: Entering directory '/home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_b2d81.dir/src.c.o
-/usr/local/bin/clang    -Werror=date-time -DC_SUPPORTS_FFUNCTION_SECTIONS   -Werror -ffunction-sections -o CMakeFiles/cmTC_b2d81.dir/src.c.o   -c /home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_b2d81
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b2d81.dir/link.txt --verbose=1
-/usr/local/bin/clang   -Werror=date-time -DC_SUPPORTS_FFUNCTION_SECTIONS    CMakeFiles/cmTC_b2d81.dir/src.c.o  -o cmTC_b2d81 -rdynamic 
+Building C object CMakeFiles/cmTC_4e031.dir/src.c.o
+/usr/local/bin/clang    -Werror=date-time -DC_SUPPORTS_FFUNCTION_SECTIONS   -Werror -ffunction-sections -o CMakeFiles/cmTC_4e031.dir/src.c.o   -c /home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_4e031
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4e031.dir/link.txt --verbose=1
+/usr/local/bin/clang   -Werror=date-time -DC_SUPPORTS_FFUNCTION_SECTIONS    CMakeFiles/cmTC_4e031.dir/src.c.o  -o cmTC_4e031 -rdynamic 
 make[1]: Leaving directory '/home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp'
 
 Source file was:
@@ -669,14 +669,14 @@ int main(void) { return 0; }
 Performing C++ SOURCE FILE Test CXX_SUPPORTS_FFUNCTION_SECTIONS succeeded with the following output:
 Change Dir: /home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_fd26d/fast"
-/usr/bin/make -f CMakeFiles/cmTC_fd26d.dir/build.make CMakeFiles/cmTC_fd26d.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_443a0/fast"
+/usr/bin/make -f CMakeFiles/cmTC_443a0.dir/build.make CMakeFiles/cmTC_443a0.dir/build
 make[1]: Entering directory '/home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_fd26d.dir/src.cxx.o
-/usr/local/bin/clang++     -Wno-unknown-warning-option -std=c++11 -Wno-vla-extension -fvisibility-inlines-hidden -Werror=date-time -std=c++11 -DCXX_SUPPORTS_FFUNCTION_SECTIONS   -Werror -ffunction-sections -o CMakeFiles/cmTC_fd26d.dir/src.cxx.o -c /home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_fd26d
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fd26d.dir/link.txt --verbose=1
-/usr/local/bin/clang++   -Wno-unknown-warning-option -std=c++11 -Wno-vla-extension -fvisibility-inlines-hidden -Werror=date-time -std=c++11 -DCXX_SUPPORTS_FFUNCTION_SECTIONS    CMakeFiles/cmTC_fd26d.dir/src.cxx.o  -o cmTC_fd26d -rdynamic 
+Building CXX object CMakeFiles/cmTC_443a0.dir/src.cxx.o
+/usr/local/bin/clang++     -Wno-unknown-warning-option -std=c++11 -Wno-vla-extension -fvisibility-inlines-hidden -Werror=date-time -std=c++11 -DCXX_SUPPORTS_FFUNCTION_SECTIONS   -Werror -ffunction-sections -o CMakeFiles/cmTC_443a0.dir/src.cxx.o -c /home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_443a0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_443a0.dir/link.txt --verbose=1
+/usr/local/bin/clang++   -Wno-unknown-warning-option -std=c++11 -Wno-vla-extension -fvisibility-inlines-hidden -Werror=date-time -std=c++11 -DCXX_SUPPORTS_FFUNCTION_SECTIONS    CMakeFiles/cmTC_443a0.dir/src.cxx.o  -o cmTC_443a0 -rdynamic 
 make[1]: Leaving directory '/home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp'
 
 Source file was:
@@ -684,14 +684,14 @@ int main() { return 0; }
 Performing C SOURCE FILE Test C_SUPPORTS_FDATA_SECTIONS succeeded with the following output:
 Change Dir: /home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_8f792/fast"
-/usr/bin/make -f CMakeFiles/cmTC_8f792.dir/build.make CMakeFiles/cmTC_8f792.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_fa53d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_fa53d.dir/build.make CMakeFiles/cmTC_fa53d.dir/build
 make[1]: Entering directory '/home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_8f792.dir/src.c.o
-/usr/local/bin/clang    -Werror=date-time -ffunction-sections -DC_SUPPORTS_FDATA_SECTIONS   -Werror -fdata-sections -o CMakeFiles/cmTC_8f792.dir/src.c.o   -c /home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_8f792
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8f792.dir/link.txt --verbose=1
-/usr/local/bin/clang   -Werror=date-time -ffunction-sections -DC_SUPPORTS_FDATA_SECTIONS    CMakeFiles/cmTC_8f792.dir/src.c.o  -o cmTC_8f792 -rdynamic 
+Building C object CMakeFiles/cmTC_fa53d.dir/src.c.o
+/usr/local/bin/clang    -Werror=date-time -ffunction-sections -DC_SUPPORTS_FDATA_SECTIONS   -Werror -fdata-sections -o CMakeFiles/cmTC_fa53d.dir/src.c.o   -c /home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_fa53d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fa53d.dir/link.txt --verbose=1
+/usr/local/bin/clang   -Werror=date-time -ffunction-sections -DC_SUPPORTS_FDATA_SECTIONS    CMakeFiles/cmTC_fa53d.dir/src.c.o  -o cmTC_fa53d -rdynamic 
 make[1]: Leaving directory '/home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp'
 
 Source file was:
@@ -699,14 +699,14 @@ int main(void) { return 0; }
 Performing C++ SOURCE FILE Test CXX_SUPPORTS_FDATA_SECTIONS succeeded with the following output:
 Change Dir: /home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_fa613/fast"
-/usr/bin/make -f CMakeFiles/cmTC_fa613.dir/build.make CMakeFiles/cmTC_fa613.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_f7080/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f7080.dir/build.make CMakeFiles/cmTC_f7080.dir/build
 make[1]: Entering directory '/home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_fa613.dir/src.cxx.o
-/usr/local/bin/clang++     -Wno-unknown-warning-option -std=c++11 -Wno-vla-extension -fvisibility-inlines-hidden -Werror=date-time -std=c++11 -ffunction-sections -DCXX_SUPPORTS_FDATA_SECTIONS   -Werror -fdata-sections -o CMakeFiles/cmTC_fa613.dir/src.cxx.o -c /home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_fa613
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fa613.dir/link.txt --verbose=1
-/usr/local/bin/clang++   -Wno-unknown-warning-option -std=c++11 -Wno-vla-extension -fvisibility-inlines-hidden -Werror=date-time -std=c++11 -ffunction-sections -DCXX_SUPPORTS_FDATA_SECTIONS    CMakeFiles/cmTC_fa613.dir/src.cxx.o  -o cmTC_fa613 -rdynamic 
+Building CXX object CMakeFiles/cmTC_f7080.dir/src.cxx.o
+/usr/local/bin/clang++     -Wno-unknown-warning-option -std=c++11 -Wno-vla-extension -fvisibility-inlines-hidden -Werror=date-time -std=c++11 -ffunction-sections -DCXX_SUPPORTS_FDATA_SECTIONS   -Werror -fdata-sections -o CMakeFiles/cmTC_f7080.dir/src.cxx.o -c /home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_f7080
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f7080.dir/link.txt --verbose=1
+/usr/local/bin/clang++   -Wno-unknown-warning-option -std=c++11 -Wno-vla-extension -fvisibility-inlines-hidden -Werror=date-time -std=c++11 -ffunction-sections -DCXX_SUPPORTS_FDATA_SECTIONS    CMakeFiles/cmTC_f7080.dir/src.cxx.o  -o cmTC_f7080 -rdynamic 
 make[1]: Leaving directory '/home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/CMakeTmp'
 
 Source file was:

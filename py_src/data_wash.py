@@ -50,6 +50,7 @@ class Data_wash(object):
             data.append(data_O3)
 
             self.inputs.append(flatten(data))
+
             if(len(flatten(data))!=155):
                 print('find unexpected feature length ('+str(len(flatten(data)))+') in ' + item[1])
                 #pdb.set_trace()
@@ -79,6 +80,10 @@ class Data_wash(object):
 
         self.generate_train_data()
         self.generate_test_data()
+
+        if(np.any(np.isnan(self.train_input)) or np.any(np.isnan(self.test_input)) ):
+            print('nan')
+
         self.write_file()
 
 
@@ -177,6 +182,7 @@ class Data_wash(object):
             if name in p_names and not name in loop_names:
                 #print(name+'*')
                 names, vals = self.sep_contents_list(item)
+
                 top5.append(vals)
                 metric_names.append(names)
                 loop_names.append(name)
@@ -193,20 +199,38 @@ class Data_wash(object):
         metric_names.append(self.O0_weighted_avg.keys())
         loop_names.append('avg')
         loop_names.append('weighted_avg')
+
+
+
         return (data, metric_names, loop_names)
 
     def compute_weighted_avg(self, ir_item, ratio):
+        #tempoary solution
+        load = 0
+        store = 0
+
+        for key, val in ir_item.items():
+            if key == 'load':
+                load = val
+            if key == 'store':
+                store = val
+
         for key, val in ir_item.items():
             if key == 'loop ID' or key == 'int/fp ratio':
                 pass
+
             else:
                 if key in self.O0_weighted_avg.keys():
                     if key == 'trip count' and val == -1:
                         self.O0_weighted_avg[key] += 0
                     else:
+                        if(key=='load/store ratio'):
+                            val = (load+1)/(store+1)
                         self.O0_weighted_avg[key] += val * ratio
                 else:
                     self.O0_weighted_avg[key] = 0
+
+
 
     def sep_contents_list(self, ir_item):
         names = []
@@ -217,6 +241,7 @@ class Data_wash(object):
             else:
                 names.append(key)
                 vals.append(val)
+
         return (names, vals)
 
     def top_k_profile_info(self, info, k=3):
@@ -261,9 +286,11 @@ class Data_wash(object):
                     pass
                 else:
                     avg[key] += val
+
         # avg
         for key in avg.keys():
             avg[key] = avg[key]/len(info)
+
         if O_level == 0:
             self.O0_avg = avg
         elif O_level == 3:

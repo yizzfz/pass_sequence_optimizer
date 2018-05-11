@@ -8,6 +8,7 @@ from torchvision import datasets, transforms
 from torch.autograd import Variable
 import numpy as np
 import pickle
+import pdb
 
 
 def main(args):
@@ -105,11 +106,23 @@ class Net(nn.Module):
 
     def forward(self, x):
         x = F.relu(self.fc1(x))
+        pdb.set_trace()
+
         x = F.dropout(x, training=self.training)
+        pdb.set_trace()
+
         x = self.fc2(x)
+        pdb.set_trace()
+
         x = F.dropout(x, training=self.training)
+        pdb.set_trace()
+
         x = self.fc3(x)
+        pdb.set_trace()
+
         x = F.dropout(x, training=self.training)
+        pdb.set_trace()
+        
         x = self.fc4(x)
         x = self.fc5(x)
         return F.log_softmax(x)
@@ -141,4 +154,6 @@ if __name__ == "__main__":
     args = parser.parse_args()
     # turn on cuda if you can
     args.cuda = torch.cuda.is_available()
+    if(args.cuda):
+        print('using CUDA')
     main(args)

@@ -36,9 +36,9 @@
             exit(1); \
         } \
         } while (0)
-        
-#define RATIO(a, b) (a==0? "0": (b==0? "INF" :to_string(a/b)))
-#define PERC(a, b) (a==0? 0: (b==0? 100 :a*100/b))
+
+#define RATIO(a, b) (to_string((a+1)/(b+1)))
+#define PERC(a, b) ((a+1)*100/(b+1)))
 #define log(i) fd<<"num of "<<#i<<" insts = "<<instCnt[AddrSpaceCastInst::i]<<"\n";
 #define instMax 128
 #define binOp 127
@@ -48,14 +48,14 @@
 using namespace std;
 using namespace llvm;
 
- 
-static cl::opt<bool> hotpath("hotpath", cl::init(false), cl::Hidden, 
+
+static cl::opt<bool> hotpath("hotpath", cl::init(false), cl::Hidden,
   cl::desc("check which counter is used for each loop, use with -fprofile-generate"));
- 
-static cl::opt<string> hotpath_file("hotpath-file", cl::init(""), cl::Hidden, 
+
+static cl::opt<string> hotpath_file("hotpath-file", cl::init(""), cl::Hidden,
   cl::desc("specify the hotpath file obtained at runtime"));
- 
-static cl::opt<bool> debug("debug", cl::init(false), cl::Hidden, 
+
+static cl::opt<bool> debug("debug", cl::init(false), cl::Hidden,
   cl::desc("print debug info"));
 
 
@@ -70,39 +70,39 @@ struct myPass : FunctionPass, InstVisitor<myPass>
   StringRef getPassName() const override {
     return "Loop IR info collect ++";
   }
-  
+
   LLVMContext *C = 0;
   Type* int64Ty = 0;
   Type* int32Ty = 0;
   Type* boolTy = 0;
   Type* voidTy = 0;
   Type* boolPtrTy = 0;
-  
-  
+
+
   ScalarEvolution *SE;
   DependenceInfo *DI;
   LoopInfo *LI;
-  DominatorTree *DT; 
-  
-  
+  DominatorTree *DT;
+
+
   int instCnt[instMax];
   vector<CallInst*> CallInsts;
   vector<StoreInst*> StoreInsts;
   vector<LoadInst*> LoadInsts;
-  
+
   error_code EC;
   string fileName = "IRinfo.txt";
   string hotpathFileName = "";
   bool checkCounter = false;
   bool debugMode = false;
-  
+
   typedef struct profileInfo {
     string functionName;
     int numCounters;
     ll* counters;
   } profileInfo;
-  
- 
+
+
 	void getAnalysisUsage(AnalysisUsage &AU) const override {
 		AU.addRequired<LoopInfoWrapperPass>();
 		AU.addRequired<DominatorTreeWrapperPass>();
@@ -110,7 +110,7 @@ struct myPass : FunctionPass, InstVisitor<myPass>
 		AU.addRequired<DependenceAnalysisWrapperPass>();
 	}
 
-	
+
   bool doInitialization(Module &Mod) override {
     M = &Mod;
     if (DL)
@@ -122,29 +122,29 @@ struct myPass : FunctionPass, InstVisitor<myPass>
     boolTy = Type::getInt1Ty(*C);
     voidTy = Type::getVoidTy(*C);
     boolPtrTy = Type::getInt1PtrTy(*C);
-    
+
     if (hotpath.getNumOccurrences() > 0)
       checkCounter = hotpath;
-      
+
     if (hotpath_file.getNumOccurrences() > 0)
       hotpathFileName = hotpath_file;
-      
+
     if (debug.getNumOccurrences() > 0)
       debugMode = true;
-    
+
     if(checkCounter) fileName = "IRinfo_profile.txt";
     return false;
   }
-  
-  
+
+
 	//test if a value is a constant, return the value if yes, -1 otherwise
   int getConstant(Value *v)
   {
-  	if(ConstantInt *c = dyn_cast<ConstantInt>(v)) 
+  	if(ConstantInt *c = dyn_cast<ConstantInt>(v))
   		return c->getValue().getLimitedValue();
-  	else return -1;	
+  	else return -1;
 	}
-	
+
 	//get the return instruction of a function
 	ReturnInst* getRetInst(Function* F)
 	{
@@ -156,8 +156,8 @@ struct myPass : FunctionPass, InstVisitor<myPass>
 		}
 		return nullptr;
 	}
-	
-	
+
+
 	int numInst(Function* F)
 	{
 		int sum = 0;
@@ -165,12 +165,12 @@ struct myPass : FunctionPass, InstVisitor<myPass>
 			sum+=numInst(&bb);
 		return sum;
 	}
-	
+
 	int numInst(BasicBlock* B)
 	{
 		return B->size();
 	}
-	
+
 	int numInst(Loop* lp)
 	{
 		int sum = 0;
@@ -178,7 +178,7 @@ struct myPass : FunctionPass, InstVisitor<myPass>
 			sum+=numInst(bb);
 		return sum;
 	}
-	
+
 	void dumpLoop(Loop* lp, string str = "a loop")
 	{
 		assert(lp && "dumping a non-exist loop");
@@ -187,32 +187,32 @@ struct myPass : FunctionPass, InstVisitor<myPass>
 			bb->dump();
 		cout<<"-------------------- "<<str<<" END   --------------------\n";
 	}
-	
+
 	int floatCnt = 0;
 	int intCnt=0;
 	int floatVecCnt = 0;
 	int intVecCnt = 0;
-	
+
 	void visitAllocaInst(AllocaInst &I) {
     instCnt[AddrSpaceCastInst::MemoryOps::Alloca]++;
   }
-  
+
 	void visitStoreInst(StoreInst &I) {
     instCnt[AddrSpaceCastInst::MemoryOps::Store]++;
     StoreInsts.push_back(&I);
   }
-  
+
 	void visitLoadInst(LoadInst &I) {
     instCnt[AddrSpaceCastInst::MemoryOps::Load]++;
     LoadInsts.push_back(&I);
   }
-  
+
 	void visitCallInst(CallInst &I) {
     instCnt[AddrSpaceCastInst::OtherOps::Call]++;
     CallInsts.push_back(&I);
   }
-  
-  
+
+
   void visitBinaryOperator(BinaryOperator &I) {
     instCnt[binOp]++;
     Type* ty = I.getOperand(0)->getType();
@@ -238,8 +238,8 @@ struct myPass : FunctionPass, InstVisitor<myPass>
 		  else res[2]++;
 		}
 		return &res[0];
-	}  
-	
+	}
+
 	int* basicBlockRange(Loop* lp)
 	{
 		int res[3] = {0,0,0};
@@ -251,16 +251,16 @@ struct myPass : FunctionPass, InstVisitor<myPass>
 		  else res[2]++;
 		}
 		return &res[0];
-	}  
-	
+	}
+
 	bool isRecursive(Function &F)
 	{
 	  for(CallInst* ci:CallInsts)
 	    if(ci->getCalledFunction() == &F) return true;
-	    
+
     return false;
 	}
-	
+
 	void instStat(BasicBlock* BB, int& allocInsts, int& storeInsts, int& loadInsts, int& arithInsts, int& vecArithInsts, int& GEPInsts)
 	{
 	  for(auto it = BB->begin();it!=BB->end();it++)
@@ -272,17 +272,17 @@ struct myPass : FunctionPass, InstVisitor<myPass>
         arithInsts++;
         Type* ty = (*it).getOperand(0)->getType();
         if(ty->isVectorTy()) vecArithInsts++;
-      }      
+      }
     return;
-	} 
-	
+	}
+
 	void instStat(Loop* lp,  int& allocInsts, int& storeInsts, int& loadInsts, int& arithInsts, int& vecArithInsts, int& GEPInsts)
 	{
 	  for(auto& bb: lp->getBlocks())
 			instStat(bb, allocInsts, storeInsts, loadInsts, arithInsts, vecArithInsts, GEPInsts);
 		return;
 	}
-	
+
 	void brStat(Loop* lp, int& uncondiBr, int& condiBr, int& undirectBr)
 	{
 	  for(auto& bb: lp->getBlocks())
@@ -296,8 +296,8 @@ struct myPass : FunctionPass, InstVisitor<myPass>
 	  }
 	  return;
 	}
-	
-	
+
+
 	void collectInst(Loop* lp, set<LoadInst*> *ldInsts, set<StoreInst*> *stInsts)
 	{
 		auto bbs = lp->getBlocks();
@@ -311,11 +311,11 @@ struct myPass : FunctionPass, InstVisitor<myPass>
 			}
 		return;
 	}
-	
+
 	bool primaryDepCheck(Loop* lp)
  	{
  		set<Instruction*> ldInsts, stInsts;
-		
+
 		auto bbs = lp->getBlocks();
 		for(auto bb: bbs)
 			for(auto it = bb->begin();it!=bb->end();it++)
@@ -325,7 +325,7 @@ struct myPass : FunctionPass, InstVisitor<myPass>
 				else if(isa<LoadInst>(it))
 					ldInsts.insert(&*it);
 			}
-			
+
 		bool hasDep = false;
 		cout<<ldInsts.size()<<" "<<stInsts.size()<<endl;
 		for(auto ld:ldInsts)
@@ -341,7 +341,7 @@ struct myPass : FunctionPass, InstVisitor<myPass>
 		stInsts.clear();
 		return hasDep;
  	}
- 	
+
  	int getCounterID(BasicBlock* bb)
  	{
  	  int id = -1;
@@ -361,20 +361,20 @@ struct myPass : FunctionPass, InstVisitor<myPass>
 		}
  	  return id;
  	}
- 	
+
  	set<BasicBlock*> getLoopExclusiveBBs(Loop* lp)
  	{
  	  set<BasicBlock*> BBs;
  	  for(auto bb: lp->getBlocks())
  	    BBs.insert(bb);
- 	    
+
     for(auto subloop: lp->getSubLoops())
       for(auto bb:subloop->getBlocks())
         BBs.erase(bb);
-    
+
     return BBs;
  	}
- 	
+
  	profileInfo readProfileInfo(string fileName, string funcName)
  	{
  	  profileInfo pi;
@@ -413,10 +413,10 @@ struct myPass : FunctionPass, InstVisitor<myPass>
 	  int res = 0;
 	  for(auto bb: lp->getBlocks())
 	    if(getCounterID(bb)!=-1) res++;
-	    
+
     return res;
 	}
-	
+
 	int countCritEdges(Loop* lp)
 	{
 	  int res = 0;
@@ -431,7 +431,7 @@ struct myPass : FunctionPass, InstVisitor<myPass>
 	  }
     return res;
 	}
-	
+
 	int countPHI(Loop* lp)
 	{
 	  int res = 0;
@@ -444,7 +444,7 @@ struct myPass : FunctionPass, InstVisitor<myPass>
 	  }
     return res;
 	}
-	
+
 	int countCallInst(Loop* lp)
 	{
 	  int res = 0;
@@ -457,8 +457,8 @@ struct myPass : FunctionPass, InstVisitor<myPass>
 	  }
     return res;
 	}
-	
-	
+
+
 	bool hasVectorInsts(Loop* lp)
 	{
 	  bool res = 0;
@@ -466,14 +466,14 @@ struct myPass : FunctionPass, InstVisitor<myPass>
 	  {
 	    for(auto it = bb->begin();it!=bb->end();it++)
 	    {
-	      if(isa<ExtractElementInst>(it) || isa<ShuffleVectorInst>(it) || isa<InsertElementInst>(it) ) 
+	      if(isa<ExtractElementInst>(it) || isa<ShuffleVectorInst>(it) || isa<InsertElementInst>(it) )
 	        return 1;
 	    }
 	  }
     return res;
-	
+
 	}
-	
+
 	void binStat(Loop* lp, int& intInsts, int& fpInsts, Type** dataTy)
 	{
 	  map<Type*, int> mp;
@@ -486,7 +486,7 @@ struct myPass : FunctionPass, InstVisitor<myPass>
           if(ty->isFloatingPointTy()) fpInsts++;
           else intInsts++;
           mp[ty]++;
-        }      
+        }
 			}
 		int lmax = 0;
 		for(auto pr:mp)
@@ -497,10 +497,10 @@ struct myPass : FunctionPass, InstVisitor<myPass>
 	    }
 		}
 	  return;
-	  
+
 	}
-	
-	
+
+
 	ll analyseLoop(Loop* lp, raw_fd_ostream& fd, int funcSize, string funcName, string loopID)
 	{
 	  ll sumInsts = 0;
@@ -508,27 +508,27 @@ struct myPass : FunctionPass, InstVisitor<myPass>
 	  int sub = 0;
     for(auto sublp: lp->getSubLoops()) {
 	    sub++;
-	    sumInsts += analyseLoop(sublp, fd, funcSize, funcName, loopID+to_string(sub));	
+	    sumInsts += analyseLoop(sublp, fd, funcSize, funcName, loopID+to_string(sub));
 	  }
 	  int depth = lp->getLoopDepth();
 	  int numBB = lp->getNumBlocks();
 	  fd<<"loop ID = "<<funcName<<"_D"<<depth<<"N"<<loopID<<"\n";
 	  DP("loop ID generated\n");
-	  
+
     set<BasicBlock*> ebbs = getLoopExclusiveBBs(lp);
 	  int einst = 0;
 	  for(auto bb:ebbs)
 	    einst+=bb->size();
-    
-	    
+
+
     set<int> cnts;
     if(checkCounter) {
 	    SmallVector<BasicBlock*, 8> latches;
 	    lp->getLoopLatches(latches);
       BasicBlock* latch = *latches.begin();
-      
+
       int latchCnt = getCounterID(latch);
-      
+
       if(latchCnt!=-1)
         cnts.insert(latchCnt);
       else {
@@ -538,18 +538,18 @@ struct myPass : FunctionPass, InstVisitor<myPass>
         }
       }
       if(cnts.size()==0) cout<<"error\n";
-      
+
       DP("found counters\n");
     }
     //int numCounters = getNumCountersInLoop(lp);
     int numInsts = numInst(lp);
-     
+
     int allocInsts = 0, loadInsts = 0, storeInsts = 0, arithInsts = 0, vecArithInsts = 0, GEPInsts = 0;
     int uncBr = 0, cBr = 0, undirect = 0;
     int intInsts = 0, fpInsts = 0;
     Type* dataTy = nullptr;
-    
-    
+
+
     if(!checkCounter) {
       instStat(lp, allocInsts, storeInsts, loadInsts, arithInsts, vecArithInsts, GEPInsts);
       binStat(lp, intInsts, fpInsts, &dataTy);
@@ -557,18 +557,18 @@ struct myPass : FunctionPass, InstVisitor<myPass>
       DP("statistic done\n");
 	    BasicBlock *Exiting = lp->getExitingBlock();
       int tripCnt = SE->getSmallConstantTripCount(lp, Exiting);
-      
+
       DP("printing .");
 	    fd<<"loop at depth = "<<depth<<"\nbasic blocks = "<< numBB<<"\ninst = "<< numInsts <<"\ncoverage wrt function = "<<numInsts*100/funcSize<<"%\n";
-	    
+
 	    fd<<"load = "<<loadInsts<<"\n";
 	    fd<<"store = "<<storeInsts<<"\n";
 	    fd<<"load/store ratio = "<<RATIO(loadInsts, storeInsts)<<"\n";
 	    fd<<"memory allocation = "<<allocInsts<<"\n";
 	    fd<<"GEP instructions = "<<GEPInsts<<"\n";
-	    
+
       DP(".");
-	    
+
 	    int allMem = loadInsts+storeInsts+allocInsts+GEPInsts;
 	    fd<<"all memory instructions = "<<allMem<<"\n";
 	    fd<<"all memory instructions (%) = "<<PERC(allMem, numInsts)<<"%\n";
@@ -581,24 +581,24 @@ struct myPass : FunctionPass, InstVisitor<myPass>
 	    if(dataTy==nullptr) fd<<" unknown";
 	    else dataTy->print(fd);
 	    fd<<"\n";
-	    
+
       DP(".");
-	    
+
 	    fd<<"contain vector instructions = "<<(hasVectorInsts(lp) || vecArithInsts>0)<<"\n";
 	    fd<<"%vector instructions = "<< PERC(vecArithInsts, arithInsts) <<"%\n";
       fd<<"trip count = "<<(tripCnt==0?-1:tripCnt)<<"\n";
-      
+
       //fd<<"cross-iteration dependency detected = "<<(primaryDepCheck(lp)?1:0)<<"\n";
-		  
+
 		  fd<<"exlusive basic blocks = "<<ebbs.size()<<"\nexlusive inst = "<<einst<<"\n";
 		  fd<<"exlusive ratio = "<<PERC(einst, numInsts)<<"%\n";
 		  fd<<"critical edges = "<< countCritEdges(lp)<<"\n";
 		  fd<<"unconditonal branch = "<<uncBr<<"\nconditional branch = "<<cBr<<"\nundirect branch = "<<undirect<<"\n";
 		  fd<<"PHI node = "<<countPHI(lp)<<"\n";
 		  fd<<"function call = "<<countCallInst(lp)<<"\n";
-		  
+
       DP(".");
-	    
+
 		  /*int* bbr = basicBlockRange(lp);
 		  fd<<"#basic block with <"<<BBSI <<" insts = "<<bbr[0]<<"\n";
 		  fd<<"#basic block with "<< BBSI <<"-"<<BBSI*2 <<" insts = "<<bbr[1]<<"\n";
@@ -606,7 +606,7 @@ struct myPass : FunctionPass, InstVisitor<myPass>
 		  fd<<"\n\n";*/
       DP(". done\n\n");
 		}
-		
+
     else {
       if(hotpathFileName=="") {
         fd<<"counters used by this loop: ";
@@ -627,15 +627,15 @@ struct myPass : FunctionPass, InstVisitor<myPass>
       }
     }
     fd<<"\n\n";
-    
-	  
-    
-    return res;		
-	}
-	
 
-	
-	
+
+
+    return res;
+	}
+
+
+
+
   bool runOnFunction(Function &F) override {
    	SE = &getAnalysis<ScalarEvolutionWrapperPass>().getSE();
 		DI = &getAnalysis<DependenceAnalysisWrapperPass>().getDI();
@@ -645,11 +645,11 @@ struct myPass : FunctionPass, InstVisitor<myPass>
 		if(F.isIntrinsic()) return false;
 		//cout<<"function: "<<F.getName().str()<<endl;
     if(F.getName().str()=="__cxx_global_var_init" || F.getName().str().find("_GLOBAL__sub_I")!=string::npos)	return false;
-    	
+
     raw_fd_ostream fd(fileName, EC, sys::fs::F_Append);
     myassert(EC.value()==0 && "error opening file");
     visit(F);
-    
+
 		int loopID = 1;
 		if(!LI->empty()) {
       for (LoopInfo::iterator LIT = LI->begin(), LEND = LI->end(); LIT != LEND; ++LIT) {
@@ -657,7 +657,7 @@ struct myPass : FunctionPass, InstVisitor<myPass>
 			  loopID++;
       }
     }
-    
+
     if(0) {
       fd<<"function ID = "<<F.getName().str()<<"\n";
       log(MemoryOps::Alloca);
@@ -693,5 +693,3 @@ void addmyPass(const PassManagerBuilder &Builder, legacy::PassManagerBase &PM) {
 RegisterStandardPasses X(PassManagerBuilder::EP_EnabledOnOptLevel0,
                          addmyPass);
 } // anonymous namespace
-
-

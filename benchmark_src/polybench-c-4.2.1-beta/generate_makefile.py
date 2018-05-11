@@ -26,7 +26,7 @@ hotpath: $(FILES)\n\
 \t@clang B.ll -O0 $(ULT)/polybench.o -lm $(FLAGS)\n\
 \n\
 run:\n\
-\t@./a.out\n\
+\t@taskset 0x1 ./a.out\n\
 "
 
 
@@ -42,7 +42,7 @@ def thread_func(root, cfiles):
     f.write(envvar_files+"\n")
     f.write(makefile_content)
   os.system('touch '+root+'/MARKER')
-  
+
   print root+" - done"
 
 

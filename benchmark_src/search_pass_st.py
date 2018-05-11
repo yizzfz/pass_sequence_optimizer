@@ -3,17 +3,48 @@ import os
 import time
 import subprocess
 import sys
+import pickle
 from subprocess import check_call, check_output, STDOUT
 from multiprocessing import Process, Queue, Value
 
-GA_MAX = 200
-CHILD_MAX = 6
-TIME_MAX = 10
+GA_MAX = 400
+CHILD_MAX = 5
+TIME_MAX = 8
+
+
+def load_prepared(base_dir):
+    try:
+        with open(base_dir+'/PP.pkl', 'rb') as f:
+            pp = pickle.load(f)
+            f.close()
+    except FileNotFoundError:
+        pp = []
+    return pp
+
+def load_finished(base_dir):
+    try:
+        with open(base_dir+'/FF.pkl', 'rb') as f:
+            ff = pickle.load(f)
+            f.close()
+    except FileNotFoundError:
+        ff = []
+    return ff
+
+def record_prepared(base_dir, pp):
+    with open(base_dir+'/PP.pkl', 'wb') as f:
+        pickle.dump(pp, f)
+        f.close()
+
+def record_finished(base_dir, ff):
+    with open(base_dir+'/FF.pkl', 'wb') as f:
+        pickle.dump(ff, f)
+        f.close()
 
 
 def load_from_txt(file):
     with open(file, "r") as f:
         lines = f.read().split('\n')
+        f.close()
     passes = lines[:len(lines) - 1]
     return passes
 
@@ -82,6 +113,7 @@ def record_list(prefix, time, size, cnt):
     with open(subdir + '/performance.txt', "w") as f:
         f.write('execution time: ' + str(time) + '\n')
         f.write('binary size: ' + str(size) + '\n')
+        f.close()
 
 
 def ga(all_list, parent_list, current_dir, time_baseline, size_baseline, cnt, succ, O3_time):
@@ -89,22 +121,22 @@ def ga(all_list, parent_list, current_dir, time_baseline, size_baseline, cnt, su
     best_list = parent_list[:]
     size = size_baseline
     improved = 0
-    current_best = (O3_time - time_baseline)*100/O3_time
+    current_best_improve = (O3_time - time_baseline)*100/O3_time
     # num of children per run
-    for i in range(1, CHILD_MAX):
+    for i in range(0, CHILD_MAX):
         cnt += 1
         child_list = generate_list(all_list, parent_list)
         list_str = list_to_string(child_list)
-        res = create_child(list_str, current_dir)
+        res = create_child(list_str, current_dir, time_baseline)
         if res[0] == 0:
             child_time = res[1]
             child_size = res[2]
             time_improve = (time_baseline - child_time) * 100 / time_baseline
             size_improve = (size_baseline - child_size) * 100 / size_baseline
             O3_improve = (O3_time - child_time)*100/O3_time
-            print(' '*100, end='\r')
+            print(' '*80, end='\r')
             #print ('['+str(cnt)+']'+'child ', i, ': num of passes ', len(child_list), ', time {:.3f} '.format(child_time), '({:.3f}%)'.format(time_improve), end='\r')
-            print ('['+str(cnt)+']', ': no.passes ', len(child_list), ', time {:.3f} '.format(child_time), '({:.3f}%)'.format(O3_improve), 'current best = {:.3f}%'.format(current_best), end='\r')
+            print ('['+str(cnt)+']', ': no.passes ', len(child_list), ', time {:.3f} '.format(child_time), '({:.3f}%)'.format(O3_improve), 'current best = {:.3f}%'.format(current_best_improve), end='\r')
             if time_improve > 0.5 and child_time < best_time:  # choose this child if improvment is greater than ?%
                 best_time = child_time
                 best_list = child_list[:]
@@ -118,7 +150,7 @@ def ga(all_list, parent_list, current_dir, time_baseline, size_baseline, cnt, su
     return (improved, best_time, best_list, size, cnt, succ)
 
 
-def create_child(list_str, current_dir):
+def create_child(list_str, current_dir, time_baseline):
     os.environ["OPTFLAGS"] = list_str
     DEVNULL = open(os.devnull, 'wb', 0)
     try:
@@ -128,23 +160,40 @@ def create_child(list_str, current_dir):
         with open(current_dir + "/error.txt", "a") as f:
             f.write(list_str)
             f.write('\n')
+            f.close()
         record_list('err_', -1, -1, 0)
         return (1, -1, -1)
 
     etime = -1.0
     size = -1
     timing = []
-    for i in range(0, TIME_MAX):
+
+    repeat = TIME_MAX   #set max run according to runtime
+    if(time_baseline>60):
+        repeat = min(repeat, 3)
+    elif(time_baseline>20):
+        repeat = min(repeat, 5)
+
+    if(time_baseline>3):
+        checkpoint = 1
+    else:
+        checkpoint = 3
+
+    for i in range(0, repeat):
         start = time.time()
-        check_call(['make run'], stdout=DEVNULL,
+        check_call(['taskset 0x1 make run'], stdout=DEVNULL,
                    stderr=STDOUT, cwd=current_dir, shell=True)
         end = time.time()
         timing.append(end - start)
+        if(i==checkpoint):   #check if worth continue at 1st run or 3rd run
+            current_time = average_timing(timing)
+            if(current_time-time_baseline > min(10, time_baseline*0.1)):
+                break
 
-    etime = average_timing(timing)
+    avg_time = average_timing(timing)
     size = int(check_output(
         'ls -nl a.out | awk \'{print $5}\'', cwd=current_dir, shell=True))
-    return (0, etime, size)
+    return (0, avg_time, size)
 
 
 def get_testcodes(base_dir):
@@ -166,6 +215,8 @@ def filter_testcodes(base_dir, testcodes_all):
                 path = os.path.realpath(root)
                 if path in testcodes_all:
                     testcodes.append(path)
+
+
     return testcodes
 
 
@@ -179,6 +230,7 @@ def read_O3_time(current_dir):
 
     with open("performance.txt", "r") as f:
         lines = f.read().split('\n')
+        f.close()
     s = lines[0].split(': ')
     time = float(s[1])
     return time
@@ -202,10 +254,12 @@ def read_list(target_dir):
     pass_list = ''
     with open(target_dir + '/' + optimal + '/passList.txt', 'r') as f:
         pass_list = f.read().split('\n')[0]
+        f.close()
     return pass_list
 
 
 def compare_with_other(current_dir, testcodes):
+    #try others pass list on myself
     O3time = read_O3_time(current_dir)
     os.chdir(current_dir)
 
@@ -214,7 +268,7 @@ def compare_with_other(current_dir, testcodes):
     for testcode in testcodes:
         others_list = read_list(testcode)
         if others_list != '':
-            res = create_child(others_list, current_dir)
+            res = create_child(others_list, current_dir, O3time)
             if res[0] == 0:
                 if res[1] < O3time:
                     output.append(((O3time - res[1]) * 100 / O3time, testcode))
@@ -224,6 +278,7 @@ def compare_with_other(current_dir, testcodes):
         for (t, c) in output:
             f.write(c + '\t')
             f.write(str(t) + '\n')
+        f.close()
 
 
 def t_prepare(current_dir, O3_list):
@@ -261,7 +316,7 @@ def t_prepare(current_dir, O3_list):
     timing = []
     for i in range(0, TIME_MAX):
         start = time.time()
-        check_call(['make run'], stdout=DEVNULL,
+        check_call(['taskset 0x1 make run'], stdout=DEVNULL,
                    stderr=STDOUT, cwd=current_dir, shell=True)
         end = time.time()
         timing.append(end - start)
@@ -291,7 +346,7 @@ def t_GA(current_dir, all_list, O3_list, testcodes):
     fail_in_a_row = 0
 
     #### num. ga steps ####
-    for i in range(1, GA_MAX):
+    for i in range(0, GA_MAX):
         res = ga(all_list, current_list, current_dir,
                  current_time, current_size, cnt, succ, O3_time)
         cnt = res[4]
@@ -299,7 +354,7 @@ def t_GA(current_dir, all_list, O3_list, testcodes):
         improved = res[0]
         if improved == 0:
             fail_in_a_row += 1
-            if fail_in_a_row > 50:
+            if fail_in_a_row > 100:
                 break
         else:
             fail_in_a_row = 0
@@ -307,14 +362,16 @@ def t_GA(current_dir, all_list, O3_list, testcodes):
             current_list = res[2][:]
             current_size = res[3]
     final_improve = (O3_time-current_time)*100/O3_time
-    print ('    final time = {:.4f}%'.format(current_time),
+    print ('    final time = {:.4f}'.format(current_time),
             '({:.3f}%)'.format(final_improve),
-            ', attempt = ', str(cnt), ', successed = ' , str(succ))
-    compare_with_other(current_dir, testcodes)
+            ', attempt =', str(cnt), ', successed =' , str(succ), ' '*10)
+    #compare_with_other(current_dir, testcodes)
     os.chdir(current_dir)
 
 
 def main():
+
+
     all_list = load_from_txt('allPassList.txt')
     O3_list = load_from_txt('O3List.txt')
 
@@ -325,10 +382,25 @@ def main():
     testcodes = get_testcodes(base_dir)
 
     if len(testcodes) == 0:
-        print ('cannot find any MARKER in (', base_dir, )', run \'generate_makefile\'')
+        print ('cannot find any MARKER in (', base_dir, '), run \'generate_makefile\' ')
         return
 
     #testcodes = random_select(testcodes, 1)
+
+    finished = load_finished(sys.path[0])
+    prepared = load_prepared(sys.path[0])
+    start_from_last = False
+    if finished != [] or prepared != []:
+        stmp = 'prepared '+str(len(prepared))+', finished '+str(len(finished))
+        cmd = input('found existed progress, '+stmp+', continue? (y/n) ')
+        if(cmd!='y'):
+            finished = []
+            prepared = []
+        else:
+            print('continued')
+            start_from_last = True
+
+
 
     print ('found ' + str(len(testcodes)) + ' benchmarks:')
     print (testcodes)
@@ -338,31 +410,39 @@ def main():
 
     total = len(testcodes)
     i = 1
-    GA_MAX = 100
-    CHILD_MAX = 6
-    TIME_MAX = 10
+
     print('GA stages = ' + str(GA_MAX) + ', child num = ' +
           str(CHILD_MAX) + ', loop wrap = ' + str(TIME_MAX))
     for testcode in testcodes:
         print('Preparing ['+ str(i) + '/' + str(total)+'] ' + shorten(testcode))
-        t_prepare(testcode, O3_list)
+        if(not(start_from_last and testcode in prepared)):
+            t_prepare(testcode, O3_list)
+            prepared.append(testcode)
+            record_prepared(sys.path[0], prepared)
         i = i+1
 
     print('\npreparation done\n')
 
     testcodes_f = filter_testcodes(base_dir, testcodes)
+    record_prepared(sys.path[0], testcodes_f)
     total = len(testcodes_f)
     i = 1
     for testcode in testcodes_f:
         print('GA on ['+ str(i) + '/' + str(total)+'] ' + shorten(testcode))
-        t_GA(testcode, all_list, O3_list, testcodes_f)
+        if(not(start_from_last and testcode in finished)):
+            t_GA(testcode, all_list, O3_list, testcodes_f)
+            finished.append(testcode)
+            record_finished(sys.path[0], finished)
         i=i+1
     print('\nall done\n')
 
 def average_timing(t1):
     t1.sort()
-    t2 = t1[1:-1]
-    avg = sum(t2) / float(len(t2))
+    if(len(t1)>2):
+        t2 = t1[1:-1]
+        avg = sum(t2) / float(len(t2))
+    else:
+        avg = t1[0]
     return avg
 
 

@@ -20,16 +20,16 @@ class Data_wash(object):
             self.list_metric = pickle.load(f)
 
     def write_file(self):
-        with open('data/train_input.pkl', 'wb') as f1:
+        with open('Data/train_input.pkl', 'wb') as f1:
             pickle.dump(self.train_input, f1)
 
-        with open('data/train_label.pkl', 'wb') as f2:
+        with open('Data/train_label.pkl', 'wb') as f2:
             pickle.dump(self.train_label, f2)
 
-        with open('data/test_input.pkl', 'wb') as f3:
+        with open('Data/test_input.pkl', 'wb') as f3:
             pickle.dump(self.test_input, f3)
 
-        with open('data/test_label.pkl', 'wb') as f4:
+        with open('Data/test_label.pkl', 'wb') as f4:
             pickle.dump(self.test_label, f4)
 
     def parse(self):
@@ -50,6 +50,10 @@ class Data_wash(object):
             data.append(data_O3)
 
             self.inputs.append(flatten(data))
+            if(len(flatten(data))!=155):
+                print('find unexpected feature length ('+str(len(flatten(data)))+') in ' + item[1])
+                #pdb.set_trace()
+
             if(item[4]!=None):
                 self.GA_sequence.append(item[4][2])
             else:
@@ -164,12 +168,14 @@ class Data_wash(object):
 
     def collect_all(self, names, p_names, ir_info):
         top5 = []
+        #print(p_names)
         metric_names = []
         loop_names = []
         for item in ir_info:
             # collect selected ir_info from hotpath
             name = item['loop ID']
-            if name in p_names:
+            if name in p_names and not name in loop_names:
+                #print(name+'*')
                 names, vals = self.sep_contents_list(item)
                 top5.append(vals)
                 metric_names.append(names)
@@ -180,7 +186,6 @@ class Data_wash(object):
                 self.compute_weighted_avg(item, 0)
 
         data = top5
-
 
         data.append(self.O0_avg.values())
         data.append(self.O0_weighted_avg.values())

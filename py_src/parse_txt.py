@@ -24,7 +24,7 @@ def main():
   global datatype_dict
 
 
-  data_dir = '../data1'
+  data_dir = '../workspace'
   (pass_list, pass_dict) = get_all_passlist()
   for i, p in enumerate(data_types):
     datatype_dict[p] = i
@@ -41,7 +41,7 @@ def main():
 
   refine_list = []
 
-  print rng
+  print (rng)
   for i in range (0, rng-1):
 
     O0data.append(read_O0(bench_path[i]))
@@ -61,7 +61,7 @@ def main():
     pickle.dump(performance_metrics, f)
 
   if len(refine_list)>0:
-    print refine_list
+    print (refine_list)
 
 
 
@@ -102,7 +102,7 @@ def get_similar(path, bench_dict):
     return res
 
   except IOError:
-    print 'workedForMe.txt does not exist'
+    print ('workedForMe.txt does not exist')
     return
 
 def read_O3(path):
@@ -202,7 +202,7 @@ def get_profile(file):
           tmp[metric] = int(num)
 
   except IOError, IndexError:
-    print 'Error in ' + file
+    print ('Error in ' + file)
 
   return loops_info
 
@@ -242,7 +242,7 @@ def get_IRinfo(file):
                   num = float('Inf')
               tmp[metric] = float(num)
   except IOError, IndexError:
-    print 'Error in ' + file
+    print ('Error in ' + file)
 
   return loops_info
 
@@ -254,7 +254,7 @@ def get_performance(file):
       size = lines[1].split(": ")[1]
       return (time, size)
   except IOError:
-    print "Error: File does not appear to exist :" + file
+    print ("Error: File does not appear to exist :" + file)
     return (-1, -1)
 
 
@@ -268,7 +268,7 @@ def get_passlist(file):
     args1 = [pass_dict[x] for x in args if x.startswith('-') and pass_dict.has_key(x)]
     return args1
   except IOError:
-    print "Error: File does not appear to exist :" + file
+    print ("Error: File does not appear to exist :" + file)
 
 if __name__ == "__main__":
   main()

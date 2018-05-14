@@ -1,11 +1,12 @@
-
+import random
 import pickle
 import sys
 import itertools
 import pdb
 import numpy as np
 
-test_data_list=[2, 9, 11, 25, 22, 30, 37, 45, 52, 33]
+test_M=[2, 9, 11, 25, 22, 30, 37, 45, 52, 33]
+test_random=True
 
 class Data_wash(object):
     def __init__(self):
@@ -73,9 +74,17 @@ class Data_wash(object):
         (put new program into first half of M*2)
         """
 
+        if(test_random==False):
+            self.test_data_list = test_M
+        else:
+            self.test_data_list = [random.randint(0, len(self.raw_data) - 1) for i in range (0, 5)]
+
+        print('selected test program:')
+        print(self.test_data_list)
+
         self.N=len(self.raw_data)
         self.M=155 ##
-        self.NTest = len(test_data_list)
+        self.NTest = len(self.test_data_list)
         self.NTrain=self.N-self.NTest
 
         self.generate_train_data()
@@ -99,7 +108,7 @@ class Data_wash(object):
         idx=0
         for i in range(0, n):
             for j in range(0, n):
-                if(i!=j and not i in test_data_list and not j in test_data_list):
+                if(i!=j and not i in self.test_data_list and not j in self.test_data_list):
                     self.train_input[idx]=self.inputs[i]+self.inputs[j]
                     self.train_label[idx]=self.rank_similarity(i, j)
                     idx=idx+1
@@ -112,7 +121,7 @@ class Data_wash(object):
         self.test_input=np.zeros((size_test_data, self.M*2))
         self.test_label=np.zeros((size_test_data, 3))
         idx = 0
-        for i in test_data_list:
+        for i in self.test_data_list:
             for j in range(0, n):
                 if(i!=j):
                     self.test_input[idx]=self.inputs[i]+self.inputs[j]

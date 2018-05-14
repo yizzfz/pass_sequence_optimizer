@@ -5,7 +5,6 @@ import itertools
 import pdb
 import numpy as np
 
-test_data_list=[2, 9, 11, 25, 22, 30, 37, 45, 52, 33]
 
 class Refine(object):
     def __init__(self):

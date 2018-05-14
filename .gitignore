@@ -13,3 +13,7 @@ data1/
 *.tar*
 compbench*
 openbench*
+*.log
+*.so
+CMakeFiles
+CMakeCache.txt

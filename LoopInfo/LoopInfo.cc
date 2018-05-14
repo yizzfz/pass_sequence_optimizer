@@ -37,8 +37,8 @@
         } \
         } while (0)
 
-#define RATIO(a, b) (to_string((a+1)/(b+1)))
-#define PERC(a, b) ((a+1)*100/(b+1)))
+#define RATIO(a, b) ((a+1)/(b+1))
+#define PERC(a, b) ((a+1)*100/(b+1))
 #define log(i) fd<<"num of "<<#i<<" insts = "<<instCnt[AddrSpaceCastInst::i]<<"\n";
 #define instMax 128
 #define binOp 127

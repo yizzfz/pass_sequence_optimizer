@@ -29,10 +29,11 @@ def main(args):
 
 
 def train(epoch, model, train_loader, args):
-    optimizer = optim.SGD(model.parameters(), lr=args.lr)
+    optimizer = optim.SGD(model.parameters(), lr=args.lr, weight_decay=1e-5)
     model.train()
     dtype = torch.FloatTensor
     criterion = torch.nn.CrossEntropyLoss()
+    correct = 0
     for batch_idx, (data, target) in enumerate(train_loader):
         data = Variable(data.type(dtype), requires_grad=True)
         target = Variable(target.type(torch.LongTensor))
@@ -43,10 +44,17 @@ def train(epoch, model, train_loader, args):
         loss = criterion(output, target)
         loss.backward()
         optimizer.step()
+
+        pred = output.data.max(1, keepdim=True)[1]
+        correct += pred.eq(target.data.view_as(pred)).cpu().sum()
+
         if batch_idx % args.log_interval == 0:
-            print('Train Epoch: {} [{}/{} ({:.0f}%)]\tLoss: {:.6f}'.format(
+            print('Train Epoch: {} [{}/{} ({:.0f}%)]\tLoss: {:.6f}\t'.format(
                 epoch, batch_idx * len(data), len(train_loader.dataset),
                 100. * batch_idx / len(train_loader), loss.item()))
+
+    print('Train Epoch: {} Acc: {:.1f}'.format(
+        epoch, 100.*correct/len(train_loader.dataset)))
 
 
 def test(model, loader, args):
@@ -98,46 +106,46 @@ class Data(object):
 class Net(nn.Module):
     def __init__(self):
         super(Net, self).__init__()
-        self.fc1 = nn.Linear(310, 200)
-        self.fc2 = nn.Linear(200, 500)
-        self.fc3 = nn.Linear(500, 500)
-        self.fc4 = nn.Linear(500, 100)
+        self.fc1 = nn.Linear(310, 500)
+        self.fc2 = nn.Linear(500, 1000)
+        self.fc3 = nn.Linear(1000, 200)
+        self.fc4 = nn.Linear(200, 100)
         self.fc5 = nn.Linear(100, 3)
 
     def forward(self, x):
         x = F.relu(self.fc1(x))
-        x = F.dropout(x, training=self.training)
+        #x = F.dropout(x, training=self.training)
         x = self.fc2(x)
         x = F.dropout(x, training=self.training)
         x = self.fc3(x)
         x = F.dropout(x, training=self.training)
         x = self.fc4(x)
         x = self.fc5(x)
-        return F.log_softmax(x)
+        return F.log_softmax(x, dim=1)
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Pass sequence classifier')
     parser.add_argument(
-        '--batch-size', type=int, default=64, metavar='N',
+        '--batch-size', type=int, default=32, metavar='N',
         help='input batch size for training (default: 64)')
     parser.add_argument(
         '--test-batch-size', type=int, default=1000, metavar='N',
         help='input batch size for testing (default: 1000)')
     parser.add_argument(
-        '--epochs', type=int, default=100, metavar='N',
+        '--epochs', type=int, default=500, metavar='N',
         help='number of epochs to train (default: 10)')
     parser.add_argument(
-        '--lr', type=float, default=0.001, metavar='LR',
+        '--lr', type=float, default=0.01, metavar='LR',
         help='learning rate (default: 0.001)')
     parser.add_argument(
-        '--momentum', type=float, default=0.8, metavar='M',
+        '--momentum', type=float, default=0.5, metavar='M',
         help='SGD momentum (default: 0.5)')
     parser.add_argument(
         '--no-cuda', action='store_true', default=False,
         help='disables CUDA training')
     parser.add_argument(
-        '--log-interval', type=int, default=10, metavar='N',
+        '--log-interval', type=int, default=20, metavar='N',
         help='how many batches to wait before logging training status')
     args = parser.parse_args()
     # turn on cuda if you can

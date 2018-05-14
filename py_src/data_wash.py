@@ -84,6 +84,9 @@ class Data_wash(object):
         if(np.any(np.isnan(self.train_input)) or np.any(np.isnan(self.test_input)) ):
             print('nan')
 
+        if(np.any(np.isinf(self.train_input)) or np.any(np.isinf(self.test_input)) ):
+            print('inf')
+
         self.write_file()
 
 
@@ -147,6 +150,9 @@ class Data_wash(object):
                 pass
             else:
                 return_list.append(value)
+
+
+
         return return_list
 
     def parse_ir_info_O0(self, raw_data):
@@ -166,9 +172,8 @@ class Data_wash(object):
         names, _ = self.top_k_IR_info(ir_info)
         # parse hot path info, find top k
         profile_names, _ = self.top_k_profile_info(profile_info)
-        data, metric_names, loop_names = self.collect_all(names, profile_names,
-                                                          ir_info)
-
+        results = self.collect_all(names, profile_names, ir_info)
+        data, metric_names, loop_names = results
         return data
 
     def collect_all(self, names, p_names, ir_info):
@@ -205,15 +210,7 @@ class Data_wash(object):
         return (data, metric_names, loop_names)
 
     def compute_weighted_avg(self, ir_item, ratio):
-        #tempoary solution
-        load = 0
-        store = 0
 
-        for key, val in ir_item.items():
-            if key == 'load':
-                load = val
-            if key == 'store':
-                store = val
 
         for key, val in ir_item.items():
             if key == 'loop ID' or key == 'int/fp ratio':
@@ -224,11 +221,10 @@ class Data_wash(object):
                     if key == 'trip count' and val == -1:
                         self.O0_weighted_avg[key] += 0
                     else:
-                        if(key=='load/store ratio'):
-                            val = (load+1)/(store+1)
                         self.O0_weighted_avg[key] += val * ratio
                 else:
                     self.O0_weighted_avg[key] = 0
+
 
 
 

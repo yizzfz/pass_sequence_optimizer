@@ -46,7 +46,7 @@ def train(epoch, model, train_loader, args):
         if batch_idx % args.log_interval == 0:
             print('Train Epoch: {} [{}/{} ({:.0f}%)]\tLoss: {:.6f}'.format(
                 epoch, batch_idx * len(data), len(train_loader.dataset),
-                100. * batch_idx / len(train_loader), loss.data[0]))
+                100. * batch_idx / len(train_loader), loss.item()))
 
 
 def test(model, loader, args):
@@ -61,7 +61,7 @@ def test(model, loader, args):
             data, target = data.cuda(), target.cuda()
         output = model(data)
         # sum up batch loss
-        test_loss += F.nll_loss(output, target, size_average=False).data[0]
+        test_loss += F.nll_loss(output, target, size_average=False).item()
         # get the index of the max log-probability
         pred = output.data.max(1, keepdim=True)[1]
         correct += pred.eq(target.data.view_as(pred)).cpu().sum()
@@ -106,23 +106,11 @@ class Net(nn.Module):
 
     def forward(self, x):
         x = F.relu(self.fc1(x))
-        pdb.set_trace()
-
         x = F.dropout(x, training=self.training)
-        pdb.set_trace()
-
         x = self.fc2(x)
-        pdb.set_trace()
-
         x = F.dropout(x, training=self.training)
-        pdb.set_trace()
-
         x = self.fc3(x)
-        pdb.set_trace()
-
         x = F.dropout(x, training=self.training)
-        pdb.set_trace()
-        
         x = self.fc4(x)
         x = self.fc5(x)
         return F.log_softmax(x)
@@ -143,7 +131,7 @@ if __name__ == "__main__":
         '--lr', type=float, default=0.001, metavar='LR',
         help='learning rate (default: 0.001)')
     parser.add_argument(
-        '--momentum', type=float, default=0.5, metavar='M',
+        '--momentum', type=float, default=0.8, metavar='M',
         help='SGD momentum (default: 0.5)')
     parser.add_argument(
         '--no-cuda', action='store_true', default=False,

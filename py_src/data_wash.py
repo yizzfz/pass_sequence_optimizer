@@ -33,6 +33,19 @@ class Data_wash(object):
         with open('Data/test_label.pkl', 'wb') as f4:
             pickle.dump(self.test_label, f4)
 
+        with open('Data/test_idx.pkl', 'wb') as f5:
+            pickle.dump(self.test_data_list, f5)
+
+        # with open('Data/n.txt', 'w') as f6:
+        #     f6.write(str(self.N))
+
+        with open('Data/all_data.pkl', 'wb') as f7:
+            pickle.dump(self.inputs, f7)
+
+        with open('Data/dict.pkl', 'wb') as f8:
+            pickle.dump(self.benchmark_names, f8)
+
+
     def parse(self):
         self.benchmark_names = []
         self.paths = []
@@ -42,6 +55,7 @@ class Data_wash(object):
         self.inputs = []
         # flatten array lambda func
         flatten = lambda l: [item for sublist in l for item in sublist]
+
         for i, item in enumerate(self.raw_data):
             self.benchmark_names.append(item[0])
             self.paths.append(item[1])
@@ -77,7 +91,8 @@ class Data_wash(object):
         if(test_random==False):
             self.test_data_list = test_M
         else:
-            self.test_data_list = [random.randint(0, len(self.raw_data) - 1) for i in range (0, 5)]
+            self.test_data_list = [random.randint(0, len(self.raw_data) - 1) for i in range (0, 10)]
+            self.test_data_list = list(set(self.test_data_list))
 
         print('selected test program:')
         print(self.test_data_list)
@@ -90,6 +105,7 @@ class Data_wash(object):
         self.generate_train_data()
         self.generate_test_data()
 
+
         if(np.any(np.isnan(self.train_input)) or np.any(np.isnan(self.test_input)) ):
             print('nan')
 
@@ -97,8 +113,6 @@ class Data_wash(object):
             print('inf')
 
         self.write_file()
-
-
 
     def generate_train_data(self):
         n=self.N
@@ -174,7 +188,7 @@ class Data_wash(object):
         """
         self.O0_avg = {}
         self.O0_weighted_avg = {}
-        ir_info, profile_info = raw_data
+        ir_info, profile_info, time, size = raw_data
         # compute avg of O0 IR info
         self.average_ir_info(ir_info, 0)
         # parse ir_info find top k

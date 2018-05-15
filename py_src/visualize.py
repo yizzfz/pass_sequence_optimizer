@@ -21,6 +21,7 @@ def main():
     for i, item in enumerate(data):
         name = item[0]
         O3time = float(item[3][0])
+        O0time = float(item[2][2])
         GAtime = O3time
         if(item[4]!=None):
             GAtime = float(item[4][0])

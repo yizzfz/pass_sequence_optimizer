@@ -27,6 +27,8 @@ def main(args):
         train(epoch, model, train_loader, args)
         test(model, eval_loader, args)
 
+    final_test(model, eval_loader, args)
+
 
 def train(epoch, model, train_loader, args):
     optimizer = optim.SGD(model.parameters(), lr=args.lr, weight_decay=1e-5)
@@ -80,6 +82,51 @@ def test(model, loader, args):
         100. * correct / len(loader.dataset)))
 
 
+def final_test(model, loader, args):
+    model.eval()
+    test_loss = 0
+    correct = 0
+    preds = []
+    dtype = torch.FloatTensor
+    for data, target in loader:
+        data = Variable(data.type(dtype), requires_grad=True)
+        target = Variable(target.type(torch.LongTensor))
+        if args.cuda:
+            data, target = data.cuda(), target.cuda()
+        output = model(data)
+        # get the index of the max log-probability
+        pred = output.data.max(1, keepdim=True)[1]
+        preds+=(pred.cpu().tolist())
+        correct += pred.eq(target.data.view_as(pred)).cpu().sum()
+
+    with open('Data/n.txt', 'rb') as f:
+        n = int(f.read())
+        f.close()
+
+    n_test = int(len(loader.dataset)/(n-1))
+    res = []
+    for i in range(0, n_test):
+        r = []
+        for j in range(0, n-1):
+            if(preds[i*(n-1)+j][0]<2):
+                if (j>=i) :
+                    r.append(j+1)
+                else:
+                    r.append(j)
+        print(r)
+
+    res.append(r)
+
+
+    with open('Data/result.pkl', 'wb') as f:
+        pickle.dump(res, f)
+        f.close()
+
+
+
+
+
+
 class Data(object):
     def __init__(self, directory='./Data/'):
         self.wrap_data(directory)
@@ -94,6 +141,11 @@ class Data(object):
         self.test_dataset = self._wrap_to_dataset(test_data, test_label)
 
     def _wrap_to_dataset(self, data, label):
+        '''
+        [1, 0, 0] -> 0
+        [0, 1, 0] -> 1
+        [0, 0, 1] -> 2
+        '''
         data = self._wrap_to_tensor(data)
         label = np.where(label > 0)[1]
         label = self._wrap_to_tensor(label)

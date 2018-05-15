@@ -6,8 +6,9 @@ import sys
 import pickle
 from subprocess import check_call, check_output, STDOUT
 from multiprocessing import Process, Queue, Value
+import numpy as np
 
-TIME_MAX = 8
+TIME_MAX = 4
 
 def load_finished(base_dir):
     try:
@@ -128,20 +129,23 @@ def read_list(target_dir):
     return pass_list
 
 
-def compare_with_other(current_dir, finished):
+def compare_with_other(current_dir, finished, res_tb, i):
     #try others pass list on myself
     os.chdir(current_dir)
     O3time = read_O3_time(current_dir)
     output = []
 
+    j = 0
     for testcode in finished:
         if(testcode != current_dir):
             others_list = read_list(testcode)
             if others_list != '':
                 res = create_child(others_list, current_dir, O3time)
                 if res[0] == 0:
+                    res_tb[i][j] = (O3time - res[1])/O3time
                     if res[1] < O3time:
                         output.append(((O3time - res[1]) * 100 / O3time, testcode))
+        j+=1
 
     output.sort(reverse=1)
     with open(current_dir + "/workedForMe.txt", "w") as f:
@@ -176,13 +180,27 @@ def main():
     if cmd != 'y':
         return
 
-    total = len(testcodes)
-    i = 1
-    for testcode in testcodes:
-        print('Checking ['+ str(i) + '/' + str(total)+'] ' + shorten(testcode))
-        if((testcode in finished)):
-            compare_with_other(testcode, finished)
-        i = i+1
+
+    total = len(finished)
+    res = np.zeros((total, total))
+    for i in range(0, total):
+        for j in range(0, total):
+            res[i][j] = np.nan
+
+
+    for i, testcode in enumerate(finished):
+        print('Checking ['+ str(i+1) + '/' + str(total)+'] ' + shorten(testcode))
+        compare_with_other(testcode, finished, res, i)
+
+
+    print(finished)
+    print(res)
+
+    with open(base_dir+'/../cross.pkl', 'wb') as f:
+        pickle.dump(finished, f)
+        pickle.dump(res, f)
+
+
 
     print('\ndone\n')
 

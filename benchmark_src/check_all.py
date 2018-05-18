@@ -4,10 +4,10 @@ import time
 import subprocess
 from subprocess import check_call, check_output, STDOUT
 from multiprocessing import Process, Queue, Value
-
+import argparse
 
 def load_from_txt(file):
-    with open(file,"rb") as f:
+    with open(file,"r") as f:
         lines = f.read().split('\n')
     passes = lines[:len(lines)-1]
     return passes
@@ -32,67 +32,76 @@ def get_testcodes(base_dir):
 
 
 
-def t_check(current_dir, O3_list):
+def t_check(current_dir, pass_list, O0=False):
     os.chdir(current_dir)
-    O3_list_str = list_to_string(O3_list)
+    os.environ["OPTFLAGS"] = pass_list
 
-    os.environ["OPTFLAGS"] = O3_list_str
-    err = os.system('make')
-    O3time = -1.0
-    O3size = -1
-    if err==0:
-      DEVNULL = open(os.devnull, 'wb', 0)
-
-
-      try:
-        start = time.time()
-        check_call(['make run'], cwd = current_dir, shell = True)
-        end = time.time()
-      except subprocess.CalledProcessError as e:
-        print 'cannot compile with O3: ' + current_dir
+    DEVNULL = open(os.devnull, 'wb', 0)
+    try:
+        check_call(['make'], stdout=DEVNULL,
+                   stderr=STDOUT, cwd=current_dir, shell=True)
+    except subprocess.CalledProcessError as e:
+        print ('make error in ' + current_dir)
         return
 
-      O3time = end - start
-      O3size = int(check_output('ls -nl a.out | awk \'{print $5}\'', cwd = current_dir, shell = True))
+    try:
+        start = time.time()
+        check_call(['taskset 0x1 make run'], stdout=DEVNULL,
+                   stderr=STDOUT, cwd=current_dir, shell=True)
+        end = time.time()
+
+        runtime = end-start
+        size = int(check_output(
+            'ls -nl a.out | awk \'{print $5}\'', cwd=current_dir, shell=True))
+    except subprocess.CalledProcessError as e:
+        print ('cannot run bin in ' + current_dir)
+        return
+
+    print ('['+ shorten(current_dir) + '] Time = {:.4f}, Bin Size = {:}'.format(runtime, size))
+
+    os.system('rm -rf precheck')
+    os.system('mkdir -p precheck')
+    if(O0):
+        filename = 'precheck/O0.txt'
     else:
-      print 'cannot compile with O3: ' + current_dir
-      return
+        filename = 'precheck/O3.txt'
+
+    with open(filename, "w") as f:
+        f.write('execution time: ' + str(runtime) + '\n')
+        f.write('binary size: ' + str(size) + '\n')
+        f.close()
 
 
-    print '['+ shorten(current_dir) + '] O3 time = ', O3time, ', bin size = ', O3size
-
-    os.system("rm -rf *.txt")
 
 
+def main(args):
+    if(args.O0):
+        pass_list = load_from_txt('O0List.txt')
+        print('running with O0')
+    elif(args.O3):
+        pass_list = load_from_txt('O3List.txt')
+        print('running with O3')
+    else:
+        return
 
-def main():
-    O3_list = load_from_txt('O3List.txt')
+    pass_list_str = list_to_string(pass_list)
+    print(pass_list_str)
+
 
     base_dir = '.'
-
     testcodes = get_testcodes(base_dir)
 
     if len(testcodes) == 0:
-      print 'cannot find any MARKER, run \'generate_makefile\''
+      print ('cannot find any MARKER, run \'generate_makefile\'')
       return
 
-    print 'found ' + str(len(testcodes)) + ' benchmarks:'
-    print testcodes
-    cmd = raw_input('continue? (y/n) ')
+    print ('found ' + str(len(testcodes)) + ' benchmarks:')
+    print (testcodes)
+    cmd = input('continue? (y/n) ')
 
     if cmd == 'y':
-    #   threads = []
-    #   i=0
-    #   for testcode in testcodes:
-    #     thread = Process(target = t_check, args = (testcode, O3_list))
-    #     threads.append(thread)
-    #     threads[i].start()
-    #     i+=1
-      #
-    #   for thread in threads:
-    #     thread.join()
         for testcode in testcodes:
-            t_check(testcode, O3_list)
+            t_check(testcode, pass_list_str, args.O0)
 
 
 
@@ -105,4 +114,13 @@ def shorten(s):
       return s
 
 if __name__=="__main__":
-    main()
+    parser = argparse.ArgumentParser(description='Run all programs with O0 or O3')
+    parser.add_argument(
+        '--O0', action='store_true', default=False,
+        help='run all programs with O0')
+    parser.add_argument(
+        '--O3', action='store_true', default=True,
+        help='run all programs with O3')
+
+    args = parser.parse_args()
+    main(args)

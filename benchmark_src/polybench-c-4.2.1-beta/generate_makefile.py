@@ -5,7 +5,7 @@ from multiprocessing import Process, Queue
 
 makefile_content = "\
 ULT=$(WORKSPACE)/polybench-c-4.2.1-beta/utilities\n\
-FLAGS=-I$(ULT) -DEXTRALARGE_DATASET \n\n\
+FLAGS=-I$(ULT) -DMINI_DATASET \n\n\
 all: $(FILES)\n\
 \t@$(RM) IRinfo* *.profraw\n\
 \t@clang $(FILES) -O0 -emit-llvm -S -o A.ll -w $(FLAGS)\n\

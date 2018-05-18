@@ -33,7 +33,7 @@
 #  endif
 
 #  ifdef LARGE_DATASET
-#   define TSTEPS 500
+#   define TSTEPS 200
 #   define N 120
 #  endif
 

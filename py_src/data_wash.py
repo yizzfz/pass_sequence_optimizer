@@ -91,7 +91,7 @@ class Data_wash(object):
         if(test_random==False):
             self.test_data_list = test_M
         else:
-            self.test_data_list = [random.randint(0, len(self.raw_data) - 1) for i in range (0, 10)]
+            self.test_data_list = [random.randint(0, len(self.raw_data) - 1) for i in range (0, 6)]
             self.test_data_list = list(set(self.test_data_list))
 
         print('selected test program:')

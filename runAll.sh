@@ -8,11 +8,8 @@ cd LoopInfo
 ./compilePass.sh && make
 cd ../workspace
 
-
 cd polybench-c-4.2.1-beta
-python generate_makefile.py
-cd ../cBench_V1.1/
-python generate_makefile.py
+./compile_uti.sh
 cd ..
 
-python3 search_pass_st.py
+python3 check_all.py

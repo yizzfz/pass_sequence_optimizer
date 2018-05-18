@@ -39,10 +39,10 @@
 #  endif
 
 #  ifdef LARGE_DATASET
-#   define NI 800
-#   define NJ 900
-#   define NK 1100
-#   define NL 1200
+#   define NI 700
+#   define NJ 800
+#   define NK 900
+#   define NL 1000
 #  endif
 
 #  ifdef EXTRALARGE_DATASET

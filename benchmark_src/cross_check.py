@@ -190,7 +190,7 @@ def main():
 
     for i, testcode in enumerate(finished):
         print('Checking ['+ str(i+1) + '/' + str(total)+'] ' + shorten(testcode))
-        compare_with_other(testcode, finished, res, i)
+        #compare_with_other(testcode, finished, res, i)
 
 
     print(finished)

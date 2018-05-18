@@ -81,6 +81,10 @@ def test(model, loader, args):
         test_loss, correct, len(loader.dataset),
         100. * correct / len(loader.dataset)))
 
+def read_test_list(name='Data/test_idx.pkl'):
+    with open(name, 'rb') as f:
+        test_list = pickle.load(f)
+    return test_list
 
 def final_test(model, loader, args):
     model.eval()
@@ -99,23 +103,21 @@ def final_test(model, loader, args):
         preds+=(pred.cpu().tolist())
         correct += pred.eq(target.data.view_as(pred)).cpu().sum()
 
-    with open('Data/n.txt', 'rb') as f:
-        n = int(f.read())
-        f.close()
-
+    test_list = read_test_list()
+    n = len(test_list)
     n_test = int(len(loader.dataset)/(n-1))
+
     res = []
-    for i in range(0, n_test):
+    for i in test_list:
         r = []
         for j in range(0, n-1):
             if(preds[i*(n-1)+j][0]<2):
-                if (j>=i) :
+                if(j>=i):
                     r.append(j+1)
                 else:
                     r.append(j)
         print(r)
-
-    res.append(r)
+        res.append(r)
 
 
     with open('Data/result.pkl', 'wb') as f:

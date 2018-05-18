@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/yaz21/dagr/pass_sequence_optimizer/LoopInfo/LoopInfo.cc" "/home/yaz21/dagr/pass_sequence_optimizer/LoopInfo/CMakeFiles/LoopInfo.dir/LoopInfo.cc.o"
+  "/home/hc/pass_sequence_optimizer/LoopInfo/LoopInfo.cc" "/home/hc/pass_sequence_optimizer/LoopInfo/CMakeFiles/LoopInfo.dir/LoopInfo.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "Clang")
 
@@ -18,7 +18,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/yaz21/dagr/llvm/llvm-4.0.1.src/include"
+  "/usr/local/include"
   )
 
 # Targets to which this target links.

@@ -65,6 +65,11 @@ def thread_func(root, cfiles, makefile_content):
 
 
 def main():
+
+  cmd = raw_input('Warning: old setting will be overwritten, continue ?')
+  if(cmd!='y'):
+    return
+
   threads = []
   i = 0
   os.system('./all__delete_work_dirs')

@@ -106,12 +106,10 @@ def main(args):
 
 
 def shorten(s):
-    if 'poly' in s:
-      return s[s.find('poly'):]
-    elif 'cBench' in s:
-      return s[s.find('cBench'):]
+    if 'workspace' in s:
+        return s[s.find('workspace')+9:]
     else:
-      return s
+        return s
 
 if __name__=="__main__":
     parser = argparse.ArgumentParser(description='Run all programs with O0 or O3')

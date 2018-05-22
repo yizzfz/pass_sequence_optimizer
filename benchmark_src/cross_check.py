@@ -216,10 +216,8 @@ def average_timing(t1):
 
 
 def shorten(s):
-    if 'poly' in s:
-        return s[s.find('poly'):]
-    elif 'cBench' in s:
-        return s[s.find('cBench'):]
+    if 'workspace' in s:
+        return s[s.find('workspace')+9:]
     else:
         return s
 

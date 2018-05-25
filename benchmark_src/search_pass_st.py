@@ -180,10 +180,21 @@ def create_child(list_str, current_dir, time_baseline):
         checkpoint = 3
 
     for i in range(0, repeat):
-        start = time.time()
-        check_call(['taskset 0x1 make run'], stdout=DEVNULL,
+
+        try:
+            start = time.time()
+            check_call(['taskset 0x1 make run'], stdout=DEVNULL,
                    stderr=STDOUT, cwd=current_dir, shell=True)
-        end = time.time()
+            end = time.time()
+        except subprocess.CalledProcessError:
+            with open(current_dir + "/error.txt", "a") as f:
+                f.write(list_str)
+                f.write('\n')
+                f.close()
+            record_list('err_', -1, -1, 0)
+            return (1, -1, -1)
+
+
         timing.append(end - start)
         if(i==checkpoint):   #check if worth continue at 1st run or 3rd run
             current_time = average_timing(timing)

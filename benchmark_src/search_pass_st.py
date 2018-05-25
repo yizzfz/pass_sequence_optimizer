@@ -7,9 +7,9 @@ import pickle
 from subprocess import check_call, check_output, STDOUT
 from multiprocessing import Process, Queue, Value
 
-GA_MAX = 1
-CHILD_MAX = 1
-TIME_MAX = 8
+GA_MAX = 300
+CHILD_MAX = 5
+TIME_MAX = 5
 
 
 def load_prepared(base_dir):
@@ -294,7 +294,7 @@ def t_prepare(current_dir, O3_list):
                    stderr=STDOUT, cwd=current_dir, shell=True)
     except subprocess.CalledProcessError as e:
         print ('make hotpath error')
-        os.system('rm ' + root + '/MARKER')
+        #os.system('rm ' + root + '/MARKER')
         return
 
     os.system('cp IRinfo.txt data_O0/IRinfo.txt')
@@ -354,7 +354,7 @@ def t_GA(current_dir, all_list, O3_list, testcodes):
         improved = res[0]
         if improved == 0:
             fail_in_a_row += 1
-            if fail_in_a_row > 50:
+            if fail_in_a_row > 80:
                 break
         else:
             fail_in_a_row = 0
@@ -365,7 +365,7 @@ def t_GA(current_dir, all_list, O3_list, testcodes):
     print ('    final time = {:.4f}'.format(current_time),
             '({:.3f}%)'.format(final_improve),
             ', attempt =', str(cnt), ', successed =' , str(succ), ' '*10)
-    compare_with_other(current_dir, testcodes)
+    #compare_with_other(current_dir, testcodes)
     os.chdir(current_dir)
 
 
@@ -376,7 +376,7 @@ def main():
     O3_list = load_from_txt('O3List.txt')
 
     base_dir = sys.path[0]
-    base_dir += '/polybench-c-4.2.1-beta'
+    #base_dir += '/polybench-c-4.2.1-beta'
     #base_dir += '/polybench-c-4.2.1-beta/stencils/jacobi-1d'
     #base_dir += '/cBench_V1.1/automotive_bitcount'
 

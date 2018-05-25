@@ -15,6 +15,6 @@ compbench*
 openbench*
 *.log
 *.so
-CMakeFiles
+CMakeFiles/
 CMakeCache.txt
 *backup

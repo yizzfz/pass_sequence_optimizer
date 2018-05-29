@@ -8,7 +8,7 @@ def main():
   file_cnt = 0
   for root, dirs, files in os.walk("."):
     for dir in dirs:
-      if dir.startswith('data_') or dir.startswith('pre_'):
+      if dir.startswith('data_') or dir.startswith('precheck'):
         shutil.rmtree(os.path.join(root, dir))
         dir_cnt+=1
 
@@ -16,7 +16,7 @@ def main():
       if ('IRinfo' in file or file.endswith('ll') or 'hotpath' in file or
           file.endswith('.out') or 'prof' in file or file=='workedForMe.txt'
           or file.endswith('.o')
-          or '.dmp' in file
+          or '.dmp' in file or 'output.ref' in file
           ):
         os.system('rm '+(os.path.join(root, file)))
         file_cnt+=1

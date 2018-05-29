@@ -1,15 +1,8 @@
-collectInfo/
-poly-2.tar
-poly-e1.zip
-poly-e1/
-poly-e2/
 *~
 C++Benchmarks/
 cpu2006/
 *.iso
 workspace/
-data/
-data1/
 *.tar*
 compbench*
 openbench*

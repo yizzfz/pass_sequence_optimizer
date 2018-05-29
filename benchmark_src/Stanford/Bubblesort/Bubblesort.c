@@ -160,7 +160,7 @@ void Bubble(int run) {
 	}
 	if ( (sortlist[1] != littlest) || (sortlist[srtelements] != biggest) )
 	printf ( "Error3 in Bubble.\n");
-	//printf("%d\n", sortlist[run + 1]);
+	if(run%10000==0) printf("%d\n", sortlist[run + 1]);
 }
 
 int main()

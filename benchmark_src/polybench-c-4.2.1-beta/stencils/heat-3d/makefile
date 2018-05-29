@@ -1,6 +1,6 @@
 FILES= heat-3d.c
 ULT=$(WORKSPACE)/polybench-c-4.2.1-beta/utilities
-FLAGS=-I$(ULT) -DLARGE_DATASET 
+FLAGS=-I$(ULT) -DPOLYBENCH_DUMP_ARRAYS -DLARGE_DATASET 
 
 all: $(FILES)
 	@$(RM) IRinfo* *.profraw
@@ -22,4 +22,4 @@ hotpath: $(FILES)
 	@clang B.ll -O0 $(ULT)/polybench.o -lm $(FLAGS)
 
 run:
-	@taskset 0x1 ./a.out
+	@taskset 0x1 ./a.out 2>data.dmp

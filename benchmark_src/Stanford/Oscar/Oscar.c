@@ -291,7 +291,7 @@ Fft (int n, struct complex z[], struct complex w[], struct complex e[],
 }
 
 void
-Oscar ()
+Oscar (int run)
 {				/* oscar */
   int i;
   Exptab (fftsize, e);
@@ -310,7 +310,7 @@ Oscar ()
     {
       Fft (fftsize, z, w, e, 0.0625f);
     }
-  //Printcomplex (z, 1, 256, 17);	/* removed 1st 2 args 6, 99, unused by printcomplex WR */
+  if(run==3999) Printcomplex (z, 1, 256, 17);	/* removed 1st 2 args 6, 99, unused by printcomplex WR */
 }				/* oscar */
 
 int
@@ -318,6 +318,6 @@ main ()
 {
   int i;
   for (i = 0; i < 4000; i++)
-    Oscar ();
+    Oscar (i);
   return 0;
 }

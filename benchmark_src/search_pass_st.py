@@ -205,8 +205,6 @@ def create_child(list_str, current_dir, time_baseline):
                     if(os.path.isfile("stdout.dmp")):
                         t1 = open("stdout.dmp.ref", "r").read()
                         t2 = open("stdout.dmp", "r").read()
-                        print(t1)
-                        print(t2)
                         result_correct = result_correct and (t1==t2)
                     else:
                         result_correct = False

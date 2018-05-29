@@ -67,6 +67,7 @@ int main(void) {
 
   val = salsa();
   val += offset;
+  printf("%d\n", val);
 
   return 0;
 }

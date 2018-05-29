@@ -1,81 +1,81 @@
 20
 =====
 1
-../../network_patricia_data/1.udp > output_large.txt
+../../network_patricia_data/1.udp > ftmp_out
 50000
 =====
 2
-../../network_patricia_data/2.udp > output_large.txt
+../../network_patricia_data/2.udp > ftmp_out
 30000
 =====
 3
-../../network_patricia_data/3.udp > output_large.txt
+../../network_patricia_data/3.udp > ftmp_out
 20000
 =====
 4
-../../network_patricia_data/4.udp > output_large.txt
+../../network_patricia_data/4.udp > ftmp_out
 15000
 =====
 5
-../../network_patricia_data/5.udp > output_large.txt
+../../network_patricia_data/5.udp > ftmp_out
 10000
 =====
 6
-../../network_patricia_data/6.udp > output_large.txt
+../../network_patricia_data/6.udp > ftmp_out
 5000
 =====
 7
-../../network_patricia_data/7.udp > output_large.txt
+../../network_patricia_data/7.udp > ftmp_out
 4000
 =====
 8
-../../network_patricia_data/8.udp > output_large.txt
+../../network_patricia_data/8.udp > ftmp_out
 2000
 =====
 9
-../../network_patricia_data/9.udp > output_large.txt
+../../network_patricia_data/9.udp > ftmp_out
 1500
 =====
 10
-../../network_patricia_data/10.udp > output_large.txt
+../../network_patricia_data/10.udp > ftmp_out
 1000
 =====
 11
-../../network_patricia_data/11.udp > output_large.txt
+../../network_patricia_data/11.udp > ftmp_out
 700
 =====
 12
-../../network_patricia_data/12.udp > output_large.txt
+../../network_patricia_data/12.udp > ftmp_out
 500
 =====
 13
-../../network_patricia_data/13.udp > output_large.txt
+../../network_patricia_data/13.udp > ftmp_out
 300
 =====
 14
-../../network_patricia_data/14.udp > output_large.txt
+../../network_patricia_data/14.udp > ftmp_out
 200
 =====
 15
-../../network_patricia_data/15.udp > output_large.txt
+../../network_patricia_data/15.udp > ftmp_out
 150
 =====
 16
-../../network_patricia_data/16.udp > output_large.txt
+../../network_patricia_data/16.udp > ftmp_out
 90
 =====
 17
-../../network_patricia_data/17.udp > output_large.txt
+../../network_patricia_data/17.udp > ftmp_out
 60
 =====
 18
-../../network_patricia_data/18.udp > output_large.txt
+../../network_patricia_data/18.udp > ftmp_out
 40
 =====
 19
-../../network_patricia_data/19.udp > output_large.txt
+../../network_patricia_data/19.udp > ftmp_out
 30
 =====
 20
-../../network_patricia_data/20.udp > output_large.txt
+../../network_patricia_data/20.udp > ftmp_out
 20

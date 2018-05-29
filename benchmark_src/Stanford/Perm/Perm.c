@@ -157,7 +157,7 @@ void Perm ()    {   /* Perm */
 
     //if ( pctr != 43300 )
 	//printf(" Error in Perm.\n");
-	//printf("%d\n", pctr);
+	printf("%d\n", pctr);
 }     /* Perm */
 
 int main()

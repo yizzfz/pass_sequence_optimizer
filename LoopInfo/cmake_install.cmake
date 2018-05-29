@@ -1,4 +1,4 @@
-# Install script for directory: /home/yaz21/cancel/pass_sequence_optimizer/LoopInfo
+# Install script for directory: /home/hc/pass_sequence_optimizer/LoopInfo
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -33,7 +33,7 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE MODULE FILES "/home/yaz21/cancel/pass_sequence_optimizer/LoopInfo/LoopInfo.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE MODULE FILES "/home/hc/pass_sequence_optimizer/LoopInfo/LoopInfo.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LoopInfo.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LoopInfo.so")
     if(CMAKE_INSTALL_DO_STRIP)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/yaz21/cancel/pass_sequence_optimizer/LoopInfo/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/hc/pass_sequence_optimizer/LoopInfo/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

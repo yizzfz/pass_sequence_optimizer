@@ -1,81 +1,81 @@
 20
 =====
 1
-../../telecom_data/1.pcm > output_large.txt
+../../telecom_data/1.pcm > ftmp_out
 3431
 =====
 2
-../../telecom_data/2.pcm > output_large.txt
+../../telecom_data/2.pcm > ftmp_out
 46
 =====
 3
-../../telecom_data/3.pcm > output_large.txt
+../../telecom_data/3.pcm > ftmp_out
 755
 =====
 4
-../../telecom_data/4.pcm > output_large.txt
+../../telecom_data/4.pcm > ftmp_out
 435
 =====
 5
-../../telecom_data/5.pcm > output_large.txt
+../../telecom_data/5.pcm > ftmp_out
 420
 =====
 6
-../../telecom_data/6.pcm > output_large.txt
+../../telecom_data/6.pcm > ftmp_out
 172
 =====
 7
-../../telecom_data/7.pcm > output_large.txt
+../../telecom_data/7.pcm > ftmp_out
 366
 =====
 8
-../../telecom_data/8.pcm > output_large.txt
+../../telecom_data/8.pcm > ftmp_out
 715
 =====
 9
-../../telecom_data/9.pcm > output_large.txt
+../../telecom_data/9.pcm > ftmp_out
 2988
 =====
 10
-../../telecom_data/10.pcm > output_large.txt
+../../telecom_data/10.pcm > ftmp_out
 1571
 =====
 11
-../../telecom_data/11.pcm > output_large.txt
+../../telecom_data/11.pcm > ftmp_out
 758
 =====
 12
-../../telecom_data/12.pcm > output_large.txt
+../../telecom_data/12.pcm > ftmp_out
 2253
 =====
 13
-../../telecom_data/13.pcm > output_large.txt
+../../telecom_data/13.pcm > ftmp_out
 451
 =====
 14
-../../telecom_data/14.pcm > output_large.txt
+../../telecom_data/14.pcm > ftmp_out
 499
 =====
 15
-../../telecom_data/15.pcm > output_large.txt
+../../telecom_data/15.pcm > ftmp_out
 2850
 =====
 16
-../../telecom_data/16.pcm > output_large.txt
+../../telecom_data/16.pcm > ftmp_out
 1967
 =====
 17
-../../telecom_data/17.pcm > output_large.txt
+../../telecom_data/17.pcm > ftmp_out
 451
 =====
 18
-../../telecom_data/18.pcm > output_large.txt
+../../telecom_data/18.pcm > ftmp_out
 6176
 =====
 19
-../../telecom_data/19.pcm > output_large.txt
+../../telecom_data/19.pcm > ftmp_out
 977
 =====
 20
-../../telecom_data/20.pcm > output_large.txt
+../../telecom_data/20.pcm > ftmp_out
 293

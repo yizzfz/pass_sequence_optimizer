@@ -207,7 +207,7 @@ void Towers ()    { /* Towers */
     movesdone=0;
     tower(1,2,maxcells);
     //if ( movesdone != 16383 ) printf (" Error in Towers.\n");
-	 //printf("%d\n", movesdone);
+	 printf("%d\n", movesdone);
 } /* Towers */
 
 int main()

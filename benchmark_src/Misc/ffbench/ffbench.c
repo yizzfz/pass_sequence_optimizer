@@ -239,7 +239,7 @@ int main()
 
 	fdata = (Float *) malloc(fasize);
 	if (fdata == NULL) {
-           fprintf(stderr, "Can't allocate data array.\n");
+           fprintf(stdout, "Can't allocate data array.\n");
 	   exit(1);
 	}
 
@@ -301,16 +301,16 @@ int main()
 	      l = (((i & 15) == 8) || ((j & 15) == 8)) ? 255 : 0;
 	      if (k != l) {
 		 m++;
-		 fprintf(stderr,
+		 fprintf(stdout,
                     "Wrong answer at (%d,%d)!  Expected %d, got %d.\n",
 		    i, j, l, k);
 	      }
 	   }
 	}
 	if (m == 0) {
-           fprintf(stderr, "%d passes.  No errors in results.\n", npasses);
+           fprintf(stdout, "%d passes.  No errors in results.\n", npasses);
 	} else {
-           fprintf(stderr, "%d passes.  %d errors in results.\n",
+           fprintf(stdout, "%d passes.  %d errors in results.\n",
 	      npasses, m);
 	}
 
@@ -346,7 +346,7 @@ int main()
 
            fp = fopen("fft.cap", "w");
 	   if (fp == NULL) {
-              fprintf(stderr, "Cannot open output file.\n");
+              fprintf(stdout, "Cannot open output file.\n");
 	      exit(0);
 	   }
            putc(':', fp);

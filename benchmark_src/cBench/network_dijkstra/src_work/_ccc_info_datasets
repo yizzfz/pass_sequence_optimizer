@@ -1,81 +1,81 @@
 20
 =====
 1
-../../network_dijkstra_data/1.dat > output_large.dat
+../../network_dijkstra_data/1.dat > ftmp_out
 500000
 =====
 2
-../../network_dijkstra_data/2.dat > output_large.dat
+../../network_dijkstra_data/2.dat > ftmp_out
 20000
 =====
 3
-../../network_dijkstra_data/3.dat > output_large.dat
+../../network_dijkstra_data/3.dat > ftmp_out
 3000
 =====
 4
-../../network_dijkstra_data/4.dat > output_large.dat
+../../network_dijkstra_data/4.dat > ftmp_out
 700
 =====
 5
-../../network_dijkstra_data/5.dat > output_large.dat
+../../network_dijkstra_data/5.dat > ftmp_out
 300
 =====
 6
-../../network_dijkstra_data/6.dat > output_large.dat
+../../network_dijkstra_data/6.dat > ftmp_out
 120
 =====
 7
-../../network_dijkstra_data/7.dat > output_large.dat
+../../network_dijkstra_data/7.dat > ftmp_out
 80
 =====
 8
-../../network_dijkstra_data/8.dat > output_large.dat
+../../network_dijkstra_data/8.dat > ftmp_out
 50
 =====
 9
-../../network_dijkstra_data/9.dat > output_large.dat
+../../network_dijkstra_data/9.dat > ftmp_out
 30
 =====
 10
-../../network_dijkstra_data/10.dat > output_large.dat
+../../network_dijkstra_data/10.dat > ftmp_out
 20
 =====
 11
-../../network_dijkstra_data/11.dat > output_large.dat
+../../network_dijkstra_data/11.dat > ftmp_out
 15
 =====
 12
-../../network_dijkstra_data/12.dat > output_large.dat
+../../network_dijkstra_data/12.dat > ftmp_out
 10
 =====
 13
-../../network_dijkstra_data/13.dat > output_large.dat
+../../network_dijkstra_data/13.dat > ftmp_out
 8
 =====
 14
-../../network_dijkstra_data/14.dat > output_large.dat
+../../network_dijkstra_data/14.dat > ftmp_out
 6
 =====
 15
-../../network_dijkstra_data/15.dat > output_large.dat
+../../network_dijkstra_data/15.dat > ftmp_out
 4
 =====
 16
-../../network_dijkstra_data/16.dat > output_large.dat
+../../network_dijkstra_data/16.dat > ftmp_out
 4
 =====
 17
-../../network_dijkstra_data/17.dat > output_large.dat
+../../network_dijkstra_data/17.dat > ftmp_out
 3
 =====
 18
-../../network_dijkstra_data/18.dat > output_large.dat
+../../network_dijkstra_data/18.dat > ftmp_out
 2
 =====
 19
-../../network_dijkstra_data/19.dat > output_large.dat
+../../network_dijkstra_data/19.dat > ftmp_out
 2
 =====
 20
-../../network_dijkstra_data/20.dat > output_large.dat
+../../network_dijkstra_data/20.dat > ftmp_out
 2

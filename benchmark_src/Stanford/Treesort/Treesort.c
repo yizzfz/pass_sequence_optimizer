@@ -175,8 +175,8 @@ void Trees(int run) {
     tree->left = nil; tree->right=nil; tree->val=sortlist[1];
     for ( i = 2; i <= sortelements; i++ )
 		Insert(sortlist[i],tree);
-	//printf("%d\n", sortlist[2 + run]);
-    //if ( ! Checktree(tree) ) printf ( " Error in Tree.\n");
+	printf("%d\n", sortlist[2 + run]);
+    if ( ! Checktree(tree) ) printf ( " Error in Tree.\n");
 }
 
 int main()

@@ -52,6 +52,7 @@ def t_check(current_dir, pass_list, O0=False):
 
         std_size = f.tell()
 
+
         runtime = end-start
         size = int(check_output(
             'ls -nl a.out | awk \'{print $5}\'', cwd=current_dir, shell=True))
@@ -100,7 +101,7 @@ def main(args):
 
 
     base_dir = '.'
-    # base_dir += '/cBench'
+    # base_dir += '/Misc'
     testcodes = get_testcodes(base_dir)
 
     if len(testcodes) == 0:
@@ -108,7 +109,8 @@ def main(args):
       return
 
     print ('found ' + str(len(testcodes)) + ' benchmarks:')
-    print (testcodes)
+    for i, c in enumerate (testcodes):
+        print("["+str(i)+"] "+shorten(c))
     cmd = input('continue? (y/n) ')
 
     if cmd == 'y':

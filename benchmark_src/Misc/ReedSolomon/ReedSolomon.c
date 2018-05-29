@@ -369,7 +369,7 @@ void rsdec_204(unsigned char* data_out, unsigned char* data_in)
   for (i=0; i<188; ++i) {
     recd[255-188 + i] = data_in[i];
   }
-  
+
   for (i=0; i<nn; i++)
      recd[i] = index_of[recd[i]] ;          /* put recd[i] into index form */
 
@@ -378,7 +378,7 @@ void rsdec_204(unsigned char* data_out, unsigned char* data_in)
 
   for (i=0; i<188; ++i) {
     data_out [i] = recd[255-188 + i];
-  }  
+  }
 }
 
 void rsenc_204(unsigned char* data_out, unsigned char* data_in)
@@ -402,7 +402,7 @@ void rsenc_204(unsigned char* data_out, unsigned char* data_in)
   for (i=0; i<188; ++i) {
     data[255-204 + i] = data_in[i];
   }
-  
+
   encode_rs();
 
   for (i=0; i<188; ++i) {
@@ -411,7 +411,7 @@ void rsenc_204(unsigned char* data_out, unsigned char* data_in)
   for (i=0; i<204-188; ++i) {
     data_out[188+i] = bb[i];
   }
-  
+
 }
 
 int main(void) {
@@ -440,8 +440,12 @@ int main(void) {
     for (j=0; j<k; ++j) {
       rs_out[random() % 204] = (random() & 0xFF);
     }
-    
+
     rsdec_204(rs_in, rs_out);
+  }
+  for(i=0;i<200;i+=20)
+  {
+    printf("%d\n", rs_out[i]);
   }
   return 0;
 }

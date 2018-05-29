@@ -148,7 +148,7 @@ void Intmm (int run) {
     for ( i = 1; i <= rowsize; i++ )
 		for ( j = 1; j <= rowsize; j++ )
 			Innerproduct(&imr[i][j],ima,imb,i,j);
-	//printf("%d\n", imr[run + 1][run + 1]);
+	printf("%d\n", imr[run + 1][run + 1]);
 }
 
 int main()

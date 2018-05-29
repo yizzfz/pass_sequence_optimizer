@@ -59,7 +59,6 @@ def t_check(current_dir, pass_list, O0=False):
 
     print ('['+ shorten(current_dir) + '] Time = {:.4f}, Bin Size = {:}'.format(runtime, size))
 
-    os.system('rm -rf precheck')
     os.system('mkdir -p precheck')
     if(O0):
         filename = 'precheck/O0.txt'

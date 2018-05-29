@@ -114,7 +114,7 @@ def read_O3(path):
 def read_O0(path):
   IRinfo = get_IRinfo(path+'/data_O0/IRinfo.txt')
   IRinfo_p = get_profile(path+'/data_O0/IRinfo_profile.txt')
-  (time, size) = get_performance(path+'/pre_O0/performance.txt')
+  (time, size) = get_performance(path+'/precheck/O0.txt')
   return IRinfo, IRinfo_p, time, size
 
 def read_opt(path):

@@ -16,12 +16,12 @@ def main():
       if ('IRinfo' in file or file.endswith('ll') or 'hotpath' in file or
           file.endswith('.out') or 'prof' in file or file=='workedForMe.txt'
           or file.endswith('.o')
-          or '.dmp' in file or 'output.ref' in file
+          or '.dmp' in file or 'output.ref' in file or file=="ftmp_out"
           ):
         os.system('rm '+(os.path.join(root, file)))
         file_cnt+=1
 
-  print str(dir_cnt) + ' directories and '+ str(file_cnt) + ' files deleted'
+  print (str(dir_cnt) + ' directories and '+ str(file_cnt) + ' files deleted')
 
 if __name__=="__main__":
   main()

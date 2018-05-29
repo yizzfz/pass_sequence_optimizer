@@ -37,6 +37,7 @@ def t_check(current_dir, pass_list, O0=False):
     os.environ["OPTFLAGS"] = pass_list
 
     DEVNULL = open(os.devnull, 'wb', 0)
+    f = open("stdout.dmp", 'w')
     try:
         check_call(['make'], stdout=DEVNULL,
                    stderr=STDOUT, cwd=current_dir, shell=True)
@@ -46,9 +47,10 @@ def t_check(current_dir, pass_list, O0=False):
 
     try:
         start = time.time()
-        check_call(['taskset 0x1 make run'], stdout=DEVNULL,
-                   stderr=STDOUT, cwd=current_dir, shell=True)
+        check_call(['taskset 0x1 make run'], stdout = f, stderr=DEVNULL, cwd=current_dir, shell=True)
         end = time.time()
+
+        std_size = f.tell()
 
         runtime = end-start
         size = int(check_output(
@@ -57,7 +59,17 @@ def t_check(current_dir, pass_list, O0=False):
         print ('cannot run bin in ' + current_dir)
         return
 
-    print ('['+ shorten(current_dir) + '] Time = {:.4f}, Bin Size = {:}'.format(runtime, size))
+    print ('['+ shorten(current_dir) + '] Time = {:.4f} '.format(runtime), end='')
+    if(os.path.isfile("data.dmp")):
+        print(', data dumped', end='')
+    if(os.path.isfile("ftmp_out")):
+        print(', cbench data dumped', end='')
+        os.system("mv ftmp_out data.dmp")
+    if(os.path.isfile("stdout.dmp")):
+        if(std_size>0):
+            print(', stdout dumped {:} chars'.format(std_size), end='')
+
+    print ()
 
     os.system('mkdir -p precheck')
     if(O0):
@@ -88,6 +100,7 @@ def main(args):
 
 
     base_dir = '.'
+    # base_dir += '/cBench'
     testcodes = get_testcodes(base_dir)
 
     if len(testcodes) == 0:

@@ -153,6 +153,8 @@ def ga(all_list, parent_list, current_dir, time_baseline, size_baseline, cnt, su
 def create_child(list_str, current_dir, time_baseline):
     os.environ["OPTFLAGS"] = list_str
     DEVNULL = open(os.devnull, 'wb', 0)
+    f = open("stdout.dmp", 'w')
+
     try:
         check_call(['timeout 60 make'], stdout=DEVNULL,
                    stderr=STDOUT, cwd=current_dir, shell=True)
@@ -183,9 +185,41 @@ def create_child(list_str, current_dir, time_baseline):
 
         try:
             start = time.time()
-            check_call(['taskset 0x1 make run'], stdout=DEVNULL,
+            check_call(['taskset 0x1 make run'], stdout=f,
                    stderr=STDOUT, cwd=current_dir, shell=True)
             end = time.time()
+            result_correct = 1
+
+            if(i==0):
+                if(os.path.isfile("data.dmp.ref")):
+                    if(os.path.isfile("ftmp_out")):
+                        os.system("mv ftmp_out data.dmp")
+                    if(os.path.isfile("data.dmp")):
+                        t1 = open("data.dmp.ref", "r").read()
+                        t2 = open("data.dmp", "r").read()
+                        result_correct = result_correct and (t1==t2)
+                    else:
+                        result_correct = False
+
+                if(os.path.isfile("stdout.dmp.ref")):
+                    if(os.path.isfile("stdout.dmp")):
+                        t1 = open("stdout.dmp.ref", "r").read()
+                        t2 = open("stdout.dmp", "r").read()
+                        print(t1)
+                        print(t2)
+                        result_correct = result_correct and (t1==t2)
+                    else:
+                        result_correct = False
+
+                if(not result_correct):
+                    with open(current_dir + "/res_error.txt", "a") as f:
+                        f.write(list_str)
+                        f.write('\n')
+                        f.close()
+                    record_list('rerr_', -1, -1, 0)
+                    return (1, -1, -1)
+
+
         except subprocess.CalledProcessError:
             with open(current_dir + "/error.txt", "a") as f:
                 f.write(list_str)
@@ -295,9 +329,10 @@ def compare_with_other(current_dir, testcodes):
 def t_prepare(current_dir, O3_list):
     os.chdir(current_dir)
     O3_list_str = list_to_string(O3_list)
-    os.system("rm -rf data* *.txt")
+    os.system("rm -rf data* *.txt *dmp* *.out")
     os.system('mkdir data_O0')
     DEVNULL = open(os.devnull, 'wb', 0)
+    f = open("stdout.dmp", 'w')
 
     # first do O0 and profile
     try:
@@ -316,10 +351,13 @@ def t_prepare(current_dir, O3_list):
     try:
         check_call(['make'], stdout=DEVNULL,
                    stderr=STDOUT, cwd=current_dir, shell=True)
+
     except subprocess.CalledProcessError as e:
         print ('make O3 error')
         os.system('rm ' + root + '/MARKER')
         return
+
+
 
     O3time = -1.0
     O3size = -1
@@ -327,17 +365,37 @@ def t_prepare(current_dir, O3_list):
     timing = []
     for i in range(0, TIME_MAX):
         start = time.time()
-        check_call(['taskset 0x1 make run'], stdout=DEVNULL,
+        check_call(['taskset 0x1 make run'], stdout=f,
                    stderr=STDOUT, cwd=current_dir, shell=True)
         end = time.time()
         timing.append(end - start)
+
+    std_size = f.tell()
 
     O3time = average_timing(timing)
     O3size = int(check_output(
         'ls -nl a.out | awk \'{print $5}\'', cwd=current_dir, shell=True))
 
 
-    print ('    O3 time = {:.4f}'.format(O3time))
+    print ('    O3 time = {:.4f}'.format(O3time), end='')
+
+
+    if(os.path.isfile("ftmp_out")):
+        print(', cbench data dumped', end='')
+        os.system("mv ftmp_out data.dmp.ref")
+
+    else:
+        if(os.path.isfile("data.dmp")):
+            print(', data dumped', end='')
+            os.system("mv data.dmp data.dmp.ref")
+
+        if(os.path.isfile("stdout.dmp")):
+            if(std_size>0):
+                print(', stdout dumped {:} chars'.format(std_size), end='')
+            os.system("mv stdout.dmp stdout.dmp.ref")
+
+    print ()
+
     record_list('O3_', O3time, O3size, 0)
     os.system('cp IRinfo.txt data_O3_0/IRinfo.txt')
 
@@ -389,7 +447,7 @@ def main():
     base_dir = sys.path[0]
     #base_dir += '/polybench-c-4.2.1-beta'
     #base_dir += '/polybench-c-4.2.1-beta/stencils/jacobi-1d'
-    #base_dir += '/cBench_V1.1/automotive_bitcount'
+    #base_dir += '/cBench/automotive_bitcount'
 
     testcodes = get_testcodes(base_dir)
 
@@ -404,7 +462,7 @@ def main():
     start_from_last = False
     if finished != [] or prepared != []:
         stmp = 'prepared '+str(len(prepared))+', finished '+str(len(finished))
-        cmd = input('found existed progress, '+stmp+', continue? (y/n) ')
+        cmd = input('found existing progress, '+stmp+', continue? (y/n) ')
         if(cmd!='y'):
             finished = []
             prepared = []

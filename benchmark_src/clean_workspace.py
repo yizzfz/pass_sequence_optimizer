@@ -16,6 +16,7 @@ def main():
       if ('IRinfo' in file or file.endswith('ll') or 'hotpath' in file or
           file.endswith('.out') or 'prof' in file or file=='workedForMe.txt'
           or file.endswith('.o')
+          or '.dmp' in file
           ):
         os.system('rm '+(os.path.join(root, file)))
         file_cnt+=1

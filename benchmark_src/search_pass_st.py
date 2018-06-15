@@ -197,7 +197,7 @@ def create_child(list_str, current_dir, time_baseline):
                 if(os.path.isfile("data.dmp.ref")):
                     if(os.path.isfile("ftmp_out")):
                         
-                        if(os.path.isfile("output_large.mp3"):
+                        if(os.path.isfile("output_large.mp3")):
                             os.system("mv output_large.mp3 data.dmp")
                         else:
                             os.system("mv ftmp_out data.dmp")
@@ -391,10 +391,10 @@ def t_prepare(current_dir, O3_list):
 
     if(os.path.isfile("ftmp_out")):
         print(', cbench data dumped', end='')
-        if(os.path.isfile("output_large.mp3"):
+        if(os.path.isfile("output_large.mp3")):
             os.system("mv output_large.mp3 data.dmp.ref")
         elif('security_sha' in current_dir):
-            os.system("rm ftmp_out"):
+            os.system("rm ftmp_out")
         else:
             os.system("mv ftmp_out data.dmp.ref")
 

@@ -41,7 +41,7 @@ def main():
 
   refine_list = []
 
-  print (rng)
+  print ('Total:',rng)
   for i in range (0, rng-1):
 
     O0data.append(read_O0(bench_path[i]))
@@ -61,6 +61,7 @@ def main():
     pickle.dump(performance_metrics, f)
 
   if len(refine_list)>0:
+    print ('Benchmarks with no optimal solution:',len(refine_list))
     print (refine_list)
 
 
@@ -156,6 +157,10 @@ def get_benchmarks(data_dir):
           if len(t)>5:
             s+='-'+t[5]
           bench.append(s)
+          bench_path.append(root)
+        else:
+          t = root.split('/')
+          bench.append(t[2]+'-'+t[3])
           bench_path.append(root)
 
   bench_dict = {}

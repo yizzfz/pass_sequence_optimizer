@@ -33,13 +33,13 @@ def main():
     pp=load_prepared('./workspace')
     print ('prepared:')
     print (len(pp))
-    for p in pp:
-        print(shorten(p))
+    #for p in pp:
+    #    print(shorten(p))
     print('\n')
     print ('finished:')
     print (len(ff))
-    for f in ff:
-        print(shorten(f))
+    #for f in ff:
+    #    print(shorten(f))
 
 
 

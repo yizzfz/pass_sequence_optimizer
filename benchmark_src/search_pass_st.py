@@ -116,7 +116,7 @@ def record_list(prefix, time, size, cnt):
         f.close()
 
 
-def ga(all_list, parent_list, current_dir, time_baseline, size_baseline, cnt, succ, O3_time):
+def ga(all_list, parent_list, current_dir, time_baseline, size_baseline, cnt, succ, fail, O3_time):
     best_time = time_baseline
     best_list = parent_list[:]
     size = size_baseline
@@ -146,14 +146,15 @@ def ga(all_list, parent_list, current_dir, time_baseline, size_baseline, cnt, su
                 succ += 1
             else:
                 record_list('B', child_time, child_size, cnt)
+        else:
+            fail+=1
 
-    return (improved, best_time, best_list, size, cnt, succ)
+    return (improved, best_time, best_list, size, cnt, succ, fail)
 
 
 def create_child(list_str, current_dir, time_baseline):
     os.environ["OPTFLAGS"] = list_str
     DEVNULL = open(os.devnull, 'wb', 0)
-    f = open("stdout.dmp", 'w')
 
     try:
         check_call(['timeout 60 make'], stdout=DEVNULL,
@@ -184,20 +185,27 @@ def create_child(list_str, current_dir, time_baseline):
     for i in range(0, repeat):
 
         try:
+            f = open("stdout.dmp", 'w')
             start = time.time()
             check_call(['taskset 0x1 make run'], stdout=f,
                    stderr=STDOUT, cwd=current_dir, shell=True)
             end = time.time()
+            f.close()
             result_correct = 1
 
             if(i==0):
                 if(os.path.isfile("data.dmp.ref")):
                     if(os.path.isfile("ftmp_out")):
-                        os.system("mv ftmp_out data.dmp")
+                        
+                        if(os.path.isfile("output_large.mp3"):
+                            os.system("mv output_large.mp3 data.dmp")
+                        else:
+                            os.system("mv ftmp_out data.dmp")
                     if(os.path.isfile("data.dmp")):
-                        t1 = open("data.dmp.ref", "r").read()
-                        t2 = open("data.dmp", "r").read()
-                        result_correct = result_correct and (t1==t2)
+                        try:
+                            check_output('diff -q data.dmp data.dmp.ref', cwd=current_dir, shell=True)
+                        except subprocess.CalledProcessError as e:
+                            result_correct = False
                     else:
                         result_correct = False
 
@@ -330,7 +338,6 @@ def t_prepare(current_dir, O3_list):
     os.system("rm -rf data* *.txt *dmp* *.out")
     os.system('mkdir data_O0')
     DEVNULL = open(os.devnull, 'wb', 0)
-    f = open("stdout.dmp", 'w')
 
     # first do O0 and profile
     try:
@@ -362,13 +369,17 @@ def t_prepare(current_dir, O3_list):
 
     timing = []
     for i in range(0, TIME_MAX):
+        os.system('rm -f *dmp*')
+        f = open("stdout.dmp", 'w')
         start = time.time()
         check_call(['taskset 0x1 make run'], stdout=f,
                    stderr=STDOUT, cwd=current_dir, shell=True)
         end = time.time()
         timing.append(end - start)
+        
 
-    std_size = f.tell()
+        std_size = f.tell()
+        f.close()
 
     O3time = average_timing(timing)
     O3size = int(check_output(
@@ -380,7 +391,12 @@ def t_prepare(current_dir, O3_list):
 
     if(os.path.isfile("ftmp_out")):
         print(', cbench data dumped', end='')
-        os.system("mv ftmp_out data.dmp.ref")
+        if(os.path.isfile("output_large.mp3"):
+            os.system("mv output_large.mp3 data.dmp.ref")
+        elif('security_sha' in current_dir):
+            os.system("rm ftmp_out"):
+        else:
+            os.system("mv ftmp_out data.dmp.ref")
 
     else:
         if(os.path.isfile("data.dmp")):
@@ -401,6 +417,7 @@ def t_prepare(current_dir, O3_list):
 def t_GA(current_dir, all_list, O3_list, testcodes):
     cnt = 0
     succ = 0
+    fail = 0
     os.chdir(current_dir)
     current_list = O3_list[:]
     O3_time = read_O3_time(current_dir)
@@ -415,13 +432,14 @@ def t_GA(current_dir, all_list, O3_list, testcodes):
     #### num. ga steps ####
     for i in range(0, GA_MAX):
         res = ga(all_list, current_list, current_dir,
-                 current_time, current_size, cnt, succ, O3_time)
+                 current_time, current_size, cnt, succ, fail, O3_time)
         cnt = res[4]
         succ = res[5]
+        fail = res[6]
         improved = res[0]
         if improved == 0:
             fail_in_a_row += 1
-            if fail_in_a_row > 80:
+            if fail_in_a_row > (80 + fail/3):
                 break
         else:
             fail_in_a_row = 0
@@ -431,7 +449,7 @@ def t_GA(current_dir, all_list, O3_list, testcodes):
     final_improve = (O3_time-current_time)*100/O3_time
     print ('    final time = {:.4f}'.format(current_time),
             '({:.3f}%)'.format(final_improve),
-            ', attempt =', str(cnt), ', successed =' , str(succ), ' '*10)
+            ', attempt =', str(cnt), ', successed =' , str(succ), ', failed = ',str(fail), ' '*10)
     #compare_with_other(current_dir, testcodes)
     os.chdir(current_dir)
 

@@ -26,10 +26,15 @@ def get_testcodes(base_dir):
     return testcodes
 
 def main():
-    base_dir = sys.path[0]
+    base_dir = sys.path[0]+'/workspace'
     testcodes = get_testcodes(base_dir)
 
     print ('found ' + str(len(testcodes)) + ' benchmarks')
+
+    for i, b in enumerate(testcodes):
+        print('['+str(i)+'] '+b)
+
+
     cmd = int(input('set prepared:'))
     i = 1
     prepared = []

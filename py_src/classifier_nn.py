@@ -31,7 +31,7 @@ def main(args):
 
 
 def train(epoch, model, train_loader, args):
-    optimizer = optim.SGD(model.parameters(), lr=args.lr, weight_decay=1e-5)
+    optimizer = optim.SGD(model.parameters(), lr=args.lr)
     model.train()
     dtype = torch.FloatTensor
     criterion = torch.nn.CrossEntropyLoss()
@@ -168,7 +168,7 @@ class Net(nn.Module):
 
     def forward(self, x):
         x = F.relu(self.fc1(x))
-        #x = F.dropout(x, training=self.training)
+        x = F.dropout(x, training=self.training)
         x = self.fc2(x)
         x = F.dropout(x, training=self.training)
         x = self.fc3(x)
@@ -190,8 +190,8 @@ if __name__ == "__main__":
         '--epochs', type=int, default=500, metavar='N',
         help='number of epochs to train (default: 10)')
     parser.add_argument(
-        '--lr', type=float, default=0.01, metavar='LR',
-        help='learning rate (default: 0.001)')
+        '--lr', type=float, default=0.1, metavar='LR',
+        help='learning rate (default: 0.01)')
     parser.add_argument(
         '--momentum', type=float, default=0.5, metavar='M',
         help='SGD momentum (default: 0.5)')

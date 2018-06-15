@@ -1,0 +1,27 @@
+Item 1
+A list of tuples, list length = total number of benchmarks
+Each tuple has 6 elements:
+  Benchmark name (string)
+  Benchmark path (string)
+  O0 (tuple): {Irinfo*, profiling info**, timing (string), size (string)}
+  O3 (tuple): {time (string), size of binary (string), a list of integer representing the pass sequence (list), Irinfo*}
+  Optimal solution found by GA (tuple): same as above
+  A list of programs, whose optimal solutions also worked here (list of tuple, each contain a program id (int) and the percentage improvement on performance (float), list is in descending order based on improvement)
+
+
+Item 2
+A list of data types used in Irinfo ('most common data type' feature) (list of string)
+
+
+Item 3
+A list of all available optimisation pass (list of string)
+
+
+Item 4
+A list of performance metrics used in Irinfo (list of string)
+
+
+* Each irinfo has a list of dictionary, each dictionary contains all the performance metrics listed in item 4, and corresponding values
+
+
+** Each profiling info has a list of dictionary, each dictionary contains {loop ID, loop execution count, number of instructions executed here (excluding subloops), number of instructions executed here}, and corresponding values

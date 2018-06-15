@@ -68,7 +68,7 @@ class Data_wash(object):
 
             if(len(flatten(data))!=155):
                 print('find unexpected feature length ('+str(len(flatten(data)))+') in ' + item[1])
-                #pdb.set_trace()
+                exit(1)
 
             if(item[4]!=None):
                 self.GA_sequence.append(item[4][2])
@@ -188,6 +188,7 @@ class Data_wash(object):
         """
         self.O0_avg = {}
         self.O0_weighted_avg = {}
+
         ir_info, profile_info, time, size = raw_data
         # compute avg of O0 IR info
         self.average_ir_info(ir_info, 0)
@@ -219,7 +220,11 @@ class Data_wash(object):
             else:
                 self.compute_weighted_avg(item, 0)
 
+        while len(top5) < 3:
+            top5 = [top5[0]] + top5
+
         data = top5
+
 
         data.append(self.O0_avg.values())
         data.append(self.O0_weighted_avg.values())

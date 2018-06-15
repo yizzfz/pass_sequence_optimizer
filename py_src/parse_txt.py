@@ -1,6 +1,7 @@
 import os
 import sys
 import pickle
+import pdb
 
 data_types = ['half', 'float', 'double', 'i1', 'i8', 'i16', 'i32', 'i64', 'i1*', 'i8*', 'i16*', 'i32*', 'i64*', 'vector', 'other']
 performance_metrics = [
@@ -210,6 +211,12 @@ def get_profile(file):
   except IOError, IndexError:
     print ('Error in ' + file)
 
+  if tmp != None:
+    loops_info.append(tmp)
+
+  if loops_info ==[]:
+    print('Error reading profile for',file)
+
   return loops_info
 
 def get_IRinfo(file):
@@ -249,6 +256,12 @@ def get_IRinfo(file):
               tmp[metric] = float(num)
   except IOError, IndexError:
     print ('Error in ' + file)
+
+  if tmp != None:
+    loops_info.append(tmp)
+
+  if loops_info ==[]:
+    print('Error reading IR info for',file)
 
   return loops_info
 

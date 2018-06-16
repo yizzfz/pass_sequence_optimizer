@@ -43,7 +43,7 @@ def main():
   refine_list = []
 
   print ('Total:',rng)
-  for i in range (0, rng-1):
+  for i in range (0, rng):
 
     O0data.append(read_O0(bench_path[i]))
     O3data.append(read_O3(bench_path[i]))

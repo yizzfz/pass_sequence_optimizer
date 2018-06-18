@@ -79,26 +79,24 @@ def get_similar(path, bench_dict):
         tmp = line.split('\t')
         improve = tmp[1]
         name = tmp[0]
-        b = ''
-        t = name.split('/')
-        a = 0
+        t = name[name.find('workspace'):].split('/')
         if 'cBench' in line:
-          b = 'cBench'
-          for i, tt in enumerate(t):
-            if a==1 and not 'src_work' in tt:
-              b += '-'+tt
-            if 'cBench' in tt:
-              a = 1
+          b = 'cBench-'+t[2]
 
         elif 'poly' in line:
-          b = 'poly'
-          for i, tt in enumerate(t):
-            if a==1:
-              b += '-'+tt
-            if 'poly' in tt:
-              a = 1
+          b = 'poly-'+t[2]
 
+          if len(t)>3:
+            b+='-'+t[3]
+          if len(t)>4:
+            b+='-'+t[4]
+        else:
+          b = t[1]+'-'+t[2]
+        
         if b!='':
+          if not b in bench_dict:
+              print('error reading similar',b)
+              exit(1)
           res.append((bench_dict[b], improve))
 
     return res

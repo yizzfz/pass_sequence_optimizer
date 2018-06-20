@@ -9,25 +9,28 @@ class Data_wash(object):
     def __init__(self, benchmark_names, paths, inputs, similar_programs):
         self.benchmark_names = benchmark_names
         self.paths = paths
-        self.inputs = inputs
+        self.inputs = np.array(inputs)
         self.similar_programs = similar_programs
 
     def wash(self):
-
-
-
-
-
-
-
-
-
-
-
-
-
+        self.norm()
         pack = self.benchmark_names, self.paths, self.inputs, self.similar_programs
         return pack
+
+    def norm(self):
+        mins = np.min(self.inputs, axis=0)
+        maxs = np.max(self.inputs, axis=0)
+        print(min(mins), max(maxs))
+
+        for i in range(0, len(self.inputs[0])):
+            self.inputs[:,i] = [(t-mins[i]+1)/(maxs[i]-mins[i]+1) for t in self.inputs[:,i]]
+
+        mins = np.min(self.inputs, axis=0)
+        maxs = np.max(self.inputs, axis=0)
+        print(min(mins), max(maxs))
+
+
+
 
 
 

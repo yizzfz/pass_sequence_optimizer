@@ -14,14 +14,9 @@ printstr1 = ''
 printstr2 = ''
 printstr3 = ''
 
-balanced = True
 
 def main(args):
-    if balanced:
-        data = Data()
-    else:
-        data = Data('./Data/backup')
-
+    data = Data() if args.balanced else Data('./Data/backup') 
     batch_size = args.batch_size
     # in case we need gpus
     kwargs = {'num_workers': 1, 'pin_memory': True} if args.cuda else {}
@@ -31,6 +26,9 @@ def main(args):
         data.test_dataset, batch_size=batch_size, shuffle=True, **kwargs)
     model = Net()
     class_weight = None
+    if args.balanced:
+        # TODO: fix this
+        class_weight = [1.0, 1.0, 1,0]
     if args.cuda:
         model.cuda()
     for epoch in range(1, args.epochs+1):
@@ -244,6 +242,9 @@ if __name__ == "__main__":
     parser.add_argument(
         '--log-interval', type=int, default=20, metavar='N',
         help='how many batches to wait before logging training status')
+    parser.add_argument(
+        '--balanced', type=lambda x: (str(x).lower() == 'true'),
+        default=True, required=False, help='pick balanced dataset or not')
     args = parser.parse_args()
     # turn on cuda if you can
     args.cuda = torch.cuda.is_available()

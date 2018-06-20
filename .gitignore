@@ -8,6 +8,7 @@ compbench*
 openbench*
 *.log
 *.so
+*.pyc
 /LoopInfo/CMakeFiles/*
 /LoopInfo/CMakeCache.txt
 *backup

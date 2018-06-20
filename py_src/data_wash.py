@@ -6,7 +6,7 @@ def main():
     parser = tools.data_parse.Data_parse()
     data = parser.parse()
 
-    washer = tools.data_wash.Data_wash(data)
+    washer = tools.data_wash.Data_wash(*data)
     data = washer.wash()
 
     generator = tools.data_generate.Data_generate(data)

@@ -6,8 +6,11 @@ import numpy as np
 
 
 class Data_wash(object):
-    def __init__(self, data):
-        self.benchmark_names, self.paths, self.inputs, self.similar_programs = data
+    def __init__(self, benchmark_names, paths, inputs, similar_programs):
+        self.benchmark_names = benchmark_names
+        self.paths = paths
+        self.inputs = inputs
+        self.similar_programs = similar_programs
 
     def wash(self):
 
@@ -41,6 +44,3 @@ class Data_wash(object):
         #
         # km = KMeans(n_clusters=3)
         # km.fit(self.train_input)
-        # print("所有样本距离聚簇中心点的总距离和:",km.inertia_)
-        # print("距离聚簇中心点的平均距离:",(km.inertia_/3))
-        # print("聚簇中心点:",km.cluster_centers_)

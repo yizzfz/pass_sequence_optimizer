@@ -137,9 +137,6 @@ class Data_generate(object):
         print('All data', data_size,' Distribution', res)
 
 
-
-
-
         test_data_list = [random.randint(0, data_size) for i in range (0, int(0.175*data_size))]
         test_data_list = set(test_data_list)
 
@@ -179,7 +176,7 @@ class Data_generate(object):
         self.train_input=np.zeros((size_train_data, self.M*2))
         self.train_label=np.zeros((size_train_data, self.N_Class))
         idx=0
-        res = dict()
+        res = [0 for _ in range(0, self.N_Class)]
         for i in range(0, n):
             for j in range(0, n):
                 if(i!=j and not i in self.test_data_list and not j in self.test_data_list
@@ -188,8 +185,6 @@ class Data_generate(object):
                     label = self.rank_similarity(i, j)
 
                     v = label.index(1)
-                    if not v in res:
-                        res[v]=0
                     res[v]+=1
                     self.train_input[idx] = data
                     self.train_label[idx] = label
@@ -209,7 +204,7 @@ class Data_generate(object):
         self.test_input=np.zeros((size_test_data, self.M*2))
         self.test_label=np.zeros((size_test_data, 3))
         idx = 0
-        res = dict()
+        res = [0 for _ in range(0, self.N_Class)]
 
         for i in self.test_data_list:
             for j in range(0, n):
@@ -219,8 +214,6 @@ class Data_generate(object):
                     self.test_label[idx] = label
 
                     v = label.index(1)
-                    if not v in res:
-                        res[v]=0
                     res[v]+=1
                     idx+=1
 

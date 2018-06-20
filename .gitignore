@@ -12,3 +12,4 @@ openbench*
 /LoopInfo/CMakeCache.txt
 *backup
 *__pycache__*
+py_src/Data/*

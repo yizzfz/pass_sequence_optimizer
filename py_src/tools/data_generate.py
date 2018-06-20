@@ -118,7 +118,7 @@ class Data_generate(object):
         self.all_input=np.zeros((max_data_size, self.M*2))
         self.all_label=np.zeros((max_data_size, self.N_Class))
         idx=0
-        res = dict()
+        res = [0 for _ in range(0, self.N_Class)]
         for i in range(0, n):
             for j in range(0, n):
                 if i!=j and self.cross_tb[i][j]!=-255:
@@ -126,16 +126,19 @@ class Data_generate(object):
                     label = self.rank_similarity(i, j)
 
                     v = label.index(1)
-                    if not v in res:
-                        res[v]=0
-                    res[v]+=1
-                    self.all_input[idx] = data
-                    self.all_label[idx] = label
-                    idx+=1
+                    if(res[v]<=2000):
+                        res[v]+=1
+                        self.all_input[idx] = data
+                        self.all_label[idx] = label
+                        idx+=1
         self.all_input=self.all_input[:idx][:]
         self.all_label=self.all_label[:idx][:]
         data_size = idx
         print('All data', data_size,' Distribution', res)
+
+
+
+
 
         test_data_list = [random.randint(0, data_size) for i in range (0, int(0.175*data_size))]
         test_data_list = set(test_data_list)

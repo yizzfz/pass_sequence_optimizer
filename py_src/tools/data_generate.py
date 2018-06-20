@@ -71,7 +71,7 @@ class Data_generate(object):
     def generate(self):
         self.read_label_file()
         """
-        NN input = (N^N, M*2), NN output = (N^N, 3)
+        NN input = (N^N, M*2), NN output = (N^N, N_Class)
         N = number of programs = 55
         M = number of features = 155
         NTrain = number of training programs = 45
@@ -93,11 +93,13 @@ class Data_generate(object):
 
         self.N=len(self.benchmark_names)
         self.M=155 ##
+        self.N_Class=3
         self.NTest = len(self.test_data_list)
         self.NTrain=self.N-self.NTest
 
-        self.generate_train_data()
-        self.generate_test_data()
+        #self.generate_train_data()
+        #self.generate_test_data()
+        self.generate_all_data()
 
 
         if(np.any(np.isnan(self.train_input)) or np.any(np.isnan(self.test_input)) ):
@@ -110,30 +112,86 @@ class Data_generate(object):
 
         self.write_file()
 
+    def generate_all_data(self):
+        n=self.N
+        max_data_size = n*n
+        self.all_input=np.zeros((max_data_size, self.M*2))
+        self.all_label=np.zeros((max_data_size, self.N_Class))
+        idx=0
+        res = dict()
+        for i in range(0, n):
+            for j in range(0, n):
+                if i!=j and self.cross_tb[i][j]!=-255:
+                    data = np.append(self.inputs[i],self.inputs[j])
+                    label = self.rank_similarity(i, j)
+
+                    v = label.index(1)
+                    if not v in res:
+                        res[v]=0
+                    res[v]+=1
+                    self.all_input[idx] = data
+                    self.all_label[idx] = label
+                    idx+=1
+        self.all_input=self.all_input[:idx][:]
+        self.all_label=self.all_label[:idx][:]
+        data_size = idx
+        print('All data', data_size,' Distribution', res)
+
+        test_data_list = [random.randint(0, data_size) for i in range (0, int(0.175*data_size))]
+        test_data_list = set(test_data_list)
+
+        self.train_input=np.zeros((data_size, self.M*2))
+        self.train_label=np.zeros((data_size, self.N_Class))
+        self.test_input=np.zeros((data_size, self.M*2))
+        self.test_label=np.zeros((data_size, self.N_Class))
+
+        i1=0
+        i2=0
+        for i in range(0, data_size):
+            if i in test_data_list:
+                self.test_input[i1]=self.all_input[i]
+                self.test_label[i1]=self.all_label[i]
+                i1+=1
+            else:
+                self.train_input[i2]=self.all_input[i]
+                self.train_label[i2]=self.all_label[i]
+                i2+=1
+
+
+        self.train_input=self.train_input[:i2]
+        self.train_label=self.train_label[:i2]
+        self.test_input=self.test_input[:i1]
+        self.test_label=self.test_label[:i1]
+        d_train = [sum([self.train_label[i][j] for i in range(0, len(self.train_label))]) for j in range(0, self.N_Class)]
+
+        d_test = [sum([self.test_label[i][j] for i in range(0, len(self.test_label))]) for j in range(0, self.N_Class)]
+        print('Training Data Distribution',d_train)
+        print('Test Data Distribution',d_test)
+
+
+
     def generate_train_data(self):
         n=self.N
         size_train_data = self.NTrain*self.NTrain-self.NTrain
         self.train_input=np.zeros((size_train_data, self.M*2))
-        self.train_label=np.zeros((size_train_data, 3))
+        self.train_label=np.zeros((size_train_data, self.N_Class))
         idx=0
-        res = [0, 0, 0, 0, 0, 0]
+        res = dict()
         for i in range(0, n):
             for j in range(0, n):
                 if(i!=j and not i in self.test_data_list and not j in self.test_data_list
                     and self.cross_tb[i][j]!=-255):
-                    data = self.inputs[i]+self.inputs[j]
+                    data = np.append(self.inputs[i],self.inputs[j])
                     label = self.rank_similarity(i, j)
 
-                    for ii, v in enumerate(label):
-                        if v==1:
-                            #cut training data here?
-                            #if res[ii]<3000:
-                            if 1:
-                                res[ii]+=1
-                                self.train_input[idx]= data
-                                self.train_label[idx] = label
-                                idx+=1
-                            break
+                    v = label.index(1)
+                    if not v in res:
+                        res[v]=0
+                    res[v]+=1
+                    self.train_input[idx] = data
+                    self.train_label[idx] = label
+                    idx+=1
+
 
         self.train_input=self.train_input[:idx][:]
         self.train_label=self.train_label[:idx][:]
@@ -148,20 +206,22 @@ class Data_generate(object):
         self.test_input=np.zeros((size_test_data, self.M*2))
         self.test_label=np.zeros((size_test_data, 3))
         idx = 0
-        res = [0, 0, 0, 0, 0, 0]
+        res = dict()
+
         for i in self.test_data_list:
             for j in range(0, n):
                 if(i!=j and self.cross_tb[i][j]!=-255):
-                    self.test_input[idx] = self.inputs[i]+self.inputs[j]
-                    tmp = self.rank_similarity(i, j)
-                    self.test_label[idx] = tmp
+                    self.test_input[idx] = np.append(self.inputs[i],self.inputs[j])
+                    label = self.rank_similarity(i, j)
+                    self.test_label[idx] = label
 
-                    for ii, v in enumerate(tmp):
-                        if v==1:
-                            res[ii]+=1
-                            break
-
+                    v = label.index(1)
+                    if not v in res:
+                        res[v]=0
+                    res[v]+=1
                     idx+=1
+
+
         self.test_input=self.test_input[:idx][:]
         self.test_label=self.test_label[:idx][:]
         print('Test data distribution', res)

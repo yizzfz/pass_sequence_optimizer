@@ -16,7 +16,7 @@ printstr3 = ''
 
 
 def main(args):
-    data = Data() if args.balanced else Data('./Data/backup') 
+    data = Data() if args.balanced else Data('./Data/backup/')
     batch_size = args.batch_size
     # in case we need gpus
     kwargs = {'num_workers': 1, 'pin_memory': True} if args.cuda else {}
@@ -25,12 +25,12 @@ def main(args):
     eval_loader = torch.utils.data.DataLoader(
         data.test_dataset, batch_size=batch_size, shuffle=True, **kwargs)
     model = Net()
-    class_weight = None
-    if args.balanced:
-        # TODO: fix this
-        class_weight = [1.0, 1.0, 1,0]
+    class_weight = torch.tensor([1.0, 1.0, 1.0])
+    if args.balanced==False:
+        class_weight = torch.tensor(data.class_weight)
     if args.cuda:
         model.cuda()
+        class_weight = class_weight.cuda()
     for epoch in range(1, args.epochs+1):
         train(epoch, model, train_loader, args, class_weight)
         test(model, eval_loader, args)
@@ -168,13 +168,13 @@ class Data(object):
     def wrap_data(self, directory):
         train_data = pickle.load(open(directory + 'train_input.pkl', 'rb'))
         train_label = pickle.load(open(directory + 'train_label.pkl', 'rb'))
-        self.train_dataset = self._wrap_to_dataset(train_data, train_label)
+        self.train_dataset = self._wrap_to_dataset(train_data, train_label,1)
 
         test_data = pickle.load(open(directory + 'test_input.pkl', 'rb'))
         test_label = pickle.load(open(directory + 'test_label.pkl', 'rb'))
         self.test_dataset = self._wrap_to_dataset(test_data, test_label)
 
-    def _wrap_to_dataset(self, data, label):
+    def _wrap_to_dataset(self, data, label, train=False):
         '''
         [1, 0, 0] -> 0
         [0, 1, 0] -> 1
@@ -182,6 +182,11 @@ class Data(object):
         '''
         data = self._wrap_to_tensor(data)
         label = np.where(label > 0)[1]
+
+        if(train):
+            self.class_weight = [1/np.sum(label==i) for i in range(0, 3)]
+            print(self.class_weight)
+
         label = self._wrap_to_tensor(label)
         return torch.utils.data.TensorDataset(data, label)
 

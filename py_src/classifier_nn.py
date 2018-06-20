@@ -14,8 +14,14 @@ printstr1 = ''
 printstr2 = ''
 printstr3 = ''
 
+balanced = True
+
 def main(args):
-    data = Data()
+    if balanced:
+        data = Data()
+    else:
+        data = Data('./Data/backup')
+
     batch_size = args.batch_size
     # in case we need gpus
     kwargs = {'num_workers': 1, 'pin_memory': True} if args.cuda else {}

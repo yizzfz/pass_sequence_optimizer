@@ -20,14 +20,14 @@ class Data_wash(object):
     def norm(self):
         mins = np.min(self.inputs, axis=0)
         maxs = np.max(self.inputs, axis=0)
-        print(min(mins), max(maxs))
+        # print(min(mins), max(maxs))
 
         for i in range(0, len(self.inputs[0])):
             self.inputs[:,i] = [(t-mins[i]+1)/(maxs[i]-mins[i]+1) for t in self.inputs[:,i]]
 
-        mins = np.min(self.inputs, axis=0)
-        maxs = np.max(self.inputs, axis=0)
-        print(min(mins), max(maxs))
+        # mins = np.min(self.inputs, axis=0)
+        # maxs = np.max(self.inputs, axis=0)
+        # print(min(mins), max(maxs))
 
 
 

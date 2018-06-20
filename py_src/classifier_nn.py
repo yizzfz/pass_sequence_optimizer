@@ -24,10 +24,11 @@ def main(args):
     eval_loader = torch.utils.data.DataLoader(
         data.test_dataset, batch_size=batch_size, shuffle=True, **kwargs)
     model = Net()
+    class_weight = None
     if args.cuda:
         model.cuda()
     for epoch in range(1, args.epochs+1):
-        train(epoch, model, train_loader, args)
+        train(epoch, model, train_loader, args, class_weight)
         test(model, eval_loader, args)
 
     # final_test(model, eval_loader, args)
@@ -44,12 +45,12 @@ def printlog():
     print(printstr2)
     print(printstr3)
 
-def train(epoch, model, train_loader, args):
+def train(epoch, model, train_loader, args, class_weight):
     global printstr1,printstr2,printstr3
     optimizer = optim.Adam(model.parameters(), lr=args.lr)
     model.train()
     dtype = torch.FloatTensor
-    criterion = torch.nn.CrossEntropyLoss()
+    criterion = torch.nn.CrossEntropyLoss(weight=class_weight)
     correct = 0
     for batch_idx, (data, target) in enumerate(train_loader):
         data = Variable(data.type(dtype), requires_grad=True)

@@ -53,7 +53,7 @@ def printlog():
 
 def train(epoch, model, train_loader, args, class_weight):
     global printstr1,printstr2,printstr3
-    optimizer = optim.Adam(model.parameters(), lr=args.lr)
+    optimizer = optim.Adam(model.parameters(), lr=args.lr, weight_decay=1e-3)
     model.train()
     dtype = torch.FloatTensor
     criterion = torch.nn.CrossEntropyLoss(weight=class_weight)
@@ -168,41 +168,48 @@ class Data(object):
         self.balanced = balanced
         self.wrap_data(directory)
 
+    def balance_data(self, train_data, train_label):
+        meta_data_pool = {
+            0: [],
+            1: [],
+            2: [],
+        }
+        for single_data, single_label in zip(train_data, train_label):
+            train_label_int = np.where(single_label==1)[0][0]
+            meta_data_pool[train_label_int].append(
+                (single_data, single_label))
+        length = lambda x: len(meta_data_pool[x])
+        balanced_length = min(length(0), length(1), length(2))
+        new_train_data = []
+        new_train_label = []
+        for key, item in meta_data_pool.items():
+            for i, meta in enumerate(item):
+                if i < balanced_length:
+                    new_train_data.append(meta[0])
+                    new_train_label.append(meta[1])
+        # shuffling
+        c = list(zip(new_train_data, new_train_label))
+        # control the seed, i like 3
+        random.seed(3)
+        random.shuffle(c)
+        new_train_data, new_train_label = zip(*c)
+        train_data = np.array(new_train_data)
+        train_label = np.array(new_train_label)
+        return (train_data, train_label)
+
     def wrap_data(self, directory):
         train_data = pickle.load(open(directory + 'train_input.pkl', 'rb'))
         train_label = pickle.load(open(directory + 'train_label.pkl', 'rb'))
         if self.balanced:
-            meta_data_pool = {
-                0: [],
-                1: [],
-                2: [],
-            }
-            for single_data, single_label in zip(train_data, train_label):
-                train_label_int = np.where(single_label==1)[0][0]
-                meta_data_pool[train_label_int].append(
-                    (single_data, single_label))
-            length = lambda x: len(meta_data_pool[x])
-            balanced_length = min(length(0), length(1), length(2))
-            new_train_data = []
-            new_train_label = []
-            for key, item in meta_data_pool.items():
-                for i, meta in enumerate(item):
-                    if i < balanced_length:
-                        new_train_data.append(meta[0])
-                        new_train_label.append(meta[1])
-            # shuffling
-            c = list(zip(new_train_data, new_train_label))
-            # control the seed, i like 3
-            random.seed(3)
-            random.shuffle(c)
-            new_train_data, new_train_label = zip(*c)
-            train_data = np.array(new_train_data)
-            train_label = np.array(new_train_label)
+            train_data, train_label = self.balance_data(train_data, train_label)
+
 
         self.train_dataset = self._wrap_to_dataset(train_data, train_label,1)
 
         test_data = pickle.load(open(directory + 'test_input.pkl', 'rb'))
         test_label = pickle.load(open(directory + 'test_label.pkl', 'rb'))
+        if self.balanced:
+            test_data, test_label = self.balance_data(test_data, test_label)
         self.test_dataset = self._wrap_to_dataset(test_data, test_label)
 
     def _wrap_to_dataset(self, data, label, train=False):

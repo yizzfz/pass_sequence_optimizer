@@ -262,7 +262,7 @@ class Data_generate(object):
             +2.5% - -2.5% not sure
             -2.5% worse than O3
         '''
-        threshold = 5.0
+        threshold = 2.5
         if v>threshold:
             return 1,0,0
         if v<=threshold and v>-threshold:

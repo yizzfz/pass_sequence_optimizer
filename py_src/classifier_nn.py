@@ -17,7 +17,7 @@ printstr3 = ''
 
 
 def main(args):
-    data = Data(balanced=args.balanced) 
+    data = Data(balanced=args.balanced)
     # if args.balanced else Data('./Data/backup/')
     batch_size = args.batch_size
     # in case we need gpus
@@ -26,7 +26,12 @@ def main(args):
         data.train_dataset, batch_size=batch_size, shuffle=True, **kwargs)
     eval_loader = torch.utils.data.DataLoader(
         data.test_dataset, batch_size=batch_size, shuffle=True, **kwargs)
-    model = Net()
+    if args.load:
+        model = torch.load('Model/nn.mdl')
+        print('Model loaded successfully from Model/nn.mdl')
+    else:
+        model = Net()
+
     class_weight = torch.tensor([1.0, 1.0, 1.0])
     if args.balanced==False:
         class_weight = torch.tensor(data.class_weight)
@@ -36,6 +41,12 @@ def main(args):
     for epoch in range(1, args.epochs+1):
         train(epoch, model, train_loader, args, class_weight)
         test(model, eval_loader, args)
+
+    if args.save:
+        if args.cuda:
+            model = model.to('cpu')
+        torch.save(model, 'Model/nn.mdl')
+        print('Model Saved to Model/nn.mdl')
 
     # final_test(model, eval_loader, args)
 
@@ -73,7 +84,7 @@ def train(epoch, model, train_loader, args, class_weight):
         correct += pred.eq(target.data.view_as(pred)).cpu().sum()
 
         if batch_idx % args.log_interval == 0:
-            printstr1 = 'Train Epoch: {} [{}/{} ({:.0f}%)]\tLoss: {:.6f}'.format(
+            printstr1 = 'Train Epoch: {} [{}\t/{} ({:.0f}%)] \tLoss: {:.6f}'.format(
                         epoch, batch_idx * len(data), len(train_loader.dataset),
                         100. * batch_idx / len(train_loader), loss.item())
             printlog()
@@ -159,10 +170,6 @@ def final_test(model, loader, args):
     #     f.close()
 
 
-
-
-
-
 class Data(object):
     def __init__(self, directory='./Data/', balanced=True):
         self.balanced = balanced
@@ -223,7 +230,10 @@ class Data(object):
 
         if(train):
             self.class_weight = [1/np.sum(label==i) for i in range(0, 3)]
-            print(self.class_weight)
+            self.class_weight = [i/min(self.class_weight) for i in self.class_weight]
+            print('Class Distribution',[np.sum(label==i) for i in range(0, 3)])
+            print('Class Weight',self.class_weight)
+            print('\n\n\n')
 
         label = self._wrap_to_tensor(label)
         return torch.utils.data.TensorDataset(data, label)
@@ -271,8 +281,8 @@ if __name__ == "__main__":
         '--test-batch-size', type=int, default=1000, metavar='N',
         help='input batch size for testing (default: 1000)')
     parser.add_argument(
-        '--epochs', type=int, default=800, metavar='N',
-        help='number of epochs to train (default: 10)')
+        '--epochs', type=int, default=500, metavar='N',
+        help='number of epochs to train (default: 500)')
     parser.add_argument(
         '--lr', type=float, default=0.001, metavar='LR',
         help='learning rate (default: 0.1)')
@@ -288,10 +298,16 @@ if __name__ == "__main__":
     parser.add_argument(
         '--balanced', type=lambda x: (str(x).lower() == 'true'),
         default=True, required=False, help='pick balanced dataset or not')
+    parser.add_argument(
+        '--save', type=lambda x: (str(x).lower() == 'true'),
+        default=True, required=False, help='load a trained model')
+    parser.add_argument(
+        '--load', type=lambda x: (str(x).lower() == 'true'),
+        default=False, required=False, help='save the model after training')
     args = parser.parse_args()
     # turn on cuda if you can
     args.cuda = torch.cuda.is_available()
-    if(args.cuda):
+    if args.cuda:
         print('using CUDA')
-    print('learning rate', args.lr,'\n\n\n')
+    print('learning rate', args.lr)
     main(args)

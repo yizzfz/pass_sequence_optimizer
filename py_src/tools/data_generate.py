@@ -126,11 +126,11 @@ class Data_generate(object):
                     label = self.rank_similarity(i, j)
 
                     v = label.index(1)
-                    if(res[v]<=2000):
-                        res[v]+=1
-                        self.all_input[idx] = data
-                        self.all_label[idx] = label
-                        idx+=1
+                    # if(res[v]<=2000):
+                    res[v]+=1
+                    self.all_input[idx] = data
+                    self.all_label[idx] = label
+                    idx+=1
         self.all_input=self.all_input[:idx][:]
         self.all_label=self.all_label[:idx][:]
         data_size = idx
@@ -262,11 +262,12 @@ class Data_generate(object):
             +2.5% - -2.5% not sure
             -2.5% worse than O3
         '''
-        if v>2.5:
+        threshold = 5.0
+        if v>threshold:
             return 1,0,0
-        if v<=2.5 and v>-2.5:
+        if v<=threshold and v>-threshold:
             return 0,1,0
-        if v<=-2.5:
+        if v<=-threshold:
             return 0,0,1
 
         else:

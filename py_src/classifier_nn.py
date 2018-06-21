@@ -9,6 +9,7 @@ from torch.autograd import Variable
 import numpy as np
 import pickle
 import pdb
+import random
 
 printstr1 = ''
 printstr2 = ''
@@ -16,7 +17,8 @@ printstr3 = ''
 
 
 def main(args):
-    data = Data() if args.balanced else Data('./Data/backup/')
+    data = Data(balanced=args.balanced) 
+    # if args.balanced else Data('./Data/backup/')
     batch_size = args.batch_size
     # in case we need gpus
     kwargs = {'num_workers': 1, 'pin_memory': True} if args.cuda else {}
@@ -162,12 +164,41 @@ def final_test(model, loader, args):
 
 
 class Data(object):
-    def __init__(self, directory='./Data/'):
+    def __init__(self, directory='./Data/', balanced=True):
+        self.balanced = balanced
         self.wrap_data(directory)
 
     def wrap_data(self, directory):
         train_data = pickle.load(open(directory + 'train_input.pkl', 'rb'))
         train_label = pickle.load(open(directory + 'train_label.pkl', 'rb'))
+        if self.balanced:
+            meta_data_pool = {
+                0: [],
+                1: [],
+                2: [],
+            }
+            for single_data, single_label in zip(train_data, train_label):
+                train_label_int = np.where(single_label==1)[0][0]
+                meta_data_pool[train_label_int].append(
+                    (single_data, single_label))
+            length = lambda x: len(meta_data_pool[x])
+            balanced_length = min(length(0), length(1), length(2))
+            new_train_data = []
+            new_train_label = []
+            for key, item in meta_data_pool.items():
+                for i, meta in enumerate(item):
+                    if i < balanced_length:
+                        new_train_data.append(meta[0])
+                        new_train_label.append(meta[1])
+            # shuffling
+            c = list(zip(new_train_data, new_train_label))
+            # control the seed, i like 3
+            random.seed(3)
+            random.shuffle(c)
+            new_train_data, new_train_label = zip(*c)
+            train_data = np.array(new_train_data)
+            train_label = np.array(new_train_label)
+
         self.train_dataset = self._wrap_to_dataset(train_data, train_label,1)
 
         test_data = pickle.load(open(directory + 'test_input.pkl', 'rb'))

@@ -23,7 +23,9 @@ class Data_wash(object):
         # print(min(mins), max(maxs))
 
         for i in range(0, len(self.inputs[0])):
-            self.inputs[:,i] = [(t-mins[i]+1)/(maxs[i]-mins[i]+1) for t in self.inputs[:,i]]
+            self.inputs[:,i] = [(t-mins[i]+1e-3)/(maxs[i]-mins[i]+1e-3) for t in self.inputs[:,i]]
+            #refine bound to -1, +1
+            self.inputs[:,i] =  (self.inputs[:,i] - 0.5) * 2.0
 
         # mins = np.min(self.inputs, axis=0)
         # maxs = np.max(self.inputs, axis=0)

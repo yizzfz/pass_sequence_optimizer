@@ -7,7 +7,6 @@ import numpy as np
 from sklearn.cluster import KMeans
 
 
-
 class Data_parse(object):
     def __init__(self):
         self.read_data_file()
@@ -19,14 +18,12 @@ class Data_parse(object):
             self.list_pass = pickle.load(f)
             self.list_metric = pickle.load(f)
 
-
     def write_file(self):
         with open('Data/all_data.pkl', 'wb') as f7:
             pickle.dump(self.inputs, f7)
 
         with open('Data/dict.pkl', 'wb') as f8:
             pickle.dump(self.benchmark_names, f8)
-
 
     def parse(self):
         self.benchmark_names = []
@@ -37,7 +34,12 @@ class Data_parse(object):
         self.inputs = []
         self.path_dict = dict()
         # flatten array lambda func
-        flatten = lambda l: [item for sublist in l for item in sublist]
+
+        def flatten(l): return [item for sublist in l for item in sublist]
+
+        # for i, item in enumerate(self.raw_data):
+        #     print('[', i, ']', item[0])
+        # input()
 
         for i, item in enumerate(self.raw_data):
             self.benchmark_names.append(item[0])
@@ -49,19 +51,20 @@ class Data_parse(object):
 
             self.inputs.append(flatten(data))
 
-            if(len(flatten(data))!=155):
-                print('find unexpected feature length ('+str(len(flatten(data)))+') in ' + item[1])
+            if(len(flatten(data)) != 165):
+                print('find unexpected feature length (' +
+                      str(len(flatten(data))) + ') in ' + item[1])
                 exit(1)
 
-            if(item[4]!=None):
+            if(item[4] is not None):
                 self.GA_sequence.append(item[4][2])
             else:
                 self.GA_sequence.append([])
             self.similar_programs.append(item[5])
 
-        pack = self.benchmark_names, self.paths, self.inputs, self.similar_programs
+        pack = (self.benchmark_names,
+                self.paths, self.inputs, self.similar_programs)
         return pack
-
 
     def parse_ir_info_O3(self, raw_data):
         """
@@ -72,12 +75,7 @@ class Data_parse(object):
         self.average_ir_info(ir_info, 3)
         return_list = []
         for key, value in self.O3_avg.items():
-            if key == 'load/store ratio':
-                pass
-            else:
-                return_list.append(value)
-
-
+            return_list.append(value)
 
         return return_list
 
@@ -105,16 +103,17 @@ class Data_parse(object):
 
     def collect_all(self, names, p_names, ir_info):
         top5 = []
-        #print(p_names)
+        # print(p_names)
         metric_names = []
         loop_names = []
         for item in ir_info:
             # collect selected ir_info from hotpath
             name = item['loop ID']
-            if name in p_names and not name in loop_names:
-                #print(name+'*')
+            if name in p_names and name not in loop_names:
+                # if this loop is important and haven't visted
                 names, vals = self.sep_contents_list(item)
-
+                names.append('score')
+                vals.append(self.O0_profile_ratio[name])
                 top5.append(vals)
                 metric_names.append(names)
                 loop_names.append(name)
@@ -128,7 +127,6 @@ class Data_parse(object):
 
         data = top5
 
-
         data.append(self.O0_avg.values())
         data.append(self.O0_weighted_avg.values())
         metric_names.append(self.O0_avg.keys())
@@ -136,15 +134,12 @@ class Data_parse(object):
         loop_names.append('avg')
         loop_names.append('weighted_avg')
 
-
-
         return (data, metric_names, loop_names)
 
     def compute_weighted_avg(self, ir_item, ratio):
 
-
         for key, val in ir_item.items():
-            if key == 'loop ID' or key == 'int/fp ratio':
+            if key == 'loop ID':
                 pass
 
             else:
@@ -156,14 +151,11 @@ class Data_parse(object):
                 else:
                     self.O0_weighted_avg[key] = 0
 
-
-
-
     def sep_contents_list(self, ir_item):
         names = []
         vals = []
         for key, val in ir_item.items():
-            if key == 'loop ID' or key == 'int/fp ratio':
+            if key == 'loop ID':
                 pass
             else:
                 names.append(key)
@@ -176,7 +168,6 @@ class Data_parse(object):
         local_inst = []
         total_inst = []
         loop_exe_cnt = []
-        scores = []
         for i, item in enumerate(info):
             names.append(item['loop ID'])
             local_inst.append(item['number of instructions executed here '
@@ -186,37 +177,37 @@ class Data_parse(object):
                 loop_exe_cnt.append(item['loop execution count'])
             else:
                 loop_exe_cnt.append(0)
-            scores.append(local_inst[i] * loop_exe_cnt[i])
-        indexes = sorted(range(len(scores)), key=lambda i: scores[i])[-k:]
+        indexes = sorted(range(len(local_inst)),
+                         key=lambda i: local_inst[i])[-k:]
         top_k_names = []
         top_k_scores = []
         self.O0_profile_ratio = {}
-        for i, score in enumerate(scores):
-            self.O0_profile_ratio[names[i]] = score / float(sum(scores))
+        for i, score in enumerate(local_inst):
+            self.O0_profile_ratio[names[i]] = score / float(sum(local_inst))
         for index in indexes:
             top_k_names.append(names[index])
-            top_k_scores.append(scores[index])
+            top_k_scores.append(local_inst[index])
         return(top_k_names, top_k_scores)
 
     def average_ir_info(self, info, O_level=0):
         avg = {}
         # init
         for key in info[0].keys():
-            if key == 'loop ID' or key == 'int/fp ratio':
+            if key == 'loop ID':
                 pass
             else:
                 avg[key] = 0
         # accumulate each value
         for item in info:
             for key, val in item.items():
-                if key == 'loop ID' or key == 'int/fp ratio':
+                if key == 'loop ID':
                     pass
                 else:
                     avg[key] += val
 
         # avg
         for key in avg.keys():
-            avg[key] = avg[key]/len(info)
+            avg[key] = avg[key] / len(info)
 
         if O_level == 0:
             self.O0_avg = avg
@@ -251,7 +242,7 @@ class Data_parse(object):
         if trip_cnt == -1:
             trip_cnt = 0
         # score complexity
-        complexity = item['inst']/float(self.O0_avg['inst'] + 1e-10) + \
+        complexity = item['inst'] / float(self.O0_avg['inst'] + 1e-10) + \
             item['floating point'] / \
             float(self.O0_avg['floating point'] + 1e-10) + \
             item['memory allocation'] / \

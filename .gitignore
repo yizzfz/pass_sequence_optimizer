@@ -15,3 +15,4 @@ openbench*
 *__pycache__*
 /py_src/Data
 /py_src/Model
+/py_src/Figure

@@ -26,45 +26,44 @@ def main(args):
         data.train_dataset, batch_size=batch_size, shuffle=True, **kwargs)
     eval_loader = torch.utils.data.DataLoader(
         data.test_dataset, batch_size=batch_size, shuffle=True, **kwargs)
+    model = Net()
     if args.load:
-        model = torch.load('Model/nn.mdl')
+        model.load_state_dict((torch.load('Model/nn.mdl')))
         print('Model loaded successfully from Model/nn.mdl')
-    else:
-        model = Net()
 
     class_weight = torch.tensor([1.0, 1.0, 1.0])
-    if args.balanced==False:
+    if args.balanced is False:
         class_weight = torch.tensor(data.class_weight)
     if args.cuda:
         model.cuda()
         class_weight = class_weight.cuda()
-    for epoch in range(1, args.epochs+1):
+    for epoch in range(1, args.epochs + 1):
         train(epoch, model, train_loader, args, class_weight)
         test(model, eval_loader, args)
 
     if args.save:
         if args.cuda:
             model = model.to('cpu')
-        torch.save(model, 'Model/nn.mdl')
+        torch.save(model.state_dict(), 'Model/nn.mdl')
         print('Model Saved to Model/nn.mdl')
 
-    # final_test(model, eval_loader, args)
 
 def printlog():
-    #\x1b[3A = move cursor up 3 lines
-    #\x1b[2K = clear stdout from cursor
-    print('\x1b[3A\x1b[2K\r',end='')
-    print(' '*100)
-    print(' '*100)
-    print(' '*100)
-    print('\x1b[3A\x1b[2K\r',end='')
+    # \x1b[3A = move cursor up 3 lines
+    # \x1b[2K = clear stdout from cursor
+    print('\x1b[3A\x1b[2K\r', end='')
+    print(' ' * 100)
+    print(' ' * 100)
+    print(' ' * 100)
+    print('\x1b[3A\x1b[2K\r', end='')
     print(printstr1)
     print(printstr2)
     print(printstr3)
 
+
 def train(epoch, model, train_loader, args, class_weight):
-    global printstr1,printstr2,printstr3
-    optimizer = optim.Adam(model.parameters(), lr=args.lr, weight_decay=1e-3)
+    global printstr1, printstr2, printstr3
+    optimizer = optim.Adam(model.parameters(), lr=args.lr, weight_decay=1e-4)
     model.train()
     dtype = torch.FloatTensor
     criterion = torch.nn.CrossEntropyLoss(weight=class_weight)
@@ -84,9 +83,10 @@ def train(epoch, model, train_loader, args, class_weight):
         correct += pred.eq(target.data.view_as(pred)).cpu().sum()
 
         if batch_idx % args.log_interval == 0:
-            printstr1 = 'Train Epoch: {} [{}\t/{} ({:.0f}%)] \tLoss: {:.6f}'.format(
-                        epoch, batch_idx * len(data), len(train_loader.dataset),
-                        100. * batch_idx / len(train_loader), loss.item())
+            printstr1 = \
+                'Train Epoch: {} [{}\t/{} ({:.0f}%)] \tLoss: {:.6f}'.format(
+                    epoch, batch_idx * len(data), len(train_loader.dataset),
+                    100. * batch_idx / len(train_loader), loss.item())
             printlog()
 
     #         print('Train Epoch: {} [{}/{} ({:.0f}%)]\tLoss: {:.6f}\t'.format(
@@ -95,8 +95,10 @@ def train(epoch, model, train_loader, args, class_weight):
     #
     # print('Train Epoch: {} Acc: {:.1f}'.format(
     #     epoch, 100.*correct/len(train_loader.dataset)))
-    printstr2 = 'Train Epoch: {} Acc: {:.1f}'.format(epoch, 100.*correct/len(train_loader.dataset))
+    printstr2 = 'Train Epoch: {} Acc: {:.1f}'.format(
+        epoch, 100. * correct / len(train_loader.dataset))
     printlog()
+
 
 def test(model, loader, args):
     global printstr3
@@ -117,57 +119,11 @@ def test(model, loader, args):
         correct += pred.eq(target.data.view_as(pred)).cpu().sum()
 
     test_loss /= len(loader.dataset)
-    printstr3 = 'Test set: Average loss: {:.4f}, Accuracy: {}/{} ({:.0f}%)'.format(
-       test_loss, correct, len(loader.dataset),
-       100. * correct / len(loader.dataset))
+    printstr3 = \
+        'Test set: Average loss: {:.4f}, Accuracy: {}/{} ({:.0f}%)'.format(
+            test_loss, correct, len(loader.dataset),
+            100. * correct / len(loader.dataset))
     printlog()
-
-    #print('Test set: Average loss: {:.4f}, Accuracy: {}/{} ({:.0f}%)\n'.format(
-    #    test_loss, correct, len(loader.dataset),
-    #    100. * correct / len(loader.dataset)))
-
-def read_test_list(name='Data/test_idx.pkl'):
-    with open(name, 'rb') as f:
-        test_list = pickle.load(f)
-    return test_list
-
-def final_test(model, loader, args):
-    model.eval()
-    test_loss = 0
-    correct = 0
-    preds = []
-    dtype = torch.FloatTensor
-    for data, target in loader:
-        data = Variable(data.type(dtype), requires_grad=True)
-        target = Variable(target.type(torch.LongTensor))
-        if args.cuda:
-            data, target = data.cuda(), target.cuda()
-        output = model(data)
-        # get the index of the max log-probability
-        pred = output.data.max(1, keepdim=True)[1]
-        preds+=(pred.cpu().tolist())
-        correct += pred.eq(target.data.view_as(pred)).cpu().sum()
-
-    test_list = read_test_list()
-    n = len(test_list)
-    n_test = int(len(loader.dataset)/(n-1))
-
-    res = []
-    for i in test_list:
-        r = []
-        for j in range(0, n-1):
-            if(preds[i*(n-1)+j][0]<2):
-                if(j>=i):
-                    r.append(j+1)
-                else:
-                    r.append(j)
-        print(r)
-        res.append(r)
-
-
-    # with open('Data/result.pkl', 'wb') as f:
-    #     pickle.dump(res, f)
-    #     f.close()
 
 
 class Data(object):
@@ -182,10 +138,11 @@ class Data(object):
             2: [],
         }
         for single_data, single_label in zip(train_data, train_label):
-            train_label_int = np.where(single_label==1)[0][0]
+            train_label_int = np.where(single_label == 1)[0][0]
             meta_data_pool[train_label_int].append(
                 (single_data, single_label))
-        length = lambda x: len(meta_data_pool[x])
+
+        def length(x): return len(meta_data_pool[x])
         balanced_length = min(length(0), length(1), length(2))
         new_train_data = []
         new_train_label = []
@@ -208,10 +165,10 @@ class Data(object):
         train_data = pickle.load(open(directory + 'train_input.pkl', 'rb'))
         train_label = pickle.load(open(directory + 'train_label.pkl', 'rb'))
         if self.balanced:
-            train_data, train_label = self.balance_data(train_data, train_label)
+            train_data, train_label = self.balance_data(
+                train_data, train_label)
 
-
-        self.train_dataset = self._wrap_to_dataset(train_data, train_label,1)
+        self.train_dataset = self._wrap_to_dataset(train_data, train_label, 1)
 
         test_data = pickle.load(open(directory + 'test_input.pkl', 'rb'))
         test_label = pickle.load(open(directory + 'test_label.pkl', 'rb'))
@@ -229,10 +186,12 @@ class Data(object):
         label = np.where(label > 0)[1]
 
         if(train):
-            self.class_weight = [1/np.sum(label==i) for i in range(0, 3)]
-            self.class_weight = [i/min(self.class_weight) for i in self.class_weight]
-            print('Class Distribution',[np.sum(label==i) for i in range(0, 3)])
-            print('Class Weight',self.class_weight)
+            self.class_weight = [1 / np.sum(label == i) for i in range(0, 3)]
+            self.class_weight = [i / min(self.class_weight)
+                                 for i in self.class_weight]
+            print('Class Distribution', [
+                  np.sum(label == i) for i in range(0, 3)])
+            print('Class Weight', self.class_weight)
             print('\n\n\n')
 
         label = self._wrap_to_tensor(label)
@@ -245,21 +204,25 @@ class Data(object):
 class Net(nn.Module):
     def __init__(self):
         super(Net, self).__init__()
-        self.fc1 = nn.Linear(310, 200)
-        self.fc2 = nn.Linear(200, 20)
-        self.fc3 = nn.Linear(20, 3)
+        self.fc1 = nn.Linear(330, 500)
+        self.fc2 = nn.Linear(500, 500)
+        self.fc5 = nn.Linear(500, 200)
+        self.fc7 = nn.Linear(200, 3)
 
     def forward(self, x):
 
-        #print(x.cpu().detach().numpy())
-        self.checkNaN(x,'0')
-
         x = F.relu(self.fc1(x))
         x = F.dropout(x, training=self.training)
-        x = self.fc2(x)
-        x = self.fc3(x)
+        x = F.relu(self.fc2(x))
+        x = F.dropout(x, training=self.training)
 
-        self.checkNaN(x,'5')
+        # x = F.relu(self.fc3(x))
+        # x = F.relu(self.fc4(x))
+        x = F.relu(self.fc5(x))
+        x = F.dropout(x, training=self.training)
+
+        # x = F.relu(self.fc6(x))
+        x = self.fc7(x)
 
         # state = self.state_dict()
         # print(state['fc1.weight'])
@@ -267,7 +230,7 @@ class Net(nn.Module):
         return F.log_softmax(x, dim=1)
 
     def checkNaN(self, x, s=''):
-        if(np.any(np.isnan(x.cpu().detach().numpy())) ):
+        if(np.any(np.isnan(x.cpu().detach().numpy()))):
             print('Found nan', s)
             exit(1)
 
@@ -285,7 +248,7 @@ if __name__ == "__main__":
         help='number of epochs to train (default: 500)')
     parser.add_argument(
         '--lr', type=float, default=0.001, metavar='LR',
-        help='learning rate (default: 0.1)')
+        help='learning rate (default: 0.001)')
     parser.add_argument(
         '--momentum', type=float, default=0.5, metavar='M',
         help='SGD momentum (default: 0.5)')
@@ -299,11 +262,11 @@ if __name__ == "__main__":
         '--balanced', type=lambda x: (str(x).lower() == 'true'),
         default=True, required=False, help='pick balanced dataset or not')
     parser.add_argument(
-        '--save', type=lambda x: (str(x).lower() == 'true'),
-        default=True, required=False, help='load a trained model')
+        '--save', action='store_true', default=False, required=False,
+        help='load a trained model')
     parser.add_argument(
-        '--load', type=lambda x: (str(x).lower() == 'true'),
-        default=False, required=False, help='save the model after training')
+        '--load', action='store_true', default=False, required=False,
+        help='save the model after training')
     args = parser.parse_args()
     # turn on cuda if you can
     args.cuda = torch.cuda.is_available()

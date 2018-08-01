@@ -6,7 +6,6 @@ import sys
 import pickle
 from subprocess import check_call, check_output, STDOUT
 from multiprocessing import Process, Queue, Value
-import numpy as np
 
 
 def load_prepared(base_dir):
@@ -67,15 +66,9 @@ def create_child(list_str, current_dir):
         check_call(['timeout 60 make'], stdout=DEVNULL,
                    stderr=STDOUT, cwd=current_dir, shell=True)
     except subprocess.CalledProcessError:
-        with open(current_dir + "/error.txt", "a") as f:
-            f.write(list_str)
-            f.write('\n')
-            f.close()
-        record_list('err_', -1, -1, 0)
         return (1, -1, -1)
 
     etime = -1.0
-    size = -1
     timing = []
 
     repeat = 5  # set max run according to runtime
@@ -116,27 +109,15 @@ def create_child(list_str, current_dir):
                         result_correct = False
 
                 if(not result_correct):
-                    with open(current_dir + "/res_error.txt", "a") as f:
-                        f.write(list_str)
-                        f.write('\n')
-                        f.close()
-                    record_list('rerr_', -1, -1, 0)
                     return (1, -1, -1)
 
         except subprocess.CalledProcessError:
-            with open(current_dir + "/error.txt", "a") as f:
-                f.write(list_str)
-                f.write('\n')
-                f.close()
-            record_list('err_', -1, -1, 0)
             return (1, -1, -1)
 
         timing.append(end - start)
 
     avg_time = average_timing(timing)
-    size = int(check_output(
-        'ls -nl a.out | awk \'{print $5}\'', cwd=current_dir, shell=True))
-    return (0, avg_time, size)
+    return (0, avg_time)
 
 
 def get_testcodes(base_dir):
@@ -149,7 +130,7 @@ def get_testcodes(base_dir):
     return testcodes
 
 
-def t_rand(current_dir, all_list):
+def t_rand(current_dir, all_list, O0list, O3list):
     os.chdir(current_dir)
     cnt = 0
     times = []
@@ -166,15 +147,19 @@ def t_rand(current_dir, all_list):
         if cnt == 10:
             break
 
-    O3time = read_O3_time(current_dir)
-    print(times, O3time)
-    return times
+    O3succ, O3time = create_child(O3list, current_dir)
+    O0succ, O0time = create_child(O3list, current_dir)
+
+    print(times, O0time, O3time)
+    return (times, O0time, O3time)
 
 
 def main():
     all_list = load_from_txt('allPassList.txt')
     base_dir = sys.path[0]
     testcodes = get_testcodes(base_dir)
+    O0list = list_to_string(load_from_txt('O0List.txt'))
+    O3list = list_to_string(load_from_txt('O3List.txt'))
 
     if len(testcodes) == 0:
         print ('cannot find any MARKER in (', base_dir,
@@ -196,10 +181,9 @@ def main():
     res_all = {}
     for i, testcode in enumerate(prepared):
         print('[' + str(i) + '/' + str(total) + '] ' + shorten(testcode))
-        res = t_rand(testcode, all_list)
+        res = t_rand(testcode, all_list, O0list, O3list)
         res_all[shorten(testcode)] = res
     print('\nall done\n')
-    print(res_all)
 
     with open('rand.pkl', 'wb') as f:
         pickle.dump(res_all, f)

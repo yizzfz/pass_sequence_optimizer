@@ -19,8 +19,6 @@ printstr3 = ''
 
 def main(args):
     data = Data()
-    import pdb; pdb.set_trace()
-    exit()
 
     # if args.balanced else Data('./Data/backup/')
     batch_size = args.batch_size
@@ -28,6 +26,9 @@ def main(args):
     kwargs = {'num_workers': 1, 'pin_memory': True} if args.cuda else {}
     train_loader = torch.utils.data.DataLoader(
         data.train_dataset, batch_size=batch_size, shuffle=True, **kwargs)
+
+    import pdb; pdb.set_trace()
+    exit()
     eval_loader = torch.utils.data.DataLoader(
         data.test_dataset, batch_size=batch_size, shuffle=True, **kwargs)
     model = Net()
@@ -166,7 +167,7 @@ class Data(object):
                 self.features[t_id] + self.features[self.id])
             test_data['label'].append(
                 self._result_to_label(self.results[t_id, self.id]))
-        return test_data
+        return self._create_dataset(test_data)
     
     def add_train_data(self):
         # add to the list
@@ -183,7 +184,13 @@ class Data(object):
                         self.features[t_id] + self.features[self.t_id2])
                     train_data['label'].append(
                         self._result_to_label(self.results[t_id, self.t_id2]))
-        return train_data
+        return self._create_dataset(train_data)
+
+    def _create_dataset(self, meta_dict):
+        tensor_x = meta_dict['input']
+        tensor_y = meta_dict['label']
+        return torch.utils.data.TensorDataset(tensor_x,tensor_y)
+
 
 
 class Net(nn.Module):

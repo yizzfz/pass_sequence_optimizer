@@ -24,13 +24,7 @@ def main(args):
     batch_size = args.batch_size
     # in case we need gpus
     kwargs = {'num_workers': 1, 'pin_memory': True} if args.cuda else {}
-    train_loader = torch.utils.data.DataLoader(
-        data.train_dataset, batch_size=batch_size, shuffle=True, **kwargs)
 
-    import pdb; pdb.set_trace()
-    exit()
-    eval_loader = torch.utils.data.DataLoader(
-        data.test_dataset, batch_size=batch_size, shuffle=True, **kwargs)
     model = Net()
     if args.load:
         model.load_state_dict((torch.load('Model/nn.mdl')))
@@ -42,9 +36,21 @@ def main(args):
     if args.cuda:
         model.cuda()
         class_weight = class_weight.cuda()
-    for epoch in range(1, args.epochs + 1):
-        train(epoch, model, train_loader, args, class_weight)
-        test(model, eval_loader, args)
+
+    for train_size in range(2, 109):
+        test_set = data.test_data_feed()
+
+        if train_size > 2:
+            eval_loader = torch.utils.data.DataLoader(
+                test_set, batch_size=batch_size, shuffle=True, **kwargs)
+            test(model, eval_loader, args)
+
+        train_set = data.add_train_data()
+        train_loader = torch.utils.data.DataLoader(
+            train_set, batch_size=batch_size, shuffle=True, **kwargs)
+
+        for epoch in range(1, args.epochs + 1):
+            train(epoch, model, train_loader, args, class_weight)
 
     if args.save:
         if args.cuda:
@@ -94,12 +100,6 @@ def train(epoch, model, train_loader, args, class_weight):
                     100. * batch_idx / len(train_loader), loss.item())
             printlog()
 
-    #         print('Train Epoch: {} [{}/{} ({:.0f}%)]\tLoss: {:.6f}\t'.format(
-    #             epoch, batch_idx * len(data), len(train_loader.dataset),
-    #             100. * batch_idx / len(train_loader), loss.item()))
-    #
-    # print('Train Epoch: {} Acc: {:.1f}'.format(
-    #     epoch, 100.*correct/len(train_loader.dataset)))
     printstr2 = 'Train Epoch: {} Acc: {:.1f}'.format(
         epoch, 100. * correct / len(train_loader.dataset))
     printlog()
@@ -139,23 +139,36 @@ class Data(object):
         self.step = 0
         self.data_pool = []
         self._threshold = 2.5
-        self.ids = list(*range(len(self.names)))
+        self.ids = list(range(len(self.names)))
         self.training_set_ids = []
-    
+
+        # need at least two programs in training set
+        self.training_set_ids.append(self.ids.pop())
+        self.training_set_ids.append(self.ids.pop())
+
+
     def _result_to_label(self, result):
+        # if result > self._threshold:
+        #     return [1, 0, 0]
+        # elif result <= self._threshold and result >= -self._threshold:
+        #     return [0, 1, 0]
+        # else:
+        #     return [0, 0, 1]
         if result > self._threshold:
-            return [1, 0, 0]
+            return 0
         elif result <= self._threshold and result >= -self._threshold:
-            return [0, 1, 0]
+            return 1
         else:
-            return [0, 0, 1]
+            return 2
 
     def _load(self, file_name):
         if not os.path.isfile(file_name):
             raise ValueError('data file not found')
         return pickle.load(open(file_name, 'rb'))
-    
+
     def test_data_feed(self):
+
+        # TODO: random pop?
         self.id = self.ids.pop()
         # self.training_set_ids.append(id)
         test_data = {
@@ -164,11 +177,12 @@ class Data(object):
         }
         for t_id in self.training_set_ids:
             test_data['input'].append(
-                self.features[t_id] + self.features[self.id])
+                np.append(self.features[self.id], self.features[t_id]))
             test_data['label'].append(
-                self._result_to_label(self.results[t_id, self.id]))
-        return self._create_dataset(test_data)
-    
+                self._result_to_label(self.results[self.id][t_id]))
+        return self._create_dataset(test_data) \
+            if self.training_set_ids != [] else []
+
     def add_train_data(self):
         # add to the list
         self.training_set_ids.append(self.id)
@@ -181,16 +195,16 @@ class Data(object):
             for t_id2 in self.training_set_ids:
                 if t_id != t_id2:
                     train_data['input'].append(
-                        self.features[t_id] + self.features[self.t_id2])
+                        np.append(self.features[t_id], self.features[t_id2]))
                     train_data['label'].append(
-                        self._result_to_label(self.results[t_id, self.t_id2]))
+                        self._result_to_label(self.results[t_id][t_id2]))
         return self._create_dataset(train_data)
 
     def _create_dataset(self, meta_dict):
-        tensor_x = meta_dict['input']
-        tensor_y = meta_dict['label']
-        return torch.utils.data.TensorDataset(tensor_x,tensor_y)
-
+        tensor_x = np.array(meta_dict['input'])
+        tensor_y = np.array(meta_dict['label'])
+        return torch.utils.data.TensorDataset(torch.from_numpy(tensor_x),
+                                              torch.from_numpy(tensor_y))
 
 
 class Net(nn.Module):
@@ -236,8 +250,8 @@ if __name__ == "__main__":
         '--test-batch-size', type=int, default=1000, metavar='N',
         help='input batch size for testing (default: 1000)')
     parser.add_argument(
-        '--epochs', type=int, default=500, metavar='N',
-        help='number of epochs to train (default: 500)')
+        '--epochs', type=int, default=100, metavar='N',
+        help='number of epochs to train (default: 100)')
     parser.add_argument(
         '--lr', type=float, default=0.001, metavar='LR',
         help='learning rate (default: 0.001)')

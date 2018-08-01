@@ -4,7 +4,7 @@ match_result.pkl:
                          (comparing with O3)
 
 features.pkl:
-  1d list, length n
+  1d numpy array, length n
   features[p] = a 165 long vector, program's feature
 
 benchmark_names.pkl:

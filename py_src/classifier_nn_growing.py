@@ -15,9 +15,11 @@ import os
 printstr1 = ''
 printstr2 = ''
 printstr3 = ''
+printstr4 = ''
 
 
 def main(args):
+    global printstr4
     data = Data()
 
     # if args.balanced else Data('./Data/backup/')
@@ -37,14 +39,19 @@ def main(args):
         model.cuda()
         class_weight = class_weight.cuda()
 
-    for train_size in range(2, 109):
+    true_positives = 0
+    passed = []
+    for i in range(0, 110):
+        n_train = len(data.training_set_ids)
         test_set = data.test_data_feed()
 
-        if train_size > 2:
+        if n_train > 2 and test_set != []:
             eval_loader = torch.utils.data.DataLoader(
                 test_set, batch_size=batch_size, shuffle=True, **kwargs)
             true_positives = test(model, eval_loader, args)
-        
+            if true_positives > 0:
+                passed.append(data.id)
+
         if true_positives <= 0:
             train_set = data.add_train_data()
             train_loader = torch.utils.data.DataLoader(
@@ -53,6 +60,16 @@ def main(args):
             for epoch in range(1, args.epochs + 1):
                 train(epoch, model, train_loader, args, class_weight)
 
+        n_train = len(data.training_set_ids)
+        n_unseen = len(data.ids)
+        n_passed = len(passed)
+        printstr4 = 'No. Train: ' + str(n_train) +\
+                    ',\t No. Unseen: ' + str(n_unseen) +\
+                    ',\t No. Passed: ' + str(n_passed)
+        printlog()
+
+    print('Programs included in system:', data.training_set_ids)
+    print('Programs predicted successfully:', passed)
     if args.save:
         if args.cuda:
             model = model.to('cpu')
@@ -63,14 +80,16 @@ def main(args):
 def printlog():
     # \x1b[3A = move cursor up 3 lines
     # \x1b[2K = clear stdout from cursor
-    print('\x1b[3A\x1b[2K\r', end='')
+    print('\x1b[4A\x1b[2K\r', end='')
     print(' ' * 100)
     print(' ' * 100)
     print(' ' * 100)
-    print('\x1b[3A\x1b[2K\r', end='')
+    print(' ' * 100)
+    print('\x1b[4A\x1b[2K\r', end='')
     print(printstr1)
     print(printstr2)
     print(printstr3)
+    print(printstr4)
 
 
 def train(epoch, model, train_loader, args, class_weight):
@@ -111,6 +130,7 @@ def test(model, loader, args):
     model.eval()
     test_loss = 0
     correct = 0
+    true_positives = 0
     dtype = torch.FloatTensor
     for data, target in loader:
         data = Variable(data.type(dtype), requires_grad=True)
@@ -122,16 +142,17 @@ def test(model, loader, args):
         test_loss += F.nll_loss(output, target, size_average=False).item()
         # get the index of the max log-probability
         pred = output.data.max(1, keepdim=True)[1]
-        correct += pred.eq(target.data.view_as(pred)).cpu().sum()
-        true_positives += ((target == correct) * (target == 0)).float().sum()
+        pred = pred.reshape(len(target))
+        correct += pred.eq(target).cpu().sum()
+        true_positives += ((target == pred) * (target == 0)).float().sum()
 
     test_loss /= len(loader.dataset)
     printstr3 = \
-        'Test set: Average loss: {:.4f}, Accuracy: {}/{} ({:.0f}%)'.format(
+        'Test set: Average loss: {:.4f}, Accuracy: {}/{} ({:.0f}%), True positive: {}'.format(
             test_loss, correct, len(loader.dataset),
-            100. * correct / len(loader.dataset))
+            100. * correct / len(loader.dataset), true_positives)
     printlog()
-    return true_positives
+    return int(true_positives)
 
 
 class Data(object):
@@ -151,12 +172,11 @@ class Data(object):
         # need at least two programs in training set
         self.training_set_ids.append(self.ids.pop())
         self.training_set_ids.append(self.ids.pop())
-    
+
     def _list_shuffle(self, xs):
         xs = [[x] for x in xs]
         random.shuffle(xs)
         return [x[0] for x in xs]
-
 
     def _result_to_label(self, result):
         # if result > self._threshold:
@@ -179,20 +199,22 @@ class Data(object):
 
     def test_data_feed(self):
 
-        # TODO: random pop?
+        if self.training_set_ids == [] or self.ids == []:
+            return []
+
         self.id = self.ids.pop()
         # self.training_set_ids.append(id)
         test_data = {
             'input': [],
             'label': [],
         }
+
         for t_id in self.training_set_ids:
             test_data['input'].append(
                 np.append(self.features[self.id], self.features[t_id]))
             test_data['label'].append(
                 self._result_to_label(self.results[self.id][t_id]))
-        return self._create_dataset(test_data) \
-            if self.training_set_ids != [] else []
+        return self._create_dataset(test_data)
 
     def add_train_data(self):
         # add to the list
@@ -290,4 +312,5 @@ if __name__ == "__main__":
     if args.cuda:
         print('using CUDA')
     print('learning rate', args.lr)
+    print('\n\n\n\n')
     main(args)

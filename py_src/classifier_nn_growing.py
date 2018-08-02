@@ -43,14 +43,15 @@ def main(args):
         if train_size > 2:
             eval_loader = torch.utils.data.DataLoader(
                 test_set, batch_size=batch_size, shuffle=True, **kwargs)
-            test(model, eval_loader, args)
+            true_positives = test(model, eval_loader, args)
+        
+        if true_positives <= 0:
+            train_set = data.add_train_data()
+            train_loader = torch.utils.data.DataLoader(
+                train_set, batch_size=batch_size, shuffle=True, **kwargs)
 
-        train_set = data.add_train_data()
-        train_loader = torch.utils.data.DataLoader(
-            train_set, batch_size=batch_size, shuffle=True, **kwargs)
-
-        for epoch in range(1, args.epochs + 1):
-            train(epoch, model, train_loader, args, class_weight)
+            for epoch in range(1, args.epochs + 1):
+                train(epoch, model, train_loader, args, class_weight)
 
     if args.save:
         if args.cuda:
@@ -122,6 +123,7 @@ def test(model, loader, args):
         # get the index of the max log-probability
         pred = output.data.max(1, keepdim=True)[1]
         correct += pred.eq(target.data.view_as(pred)).cpu().sum()
+        true_positives += ((target == correct) * (target == 0)).float().sum()
 
     test_loss /= len(loader.dataset)
     printstr3 = \
@@ -129,6 +131,7 @@ def test(model, loader, args):
             test_loss, correct, len(loader.dataset),
             100. * correct / len(loader.dataset))
     printlog()
+    return true_positives
 
 
 class Data(object):

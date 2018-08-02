@@ -132,7 +132,7 @@ def test(model, loader, args):
 
 
 class Data(object):
-    def __init__(self, file_name='./Dict/', balanced=True):
+    def __init__(self, file_name='./Dict/', balanced=True, random=True):
         self.names = self._load(file_name + 'benchname.pkl')
         self.features = self._load(file_name + 'features.pkl')
         self.results = self._load(file_name + 'match_result.pkl')
@@ -140,11 +140,19 @@ class Data(object):
         self.data_pool = []
         self._threshold = 2.5
         self.ids = list(range(len(self.names)))
+        # random shuffle
+        if random:
+            self.ids = self._list_shuffle(self.ids)
         self.training_set_ids = []
 
         # need at least two programs in training set
         self.training_set_ids.append(self.ids.pop())
         self.training_set_ids.append(self.ids.pop())
+    
+    def _list_shuffle(self, xs):
+        xs = [[x] for x in xs]
+        random.shuffle(xs)
+        return [x[0] for x in xs]
 
 
     def _result_to_label(self, result):

@@ -17,10 +17,10 @@ printstr2 = ''
 printstr3 = ''
 printstr4 = ''
 
+supported_runs = ['grow_nn', 'k_fold']
 
 def main(args):
     global printstr4
-    data = Data()
 
     # if args.balanced else Data('./Data/backup/')
     batch_size = args.batch_size
@@ -39,42 +39,62 @@ def main(args):
         model.cuda()
         class_weight = class_weight.cuda()
 
-    true_positives = 0
-    passed = []
-    for i in range(0, 110):
-        n_train = len(data.training_set_ids)
-        test_set = data.test_data_feed()
+    if args.run not in supported_runs:
+        raise ValueError('Run type {} not in supported runs {}'.format(
+            args.run, supported_runs))
 
-        if n_train > 2 and test_set != []:
-            eval_loader = torch.utils.data.DataLoader(
-                test_set, batch_size=batch_size, shuffle=True, **kwargs)
-            true_positives = test(model, eval_loader, args)
-            if true_positives > 0:
-                passed.append(data.id)
+    if args.run == 'grow_nn':
+        data = Data()
+        true_positives = 0
+        passed = []
+        for i in range(0, 110):
+            n_train = len(data.training_set_ids)
+            test_set = data.test_data_feed()
 
-        if true_positives <= 0:
-            train_set = data.add_train_data()
-            train_loader = torch.utils.data.DataLoader(
-                train_set, batch_size=batch_size, shuffle=True, **kwargs)
+            if n_train > 2 and test_set != []:
+                eval_loader = torch.utils.data.DataLoader(
+                    test_set, batch_size=batch_size, shuffle=True, **kwargs)
+                true_positives = test(model, eval_loader, args)
+                if true_positives > 0:
+                    passed.append(data.id)
 
-            for epoch in range(1, args.epochs + 1):
-                train(epoch, model, train_loader, args, class_weight)
+            if true_positives <= 0:
+                train_set = data.add_train_data()
+                train_loader = torch.utils.data.DataLoader(
+                    train_set, batch_size=batch_size, shuffle=True, **kwargs)
 
-        n_train = len(data.training_set_ids)
-        n_unseen = len(data.ids)
-        n_passed = len(passed)
-        printstr4 = 'No. Train: ' + str(n_train) +\
-                    ',\t No. Unseen: ' + str(n_unseen) +\
-                    ',\t No. Passed: ' + str(n_passed)
-        printlog()
+                for epoch in range(1, args.epochs + 1):
+                    train(epoch, model, train_loader, args, class_weight)
 
-    print('Programs included in system:', data.training_set_ids)
-    print('Programs predicted successfully:', passed)
-    if args.save:
-        if args.cuda:
-            model = model.to('cpu')
-        torch.save(model.state_dict(), 'Model/nn.mdl')
-        print('Model Saved to Model/nn.mdl')
+            n_train = len(data.training_set_ids)
+            n_unseen = len(data.ids)
+            n_passed = len(passed)
+            printstr4 = 'No. Train: ' + str(n_train) +\
+                        ',\t No. Unseen: ' + str(n_unseen) +\
+                        ',\t No. Passed: ' + str(n_passed)
+            printlog()
+
+        print('Programs included in system:', data.training_set_ids)
+        print('Programs predicted successfully:', passed)
+        if args.save:
+            if args.cuda:
+                model = model.to('cpu')
+            torch.save(model.state_dict(), 'Model/nn.mdl')
+            print('Model Saved to Model/nn.mdl')
+
+    if args.run == 'k_fold':
+        data = KfoldData()
+        train_set, test_set = data.data_feed()
+        train_loader = torch.utils.data.DataLoader(
+            train_set, batch_size=batch_size, shuffle=True, **kwargs)
+        for epoch in range(args.epochs):
+            train(epoch, model, train_loader, args, class_weight)
+        eval_loader = torch.utils.data.DataLoader(
+            test_set, batch_size=batch_size, shuffle=True, **kwargs)
+
+
+
+        
 
 
 def printlog():
@@ -155,8 +175,46 @@ def test(model, loader, args):
     return int(true_positives)
 
 
+
+
+class KfoldData(Data):
+    def __init__(self, file_name='./Dict/', balanced=True, k_fold=10):
+        super.__init__(
+            self, file_name=file_name, balanced=balanced, 
+            random=True, training_set=False)
+        self.cnt = 0
+        self.k_fold = k_fold
+        
+    def data_feed(self):
+        self.test_set_ids = self.ids[self.cnt: self.k_fold]
+        self.training_set_ids = self.ids[0:self.cnt] + self.ids[self.k_fold:]
+        test_data = {
+            'input': [],
+            'label': [],
+        }
+
+        for t_id in self.test_set_ids:
+            test_data['input'].append(
+                np.append(self.features[self.id], self.features[t_id]))
+            test_data['label'].append(
+                self._result_to_label(self.results[self.id][t_id]))
+        train_data = {
+            'input': [],
+            'label': [],
+        }
+
+        for t_id in self.training_set_ids:
+            train_data['input'].append(
+                np.append(self.features[self.id], self.features[t_id]))
+            train_data['label'].append(
+                self._result_to_label(self.results[self.id][t_id]))
+        return (self._create_dataset(train_data), self._create_dataset(test_data))
+
+
+
+
 class Data(object):
-    def __init__(self, file_name='./Dict/', balanced=True, random=True):
+    def __init__(self, file_name='./Dict/', balanced=True, random=True, training_set=True):
         self.names = self._load(file_name + 'benchname.pkl')
         self.features = self._load(file_name + 'features.pkl')
         self.results = self._load(file_name + 'match_result.pkl')
@@ -169,9 +227,10 @@ class Data(object):
             self.ids = self._list_shuffle(self.ids)
         self.training_set_ids = []
 
-        # need at least two programs in training set
-        self.training_set_ids.append(self.ids.pop())
-        self.training_set_ids.append(self.ids.pop())
+        if training_set;
+            # need at least two programs in training set
+            self.training_set_ids.append(self.ids.pop())
+            self.training_set_ids.append(self.ids.pop())
 
     def _list_shuffle(self, xs):
         xs = [[x] for x in xs]
@@ -306,6 +365,9 @@ if __name__ == "__main__":
     parser.add_argument(
         '--load', action='store_true', default=False, required=False,
         help='save the model after training')
+    parser.add_argument(
+        '--run', type=str, default='grow_nn', required=False,
+        help='which type of run')
     args = parser.parse_args()
     # turn on cuda if you can
     args.cuda = torch.cuda.is_available()

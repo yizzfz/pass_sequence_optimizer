@@ -83,18 +83,21 @@ def main(args):
             print('Model Saved to Model/nn.mdl')
 
     if args.run == 'k_fold':
-        data = KfoldData()
-        train_set, test_set = data.data_feed()
-        train_loader = torch.utils.data.DataLoader(
-            train_set, batch_size=batch_size, shuffle=True, **kwargs)
-        for epoch in range(args.epochs):
-            train(epoch, model, train_loader, args, class_weight)
-        eval_loader = torch.utils.data.DataLoader(
-            test_set, batch_size=batch_size, shuffle=True, **kwargs)
-
-
-
-        
+        data = KfoldData(k_fold=args.k_fold)
+        accs = []
+        for i in range(0, 110, args.k_fold):
+            print('{}th test'.format(i))
+            train_set, test_set = data.data_feed()
+            train_loader = torch.utils.data.DataLoader(
+                train_set, batch_size=batch_size, shuffle=True, **kwargs)
+            for epoch in range(args.epochs):
+                train(epoch, model, train_loader, args, class_weight)
+            eval_loader = torch.utils.data.DataLoader(
+                test_set, batch_size=batch_size, shuffle=True, **kwargs)
+            acc = test(model, eval_loader, args)
+            accs.append(acc)
+        print('K_fold test accuracy is {}'.format(accs))
+        print('The mean accuracy is {}'.format(np.mean(np.array(accs))))
 
 
 def printlog():
@@ -145,7 +148,7 @@ def train(epoch, model, train_loader, args, class_weight):
     printlog()
 
 
-def test(model, loader, args):
+def test(model, loader, args, true_positives=True):
     global printstr3
     model.eval()
     test_loss = 0
@@ -172,43 +175,10 @@ def test(model, loader, args):
             test_loss, correct, len(loader.dataset),
             100. * correct / len(loader.dataset), true_positives)
     printlog()
-    return int(true_positives)
+    if true_positives:
+        return int(true_positives)
+    return 100. * correct / len(loader.dataset)
 
-
-
-
-class KfoldData(Data):
-    def __init__(self, file_name='./Dict/', balanced=True, k_fold=10):
-        super.__init__(
-            self, file_name=file_name, balanced=balanced, 
-            random=True, training_set=False)
-        self.cnt = 0
-        self.k_fold = k_fold
-        
-    def data_feed(self):
-        self.test_set_ids = self.ids[self.cnt: self.k_fold]
-        self.training_set_ids = self.ids[0:self.cnt] + self.ids[self.k_fold:]
-        test_data = {
-            'input': [],
-            'label': [],
-        }
-
-        for t_id in self.test_set_ids:
-            test_data['input'].append(
-                np.append(self.features[self.id], self.features[t_id]))
-            test_data['label'].append(
-                self._result_to_label(self.results[self.id][t_id]))
-        train_data = {
-            'input': [],
-            'label': [],
-        }
-
-        for t_id in self.training_set_ids:
-            train_data['input'].append(
-                np.append(self.features[self.id], self.features[t_id]))
-            train_data['label'].append(
-                self._result_to_label(self.results[self.id][t_id]))
-        return (self._create_dataset(train_data), self._create_dataset(test_data))
 
 
 
@@ -222,12 +192,13 @@ class Data(object):
         self.data_pool = []
         self._threshold = 2.5
         self.ids = list(range(len(self.names)))
+        self.num_programs = len(self.ids)
         # random shuffle
         if random:
             self.ids = self._list_shuffle(self.ids)
         self.training_set_ids = []
 
-        if training_set;
+        if training_set:
             # need at least two programs in training set
             self.training_set_ids.append(self.ids.pop())
             self.training_set_ids.append(self.ids.pop())
@@ -299,6 +270,48 @@ class Data(object):
                                               torch.from_numpy(tensor_y))
 
 
+class KfoldData(Data):
+    def __init__(self, file_name='./Dict/', balanced=True, k_fold=10):
+        super(KfoldData, self).__init__(
+            file_name=file_name, balanced=balanced, 
+            random=True, training_set=False)
+        self.cnt = 0
+        self.k_fold = k_fold
+    
+    def next_group(self):
+        self.cnt += 1
+        
+    def data_feed(self):
+        self.test_set_ids = self.ids[self.cnt: self.k_fold]
+        self.training_set_ids = self.ids[0:self.cnt] + self.ids[self.k_fold:]
+        test_data = {
+            'input': [],
+            'label': [],
+        }
+
+        for test_id in self.test_set_ids:
+            for t_id in self.training_set_ids:
+                test_data['input'].append(
+                    np.append(self.features[test_id], self.features[t_id]))
+                test_data['label'].append(
+                    self._result_to_label(self.results[test_id][t_id]))
+        train_data = {
+            'input': [],
+            'label': [],
+        }
+
+        for train_id in self.training_set_ids:
+            for t_id in self.training_set_ids:
+                train_data['input'].append(
+                    np.append(self.features[train_id], self.features[t_id]))
+                train_data['label'].append(
+                    self._result_to_label(self.results[train_id][t_id]))
+        self.next_group()
+        return (self._create_dataset(train_data), self._create_dataset(test_data))
+
+
+
+
 class Net(nn.Module):
     def __init__(self):
         super(Net, self).__init__()
@@ -368,6 +381,10 @@ if __name__ == "__main__":
     parser.add_argument(
         '--run', type=str, default='grow_nn', required=False,
         help='which type of run')
+    parser.add_argument(
+        '--k_fold', type=int, default=10, metavar='N',
+        help='number of epochs to train (default: 100)')
+ 
     args = parser.parse_args()
     # turn on cuda if you can
     args.cuda = torch.cuda.is_available()

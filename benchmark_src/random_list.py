@@ -148,7 +148,7 @@ def t_rand(current_dir, all_list, O0list, O3list):
             break
 
     O3succ, O3time = create_child(O3list, current_dir)
-    O0succ, O0time = create_child(O3list, current_dir)
+    O0succ, O0time = create_child(O0list, current_dir)
 
     print(times, O0time, O3time)
     return (times, O0time, O3time)

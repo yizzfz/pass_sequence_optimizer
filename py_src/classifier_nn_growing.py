@@ -11,6 +11,9 @@ import pickle
 import pdb
 import random
 import os
+import matplotlib.pyplot as plt
+import time
+
 
 printstr1 = ''
 printstr2 = ''
@@ -18,6 +21,33 @@ printstr3 = ''
 printstr4 = ''
 
 supported_runs = ['grow_nn', 'k_fold']
+
+
+def draw(data):
+    n = len(data)
+    ind = range(n)
+    fig, ax = plt.subplots(2, 2)
+    ax[0, 0].plot(ind, [a for a, b, c, d in data])
+    ax[0, 0].set_title('No. Training Programs')
+    ax[0, 1].plot(ind, [b for a, b, c, d in data])
+    ax[0, 1].set_title('No. Predictable Programs')
+
+    tps = [c for a, b, c, d in data]
+    ra = [np.average(tps[:i]) for i in range(1, n+1)]
+    ax[1, 0].plot(ind, ra)
+    ax[1, 0].set_title('True Positives')
+    ax[1, 1].plot(ind, [d for a, b, c, d in data])
+    ax[1, 1].set_title('Training Accuracy')
+
+    plt.tight_layout()
+    plt.show()
+
+    cmd = input('save?\n')
+    if cmd != '':
+        fig.savefig('./Figure/G/' + cmd)
+        with open('./Figure/G/'+cmd+'.pkl', 'wb') as f:
+            pickle.dump(data, f)
+
 
 def main(args):
     global printstr4
@@ -43,61 +73,102 @@ def main(args):
         raise ValueError('Run type {} not in supported runs {}'.format(
             args.run, supported_runs))
 
+    raw_data = pickle.load(open('data.pkl', 'rb'))
+    grow_log = []
     if args.run == 'grow_nn':
         data = Data()
         true_positives = 0
         passed = []
+        imps = []
+        verify_time = 0
+        train_time = 0
+        ga_time = 0
         for i in range(0, 110):
             n_train = len(data.training_set_ids)
             test_set = data.test_data_feed()
+            O3time = float(raw_data[data.id][3][0])
 
             if n_train > 2 and test_set != []:
                 eval_loader = torch.utils.data.DataLoader(
-                    test_set, batch_size=batch_size, shuffle=True, **kwargs)
-                true_positives = test(model, eval_loader, args)
+                    test_set, batch_size=200, shuffle=False, **kwargs)
+                true_positives, tids = test(model, eval_loader, args)
+                verify_time += len(tids)*O3time
                 if true_positives > 0:
                     passed.append(data.id)
+                    tid = data.training_set_ids[tids[-1]]
+                    imp = data.results[data.id][tid]
+                    assert(imp > 2.5)
+                    imps.append(imp)
 
             if true_positives <= 0:
                 train_set = data.add_train_data()
                 train_loader = torch.utils.data.DataLoader(
                     train_set, batch_size=batch_size, shuffle=True, **kwargs)
-
+                t0 = time.time()
                 for epoch in range(1, args.epochs + 1):
-                    train(epoch, model, train_loader, args, class_weight)
+                    acc = train(epoch, model, train_loader, args, class_weight)
+                t1 = time.time()
+                ga_time += 3000*O3time
+                train_time += t1 - t0
 
             n_train = len(data.training_set_ids)
             n_unseen = len(data.ids)
             n_passed = len(passed)
+
             printstr4 = 'No. Train: ' + str(n_train) +\
                         ',\t No. Unseen: ' + str(n_unseen) +\
                         ',\t No. Passed: ' + str(n_passed)
+            # grow_log.append((n_train, n_passed, true_positives, acc))
             printlog()
+            if n_passed + n_train == len(data.names):
+                break
 
         print('Programs included in system:', data.training_set_ids)
         print('Programs predicted successfully:', passed)
-        if args.save:
-            if args.cuda:
-                model = model.to('cpu')
-            torch.save(model.state_dict(), 'Model/nn.mdl')
-            print('Model Saved to Model/nn.mdl')
+        print('Verify Time:', verify_time)
+        print('GA Time:', ga_time)
+        print('Train Time:', train_time)
+        print('Sum:', verify_time + ga_time + train_time)
+        print('Improvement to O3:', np.average(imps), imps)
+        # draw(grow_log)
 
     if args.run == 'k_fold':
         data = KfoldData(k_fold=args.k_fold)
         accs = []
-        for i in range(0, 110, args.k_fold):
-            print('{}th test'.format(i))
+        poss = []
+        tposs = []
+        for i in range(args.k_fold):
             train_set, test_set = data.data_feed()
+            len_test = len(data.test_set_ids)
+
             train_loader = torch.utils.data.DataLoader(
                 train_set, batch_size=batch_size, shuffle=True, **kwargs)
             for epoch in range(args.epochs):
                 train(epoch, model, train_loader, args, class_weight)
             eval_loader = torch.utils.data.DataLoader(
-                test_set, batch_size=batch_size, shuffle=True, **kwargs)
-            acc = test(model, eval_loader, args)
+                test_set, batch_size=len(data.training_set_ids),
+                shuffle=False, **kwargs)
+            pos, tpos, acc = test(model, eval_loader, args)
             accs.append(acc)
-        print('K_fold test accuracy is {}'.format(accs))
-        print('The mean accuracy is {}'.format(np.mean(np.array(accs))))
+            poss.append(pos/len_test)
+            tposs.append(tpos/len_test)
+            printstr4 = '[{}] train {}, test {}, positive {} {:.2f}, true positive {} {:.2f}'.format(data.cnt,
+              len(data.training_set_ids),
+              len(data.test_set_ids), pos, pos/len_test, tpos, tpos/len_test)
+            printlog()
+
+        print('K_fold test accuracy is {}, no.positive {}, no. true postive {}'.format(accs, poss, tposs))
+        print('The mean accuracy is {:.2f}, positive rate {}, true postive rate {}'.format(np.mean(np.array(accs)), np.mean(np.array(poss)), np.mean(np.array(tposs))))
+
+    if args.save:
+        if args.cuda:
+            model = model.to('cpu')
+        if args.run == 'grow_nn':
+            torch.save(model.state_dict(), 'Model/grow_nn.mdl')
+        if args.run == 'k_fold':
+            torch.save(model.state_dict(), 'Model/k_fold.mdl')
+
+        print('Model Saved')
 
 
 def printlog():
@@ -134,7 +205,7 @@ def train(epoch, model, train_loader, args, class_weight):
         optimizer.step()
 
         pred = output.data.max(1, keepdim=True)[1]
-        correct += pred.eq(target.data.view_as(pred)).cpu().sum()
+        correct += int(pred.eq(target.data.view_as(pred)).cpu().sum())
 
         if batch_idx % args.log_interval == 0:
             printstr1 = \
@@ -142,10 +213,10 @@ def train(epoch, model, train_loader, args, class_weight):
                     epoch, batch_idx * len(data), len(train_loader.dataset),
                     100. * batch_idx / len(train_loader), loss.item())
             printlog()
-
-    printstr2 = 'Train Epoch: {} Acc: {:.1f}'.format(
-        epoch, 100. * correct / len(train_loader.dataset))
+    acc = 100. * correct / len(train_loader.dataset)
+    printstr2 = 'Train Epoch: {} Acc: {:.1f}'.format(epoch, acc)
     printlog()
+    return acc
 
 
 def test(model, loader, args, true_positives=True):
@@ -155,6 +226,11 @@ def test(model, loader, args, true_positives=True):
     correct = 0
     true_positives = 0
     dtype = torch.FloatTensor
+    verify_time = 0
+    tids = []
+    npos = 0
+    ntpos = 0
+
     for data, target in loader:
         data = Variable(data.type(dtype), requires_grad=True)
         target = Variable(target.type(torch.LongTensor))
@@ -166,21 +242,35 @@ def test(model, loader, args, true_positives=True):
         # get the index of the max log-probability
         pred = output.data.max(1, keepdim=True)[1]
         pred = pred.reshape(len(target))
-        correct += pred.eq(target).cpu().sum()
-        true_positives += ((target == pred) * (target == 0)).float().sum()
+        correct += pred.eq(target).cpu().float().sum()
+        true_positives = ((target == pred) * (target == 0)).float().sum()
+        positives_idx = [(c1, i) for i, (c1, c2, c3) in
+                         enumerate(output.tolist())
+                         if max(c1, c2, c3) == c1]
+        positives_idx.sort(reverse=1)
 
+        if len(positives_idx) > 0:
+            npos += 1
+        if true_positives > 0:
+            ntpos += 1
+        for _, i in positives_idx:
+            tids.append(i)
+            if target.tolist()[i] == 0:
+                break
     test_loss /= len(loader.dataset)
     printstr3 = \
-        'Test set: Average loss: {:.4f}, Accuracy: {}/{} ({:.0f}%), True positive: {}'.format(
+        'Test set: Average loss: {:.4f}, Accuracy: {}/{} ({:.1f}%), True positive: {}'.format(
             test_loss, correct, len(loader.dataset),
             100. * correct / len(loader.dataset), true_positives)
     printlog()
-    if true_positives:
-        return int(true_positives)
-    return 100. * correct / len(loader.dataset)
+    acc = float(100. * correct / len(loader.dataset))
+    if args.run == 'grow_nn':
+        return int(true_positives), tids
 
+    if args.run == 'k_fold':
+        return npos, ntpos, acc
 
-
+    return acc
 
 
 class Data(object):
@@ -239,6 +329,8 @@ class Data(object):
             'label': [],
         }
 
+        test_idx = []
+
         for t_id in self.training_set_ids:
             test_data['input'].append(
                 np.append(self.features[self.id], self.features[t_id]))
@@ -273,17 +365,19 @@ class Data(object):
 class KfoldData(Data):
     def __init__(self, file_name='./Dict/', balanced=True, k_fold=10):
         super(KfoldData, self).__init__(
-            file_name=file_name, balanced=balanced, 
+            file_name=file_name, balanced=balanced,
             random=True, training_set=False)
         self.cnt = 0
-        self.k_fold = k_fold
-    
+        self.batch_size = int(self.num_programs / k_fold)
+
     def next_group(self):
         self.cnt += 1
-        
+
     def data_feed(self):
-        self.test_set_ids = self.ids[self.cnt: self.k_fold]
-        self.training_set_ids = self.ids[0:self.cnt] + self.ids[self.k_fold:]
+        ts = self.cnt * self.batch_size
+        te = (self.cnt + 1) * self.batch_size
+        self.test_set_ids = self.ids[ts: te]
+        self.training_set_ids = self.ids[0:ts] + self.ids[te:]
         test_data = {
             'input': [],
             'label': [],
@@ -308,8 +402,6 @@ class KfoldData(Data):
                     self._result_to_label(self.results[train_id][t_id]))
         self.next_group()
         return (self._create_dataset(train_data), self._create_dataset(test_data))
-
-
 
 
 class Net(nn.Module):
@@ -384,7 +476,7 @@ if __name__ == "__main__":
     parser.add_argument(
         '--k_fold', type=int, default=10, metavar='N',
         help='number of epochs to train (default: 100)')
- 
+
     args = parser.parse_args()
     # turn on cuda if you can
     args.cuda = torch.cuda.is_available()

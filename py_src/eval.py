@@ -11,6 +11,7 @@ import pickle
 import pdb
 import matplotlib.pyplot as plt
 import math
+import time
 
 
 def main():
@@ -60,7 +61,7 @@ def final_test(model, loader):
         res[new].sort(reverse=1)
 
     timed_res = []
-    drawall = 1
+    drawall = 0
     for newprogram, val in res.items():
         print(newprogram, ': ', [(cross_tb[newprogram][oldprogram])
                                  for confidence, oldprogram in val[:5]])
@@ -71,10 +72,53 @@ def final_test(model, loader):
                 else 0
                 for confidence, oldprogram in val[:5]
             ]))
-    if drawall:
-        draw3(timed_res)
-    else:
-        draw2(timed_res)
+    # if drawall:
+    #     draw3(timed_res)
+    # else:
+    #     draw2(timed_res)
+
+    draw_compile_time(timed_res)
+
+
+def draw_compile_time(nn_res):
+    print(nn_res)
+    length = len(nn_res)
+    fig, ax = plt.subplots()
+    data = read_data()
+    programs = [p for p, _ in nn_res]
+    times = [t[:3] for _, t in nn_res]
+
+    bar1 = []
+    program_ids = []
+    for i, program_id in enumerate(programs):
+        O3time = float(data[program_id][3][0])
+        NN_verify = sum([O3time / (r / 100 + 1) for r in times[i]])
+        bar1.append(NN_verify+O3time)
+        program_ids.append(data[program_id][0])
+
+    bar1 += [np.average(bar1), geomean(bar1)]
+
+    program_ids.append('Mean')
+    program_ids.append('Geo Mean')
+
+    program_ids = [c[c.find('-') + 1:] for c in program_ids]
+    program_ids = [c[15:] if 'linear-' in c else c for c in program_ids]
+    ind = np.arange(1, len(program_ids) + 1)
+    width = 0.5
+    opacity = 0.4
+
+    ax.bar(ind + width * 0, bar1, width, label='O0', alpha=opacity)
+
+    ax.set_ylabel('System Compilation Time (s)')
+    ax.set_xlabel('Test Set')
+    ax.set_xticks(ind)
+    ax.set_xticklabels(program_ids, rotation=80)
+    plt.tight_layout()
+    plt.show()
+
+    cmd = input('save?\n')
+    if cmd != '':
+        fig.savefig('./Figure/' + cmd)
 
 
 def drawC(tb):
@@ -173,6 +217,8 @@ def draw2(nn_res):
     length = len(nn_res)
     fig, ax = plt.subplots()
     data = read_data()
+    rand = read_rand()
+
     programs = [p for p, _ in nn_res]
 
     z1 = [min(res) if len(res) > 0 else 0 for _, res in nn_res]
@@ -193,11 +239,12 @@ def draw2(nn_res):
         O0time = O3time if O0time < O3time else O0time
         NN_best = O3time / (z2[i] / 100 + 1)  # if z2[i] != 0 else 0.001
         NN_avg = O3time / (z3[i] / 100 + 1)  # if z3[i] != 0 else 0.001
+        ra, _, _ = rand[shorten(data[program_id][1])]
 
         bar1.append(O0time)
         bar2.append(O3time)
         bar3.append(NN_best)
-        bar4.append(GAtime)
+        bar4.append(np.average(ra))
         program_ids.append(data[program_id][0])
 
     bar1 += [np.average(bar1), geomean(bar1)]
@@ -208,11 +255,23 @@ def draw2(nn_res):
     program_ids.append('Geo Mean')
 
     # pdb.set_trace()
-    print('avg time:', (bar2[-2] - bar3[-2]),
+    print('avg time NN-O3:', (bar2[-2] - bar3[-2]),
           'avg%:', (bar2[-2] - bar3[-2]) / bar2[-2])
 
-    print('avg time:', (bar1[-1] - bar3[-1]),
+    print('avg time NN-O0:', (bar1[-1] - bar3[-1]),
           'avg%:', (bar1[-1] - bar3[-1]) / bar1[-1])
+
+    print('avg time ra-O3:', (bar2[-2] - bar4[-2]),
+          'avg%:', (bar2[-2] - bar4[-2]) / bar2[-2])
+
+    print('avg time ra-O0:', (bar1[-1] - bar4[-1]),
+          'avg%:', (bar1[-1] - bar4[-1]) / bar1[-1])
+
+    print('avg time O3-O0:', (bar1[-1] - bar2[-1]),
+          'avg%:', (bar1[-1] - bar2[-1]) / bar1[-1])
+
+    print('avg time NN-ra:', (bar4[-1] - bar3[-1]),
+          'avg%:', (bar4[-1] - bar3[-1]) / bar4[-1])
 
     print('geo time:', (bar2[-1] - bar3[-1]),
           'geo%:', (bar2[-1] - bar3[-1]) / bar2[-1])
@@ -226,7 +285,7 @@ def draw2(nn_res):
     ax.bar(ind + width * 0, bar1, width, label='O0', alpha=opacity)
     ax.bar(ind + width * 1, bar2, width, label='O3', alpha=opacity)
     ax.bar(ind + width * 2, bar3, width, label='NN', alpha=opacity)
-    # ax.bar(ind + width * 3, bar4, width, label='GA', alpha=opacity)
+    ax.bar(ind + width * 3, bar4, width, label='Random', alpha=opacity)
 
     ax.set_ylabel('Exection Time (s)')
     ax.set_xlabel('Test Set')
@@ -330,6 +389,12 @@ def read_data(name='data.pkl'):
     return raw_data
 
 
+def read_rand(name='rand.pkl'):
+    with open(name, 'rb') as f:
+        rand = pickle.load(f)
+    return rand
+
+
 def read_label_file(name='Data/cross_tb.pkl'):
     with open(name, 'rb') as f:
         cross_tb = pickle.load(f)
@@ -401,6 +466,12 @@ class Net(nn.Module):
             print('Found nan', s)
             exit(1)
 
+
+def shorten(s):
+    if 'workspace' in s:
+        return s[s.find('workspace') + 9:]
+    else:
+        return s
 
 if __name__ == '__main__':
     main()

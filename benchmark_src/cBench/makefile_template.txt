@@ -3,9 +3,9 @@ all:
 	@make ll1 -s
 	@clang $(LL1) -O0 $(LD_FLAGS) -o a.out
 	@$(RM) *.ll
-	
+
 run:
-	@taskset 0x1 ./__run 1
+	@taskset 0x1 ./__run $(WORKLOAD)
 
 ll1: $(LL1)
 	@
@@ -39,3 +39,9 @@ ll3: $(LL3)
 
 %.3.ll: %.2.ll
 	@opt $^ -S -o $@ -O0 -load $(IR_PASS) -hotpath -hotpath-file=hotpath.txt
+
+profile: $(FILES)
+	@clang $(FILES) -O3 -fprofile-generate $(CC_FLAGS) $(LD_FLAGS)
+	@make run
+	@llvm-profdata merge -output=a.prof default*
+	@clang $(FILES) -O3 -fprofile-use=a.prof $(CC_FLAGS) $(LD_FLAGS)

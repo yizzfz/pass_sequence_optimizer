@@ -3,31 +3,39 @@ import subprocess
 from subprocess import check_call, check_output, STDOUT
 from multiprocessing import Process, Queue
 
-makefile_content = "\
-ULT=$(WORKSPACE)/polybench-c-4.2.1-beta/utilities\n\
-FLAGS=-I$(ULT) -DMINI_DATASET \n\n\
-all: $(FILES)\n\
-\t@$(RM) IRinfo* *.profraw\n\
-\t@clang $(FILES) -O0 -emit-llvm -S -o A.ll -w $(FLAGS)\n\
-\t@opt A.ll -S -o B.ll $(OPTFLAGS)\n\
-\t@opt B.ll -S -o tmp.ll -O0 -load $(IR_PASS)\n\
-\t@clang B.ll -O0 $(ULT)/polybench.o -lm $(FLAGS)\n\
-\n\
-hotpath: $(FILES)\n\
-\t@$(RM) IRinfo* *.profraw\n\
-\t@clang $(FILES) -O0 -emit-llvm -S -o A.ll -w $(FLAGS)\n\
-\t@opt A.ll -S -o B.ll $(OPTFLAGS)\n\
-\t@opt B.ll -S -o C.ll -O0 -profile-generate\n\
-\t@opt B.ll -S -o tmp.ll -O0 -load $(IR_PASS)\n\
-\t@clang B.ll -O0 $(ULT)/polybench.o -fprofile-generate -lm -o p.out $(FLAGS)\n\
-\t@./p.out\n\
-\t@llvm-profdata show -counts -all-functions default* > hotpath.txt\n\
-\t@opt C.ll -S -o tmp.ll -O0 -load $(IR_PASS) -hotpath -hotpath-file=hotpath.txt\n\
-\t@clang B.ll -O0 $(ULT)/polybench.o -lm $(FLAGS)\n\
-\n\
-run:\n\
-\t@taskset 0x1 ./a.out\n\
-"
+makefile_content = \
+'''
+ULT=$(WORKSPACE)/polybench-c-4.2.1-beta/utilities
+FLAGS=-I$(ULT) -DPOLYBENCH_DUMP_ARRAYS $(WORKLOAD)
+
+all: $(FILES)
+	@$(RM) IRinfo* *.profraw
+	@clang $(FILES) -O1 -emit-llvm -c -o A.ll -w $(FLAGS)
+	@opt A.ll -o B.ll $(OPTFLAGS)
+	@opt B.ll -o tmp.ll -O0 -load $(IR_PASS)
+	@clang B.ll -O1 $(ULT)/polybench.o -lm $(FLAGS)
+
+hotpath: $(FILES)
+	@$(RM) IRinfo* *.profraw
+	@clang $(FILES) -O0 -emit-llvm -c -o A.ll -w $(FLAGS)
+	@opt A.ll -o B.ll $(OPTFLAGS)
+	@opt B.ll -o C.ll -O0 -profile-generate
+	@opt B.ll -o tmp.ll -O0 -load $(IR_PASS)
+	@clang B.ll -O1 $(ULT)/polybench.o -fprofile-generate -lm -o p.out $(FLAGS)
+	@./p.out 2>/dev/null
+	@llvm-profdata show -counts -all-functions default* > hotpath.txt
+	@opt C.ll -o tmp.ll -O0 -load $(IR_PASS) -hotpath -hotpath-file=hotpath.txt
+	@clang B.ll -O1 $(ULT)/polybench.o -lm $(FLAGS)
+
+run:
+	@taskset 0x1 ./a.out 2>data.dmp
+
+profile: $(FILES)
+	@clang $(FILES) -O3 -fprofile-generate $(FLAGS) -lm $(ULT)/polybench.o -o p.out
+	@taskset 0x1 ./p.out 2>/dev/null
+	@llvm-profdata merge -output=a.prof default*
+	@clang $(FILES) -O3 -fprofile-use=a.prof $(FLAGS) -lm $(ULT)/polybench.o
+'''
 
 
 def list_to_string(list):
@@ -38,12 +46,14 @@ def list_to_string(list):
 
 def thread_func(root, cfiles):
   envvar_files = "FILES=" + list_to_string(cfiles)
-  with open(root+'/makefile', "wb") as f:
+  workload = open(root+'/workload.txt', 'r').read()
+  with open(root+'/makefile', "w") as f:
     f.write(envvar_files+"\n")
+    f.write('WORKLOAD='+workload+'\n')
     f.write(makefile_content)
   os.system('touch '+root+'/MARKER')
 
-  print root+" - done"
+  print (root, "done", workload)
 
 
 def main():

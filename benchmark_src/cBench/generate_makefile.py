@@ -18,13 +18,13 @@ def cfiles_to_objs(list, pf):
 
 def read_makefile():
   s = ''
-  with open("makefile_template.txt", 'rb') as f:
+  with open("makefile_template.txt", 'r') as f:
     s = f.read()
   return s
 
 def get_cc_flags(root):
   flags = ''
-  with open(root+'/../src/Makefile', 'rb') as f1:
+  with open(root+'/../src/Makefile', 'r') as f1:
     lines = f1.read().split('\n')
     for line in lines:
       if '$(ZCC) $(CCC_OPTS) $(CCC_OPTS_ADD)' in line:
@@ -36,7 +36,7 @@ def get_cc_flags(root):
 
 def get_ld_flags(root):
   flags = ''
-  with open(root+'/../src/Makefile', 'rb') as f1:
+  with open(root+'/../src/Makefile', 'r') as f1:
     lines = f1.read().split('\n')
     for line in lines:
       if '$(LDCC) $(LD_OPTS) $(CCC_OPTS_ADD)' in line:
@@ -49,33 +49,31 @@ def get_ld_flags(root):
 
 def thread_func(root, cfiles, makefile_content):
   env_FILES = "FILES=" + list_to_string(cfiles)
-  with open(root+'/makefile', "wb") as f:
+  workload = open(root+'/workload.txt', 'r').read()
+  with open(root+'/makefile', "w") as f:
     f.write(env_FILES+"\n")
     f.write("LL1=" + cfiles_to_objs(cfiles, '.1.ll')+"\n")
     f.write("LL2=" + cfiles_to_objs(cfiles, '.2.ll')+"\n")
     f.write("LL3=" + cfiles_to_objs(cfiles, '.3.ll')+"\n")
     f.write("CC_FLAGS=" + get_cc_flags(root)+'\n')
     f.write("LD_FLAGS=" + get_ld_flags(root)+'\n')
+    f.write('WORKLOAD='+workload+'\n')
     f.write("\n")
     f.write(makefile_content)
   os.system('touch '+root+'/MARKER')
   os.system('rm -f '+root+'/Make*')
 
-  print root + " - done"
+  print (root, 'done', workload)
 
 
 def main():
 
-  cmd = raw_input('Warning: old setting will be overwritten, continue ?')
-  if(cmd!='y'):
-    return
-
   threads = []
   i = 0
-  os.system('./all__delete_work_dirs')
-  print 'work dir cleared\n'
-  os.system('./all__create_work_dirs')
-  print 'work dir created\n'
+  # os.system('./all__delete_work_dirs')
+  # print ('work dir cleared')
+  # os.system('./all__create_work_dirs')
+  # print ('work dir created')
 
   makefile_content = read_makefile()
   for root, dirs, files in os.walk("."):
@@ -83,11 +81,12 @@ def main():
     for file in files:
       if file.endswith(".c") :
         cfiles.append(file)
-    if len(cfiles)>=1 and 'src_work' in root:
-      thread = Process(target = thread_func, args = (root, cfiles, makefile_content,  ))
-      threads.append(thread)
-      threads[i].start()
-      i+=1
+    if len(cfiles)>=1 and 'src_work' in root and 'workload.txt' in files:
+      # thread = Process(target = thread_func, args = (root, cfiles, makefile_content,  ))
+      # threads.append(thread)
+      # threads[i].start()
+      # i+=1
+      thread_func(root, cfiles, makefile_content)
 
 
 

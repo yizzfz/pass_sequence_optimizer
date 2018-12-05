@@ -80,6 +80,7 @@ def main(args):
         true_positives = 0
         passed = []
         imps = []
+        ga_imps = []
         verify_time = 0
         train_time = 0
         ga_time = 0
@@ -111,6 +112,12 @@ def main(args):
                 ga_time += 3000*O3time
                 train_time += t1 - t0
 
+                O3time = float(data.raw_data[data.id][3][0])
+                GAtime = O3time
+                if(data.raw_data[data.id][4] is not None):
+                    GAtime = float(data.raw_data[data.id][4][0])
+                ga_imps.append((O3time-GAtime)*100/O3time)
+
             n_train = len(data.training_set_ids)
             n_unseen = len(data.ids)
             n_passed = len(passed)
@@ -127,9 +134,16 @@ def main(args):
         print('Programs predicted successfully:', passed)
         print('Verify Time:', verify_time)
         print('GA Time:', ga_time)
-        print('Train Time:', train_time)
-        print('Sum:', verify_time + ga_time + train_time)
-        print('Improvement to O3:', np.average(imps), imps)
+        print('Train Time: {}'.format(train_time))
+        ss = verify_time + ga_time + train_time
+        print('Sum {}s ({}h {}m)'.format(ss,
+              ss/3600, (ss/60)%60))
+        print('NN Improvement to O3:', np.average(imps), imps)
+        print('GA Improvement to O3:', np.average(ga_imps), ga_imps)
+        all_imps = imps + ga_imps
+        print('All Improvement to O3:', np.average(all_imps), all_imps)
+
+
         # draw(grow_log)
 
     if args.run == 'k_fold':
@@ -283,6 +297,7 @@ class Data(object):
         self._threshold = 2.5
         self.ids = list(range(len(self.names)))
         self.num_programs = len(self.ids)
+        self.raw_data = pickle.load(open('data.pkl', 'rb'))
         # random shuffle
         if random:
             self.ids = self._list_shuffle(self.ids)

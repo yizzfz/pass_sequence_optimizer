@@ -53,6 +53,9 @@
 #include "llvm/Target/TargetMachine.h"
 #include "llvm/Transforms/Coroutines.h"
 #include "llvm/Transforms/IPO/AlwaysInliner.h"
+#include "llvm/Transforms/IPO/ForceFunctionAttrs.h"
+#include "llvm/Transforms/IPO/InferFunctionAttrs.h"
+#include "llvm/Transforms/IPO/FunctionAttrs.h"
 #include "llvm/Transforms/IPO/PassManagerBuilder.h"
 #include "llvm/Transforms/Utils/Cloning.h"
 #include <algorithm>
@@ -256,6 +259,96 @@ static inline void addPass(legacy::PassManagerBase &PM, Pass *P) {
     PM.add(createVerifierPass());
 }
 
+
+static void useCustomPassSequence(
+    PassManagerBuilder* Builder,
+    legacy::FunctionPassManager &FPM,
+    legacy::PassManagerBase &MPM) {
+
+  // FPM part
+  FPM.add(createCFGSimplificationPass());
+  FPM.add(createSROAPass());
+  FPM.add(createEarlyCSEPass());
+  FPM.add(createLowerExpectIntrinsicPass());
+
+  // MPM part
+  MPM.add(createForceFunctionAttrsLegacyPass());
+  MPM.add(createInferFunctionAttrsLegacyPass());
+  MPM.add(createIPSCCPPass());          // IP SCCP
+  MPM.add(createGlobalOptimizerPass()); // Optimize out global vars
+  MPM.add(createPromoteMemoryToRegisterPass());
+  MPM.add(createDeadArgEliminationPass()); // Dead argument elimination
+  MPM.add(createInstructionCombiningPass(1));
+  MPM.add(createCFGSimplificationPass()); // Clean up after IPCP & DAE
+  MPM.add(createPGOIndirectCallPromotionLegacyPass());
+  MPM.add(createGlobalsAAWrapperPass());
+  MPM.add(createPruneEHPass()); // Remove dead EH info
+  MPM.add(Builder->Inliner); Builder->Inliner = nullptr;
+  MPM.add(createPostOrderFunctionAttrsLegacyPass());
+  MPM.add(createArgumentPromotionPass()); // Scalarize uninlined fn args
+
+  // function simplify pass
+  MPM.add(createSROAPass());
+  MPM.add(createEarlyCSEPass());              // Catch trivial redundancies
+  MPM.add(createSpeculativeExecutionIfHasBranchDivergencePass());
+  MPM.add(createJumpThreadingPass());         // Thread jumps.
+  MPM.add(createCorrelatedValuePropagationPass()); // Propagate conditionals
+  MPM.add(createCFGSimplificationPass());     // Merge & remove BBs
+  MPM.add(createInstructionCombiningPass(1));
+  MPM.add(createLibCallsShrinkWrapPass());
+  MPM.add(createTailCallEliminationPass()); // Eliminate tail calls
+  MPM.add(createCFGSimplificationPass());     // Merge & remove BBs
+  MPM.add(createReassociatePass());           // Reassociate expressions
+  MPM.add(createLoopRotatePass(-1));
+  MPM.add(createLICMPass());                  // Hoist loop invariants
+  MPM.add(createLoopUnswitchPass(0));
+  MPM.add(createCFGSimplificationPass());
+  MPM.add(createInstructionCombiningPass(1));
+  MPM.add(createIndVarSimplifyPass());        // Canonicalize indvars
+  MPM.add(createLoopIdiomPass());             // Recognize idioms like memset.
+  MPM.add(createLoopDeletionPass());          // Delete dead loops
+  MPM.add(createSimpleLoopUnrollPass());    // Unroll small loops
+  MPM.add(createMergedLoadStoreMotionPass()); // Merge ld/st in diamonds
+  MPM.add(createGVNPass(0)); // Remove redundancies
+  MPM.add(createMemCpyOptPass());             // Remove memcpy / form memset
+  MPM.add(createSCCPPass());                  // Constant prop with SCCP
+  MPM.add(createBitTrackingDCEPass());        // Delete dead bit computations
+  MPM.add(createInstructionCombiningPass(1));
+  MPM.add(createJumpThreadingPass());         // Thread jumps
+  MPM.add(createCorrelatedValuePropagationPass());
+  MPM.add(createDeadStoreEliminationPass());  // Delete dead stores
+  MPM.add(createLICMPass());
+  MPM.add(createAggressiveDCEPass());         // Delete dead instructions
+  MPM.add(createCFGSimplificationPass()); // Merge & remove BBs
+  MPM.add(createInstructionCombiningPass(1));
+  // function simplify pass finish
+
+  MPM.add(createBarrierNoopPass());
+  MPM.add(createEliminateAvailableExternallyPass());
+  MPM.add(createReversePostOrderFunctionAttrsPass());
+  MPM.add(createGlobalsAAWrapperPass());
+  MPM.add(createFloat2IntPass());
+  MPM.add(createLoopRotatePass(-1));
+  MPM.add(createLoopDistributePass());
+  MPM.add(createLoopVectorizePass(0, 1));
+  MPM.add(createLoopLoadEliminationPass());
+  MPM.add(createInstructionCombiningPass(1));
+  MPM.add(createSLPVectorizerPass());   // Vectorize parallel scalar chains.
+  MPM.add(createCFGSimplificationPass());
+  MPM.add(createInstructionCombiningPass(1));
+  MPM.add(createLoopUnrollPass());    // Unroll small loops
+  MPM.add(createInstructionCombiningPass(1));
+  MPM.add(createLICMPass());
+  MPM.add(createAlignmentFromAssumptionsPass());
+  MPM.add(createStripDeadPrototypesPass());
+  MPM.add(createGlobalDCEPass());         // Remove dead fns and globals.
+  MPM.add(createConstantMergePass());     // Merge dup global constants
+  MPM.add(createLoopSinkPass());
+  MPM.add(createInstructionSimplifierPass());
+  return;
+}
+
+
 /// This routine adds optimization passes based on selected optimization level,
 /// OptLevel.
 ///
@@ -306,7 +399,8 @@ static void AddOptimizationPasses(legacy::PassManagerBase &MPM,
 
   if (CustomPassSequence) {
     std::cout<<"\nCustom Pass Sequence\n"<<std::endl;
-    Builder.populatePassManager(FPM, MPM);
+    useCustomPassSequence(&Builder, FPM, MPM);
+    // Builder.populatePassManager(FPM, MPM);
   }
   else {
     Builder.populateFunctionPassManager(FPM);
@@ -364,6 +458,10 @@ namespace polly {
 void initializePollyPasses(llvm::PassRegistry &Registry);
 }
 #endif
+
+
+
+
 
 //===----------------------------------------------------------------------===//
 // main for opt

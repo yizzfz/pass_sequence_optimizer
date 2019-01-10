@@ -3,16 +3,17 @@ LL1= bf_ecb.1.ll bf_ofb64.1.ll bf_cfb64.1.ll bf.1.ll bf_cbc.1.ll bf_enc.1.ll bf_
 LL2= bf_ecb.2.ll bf_ofb64.2.ll bf_cfb64.2.ll bf.2.ll bf_cbc.2.ll bf_enc.2.ll bf_skey.2.ll
 LL3= bf_ecb.3.ll bf_ofb64.3.ll bf_cfb64.3.ll bf.3.ll bf_cbc.3.ll bf_enc.3.ll bf_skey.3.ll
 CC_FLAGS=
-LD_FLAGS=-lm
+LD_FLAGS=-lm 
+WORKLOAD=1 24000
 
 all:
 	@$(RM) IRinfo.txt *.profraw
 	@make ll1 -s
-	@clang $(LL1) -O0 $(LD_FLAGS) -o a.out
+	@clang $(LL1) -O1 $(LD_FLAGS) -o a.out
 	@$(RM) *.ll
 
 run:
-	@taskset 0x1 ./__run 1 24000
+	@taskset 0x1 ./__run $(WORKLOAD)
 
 ll1: $(LL1)
 	@
@@ -41,8 +42,14 @@ ll3: $(LL3)
 	@opt $@ -S -o tmp.ll -O0 -load $(IR_PASS)
 
 %.2.ll: %.ll
-	@opt $^ -S -o tmp1.ll $(OPTFLAGS)
+	@opt $^ -S -o tmp1.ll -O0
 	@opt tmp1.ll -S -o $@ -O0 -profile-generate
 
 %.3.ll: %.2.ll
 	@opt $^ -S -o $@ -O0 -load $(IR_PASS) -hotpath -hotpath-file=hotpath.txt
+
+profile: $(FILES)
+	@clang $(FILES) -O3 -fprofile-generate $(CC_FLAGS) $(LD_FLAGS)
+	@make run
+	@llvm-profdata merge -output=a.prof default*
+	@clang $(FILES) -O3 -fprofile-use=a.prof $(CC_FLAGS) $(LD_FLAGS)

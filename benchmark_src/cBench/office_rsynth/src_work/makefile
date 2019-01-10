@@ -4,15 +4,16 @@ LL2= darray.2.ll elements.2.ll l2u.2.ll linuxplay.2.ll dict.2.ll def_pars.2.ll h
 LL3= darray.3.ll elements.3.ll l2u.3.ll linuxplay.3.ll dict.3.ll def_pars.3.ll holmes.3.ll nsynth.3.ll say.3.ll phtoelm.3.ll ASCII.3.ll aufile.3.ll english.3.ll saynum.3.ll text.3.ll Revision.3.ll trie.3.ll getarg.3.ll phones.3.ll
 CC_FLAGS=-I./ 
 LD_FLAGS=-lm 
+WORKLOAD=1
 
 all:
 	@$(RM) IRinfo.txt *.profraw
 	@make ll1 -s
-	@clang $(LL1) -O0 $(LD_FLAGS) -o a.out
+	@clang $(LL1) -O1 $(LD_FLAGS) -o a.out
 	@$(RM) *.ll
-	
+
 run:
-	@taskset 0x1 ./__run 1
+	@taskset 0x1 ./__run $(WORKLOAD)
 
 ll1: $(LL1)
 	@
@@ -41,8 +42,14 @@ ll3: $(LL3)
 	@opt $@ -S -o tmp.ll -O0 -load $(IR_PASS)
 
 %.2.ll: %.ll
-	@opt $^ -S -o tmp1.ll $(OPTFLAGS)
+	@opt $^ -S -o tmp1.ll -O0
 	@opt tmp1.ll -S -o $@ -O0 -profile-generate
 
 %.3.ll: %.2.ll
 	@opt $^ -S -o $@ -O0 -load $(IR_PASS) -hotpath -hotpath-file=hotpath.txt
+
+profile: $(FILES)
+	@clang $(FILES) -O3 -fprofile-generate $(CC_FLAGS) $(LD_FLAGS)
+	@make run
+	@llvm-profdata merge -output=a.prof default*
+	@clang $(FILES) -O3 -fprofile-use=a.prof $(CC_FLAGS) $(LD_FLAGS)

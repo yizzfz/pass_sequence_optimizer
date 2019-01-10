@@ -18,7 +18,7 @@ all: $(FILES)
 hotpath: $(FILES)
 	@$(RM) IRinfo* *.profraw
 	@clang $(FILES) -O0 -emit-llvm -c -o A.ll -w $(FLAGS)
-	@opt A.ll -o B.ll $(OPTFLAGS)
+	@cp A.ll B.ll
 	@opt B.ll -o C.ll -O0 -profile-generate
 	@opt B.ll -o tmp.ll -O0 -load $(IR_PASS)
 	@clang B.ll -O1 $(ULT)/polybench.o -fprofile-generate -lm -o p.out $(FLAGS)

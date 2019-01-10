@@ -1,4 +1,4 @@
-# this is for anything beside cBench and polybench
+# this is for everything other than cBench and polybench
 
 import os
 import subprocess
@@ -11,15 +11,15 @@ FLAGS=-lm
 
 all: $(FILES)
 	@$(RM) IRinfo* *.profraw
-	@clang $(FILES) -O0 -emit-llvm -S -o A.ll -w $(FLAGS)
+	@clang $(FILES) -O1 -emit-llvm -S -o A.ll -w $(FLAGS)
 	@opt A.ll -S -o B.ll $(OPTFLAGS)
 	@opt B.ll -S -o tmp.ll -O0 -load $(IR_PASS)
-	@clang B.ll -O0 $(FLAGS)
+	@clang B.ll -O1 $(FLAGS)
 
 hotpath: $(FILES)
 	@$(RM) IRinfo* *.profraw
 	@clang $(FILES) -O0 -emit-llvm -S -o A.ll -w $(FLAGS)
-	@opt A.ll -S -o B.ll $(OPTFLAGS)
+	@cp A.ll B.ll
 	@opt B.ll -S -o C.ll -O0 -profile-generate
 	@opt B.ll -S -o tmp.ll -O0 -load $(IR_PASS)
 	@clang B.ll -O0 -fprofile-generate -lm -o p.out $(FLAGS)
@@ -40,39 +40,38 @@ profile: $(FILES)
 
 
 def list_to_string(list):
-  s = ''
-  for ele in list:
-    s += ' ' + ele
-  return s
+    s = ''
+    for ele in list:
+        s += ' ' + ele
+    return s
+
 
 def thread_func(root, cfiles):
-  envvar_files = "FILES=" + list_to_string(cfiles)
-  with open(root+'/makefile', "w") as f:
-    f.write(envvar_files+"\n")
-    f.write(makefile_content)
-  os.system('touch '+root+'/MARKER')
+    envvar_files = "FILES=" + list_to_string(cfiles)
+    with open(root + '/makefile', "w") as f:
+        f.write(envvar_files + "\n")
+        f.write(makefile_content)
+    os.system('touch ' + root + '/MARKER')
 
-  print (root+" - done")
+    print (root + " - done")
 
 
 def main():
 
-  threads = []
-  i = 0
-  for root, dirs, files in os.walk("."):
-    cfiles = []
-    for file in files:
-      if file.endswith(".c"):
-        cfiles.append(file)
-    if len(cfiles)==1:
-      #thread = Process(target = thread_func, args = (root, cfiles, ))
-      #threads.append(thread)
-      #threads[i].start()
-      thread_func(root, cfiles)
-      i+=1
+    threads = []
+    i = 0
+    for root, dirs, files in os.walk("."):
+        cfiles = []
+        for file in files:
+            if file.endswith(".c"):
+                cfiles.append(file)
+        if len(cfiles) == 1:
+            # thread = Process(target = thread_func, args = (root, cfiles, ))
+            # threads.append(thread)
+            # threads[i].start()
+            thread_func(root, cfiles)
+            i += 1
 
 
-
-
-if __name__=="__main__":
-  main()
+if __name__ == "__main__":
+    main()

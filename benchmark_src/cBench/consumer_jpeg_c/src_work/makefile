@@ -3,16 +3,17 @@ LL1= cjpeg.1.ll jdmerge.1.ll jccolor.1.ll jcapistd.1.ll jcinit.1.ll jcmarker.1.l
 LL2= cjpeg.2.ll jdmerge.2.ll jccolor.2.ll jcapistd.2.ll jcinit.2.ll jcmarker.2.ll rdrle.2.ll rdbmp.2.ll jcsample.2.ll jcphuff.2.ll jddctmgr.2.ll jdatadst.2.ll jccoefct.2.ll jcprepct.2.ll rdtarga.2.ll jquant2.2.ll jdapimin.2.ll jcdctmgr.2.ll jcmaster.2.ll jidctfst.2.ll jidctflt.2.ll jfdctfst.2.ll jdmainct.2.ll jdpostct.2.ll jctrans.2.ll cdjpeg.2.ll jidctint.2.ll jutils.2.ll jdsample.2.ll jcomapi.2.ll jdhuff.2.ll jdtrans.2.ll jfdctflt.2.ll jdmarker.2.ll jcapimin.2.ll jidctred.2.ll jmemansi.2.ll jdphuff.2.ll jerror.2.ll loop-wrap.2.ll jcmainct.2.ll rdgif.2.ll jdapistd.2.ll jmemmgr.2.ll jchuff.2.ll rdswitch.2.ll jdmaster.2.ll jdatasrc.2.ll jcparam.2.ll jdcolor.2.ll jdcoefct.2.ll rdppm.2.ll jdinput.2.ll jquant1.2.ll jfdctint.2.ll
 LL3= cjpeg.3.ll jdmerge.3.ll jccolor.3.ll jcapistd.3.ll jcinit.3.ll jcmarker.3.ll rdrle.3.ll rdbmp.3.ll jcsample.3.ll jcphuff.3.ll jddctmgr.3.ll jdatadst.3.ll jccoefct.3.ll jcprepct.3.ll rdtarga.3.ll jquant2.3.ll jdapimin.3.ll jcdctmgr.3.ll jcmaster.3.ll jidctfst.3.ll jidctflt.3.ll jfdctfst.3.ll jdmainct.3.ll jdpostct.3.ll jctrans.3.ll cdjpeg.3.ll jidctint.3.ll jutils.3.ll jdsample.3.ll jcomapi.3.ll jdhuff.3.ll jdtrans.3.ll jfdctflt.3.ll jdmarker.3.ll jcapimin.3.ll jidctred.3.ll jmemansi.3.ll jdphuff.3.ll jerror.3.ll loop-wrap.3.ll jcmainct.3.ll rdgif.3.ll jdapistd.3.ll jmemmgr.3.ll jchuff.3.ll rdswitch.3.ll jdmaster.3.ll jdatasrc.3.ll jcparam.3.ll jdcolor.3.ll jdcoefct.3.ll rdppm.3.ll jdinput.3.ll jquant1.3.ll jfdctint.3.ll
 CC_FLAGS=
-LD_FLAGS=-lm
+LD_FLAGS=-lm 
+WORKLOAD=1 500
 
 all:
 	@$(RM) IRinfo.txt *.profraw
 	@make ll1 -s
-	@clang $(LL1) -O0 $(LD_FLAGS) -o a.out
+	@clang $(LL1) -O1 $(LD_FLAGS) -o a.out
 	@$(RM) *.ll
 
 run:
-	@taskset 0x1 ./__run 1 500
+	@taskset 0x1 ./__run $(WORKLOAD)
 
 ll1: $(LL1)
 	@
@@ -41,8 +42,14 @@ ll3: $(LL3)
 	@opt $@ -S -o tmp.ll -O0 -load $(IR_PASS)
 
 %.2.ll: %.ll
-	@opt $^ -S -o tmp1.ll $(OPTFLAGS)
+	@opt $^ -S -o tmp1.ll -O0
 	@opt tmp1.ll -S -o $@ -O0 -profile-generate
 
 %.3.ll: %.2.ll
 	@opt $^ -S -o $@ -O0 -load $(IR_PASS) -hotpath -hotpath-file=hotpath.txt
+
+profile: $(FILES)
+	@clang $(FILES) -O3 -fprofile-generate $(CC_FLAGS) $(LD_FLAGS)
+	@make run
+	@llvm-profdata merge -output=a.prof default*
+	@clang $(FILES) -O3 -fprofile-use=a.prof $(CC_FLAGS) $(LD_FLAGS)

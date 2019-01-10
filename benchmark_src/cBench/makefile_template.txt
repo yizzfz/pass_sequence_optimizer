@@ -1,7 +1,7 @@
 all:
 	@$(RM) IRinfo.txt *.profraw
 	@make ll1 -s
-	@clang $(LL1) -O0 $(LD_FLAGS) -o a.out
+	@clang $(LL1) -O1 $(LD_FLAGS) -o a.out
 	@$(RM) *.ll
 
 run:
@@ -34,7 +34,7 @@ ll3: $(LL3)
 	@opt $@ -S -o tmp.ll -O0 -load $(IR_PASS)
 
 %.2.ll: %.ll
-	@opt $^ -S -o tmp1.ll $(OPTFLAGS)
+	@opt $^ -S -o tmp1.ll -O0
 	@opt tmp1.ll -S -o $@ -O0 -profile-generate
 
 %.3.ll: %.2.ll

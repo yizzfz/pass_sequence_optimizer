@@ -3,16 +3,17 @@ LL1= adpcm.1.ll rawdaudio.1.ll
 LL2= adpcm.2.ll rawdaudio.2.ll
 LL3= adpcm.3.ll rawdaudio.3.ll
 CC_FLAGS=
-LD_FLAGS=-lm
+LD_FLAGS=-lm 
+WORKLOAD=1 2000
 
 all:
 	@$(RM) IRinfo.txt *.profraw
 	@make ll1 -s
-	@clang $(LL1) -O0 $(LD_FLAGS) -o a.out
+	@clang $(LL1) -O1 $(LD_FLAGS) -o a.out
 	@$(RM) *.ll
 
 run:
-	@taskset 0x1 ./__run 1 2000
+	@taskset 0x1 ./__run $(WORKLOAD)
 
 ll1: $(LL1)
 	@
@@ -41,8 +42,14 @@ ll3: $(LL3)
 	@opt $@ -S -o tmp.ll -O0 -load $(IR_PASS)
 
 %.2.ll: %.ll
-	@opt $^ -S -o tmp1.ll $(OPTFLAGS)
+	@opt $^ -S -o tmp1.ll -O0
 	@opt tmp1.ll -S -o $@ -O0 -profile-generate
 
 %.3.ll: %.2.ll
 	@opt $^ -S -o $@ -O0 -load $(IR_PASS) -hotpath -hotpath-file=hotpath.txt
+
+profile: $(FILES)
+	@clang $(FILES) -O3 -fprofile-generate $(CC_FLAGS) $(LD_FLAGS)
+	@make run
+	@llvm-profdata merge -output=a.prof default*
+	@clang $(FILES) -O3 -fprofile-use=a.prof $(CC_FLAGS) $(LD_FLAGS)

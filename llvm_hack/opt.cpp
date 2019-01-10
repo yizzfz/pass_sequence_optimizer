@@ -265,6 +265,91 @@ static void useCustomPassSequence(
     legacy::FunctionPassManager &FPM,
     legacy::PassManagerBase &MPM) {
 
+      FPM.add(createCFGSimplificationPass());
+      FPM.add(createEarlyCSEPass());
+      FPM.add(createGVNHoistPass());
+      FPM.add(createLowerExpectIntrinsicPass());
+      FPM.add(createSCCPPass());
+      FPM.add(createSROAPass());
+      FPM.add(createVerifierPass());
+      MPM.add(createAggressiveDCEPass());
+      MPM.add(createAlignmentFromAssumptionsPass());
+      MPM.add(createArgumentPromotionPass());
+      MPM.add(createBBVectorizePass());
+      MPM.add(createBarrierNoopPass());
+      MPM.add(createBitTrackingDCEPass());
+      MPM.add(createCFGSimplificationPass());
+      MPM.add(createConstantMergePass());
+      MPM.add(createCorrelatedValuePropagationPass());
+      MPM.add(createDeadArgEliminationPass());
+      MPM.add(createDeadStoreEliminationPass());
+      MPM.add(createEarlyCSEPass());
+      MPM.add(createEliminateAvailableExternallyPass());
+      MPM.add(createFloat2IntPass());
+      MPM.add(createForceFunctionAttrsLegacyPass());
+      MPM.add(createGVNPass(0));
+      MPM.add(createGlobalDCEPass());
+      MPM.add(createGlobalOptimizerPass());
+      MPM.add(createGlobalsAAWrapperPass());
+      MPM.add(createIPSCCPPass());
+      MPM.add(createIndVarSimplifyPass());
+      MPM.add(createInferFunctionAttrsLegacyPass());
+      MPM.add(createInstructionCombiningPass());
+      MPM.add(createInstructionCombiningPass(1));
+      MPM.add(createInstructionSimplifierPass());
+      MPM.add(createJumpThreadingPass());
+      MPM.add(createLICMPass());
+      MPM.add(createLibCallsShrinkWrapPass());
+      MPM.add(createLoadCombinePass());
+      MPM.add(createLoopDeletionPass());
+      MPM.add(createLoopDistributePass());
+      MPM.add(createLoopIdiomPass());
+      MPM.add(createLoopInterchangePass());
+      MPM.add(createLoopLoadEliminationPass());
+      MPM.add(createLoopRerollPass());
+      MPM.add(createLoopRotatePass(-1));
+      MPM.add(createLoopRotatePass(0));
+      MPM.add(createLoopSinkPass());
+      MPM.add(createLoopUnrollPass());
+      MPM.add(createLoopUnswitchPass(0));
+      MPM.add(createLoopUnswitchPass(1));
+
+      MPM.add(createLoopVectorizePass(0, 1));
+      MPM.add(createLoopVectorizePass(1, 1));
+      MPM.add(createLoopVectorizePass(1, 0));
+      MPM.add(createLoopVectorizePass(0, 0));
+
+      MPM.add(createLoopVersioningLICMPass());
+      MPM.add(createMemCpyOptPass());
+      MPM.add(createMergeFunctionsPass());
+      MPM.add(createMergedLoadStoreMotionPass());
+      MPM.add(createNameAnonGlobalPass());
+      // MPM.add(createPGOIndirectCallPromotionLegacyPass());
+      // MPM.add(createPGOIndirectCallPromotionLegacyPass(1));
+      // MPM.add(createPGOInstrumentationGenLegacyPass());
+      MPM.add(createPostOrderFunctionAttrsLegacyPass());
+      MPM.add(createPromoteMemoryToRegisterPass());
+      MPM.add(createPruneEHPass());
+
+      MPM.add(createReassociatePass());
+      MPM.add(createReversePostOrderFunctionAttrsPass());
+
+      MPM.add(createSCCPPass());
+      MPM.add(createSLPVectorizerPass());
+      MPM.add(createSROAPass());
+      MPM.add(createSimpleLoopUnrollPass());
+
+      MPM.add(createSpeculativeExecutionIfHasBranchDivergencePass());
+      MPM.add(createStripDeadPrototypesPass());
+
+      MPM.add(createStripSymbolsPass(1));
+      MPM.add(createStripSymbolsPass(0));
+      MPM.add(createTailCallEliminationPass());
+      if(Builder->Inliner) {MPM.add(Builder->Inliner); Builder->Inliner = nullptr;}
+
+
+
+
   // FPM part
   FPM.add(createCFGSimplificationPass());
   FPM.add(createSROAPass());
@@ -283,7 +368,7 @@ static void useCustomPassSequence(
   MPM.add(createPGOIndirectCallPromotionLegacyPass());
   MPM.add(createGlobalsAAWrapperPass());
   MPM.add(createPruneEHPass()); // Remove dead EH info
-  MPM.add(Builder->Inliner); Builder->Inliner = nullptr;
+  if(Builder->Inliner) {MPM.add(Builder->Inliner); Builder->Inliner = nullptr;}
   MPM.add(createPostOrderFunctionAttrsLegacyPass());
   MPM.add(createArgumentPromotionPass()); // Scalarize uninlined fn args
 
@@ -398,7 +483,7 @@ static void AddOptimizationPasses(legacy::PassManagerBase &MPM,
     addCoroutinePassesToExtensionPoints(Builder);
 
   if (CustomPassSequence) {
-    std::cout<<"\nCustom Pass Sequence\n"<<std::endl;
+    // std::cout<<"\nCustom Pass Sequence\n"<<std::endl;
     useCustomPassSequence(&Builder, FPM, MPM);
     // Builder.populatePassManager(FPM, MPM);
   }

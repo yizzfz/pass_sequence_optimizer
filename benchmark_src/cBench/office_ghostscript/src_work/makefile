@@ -4,15 +4,16 @@ LL2= gscolor1.2.ll zfdctd.2.ll gxclfile.2.ll jccolor.2.ll zfbcp.2.ll spngp.2.ll 
 LL3= gscolor1.3.ll zfdctd.3.ll gxclfile.3.ll jccolor.3.ll zfbcp.3.ll spngp.3.ll zchar.3.ll jcapistd.3.ll scfe.3.ll ilocate.3.ll gdevpsdf.3.ll gxbcache.3.ll gxstroke.3.ll gshsb.3.ll jcinit.3.ll jcmarker.3.ll zupath.3.ll zfdctc.3.ll iparam.3.ll gdevabuf.3.ll gxclbits.3.ll szlibe.3.ll iname.3.ll gsimpath.3.ll gxdcconv.3.ll gxdither.3.ll gdevm16.3.ll zdevcal.3.ll gscoord.3.ll gsalloc.3.ll zfont2.3.ll zdevice.3.ll jcsample.3.ll gxpaint.3.ll gdevmpla.3.ll zpath1.3.ll gdevmem.3.ll gxclrect.3.ll isave.3.ll zfile.3.ll gximage0.3.ll gdevm2.3.ll zfont.3.ll jddctmgr.3.ll stream.3.ll gsparam.3.ll gschar.3.ll zcsindex.3.ll shc.3.ll igc.3.ll zpath.3.ll sbhc.3.ll gsfcmap.3.ll iscannum.3.ll gsflip.3.ll igcstr.3.ll zht1.3.ll interp.3.ll slzwc.3.ll gp_unifn.3.ll jccoefct.3.ll sfxstdio.3.ll gxccache.3.ll iconfig.3.ll gdevpipe.3.ll jcprepct.3.ll iccinit0.3.ll zcontrol.3.ll gspaint.3.ll jdapimin.3.ll gstype2.3.ll jcdctmgr.3.ll zcid.3.ll gs.3.ll gp_unix.3.ll gdevpbm.3.ll gdevpdfi.3.ll gximage3.3.ll jcmaster.3.ll srld.3.ll gdevpx.3.ll gximage1.3.ll iinit.3.ll spcxd.3.ll gxclpath.3.ll ibnum.3.ll jdmainct.3.ll gspcolor.3.ll gdevm1.3.ll jdpostct.3.ll gdevpdf.3.ll zchar2.3.ll gsfont0.3.ll gxhint1.3.ll gxht.3.ll gscie.3.ll sbcp.3.ll zfcmap.3.ll zstack.3.ll gxclpage.3.ll gdevpdft.3.ll gdevps.3.ll zgstate.3.ll zpacked.3.ll gsht.3.ll gsbittab.3.ll gsdevice.3.ll zht2.3.ll ziodev.3.ll jidctint.3.ll zmisc.3.ll iscanbin.3.ll jutils.3.ll imain.3.ll zcolor.3.ll gsdparam.3.ll jdsample.3.ll gdevm4.3.ll gdevpdfp.3.ll iscan.3.ll zfileio.3.ll scfetab.3.ll zdevice2.3.ll zusparam.3.ll zvmem.3.ll zfilter.3.ll gsstate.3.ll jcomapi.3.ll zimage.3.ll slzwd.3.ll gxpdash.3.ll ziodev2.3.ll gscdefs.3.ll gdevprn.3.ll gsutil.3.ll zfdecode.3.ll zchar1.3.ll gdevdflt.3.ll zfilterx.3.ll gxpflat.3.ll ireclaim.3.ll jdhuff.3.ll scantab.3.ll zfont1.3.ll gshtscr.3.ll imainarg.3.ll gsbitops.3.ll zchar42.3.ll sfilter1.3.ll gxacpath.3.ll zfzlib.3.ll gxhint3.3.ll scfd.3.ll spdiff.3.ll gsmemory.3.ll gxclist.3.ll srle.3.ll gspath.3.ll gximage2.3.ll sdctd.3.ll idparam.3.ll zmath.3.ll jdmarker.3.ll jcapimin.3.ll gxcht.3.ll gconfig.3.ll gxpcmap.3.ll zfname.3.ll zdps1.3.ll jdphuff.3.ll istack.3.ll gdevpstr.3.ll sstring.3.ll gsiodev.3.ll igcref.3.ll ztoken.3.ll gxdcolor.3.ll gsline.3.ll gdevm32.3.ll gsimage.3.ll zfont0.3.ll zht.3.ll zcssepr.3.ll gxsample.3.ll loop-wrap.3.ll zvmem2.3.ll jcmainct.3.ll gxpcopy.3.ll zstring.3.ll seexec.3.ll gdevddrw.3.ll jdapistd.3.ll gximage5.3.ll zpaint.3.ll gscsepr.3.ll zhsb.3.ll zbseq.3.ll slzwce.3.ll gdevm8.3.ll iutil2.3.ll sdcte.3.ll zarray.3.ll zarith.3.ll jmemmgr.3.ll gsmisc.3.ll gxpath.3.ll gscolor.3.ll jchuff.3.ll gdevmrop.3.ll gstype1.3.ll zsysvm.3.ll gxctable.3.ll gdevnfwd.3.ll zmatrix.3.ll zfilter2.3.ll gspath1.3.ll gp_unifs.3.ll ialloc.3.ll jdmaster.3.ll sdctc.3.ll icontext.3.ll zcolor1.3.ll gsfont.3.ll gxclip2.3.ll gxtype1.3.ll zimage2.3.ll zcolor2.3.ll gsdps1.3.ll gdevbbox.3.ll gsmatrix.3.ll gsargs.3.ll gdevm24.3.ll zcie.3.ll gxclimag.3.ll gxclread.3.ll gsinit.3.ll sfilter2.3.ll gsdevmem.3.ll gp_nofb.3.ll gxcpath.3.ll gsrop.3.ll smtf.3.ll zfont42.3.ll idebug.3.ll zcrd.3.ll shcgen.3.ll ztype.3.ll zfdcte.3.ll szlibd.3.ll sjpege.3.ll gschar0.3.ll gsht1.3.ll gximage.3.ll sbwbs.3.ll gxclzlib.3.ll jcparam.3.ll gdevvec.3.ll zrelbit.3.ll zgeneric.3.ll zcharout.3.ll jdcolor.3.ll gxhint2.3.ll scfdtab.3.ll idict.3.ll zmisc1.3.ll szlibc.3.ll jdcoefct.3.ll gsroptab.3.ll sjpegc.3.ll siscale.3.ll gxfill.3.ll gdevpdfm.3.ll gxccman.3.ll zfproc.3.ll sjpegd.3.ll zmisc2.3.ll gxpath2.3.ll zdict.3.ll gstype42.3.ll gscolor2.3.ll jdinput.3.ll iutil.3.ll gxcmap.3.ll gximage4.3.ll sjpegerr.3.ll zmedia2.3.ll jfdctint.3.ll zpcolor.3.ll
 CC_FLAGS=
 LD_FLAGS=-lm -lz 
+WORKLOAD=1
 
 all:
 	@$(RM) IRinfo.txt *.profraw
 	@make ll1 -s
-	@clang $(LL1) -O0 $(LD_FLAGS) -o a.out
+	@clang $(LL1) -O1 $(LD_FLAGS) -o a.out
 	@$(RM) *.ll
-	
+
 run:
-	@taskset 0x1 ./__run 1
+	@taskset 0x1 ./__run $(WORKLOAD)
 
 ll1: $(LL1)
 	@
@@ -41,8 +42,14 @@ ll3: $(LL3)
 	@opt $@ -S -o tmp.ll -O0 -load $(IR_PASS)
 
 %.2.ll: %.ll
-	@opt $^ -S -o tmp1.ll $(OPTFLAGS)
+	@opt $^ -S -o tmp1.ll -O0
 	@opt tmp1.ll -S -o $@ -O0 -profile-generate
 
 %.3.ll: %.2.ll
 	@opt $^ -S -o $@ -O0 -load $(IR_PASS) -hotpath -hotpath-file=hotpath.txt
+
+profile: $(FILES)
+	@clang $(FILES) -O3 -fprofile-generate $(CC_FLAGS) $(LD_FLAGS)
+	@make run
+	@llvm-profdata merge -output=a.prof default*
+	@clang $(FILES) -O3 -fprofile-use=a.prof $(CC_FLAGS) $(LD_FLAGS)

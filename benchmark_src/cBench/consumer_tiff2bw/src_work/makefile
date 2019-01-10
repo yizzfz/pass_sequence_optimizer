@@ -3,16 +3,17 @@ LL1= tif_flush.1.ll tif_lzw.1.ll tif_zip.1.ll tif_dirwrite.1.ll tif_write.1.ll t
 LL2= tif_flush.2.ll tif_lzw.2.ll tif_zip.2.ll tif_dirwrite.2.ll tif_write.2.ll tif_predict.2.ll tif_dirread.2.ll tif_open.2.ll tif_luv.2.ll tif_dirinfo.2.ll tif_jpeg.2.ll tif_error.2.ll tif_packbits.2.ll tif_unix.2.ll tif_fax3.2.ll tif_tile.2.ll tif_print.2.ll tif_dumpmode.2.ll tif_swab.2.ll tif_warning.2.ll tif_version.2.ll loop-wrap.2.ll tif_compress.2.ll tif_dir.2.ll tif_pixarlog.2.ll tif_close.2.ll tif_read.2.ll tif_strip.2.ll tif_codec.2.ll tif_fax3sm.2.ll tif_thunder.2.ll tif_getimage.2.ll tif_next.2.ll tif_aux.2.ll tiff2bw.2.ll
 LL3= tif_flush.3.ll tif_lzw.3.ll tif_zip.3.ll tif_dirwrite.3.ll tif_write.3.ll tif_predict.3.ll tif_dirread.3.ll tif_open.3.ll tif_luv.3.ll tif_dirinfo.3.ll tif_jpeg.3.ll tif_error.3.ll tif_packbits.3.ll tif_unix.3.ll tif_fax3.3.ll tif_tile.3.ll tif_print.3.ll tif_dumpmode.3.ll tif_swab.3.ll tif_warning.3.ll tif_version.3.ll loop-wrap.3.ll tif_compress.3.ll tif_dir.3.ll tif_pixarlog.3.ll tif_close.3.ll tif_read.3.ll tif_strip.3.ll tif_codec.3.ll tif_fax3sm.3.ll tif_thunder.3.ll tif_getimage.3.ll tif_next.3.ll tif_aux.3.ll tiff2bw.3.ll
 CC_FLAGS=
-LD_FLAGS=-lm
+LD_FLAGS=-lm 
+WORKLOAD=1 1000
 
 all:
 	@$(RM) IRinfo.txt *.profraw
 	@make ll1 -s
-	@clang $(LL1) -O0 $(LD_FLAGS) -o a.out
+	@clang $(LL1) -O1 $(LD_FLAGS) -o a.out
 	@$(RM) *.ll
 
 run:
-	@taskset 0x1 ./__run 1 1000
+	@taskset 0x1 ./__run $(WORKLOAD)
 
 ll1: $(LL1)
 	@
@@ -41,8 +42,14 @@ ll3: $(LL3)
 	@opt $@ -S -o tmp.ll -O0 -load $(IR_PASS)
 
 %.2.ll: %.ll
-	@opt $^ -S -o tmp1.ll $(OPTFLAGS)
+	@opt $^ -S -o tmp1.ll -O0
 	@opt tmp1.ll -S -o $@ -O0 -profile-generate
 
 %.3.ll: %.2.ll
 	@opt $^ -S -o $@ -O0 -load $(IR_PASS) -hotpath -hotpath-file=hotpath.txt
+
+profile: $(FILES)
+	@clang $(FILES) -O3 -fprofile-generate $(CC_FLAGS) $(LD_FLAGS)
+	@make run
+	@llvm-profdata merge -output=a.prof default*
+	@clang $(FILES) -O3 -fprofile-use=a.prof $(CC_FLAGS) $(LD_FLAGS)

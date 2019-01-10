@@ -1,24 +1,15 @@
 import random
 import os
-import time
 import subprocess
 from subprocess import check_call, check_output, STDOUT
-from multiprocessing import Process, Queue, Value
 import argparse
+import sys
+import time
+sys.path.append('../llvm_hack')
+import llvm_CPS
 
-
-def load_from_txt(file):
-    with open(file, "r") as f:
-        lines = f.read().split('\n')
-    passes = lines[:len(lines) - 1]
-    return passes
-
-
-def list_to_string(pass_list):
-    s = ''
-    for ele in pass_list:
-        s += ' ' + ele
-    return s
+CPS = llvm_CPS.CPS_Generator()
+os.environ["OPTFLAGS"] = '-CPS'
 
 
 def get_testcodes(base_dir):
@@ -31,9 +22,8 @@ def get_testcodes(base_dir):
     return testcodes
 
 
-def t_check(current_dir, pass_list, O0=False):
+def t_check(current_dir, O0=False):
     os.chdir(current_dir)
-    os.environ["OPTFLAGS"] = pass_list
 
     DEVNULL = open(os.devnull, 'wb', 0)
     f = open("stdout.dmp", 'w')
@@ -85,16 +75,13 @@ def t_check(current_dir, pass_list, O0=False):
 
 def main(args):
     if(args.O0):
-        pass_list = load_from_txt('O0List.txt')
+        CPS.set_default_list(O3=False)
         print('running with O0')
     elif(args.O3):
-        pass_list = load_from_txt('O3List.txt')
+        CPS.set_default_list(O3=True)
         print('running with O3')
     else:
         return
-
-    pass_list_str = list_to_string(pass_list)
-    print(pass_list_str)
 
     base_dir = '.'
     # base_dir += '/Misc'
@@ -111,7 +98,7 @@ def main(args):
 
     if cmd == 'y':
         for testcode in testcodes:
-            t_check(testcode, pass_list_str, args.O0)
+            t_check(testcode, args.O0)
 
 
 def shorten(s):
